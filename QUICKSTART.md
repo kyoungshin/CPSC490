@@ -39,7 +39,23 @@ copy these into your new repository, then commit:
 git add -A && git commit -m "chore: course scaffolding" && git push
 ```
 
-## 4. Leader: set up branches, labels, milestones, board (20 min)
+## 4. Leader: set up branches, labels, milestones, board (1 command)
+
+Everything in this step is automated. From inside your repository:
+
+```bash
+gh auth login                       # once, if you have not
+gh auth refresh -s project,repo     # lets it create the board
+bash scripts/bootstrap.sh
+```
+
+That creates all 17 labels, the four sprint milestones with dates, the
+`develop` branch, branch protection on `main` and `develop`, and the project
+board with its Status / Story Points / Sprint fields. It is safe to re-run —
+it skips whatever already exists — and it prints what is left for you.
+
+<details>
+<summary>Or do it by hand (click-by-click, ~20 minutes)</summary>
 
 **Branches** — create `develop` and protect both:
 
@@ -73,6 +89,8 @@ with the due dates from the setup guide §6.
 - add a **number** field named `Story Points`
 - add an **iteration** field named `Sprint` with four 2-week iterations
 - paste the board URL into your README
+
+</details>
 
 ## 5. Everyone: file your goals and objectives as issues (30 min)
 
@@ -116,6 +134,7 @@ That is the loop you will repeat all semester.
 | When something keeps going wrong | [`docs/aidlc/loop-engineering.md`](docs/aidlc/loop-engineering.md) — harness building and the stopping rules |
 | At every sprint boundary | [`docs/sprint-reviews/sprint-1.md`](docs/sprint-reviews/sprint-1.md) — copy it for the new sprint |
 | The full reference | [`README.md`](README.md) — the complete setup guide |
+| When you want the research behind a rule | [`docs/aidlc/evidence.md`](docs/aidlc/evidence.md) — sources and measured failure rates |
 
 Stuck on tooling for more than 20 minutes? Ask in the course channel or at
 the project meeting. Do not lose sprint days to setup.

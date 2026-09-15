@@ -81,6 +81,23 @@ def warn(gate: str, msg: str) -> None:
     warnings.append(f"{gate}: {msg}")
 
 
+def inventory_issue(gate: str, msg: str) -> None:
+    """Inventory gates (G8, G9) are advisory during a sprint and blocking on
+    the way to main.
+
+    Rationale: an issue filed mid-sprint that nobody has added to the
+    proposal yet should not redden an unrelated pull request - that teaches
+    people to resent the harness. But a release must not reach main with the
+    document and the board out of step. So: warn on feature -> develop, fail
+    on anything -> main (and whenever --strict is passed).
+    """
+    enforcing = ("--strict" in sys.argv
+                 or os.environ.get("GITHUB_BASE_REF") == "main"
+                 or os.environ.get("GITHUB_REF") == "refs/heads/main")
+    (fail if enforcing else warn)(gate, msg + ("" if enforcing else
+                                 "  [advisory now; blocks the merge into main]"))
+
+
 def md_files() -> list[Path]:
     out: list[Path] = []
     for p in ROOT.rglob("*.md"):
@@ -394,9 +411,9 @@ def gate_activities_linked() -> None:
                     continue
                 if issue["number"] not in linked:
                     unlinked += 1
-                    fail(g, f'#{issue["number"]} ({label}) "{issue["title"][:45]}" '
-                            f'is not linked from proposal section {num} '
-                            f'({SECTION_TITLE[num]})')
+                    inventory_issue(g, f'#{issue["number"]} ({label}) '
+                                       f'"{issue["title"][:45]}" is not linked from '
+                                       f'proposal section {num} ({SECTION_TITLE[num]})')
     if not unlinked:
         print(f"  {g}: {total_links} issue link(s) across sections 2 and 4, "
               f"nothing unlinked")
@@ -428,8 +445,8 @@ def gate_documents_linked() -> None:
     for d in docs:
         rel = d.relative_to(ROOT).as_posix()
         if rel not in section and d.name not in section:
-            fail(g, f"{rel} is not listed in proposal section 4 "
-                    f"(Specification and design documents)")
+            inventory_issue(g, f"{rel} is not listed in proposal section 4 "
+                               f"(Specification and design documents)")
     print(f"  {g}: checked {len(docs)} document(s) against proposal section 4")
 
 

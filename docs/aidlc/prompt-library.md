@@ -211,31 +211,16 @@ and fix the criteria or split the story (that is what `loe: L` means).
 
 ## The honest caveat
 
-A randomized trial of experienced open-source developers found they were
-**about 19% slower** on real tasks in their own repositories when allowed to
-use AI tools — while *believing* they had been roughly 20% faster. Small
-study, expert subjects, familiar code, early-2025 tooling — it may not
-describe you. But it is the best evidence that **your felt sense of speedup
-is not evidence**. That is precisely why this course asks for velocity
-numbers in the sprint review and evidence lines in every PR: so your team
-can find out what is actually true for you, which is Lecture 4's whole
-subject.
-
----
+A randomized trial found experienced developers were **~19% slower** with AI
+tools on their own code while believing they were ~20% faster. It may not
+describe you — but it is the best evidence that *your felt sense of speedup
+is not evidence*, which is why this course asks for measured velocity and an
+evidence line in every PR. Details and caveats: [`evidence.md`](evidence.md).
 
 ## Sources
 
-Current primary documentation (verify against these rather than blog
-summaries — the guidance changes with each model generation):
-
-- Anthropic, *Claude prompting best practices* — platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices
-- Anthropic, *Claude Code best practices* — code.claude.com/docs/en/best-practices (verification loops, explore→plan→code→commit, the named failure patterns, context-file include/exclude guidance)
-- Anthropic, *Effective context engineering for AI agents* — anthropic.com/engineering/effective-context-engineering-for-ai-agents ("context rot"; smallest set of high-signal tokens)
-- OpenAI, *Prompt engineering guide* and the *GPT-5 / GPT-5.2 prompting guides* — developers.openai.com (reference-text grounding, citation tactics, rubric self-scoring, cost of contradictory instructions)
-- Google, *Prompt design strategies* — ai.google.dev/gemini-api/docs/prompting-strategies (few-shot emphasis, output constraints)
-- GitHub, *Prompt engineering for Copilot Chat* + *repository custom instructions* — docs.github.com/en/copilot (start general then specific; tests as examples; the ~2-page instruction-file limit)
-- *AGENTS.md* — agents.md (the cross-tool context-file convention; `CLAUDE.md` is the same idea under Claude's name)
-- Simon Willison, *Using LLMs for code* (2025-03-11) and *Coding agent tips* (2025-10-25) — simonwillison.net
-- METR, *Measuring the impact of early-2025 AI on experienced open-source developer productivity* — metr.org + arXiv:2507.09089 (the −19% result)
-- Nature *Scientific Reports* (2023), s41598-023-41032-5 — measured fabrication in ChatGPT-generated citations
-- USENIX Security 2025 package-hallucination study and follow-on 2026 analyses — nonexistent package names in generated code ("slopsquatting")
+The vendor documentation and studies behind these rules — Anthropic, OpenAI,
+Google, GitHub, plus the measured failure rates for citations, packages and
+security — are collected in [`evidence.md`](evidence.md). Prefer those
+primaries over blog summaries: this guidance changes with each model
+generation.

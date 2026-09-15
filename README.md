@@ -7,8 +7,9 @@
 > [CPSC490 project board](https://github.com/users/kyoungshin/projects/1) —
 > then build yours the same way.
 >
-> **Start with [`QUICKSTART.md`](QUICKSTART.md)** (one hour, numbered steps).
-> This document is the reference behind it.
+> **Start with [`QUICKSTART.md`](QUICKSTART.md)** — one hour, numbered steps,
+> and `scripts/bootstrap.sh` does the whole labels/milestones/branches/board
+> setup in one command. This document is the reference behind it.
 
 **Fall 2026 · Prof. Kyoung Shin · Department of Computer Science, CSUF**
 
@@ -445,13 +446,13 @@ night before review, "Done" columns full of unmerged work.
 - [ ] README filled in from `README_TEMPLATE.md` (team table, project title, links)
 - [ ] `proposal/proposal.md` skeleton committed with all 11 template headings
 - [ ] Issue templates + PR template committed
-- [ ] Labels created: `epic`, `user-story`, `priority: high/medium/low`, `loe: S/M/L`
+- [ ] Labels created (all 17: the 7 agile types + priority/loe/sp) — `bootstrap.sh` does this
 - [ ] Milestones created: `Sprint 1`–`Sprint 4` with dates
 - [ ] Project board created (5 columns + Story Points number field + Sprint iteration field), linked in README
 - [ ] Every goal filed as an epic; every objective as a user story under it
 - [ ] Sprint 1 stories pulled into the `Sprint 1` milestone with owner/priority/LOE/points — including prototype stories, not only writing
 - [ ] Prototype v0 committed under `prototype/` with run instructions in its README
-- [ ] `develop` branch created; branch protection on `main` + `develop` (green CI + 1 approval)
+- [ ] `bash scripts/bootstrap.sh` run (labels, milestones, `develop`, branch protection, board — one command; safe to re-run)
 - [ ] `CLAUDE.md` copied and filled in; team agreed to read `docs/aidlc/hitl-gates.md`
 - [ ] CI green on a first real pull request, reviewed by a non-author
 

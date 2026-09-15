@@ -1,5 +1,10 @@
 # Harness and loop engineering
 
+> **If you read nothing else:** write the acceptance criteria first, give
+> the assistant a check it can run, demand the evidence rather than a claim,
+> and stop after two failed corrections. Everything below is detail on those
+> four sentences.
+
 > **Agent = model + harness.** You cannot change the model. Every bit of
 > engineering leverage you have is in the *harness*: the guides you put in
 > front of the model and the checks you put behind it.
@@ -196,34 +201,9 @@ reliably helped.
 
 ---
 
-## What the evidence actually says
+## Where the evidence for all this lives
 
-Worth knowing, because the hype and the doom are both wrong:
-
-- **Perception is unreliable.** In a randomized trial, experienced
-  developers were ~19% *slower* with AI tools on their own repositories
-  while believing they were ~20% faster. (Small, expert, familiar-code
-  study — but the perception gap is the durable lesson.)
-- **AI amplifies whatever your process already is.** The 2025 DORA
-  research found throughput up with AI adoption *and* instability up:
-  more change failures and rework. Discipline matters more, not less.
-- **Maintainability is drifting.** Across hundreds of millions of changed
-  lines, duplicated code blocks rose sharply while refactoring fell —
-  attributed to workflow incentives (accept-and-move-on), not to models
-  being incapable.
-- **Review is the missing gate in the wild.** In a large study of
-  AI-generated pull requests, the majority had *no* recorded human review
-  activity. Where review does happen, agent PRs merge at close to human
-  rates. The gate is what makes the difference — which is the whole reason
-  this course requires it.
-
-Sources for all of the above, plus the harness model this file is built on:
-Fowler on harness engineering (martinfowler.com/articles/harness-engineering.html) ·
-Anthropic's Claude Code best practices (code.claude.com/docs/en/best-practices) ·
-GitHub's guides to reviewing agent PRs and AI-generated code (github.blog, docs.github.com/en/copilot/tutorials/review-ai-generated-code) ·
-Osmani on agent harness engineering (addyosmani.com/blog/agent-harness-engineering/) ·
-GitHub spec-kit on EARS-style criteria (github.com/github/spec-kit) ·
-METR (metr.org) · DORA 2025 (dora.dev/insights/balancing-ai-tensions/) ·
-GitClear maintainability report (gitclear.com) ·
-USENIX Security 2025 on package hallucination · Veracode's GenAI code-security
-report · SpecBench (arXiv:2605.21384) · AIDev PR-review analysis (arXiv:2605.02273).
+Every claim in this file — the perception gap, AI as an amplifier, the
+maintainability drift, hidden-test gaming, hallucinated packages — is sourced
+in [`evidence.md`](evidence.md), along with the primary documentation worth
+reading yourself.

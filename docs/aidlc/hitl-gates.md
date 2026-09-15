@@ -1,5 +1,11 @@
 # The seven gates — how we keep LLM output honest
 
+> **If you read nothing else:** the seven gates are (0) write the criteria,
+> (1) prompt from shared context, (2) read it and run the harness yourself,
+> (3) CI, (4) a teammate who did not write it approves, (5) protected merge,
+> (6) sprint review. Gate 2 is the one that catches the most, and it is
+> entirely yours.
+
 > **AIDLC, human-in-the-loop (HITL).** You may use any LLM for any part of
 > this project. What you may *not* do is let its output reach `main` without
 > passing through gates that a human controls. This file explains every gate:
