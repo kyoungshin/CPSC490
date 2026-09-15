@@ -138,6 +138,14 @@ Everything above is deliberate: it is what makes "human in the loop"
 structural instead of a promise. An AI can write the whole change — but it
 cannot approve it, and it cannot merge past a red harness.
 
+> **Plan caveat, verified the hard way.** GitHub does **not** allow branch
+> protection on a **private** repository on the free plan — `bootstrap.sh`
+> will tell you so rather than pretending it worked. Either make the
+> repository **public**, or activate **GitHub Pro/Team free via
+> [GitHub Education](https://education.github.com)** and re-run the script.
+> Without one of those, the merge rule is honour-based: you still open pull
+> requests and still get a non-author approval, but nothing stops a merge.
+
 ## 7. Commit provenance for AI-assisted work
 
 Add a trailer to any commit an assistant helped write:

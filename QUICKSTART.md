@@ -13,8 +13,17 @@ watches, because everyone has to work in this repo.
 
 1. GitHub → **New repository**
 2. Name: `CPSC490-G<number>-<groupname>` — e.g. `CPSC490-G03-California`
-3. **Private**, and check **Add a README file**
-4. Create it.
+3. **Visibility — read this before you pick:**
+   - **Public** — branch protection works on the free plan, so "green CI + one
+     approval before merge" is actually *enforced*. Your proposal and
+     prototype are visible to anyone. Recommended unless your sponsor has
+     told you the work is confidential.
+   - **Private** — GitHub does **not** allow branch protection on private
+     repositories on the free plan, so the merge rule becomes honour-based
+     unless someone on the team activates **GitHub Pro/Team free through
+     [GitHub Education](https://education.github.com)** (a few minutes with a
+     `.edu` address). If your sponsor requires private, do that.
+4. Check **Add a README file**, and create it.
 
 ## 2. Leader: add your team and the instructor (2 min)
 

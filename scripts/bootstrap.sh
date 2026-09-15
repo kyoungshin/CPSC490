@@ -100,14 +100,12 @@ fi
 
 # ---------------------------------------------------------------- protection
 step "Protecting $DEFAULT_BRANCH and develop"
-protect() {
-  gh api -X PUT "repos/$REPO/branches/$1/protection" --input - >/dev/null 2>&1 <<JSON \
-    && ok "protected $1 (1 approval + 3 required checks)" \
-    || warn "could not protect $1 — private repos on a free plan cannot use branch protection; use a ruleset in Settings, or make the repo public"
+PROTECT_JSON=$(mktemp)
+cat > "$PROTECT_JSON" <<'JSON'
 {
   "required_status_checks": {
     "strict": true,
-    "contexts": ["Repository harness (G1–G6)", "Prototype build & tests", "PR links an issue and discloses AI use"]
+    "contexts": ["Repository harness (G1-G6)", "Prototype build & tests", "PR links an issue and discloses AI use"]
   },
   "enforce_admins": false,
   "required_pull_request_reviews": {
@@ -121,6 +119,17 @@ protect() {
   "allow_deletions": false
 }
 JSON
+
+protect() {
+  if gh api -X PUT "repos/$REPO/branches/$1/protection" --input "$PROTECT_JSON" >/dev/null 2>&1; then
+    ok "protected $1 (1 approval + 3 required checks)"
+  else
+    warn "could not protect $1 - GitHub does not allow branch protection on a PRIVATE repo on the free plan."
+    warn "  Pick one: make the repository PUBLIC, or get GitHub Pro/Team free through"
+    warn "  GitHub Education (https://education.github.com), then re-run this script."
+    warn "  Until then the review rule is honour-based: still open PRs, still get a"
+    warn "  non-author approval - it just is not enforced by the platform."
+  fi
 }
 protect "$DEFAULT_BRANCH"
 gh api "repos/$REPO/branches/develop" >/dev/null 2>&1 && protect develop
@@ -166,7 +175,10 @@ else
       # Replacing the options assigns NEW option ids, which clears the Status
       # of every card already on the board - so only do it when they differ.
       gh api graphql -f query="mutation { updateProjectV2Field(input: {fieldId: \"$SF\", singleSelectOptions: [{name: \"Backlog\", color: GRAY, description: \"\"}, {name: \"Sprint To-Do\", color: BLUE, description: \"\"}, {name: \"In Progress\", color: YELLOW, description: \"\"}, {name: \"In Review\", color: ORANGE, description: \"\"}, {name: \"Done\", color: GREEN, description: \"\"}]}) { projectV2Field { ... on ProjectV2SingleSelectField { id } } } }" >/dev/null 2>&1         && ok "Status columns: Backlog / Sprint To-Do / In Progress / In Review / Done"         || warn "could not set the Status columns"
-      [ -n "$HAVE" ] && warn "cards on the board lost their Status (option ids changed) - re-set them once"
+      ITEMS=$(gh api graphql -f query="{ node(id: \"$PID\") { ... on ProjectV2 { items(first: 1) { totalCount } } } }"               -q '.data.node.items.totalCount' 2>/dev/null)
+      if [ -n "$HAVE" ] && [ "${ITEMS:-0}" -gt 0 ]; then
+        warn "cards already on the board lost their Status (option ids changed) - re-set them once"
+      fi
     fi
 
     if [ -n "$(field_id 'Story Points')" ]; then
