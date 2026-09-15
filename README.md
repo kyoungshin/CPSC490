@@ -15,6 +15,10 @@
 
 **Fall 2026 · Prof. Kyoung Shin · Department of Computer Science, CSUF**
 
+*Instructors from other courses: see [`FOR_INSTRUCTORS.md`](FOR_INSTRUCTORS.md)
+for what is here, what to change for your course, and the licence
+([`LICENSE`](LICENSE) — materials CC BY 4.0, code MIT).*
+
 Every group runs its capstone like a real software project starting now.
 CPSC 490 has **two deliverables that grow together all semester**: the
 **project proposal** (with its specification and design documents) and a

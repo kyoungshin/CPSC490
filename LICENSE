@@ -1,0 +1,47 @@
+CPSC 490 course scaffold — licensing
+====================================
+
+Two licences, because this repository holds two different kinds of thing.
+
+1. COURSE MATERIALS  (all Markdown documents, the AIDLC lecture slides in
+   docs/aidlc/lectures/, and the AIDLC Field Guide)
+
+   Copyright (c) 2026 Kyoung Shin, Department of Computer Science,
+   California State University, Fullerton.
+
+   Licensed under the Creative Commons Attribution 4.0 International
+   licence (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/
+
+   You may share and adapt these materials, including for your own course
+   and commercially, provided you give appropriate credit and indicate
+   whether changes were made.
+
+2. CODE  (scripts/bootstrap.sh, .github/scripts/check_repo.py,
+   .github/workflows/ci.yml, prototype/, and the templates)
+
+   MIT License
+
+   Copyright (c) 2026 Kyoung Shin
+
+   Permission is hereby granted, free of charge, to any person obtaining a
+   copy of this software and associated documentation files (the
+   "Software"), to deal in the Software without restriction, including
+   without limitation the rights to use, copy, modify, merge, publish,
+   distribute, sublicense, and/or sell copies of the Software, and to
+   permit persons to whom the Software is furnished to do so, subject to
+   the following conditions:
+
+   The above copyright notice and this permission notice shall be included
+   in all copies or substantial portions of the Software.
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+   OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+   MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+   IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+   CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+   TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+   SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Third-party content: the research appendix (docs/aidlc/evidence.md) cites
+external work under the citing conventions of academic fair use; those
+sources remain the property of their authors.
