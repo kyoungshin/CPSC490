@@ -29,11 +29,19 @@ Members: <Name (GitHub username)>, …
 Each **goal is an Epic** and each **objective is a User Story** on our issue
 board (see the repository README §4). Example of the required format:
 
-- **Goal 1: 〈goal, one line〉** (Epic #1)
-  - Objective 1.1: As a 〈who〉, I want 〈what〉, so that 〈why〉. (#2)
-  - Objective 1.2: … (#3)
-- **Goal 2: …** (Epic #4)
-  - Objective 2.1: … (#5)
+- **Goal 1: Secure account management** (Epic #1)
+  - Objective 1.1: As a member, I want to register and log in, so that my
+    data is private. (#2)
+  - Objective 1.2: As a reviewer, I want a runnable login prototype, so that
+    the riskiest flow is proven. (#3)
+  - Objective 1.3: As a developer, I want a documented architecture, so that
+    implementation in 491 is unambiguous. (#4)
+- **Goal 2: 〈your second goal〉** (Epic #〈n〉)
+  - Objective 2.1: 〈…〉 (#〈n〉)
+
+*(Goal 1 above is the live example in this repository — issues #1–#4 and the
+board show exactly these items with owner, sprint, priority, LOE, and
+points. Replace it with your own goals.)*
 
 ## Proposed Approaches
 
