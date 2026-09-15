@@ -23,6 +23,16 @@
 |---|---|---|---|
 | #〈n〉 | @〈user〉 | 〈honest reason〉 | 〈re-scoped / moved to Sprint 2 / split into #…〉 |
 
+## Loop health (docs/aidlc/loop-engineering.md §8)
+
+| | This sprint |
+|---|---|
+| Iterations to green, average per PR | 〈n〉 |
+| Harness rules added (rows in the harness log) | 〈n〉 |
+
+〈One line: is our spec-writing improving, or are we still discovering
+requirements during implementation?〉
+
 ## Prototype increment
 
 〈What the prototype can do at the end of this sprint that it couldn't at the

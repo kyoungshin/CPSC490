@@ -283,7 +283,74 @@ in `docs/sprint-reviews/sprint-N.md`** (template in the example repo):
 
 ---
 
-## 7. How sprint performance is measured
+## 7. Working with an LLM: AIDLC, human-in-the-loop
+
+You may use any LLM (Claude, ChatGPT, Copilot, Gemini) for any part of this
+project — that is encouraged, and it is what the AIDLC lectures are about.
+The discipline is **human-in-the-loop**: the assistant drafts, *you* verify,
+and a *second human* approves. Nothing reaches `main` otherwise.
+
+Three things make that real in your repository, and all three are in the
+example repo ready to copy:
+
+1. **[`CLAUDE.md`](CLAUDE.md) — standardized context.** One file naming the
+   project, conventions, what the assistant may draft, and what only a human
+   decides. Every teammate's session starts from the same facts, so you stop
+   getting five different answers about your own project. (Copilot reads
+   `.github/copilot-instructions.md`, Cursor reads `.cursor/rules/` — keep
+   one real file and copy it.)
+2. **[`docs/aidlc/prompt-library.md`](docs/aidlc/prompt-library.md) —
+   standardized prompts** for the jobs you actually do: draft a spec section
+   from a story, write code from acceptance criteria, review a diff, write
+   tests, survey related work. Each template ends by requiring the model to
+   separate what it verified from what it could not.
+3. **[`docs/aidlc/hitl-gates.md`](docs/aidlc/hitl-gates.md) — the seven
+   gates.** Read this one carefully. It names the six ways LLMs fail
+   (fabrication, plausible-but-wrong, requirement drift, scope creep,
+   unverified claims, check-gaming) and, gate by gate, what catches each:
+   framing criteria before prompting → your own verification → the CI
+   harness (G1–G6) → peer review → protected merge → sprint review.
+
+4. **[`docs/aidlc/loop-engineering.md`](docs/aidlc/loop-engineering.md) —
+   the harness and the loop.** What a harness is (guides that steer before,
+   sensors that detect after), which checks to build first for the best
+   payoff, test-first with a committed failing test, the two-correction
+   stopping rule, how to tell the *spec* is at fault rather than the prompt,
+   how to stop a check from being gamed, and a ten-minute review protocol.
+   Teams keep a [harness log](docs/aidlc/harness-log.md) where every rule
+   names the failure that caused it — bring it to the sprint review.
+
+**The harness** is the automated half — run it in one second before you push:
+
+```bash
+python .github/scripts/check_repo.py
+```
+
+It checks template structure, document↔issue traceability, that cited issue
+numbers really exist, that links resolve, that no secrets are committed, and
+flags leftover placeholders. GitHub Actions runs the same script on every
+pull request, plus your prototype's tests and a check that your PR links a
+story, discloses AI use, and says what you verified.
+
+**Loop engineering** in one line: frame the criteria, prompt once, verify
+against the harness, iterate — two failed corrections mean start a clean
+session, three failed attempts mean the specification is the problem, not
+the prompt. Keep the local command and the CI command identical, and
+disclose AI-assisted commits with an `Assisted-by:` trailer.
+
+**Git workflow and CI/CD:** standard Gitflow
+(`main` / `develop` / `feature/*` / `release/*` / `hotfix/*`), branch
+protection requiring green CI plus one non-author approval, releases tagged
+on `main` — all in
+[`docs/git-workflow.md`](docs/git-workflow.md).
+
+**Course AIDLC materials** are in the repository so everything lives in one
+place: [`docs/aidlc/lectures/`](docs/aidlc/lectures/) (Lecture 1 From SDLC to
+AIDLC / HITL vs HOTL · Lecture 2 Prompt Engineering · Lecture 3 Harness Loop
+Engineering · Lecture 4 Benchmarks, Quality and ROI) and the
+[AIDLC Field Guide](docs/aidlc/AIDLC-Field-Guide.html).
+
+## 8. How sprint performance is measured
 
 At each sprint checkpoint the repository is reviewed against five metrics
 (the same rubric continues into CPSC 491's implementation sprints):
@@ -302,7 +369,7 @@ night before review, "Done" columns full of unmerged work.
 
 ---
 
-## 8. Quick-start checklist (do in week one of Sprint 1)
+## 9. Quick-start checklist (do in week one of Sprint 1)
 
 - [ ] Repo created with course naming; all members + `kyoungshin` added
 - [ ] README filled in from `README_TEMPLATE.md` (team table, project title, links)
@@ -314,11 +381,13 @@ night before review, "Done" columns full of unmerged work.
 - [ ] Every goal filed as an epic; every objective as a user story under it
 - [ ] Sprint 1 stories pulled into the `Sprint 1` milestone with owner/priority/LOE/points — including prototype stories, not only writing
 - [ ] Prototype v0 committed under `prototype/` with run instructions in its README
-- [ ] First PR merged (a real one — e.g. the proposal skeleton), reviewed by a non-author
+- [ ] `develop` branch created; branch protection on `main` + `develop` (green CI + 1 approval)
+- [ ] `CLAUDE.md` copied and filled in; team agreed to read `docs/aidlc/hitl-gates.md`
+- [ ] CI green on a first real pull request, reviewed by a non-author
 
 ---
 
-## 9. AI usage
+## 10. AI usage
 
 AI tools (Claude, Copilot, ChatGPT, …) are **encouraged** for drafting,
 reviewing, and organizing — and their use must be disclosed in the
