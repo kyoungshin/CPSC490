@@ -32,6 +32,12 @@ the PR are one trail: `feature/12-login-spec`, `feature/27-prototype-auth`,
 `v0.1` = proposal + prototype v0 (Sep 27), `v0.2` = the Week-8 demo build,
 `v0.3` = report draft #1, `v1.0` = final submission.
 
+> **Note on this example repository.** It ships with `main` only, because it
+> is a template you copy — a second identical branch here would just be
+> noise. **Your** repository needs `develop`, and
+> `bash scripts/bootstrap.sh` creates and protects it for you (QUICKSTART
+> step 4).
+
 ## 2. The everyday loop (feature → develop)
 
 ```bash
