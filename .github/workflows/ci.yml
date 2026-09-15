@@ -60,8 +60,13 @@ jobs:
           if [ -f package-lock.json ]; then npm ci; else npm install; fi
           # only run the script if it exists, so a prototype without tests
           # still reports honestly instead of failing for the wrong reason
-          if npm run | grep -qE '^  test'; then npm test; else
-            echo "::warning::prototype/package.json has no test script — add one before Sprint 2"; fi
+          # --if-present exits 0 when there is no test script, so check for it
+          # explicitly rather than parsing 'npm run' output.
+          if node -e "process.exit(require('./package.json').scripts?.test?0:1)"; then
+            npm test
+          else
+            echo "::warning::prototype/package.json has no test script — add one before Sprint 2"
+          fi
 
       # --- Python prototypes -----------------------------------------------
       - name: Detect Python project
@@ -81,8 +86,15 @@ jobs:
           [ -f requirements.txt ] && pip install -r requirements.txt || true
           [ -f pyproject.toml ] && pip install -e . || true
           pip install pytest
-          if ls tests test_*.py **/test_*.py >/dev/null 2>&1; then pytest -q; else
-            echo "::warning::no Python tests found in prototype/ — add one before Sprint 2"; fi
+          # Ask pytest, do not guess with a glob: exit code 5 means "no tests
+          # collected", anything else non-zero is a real failure. A glob-based
+          # check silently skipped the tests and reported success.
+          set +e; python -m pytest -q; rc=$?; set -e
+          if [ "$rc" -eq 5 ]; then
+            echo "::warning::no Python tests found in prototype/ — add one before Sprint 2"
+          elif [ "$rc" -ne 0 ]; then
+            exit "$rc"
+          fi
 
       - name: Nothing to build
         if: steps.node.outputs.found == 'false' && steps.py.outputs.found == 'false'
