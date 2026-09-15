@@ -15,9 +15,10 @@
 
 **Fall 2026 · Prof. Kyoung Shin · Department of Computer Science, CSUF**
 
-Author: **Kyoung Shin** · <kshin@fullerton.edu> · © 2026, all course
-materials his original work. Licence: [`LICENSE`](LICENSE) — materials
-CC BY-NC-SA 4.0, code MIT.
+Author: **Kyoung Shin** · <kshin@fullerton.edu> · © 2026 — original course
+work, **all rights reserved** ([`LICENSE`](LICENSE)). Enrolled CPSC 490/491
+students may copy and build on this for their coursework; any other use,
+including adoption for another course, needs written permission — just ask.
 
 *Instructors from other courses: [`FOR_INSTRUCTORS.md`](FOR_INSTRUCTORS.md)
 covers what is here, what to change for your course, and how to cite it.*

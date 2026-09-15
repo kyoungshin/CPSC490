@@ -11,16 +11,18 @@ California State University, Fullerton — <kshin@fullerton.edu>. This
 curriculum, the AIDLC lecture series, and the harness are his original course
 work.
 
-You are welcome to use it in your own teaching. See [`LICENSE`](LICENSE):
-course materials under **CC BY-NC-SA 4.0** (non-commercial, credit Kyoung
-Shin, share alike) and the code under MIT. Commercial use needs written
-permission. If you adopt or adapt it, a note to <kshin@fullerton.edu> is
-appreciated — and please cite:
+**Terms: all rights reserved — please ask first.** The repository is public
+so that enrolled students can copy it and so colleagues can evaluate the
+approach, but publication grants no licence (see [`LICENSE`](LICENSE)).
+If you would like to use or adapt any of it for your own course, write to
+<kshin@fullerton.edu>. Requests from fellow instructors are welcome and
+normally granted — the point is simply that the author knows who is using
+the material and that authorship stays clear. Once granted, please cite:
 
 > Shin, K. (2026). *CPSC 490 AIDLC course scaffold: human-in-the-loop
 > AI-driven development for undergraduate capstone projects.* Department of
-> Computer Science, California State University, Fullerton.
-> https://github.com/kyoungshin/CPSC490
+> Computer Science, California State University, Fullerton. Used with
+> permission. https://github.com/kyoungshin/CPSC490
 
 ---
 
