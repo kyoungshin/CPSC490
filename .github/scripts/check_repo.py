@@ -117,6 +117,9 @@ def is_deliverable(path: Path) -> bool:
     otherwise flag the very documents that explain them.
     """
     rel = path.relative_to(ROOT).as_posix()
+    if path.name.startswith("example-"):
+        return False    # worked examples ship with the scaffold; their issue
+                        # numbers belong to the example repo, not to yours
     if rel.startswith(("proposal/", "docs/specs/", "docs/sprint-reviews/")):
         return True
     if rel.startswith("docs/design/"):
@@ -390,6 +393,13 @@ def gate_activities_linked() -> None:
         if section is None:
             fail(g, f"could not find section {num} ({SECTION_TITLE[num]}) in "
                     f"proposal/proposal.md")
+            continue
+        if "〈" in section:
+            # Still the untouched skeleton (angle-bracket placeholders). Say so
+            # once, gently, instead of listing every issue in the repository -
+            # a team on day one has not written this section yet.
+            warn(g, f"proposal section {num} ({SECTION_TITLE[num]}) is still the "
+                    f"skeleton - list your real issue numbers there as you file them")
             continue
         linked = {int(n) for n in re.findall(r"#(\d{1,5})", section)}
         linked |= {int(n) for n in re.findall(r"/issues/(\d{1,5})", section)}

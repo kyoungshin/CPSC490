@@ -137,19 +137,19 @@ CI gate G8 fails if one exists that this section does not link. That is what
 keeps the goals in this document and the work on the board from drifting
 apart.
 
-- **Goal 1: Secure account management** (Epic #1)
-  - Objective 1.1: As a member, I want to register and log in, so that my
-    data is private. (#2)
-  - Objective 1.2: As a reviewer, I want a runnable login prototype, so that
-    the riskiest flow is proven early. (#3)
-  - Objective 1.3: As a developer, I want a documented architecture, so that
-    implementation in CPSC 491 is unambiguous. (#4)
+- **Goal 1: 〈e.g. Secure account management〉** (Epic #〈n〉)
+  - Objective 1.1: 〈As a member, I want to register and log in, so that my
+    data is private.〉 (#〈n〉)
+  - Objective 1.2: 〈As a reviewer, I want a runnable prototype of the riskiest
+    flow, so that it is proven early.〉 (#〈n〉)
 - **Goal 2: 〈your second goal〉** (Epic #〈n〉)
   - Objective 2.1: 〈As a …, I want …, so that …〉 (#〈n〉)
 
-〈Goal 1 above is the live example in this repository — issues #1–#4 and the
-project board show these items with owner, sprint, priority, level of effort,
-and story points. Replace it with your own 2–3 goals.〉
+〈Replace the brackets with your own 2–3 goals and their objectives, and put
+the **real issue numbers** in as you file them — gate G8 checks that every
+epic and story in your repository is linked from this section. A fully worked
+version of this, with live issues and a populated board, is in the course
+example repository.〉
 
 ## 3. Proposed Approaches
 
@@ -207,9 +207,12 @@ buildable. CI gate G9 fails if a document exists in `docs/specs/` or
 
 | Document | Kind | Covers | Issues |
 |---|---|---|---|
-| [docs/specs/example-spec.md](../docs/specs/example-spec.md) | specification | account management requirements | #1, #2, #3 |
-| [docs/design/example-design.md](../docs/design/example-design.md) | design | system architecture + data model | #1, #4 |
-| 〈docs/specs/…〉 | 〈specification/design〉 | 〈…〉 | 〈#n〉 |
+| 〈docs/specs/account-management.md〉 | specification | 〈account management requirements〉 | 〈#n, #n〉 |
+| 〈docs/design/architecture.md〉 | design | 〈system architecture + data model〉 | 〈#n〉 |
+
+〈The scaffold ships `docs/specs/example-spec.md` and
+`docs/design/example-design.md` as worked examples — read them, then delete
+them once you have your own, and list yours here.〉
 
 〈Replace these rows with your own. Each document names its epic and stories
 in its own first lines too (gate G2), so the trail runs both ways.〉
@@ -223,7 +226,7 @@ G8 fails if such an issue exists that this section does not link.
 
 | Issue | Type | Activity | Parent | Owner | Sprint |
 |---|---|---|---|---|---|
-| [#5](../../issues/5) | task | Stand up the prototype login endpoint | #3 | 〈owner〉 | Sprint 1 |
+| 〈#n〉 | 〈task〉 | 〈stand up the prototype login endpoint〉 | 〈#story〉 | 〈owner〉 | 〈Sprint 1〉 |
 | 〈#n〉 | 〈feature/enhancement/bug/task/sub-task〉 | 〈…〉 | 〈#story〉 | 〈…〉 | 〈…〉 |
 
 〈Replace these rows with your own, and keep the table current as you file new

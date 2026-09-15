@@ -36,7 +36,7 @@ far better than a padded list.〉
 
 | Story | Owner | Points | PR |
 |---|---|---|---|
-| #2 〈title〉 | @〈user〉 | 3 | #〈pr〉 |
+| 〈#n title〉 | @〈user〉 | 〈3〉 | 〈#pr〉 |
 
 ## Carried over — and why
 
@@ -66,7 +66,7 @@ row. "We were told and did nothing" is a legitimate row — with a reason.
 
 | Feedback (source) | What we changed | Issue / PR |
 |---|---|---|
-| 〈advisor meeting, issue #n: "the ER model has no cardinality"〉 | 〈added cardinality and reviewed against checklist D4〉 | 〈#n / PR #n〉 |
+| 〈advisor meeting, issue #〈n〉: "the ER model has no cardinality"〉 | 〈added cardinality and reviewed against checklist D4〉 | 〈#n / PR #n〉 |
 
 ## Contribution snapshot
 

@@ -6,15 +6,17 @@
 
 > **This repository is itself the example.** It is laid out exactly the way
 > your group repository should be — browse the folders, the issue templates,
-> the labels, the `Sprint 1`–`Sprint 4` milestones, the sample issues (#1–#5),
-> the runnable `prototype/`, the worked
+> the labels, the `Sprint 1`–`Sprint 4` milestones, the sample issues, the
+> runnable `prototype/`, the worked
 > [specification](docs/specs/example-spec.md) and
 > [design document](docs/design/example-design.md), and the
 > [project board](https://github.com/users/kyoungshin/projects/1) — then
 > build yours the same way.
 >
 > `scripts/bootstrap.sh` does the whole labels/milestones/branches/board
-> setup in one command. This document is the reference behind QUICKSTART.
+> setup in one command, and `scripts/sprint_report.py` measures story points
+> committed versus closed each sprint. This document is the reference behind
+> QUICKSTART.
 >
 > **The syllabus governs grades and deadlines.** Repository work is assessed
 > under the syllabus's **20% Prototype & repository practice — 5% per
@@ -261,10 +263,38 @@ card to Done is not how work finishes, and a Done column full of unmerged
 cards is the fastest way to undercut the *transparency* evidence behind
 that 20%.
 
-**At the sprint boundary** — in the Sprint Plan view, read the `Sprint 1`
-group: points planned versus points actually in `Done`. That ratio is your
-velocity, and it goes in `docs/sprint-reviews/sprint-N.md` with anything
-that carried over and why. Then plan the next sprint from the same view.
+**Seeing the story-point totals per sprint.** GitHub's milestone pages count
+issues, not points, so set the totals up in two places:
+
+- **On the board (live, no tooling):** in the **Sprint Plan** table view,
+  group by `Sprint`, then open the `Story Points` column menu and turn on
+  **Sum**. Each sprint's group header then shows its total points. Group by
+  `Status` instead and you get the same sum split into Backlog / In Progress
+  / Done — which *is* committed versus completed, live, while the sprint runs.
+- **Automatically, with the history:** run
+
+  ```bash
+  python scripts/sprint_report.py            # or --markdown for the review
+  ```
+
+  It prints, per sprint, the points the sprint **started** with, the points
+  that **closed** inside it, what carried over, what scope was **added after
+  the sprint began**, and the completion percentage — then reads your own
+  history back to you: *"completed 8, 11, 9 → commit about 9 next sprint."*
+  It uses the `sp:` labels and the `Sprint N` milestones (not the board), so
+  the workflow `.github/workflows/sprint-report.yml` runs it weekly with
+  GitHub's own token, no extra setup. That answer — your team's real capacity
+  — is the number worth knowing by Sprint 3.
+
+> **So put the points in the `sp:` label**, and mirror them in the board's
+> Story Points field if you want the live sums. The label is what the
+> automated report reads.
+
+**At the sprint boundary** — read the `Sprint N` group: points planned versus
+points actually in `Done`. That ratio is your velocity; it goes in
+`docs/sprint-reviews/sprint-N.md` with anything that carried over and why.
+Then plan the next sprint from the same view, using the report's suggested
+commitment rather than optimism.
 
 **Epics stay on the board but carry no Sprint** — they span sprints, and
 their progress shows through the task list of stories in the epic body.

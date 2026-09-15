@@ -42,11 +42,17 @@ copy these into your new repository, then commit:
 | `proposal/proposal.md` | `proposal/proposal.md` | the proposal skeleton (already matches the Word template) |
 | `.github/` (whole folder) | `.github/` | issue + PR templates, CI workflow, the harness script |
 | `docs/` (whole folder) | `docs/` | reference docs, diagram guide, sprint-review template |
+| `scripts/` (whole folder) | `scripts/` | the setup script and the sprint story-point report |
 | `prototype/` | `prototype/` | the runnable starter — replace the code with yours |
 
 ```bash
 git add -A && git commit -m "chore: course scaffolding" && git push
 ```
+
+The two `example-*` documents in `docs/specs/` and `docs/design/` are worked
+examples to read and then delete once you have your own — the harness treats
+them as reference material, so they will not fail your CI while they sit
+there.
 
 ## 4. Leader: set up branches, labels, milestones, board (1 command)
 
@@ -166,6 +172,7 @@ read it all at once.
 | With the proposal, then every sprint | [`docs/development-plan.md`](docs/development-plan.md) — team charter with real triggers, QA owner, risk register |
 | The full reference | [`README.md`](README.md) — the complete setup guide |
 | When you want the research behind a rule | [`docs/aidlc/evidence.md`](docs/aidlc/evidence.md) — sources and measured failure rates |
+| At planning, to decide how much to commit | `python scripts/sprint_report.py` — points committed vs closed per sprint, and your real capacity |
 
 Stuck on tooling for more than 20 minutes? Ask in the course channel or at
 the project meeting. Do not lose sprint days to setup.
