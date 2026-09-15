@@ -55,10 +55,13 @@ CPSC490-G03-California/
 ├── README.md               ← team + project one-pager (below)
 ├── proposal/
 │   └── proposal.md         ← THE proposal, template §3 (single source of truth)
+├── CLAUDE.md               ← shared AI context (§7)
 ├── docs/
 │   ├── specs/              ← specification documents (one .md per epic)
-│   └── design/             ← design documents (architecture, UI, data, APIs)
-│   └── sprint-reviews/     ← one file per sprint boundary (§6 ritual)
+│   ├── design/             ← design documents + diagrams/ (§3, DIAGRAMS.md)
+│   ├── sprint-reviews/     ← one file per sprint boundary (§6 ritual)
+│   ├── git-workflow.md     ← Gitflow + CI/CD (§7)
+│   └── aidlc/              ← the seven gates, prompt library, harness log, lectures (§7)
 ├── prototype/              ← prototype v0: running proof-of-concept (due Sep 27)
 │   └── README.md           ← how to build/run it
 └── .github/
@@ -80,35 +83,57 @@ copy it to your repo as `README.md` and fill in the 〈brackets〉.
 
 ## 3. The proposal (`proposal/proposal.md`)
 
-Write the proposal in Markdown using **exactly the section headings of the
-course template** (CPSC 490 Project Proposal Template Fall 2026):
+`proposal/proposal.md` **is the proposal document, not a README.** Write
+continuous academic prose — no task lists, no emoji, no repo jargon — with
+the section numbers and titles of the course Word template, exactly:
 
-1. Abstract
-2. Introduction
-3. Related Work
-4. Problem Statements
-5. **Goals and Objectives** ← this section drives your issue board (§4)
-6. Proposed Approaches
-7. Required Environment, Resources, and Planned Activities
-8. Project Outcomes
-9. Project Timeline
-10. AI Usage
-11. References
+| § | Section |
+|---|---|
+| 0 | Abstract |
+| 1 | Introduction |
+| 1.1 | Related Work |
+| 1.2 | Problem Statements |
+| 1.3 | **Goals and Objectives** ← drives your issue board (§4) |
+| 2 | Proposed Approaches |
+| 3 | Required Environment, Resources, and Planned Activities ← **diagrams go here** |
+| 4 | Project Outcomes |
+| 5 | Project Timeline ← **next semester's implementation plan** |
+| 6 | AI Usage |
+| 7 | References |
 
-Two sections get special treatment:
+CI gate G1 checks these headings and their numbering, because the numbering
+is what makes the file convert cleanly into the Word template.
 
-- **Goals and Objectives** — write each *goal* as an **Epic** and each
-  *objective* under it as a **User Story** (§4). In the proposal, list them
-  with their issue numbers once created, e.g.
-  `Goal 1: Secure account management (#1)` /
-  `— Objective 1.1: As a user, I can register and log in (#2)`.
-- **Project Timeline** — present the four 2-week sprints (§6) as a table:
-  sprint, dates, the epics/stories planned in it.
+**Converting for Canvas submission** — keep one source, submit the Word
+file:
 
-The proposal you submit to Canvas (HW#4, the Word document following the
-template) and `proposal.md` must say the same thing — the repo copy is the
-living version you keep improving all semester; the Preview and Final
-Project Proposal Papers grow out of it.
+```bash
+pandoc proposal/proposal.md -o proposal.docx   --reference-doc="CPSC 490 Project Proposal Template Fall 2026.docx"
+```
+
+Open the result in Word, check heading numbering and figure placement, and
+submit that. (Writing in Word instead is fine — but commit the `.docx` here
+*and* keep the Markdown current, since that is what review and CI can read.)
+
+Three sections need particular care:
+
+- **1.3 Goals and Objectives** — each *goal* is an **Epic** issue, each
+  *objective* under it a **User Story** issue (§4). Cite the issue numbers in
+  the prose so the document and the board stay in step.
+- **3 Required Environment, Resources, and Planned Activities** — this is
+  where your **diagrams** appear: high-level architecture and system/context
+  at minimum, plus ER/EER and data-flow views where they earn their place.
+  Keep the authoritative copies in `docs/design/` (editable source *and*
+  exported image) and reference them here. Tools and conventions:
+  [`docs/design/DIAGRAMS.md`](docs/design/DIAGRAMS.md).
+- **5 Project Timeline** — this is the plan for **CPSC 491 next semester**:
+  how the system actually gets built, in what order, with which milestones.
+  It is *not* this semester's four proposal sprints — those live on the
+  project board and in `docs/sprint-reviews/`.
+
+The Word document you submit and `proposal.md` must say the same thing — the
+repo copy is the living version you keep improving all semester, and the
+Preview and Final Project Proposal Papers grow out of it.
 
 ---
 
@@ -258,7 +283,7 @@ Four 2-week sprints between the proposal submission and the Preview Paper
 |---|---|---|---|
 | **Sprint 1** | Sep 28 – Oct 11 | Epics + stories filed from Goals & Objectives; board running; specs started; **prototype v0 → v1 demo path** for the in-class check | ends right before the **Week-8 in-class prototype check** (Oct 13 §01 / Oct 15 §05) |
 | **Sprint 2** | Oct 12 – Oct 25 | Specification documents per epic; proposed approach firmed; **prototype reworked from check feedback** | — |
-| **Sprint 3** | Oct 26 – Nov 8 | Design documents (architecture, data, UI/API sketches); **prototype proves the riskiest design choice**; timeline validated | **report draft #1 due Nov 1** (mid-sprint) |
+| **Sprint 3** | Oct 26 – Nov 8 | Design documents **with diagrams** (architecture, system context, ER/EER, DFD); **prototype proves the riskiest design choice**; spring timeline drafted | **report draft #1 due Nov 1** (mid-sprint) |
 | **Sprint 4** | Nov 9 – Nov 22 | Integration: proposal/report polished end-to-end; **prototype stable + demoable, README run instructions verified** | **report draft #2 due Nov 29** (the sprint's output) |
 
 Plan a healthy mix each sprint — document stories AND prototype stories.

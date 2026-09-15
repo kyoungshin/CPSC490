@@ -24,19 +24,22 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 
-# The 11 headings of the CPSC 490 proposal template, in order.
-REQUIRED_PROPOSAL_HEADINGS = [
-    "Abstract",
-    "Introduction",
-    "Related Work",
-    "Problem Statements",
-    "Goals and Objectives",
-    "Proposed Approaches",
-    "Required Environment, Resources, and Planned Activities",
-    "Project Outcomes",
-    "Project Timeline",
-    "AI Usage",
-    "References",
+# The sections of the CPSC 490 proposal template, with the template's own
+# numbering (0 Abstract; 1 Introduction with 1.1-1.3; 2 onward). Headings in
+# proposal.md must match these so the document converts into the Word
+# template for Canvas submission.
+REQUIRED_PROPOSAL_SECTIONS = [
+    ("0", "Abstract"),
+    ("1", "Introduction"),
+    ("1.1", "Related Work"),
+    ("1.2", "Problem Statements"),
+    ("1.3", "Goals and Objectives"),
+    ("2", "Proposed Approaches"),
+    ("3", "Required Environment, Resources, and Planned Activities"),
+    ("4", "Project Outcomes"),
+    ("5", "Project Timeline"),
+    ("6", "AI Usage"),
+    ("7", "References"),
 ]
 
 # Files that are meant to contain 〈placeholders〉 — templates and examples.
@@ -60,6 +63,9 @@ SECRET_PATTERNS = [
     (r"-----BEGIN (?:RSA |OPENSSH |EC )?PRIVATE KEY-----", "private key block"),
     (r"(?i)(password|passwd|secret|api[_-]?key)\s*[:=]\s*['\"][^'\"\s]{8,}['\"]", "hardcoded credential"),
 ]
+
+# Fenced code blocks: links inside them are documented examples, not links.
+FENCE_RE = re.compile('^ {0,3}(?:`{3,}|~{3,}).*?^ {0,3}(?:`{3,}|~{3,})', re.S | re.M)
 
 PLACEHOLDER_PATTERNS = [r"〈[^〉]{0,80}〉", r"\bTODO\b", r"\bFIXME\b", r"(?i)lorem ipsum"]
 
@@ -107,16 +113,22 @@ def gate_proposal_structure() -> None:
     headings = [re.sub(r"\s+", " ", m.group(1)).strip()
                 for m in re.finditer(r"^#{1,3}\s+(.+?)\s*$", text, re.M)]
     lowered = [h.lower() for h in headings]
-    missing = [h for h in REQUIRED_PROPOSAL_HEADINGS if h.lower() not in lowered]
+    found, missing = [], []
+    for num, title in REQUIRED_PROPOSAL_SECTIONS:
+        accepted = (f"{num} {title}".lower(), f"{num}. {title}".lower())
+        hit = next((h for h in lowered if h in accepted), None)
+        if hit is None:
+            missing.append(f"{num}. {title}")
+        else:
+            found.append(lowered.index(hit))
     if missing:
-        fail(g, "proposal is missing required section(s): " + ", ".join(missing))
-    # order check on the ones that are present
-    present = [h for h in REQUIRED_PROPOSAL_HEADINGS if h.lower() in lowered]
-    positions = [lowered.index(h.lower()) for h in present]
-    if positions != sorted(positions):
+        fail(g, "proposal is missing section(s), numbered exactly as the Word "
+                "template does: " + "; ".join(missing))
+    if found != sorted(found):
         warn(g, "proposal sections are out of template order")
-    if not failures:
-        print(f"  {g}: all {len(REQUIRED_PROPOSAL_HEADINGS)} template sections present")
+    if not missing:
+        print(f"  {g}: all {len(REQUIRED_PROPOSAL_SECTIONS)} template sections "
+              f"present with template numbering")
 
 
 # ---------------------------------------------------------------- gate 2
@@ -129,7 +141,9 @@ def gate_traceability() -> None:
     """
     g = "G2 traceability"
     docs = [p for p in (ROOT / "docs").rglob("*.md")
-            if p.parent.name in ("specs", "design")] if (ROOT / "docs").exists() else []
+            if p.parent.name in ("specs", "design")
+            and not p.stem.isupper()  # ALL-CAPS = course reference doc, not a deliverable
+            ] if (ROOT / "docs").exists() else []
     if not docs:
         warn(g, "no documents in docs/specs or docs/design yet")
         return
@@ -197,6 +211,8 @@ def gate_links() -> None:
     broken = 0
     for p in md_files():
         text = p.read_text(encoding="utf-8", errors="replace")
+        # strip fenced code blocks: links inside them are examples, not links
+        text = re.sub(FENCE_RE, "", text)
         for m in re.finditer(r"\[[^\]]*\]\(([^)]+)\)", text):
             target = m.group(1).strip()
             if re.match(r"^(https?:|mailto:|#)", target):
@@ -262,11 +278,35 @@ def gate_placeholders() -> None:
         print(f"  {g}: no stray placeholders outside templates")
 
 
+# ---------------------------------------------------------------- gate 7
+def gate_diagrams() -> None:
+    """G7 - every design document contains a diagram.
+
+    Catches: design-by-prose. A design nobody drew is a design nobody
+    checked; structure is the thing readers cannot reconstruct from
+    paragraphs. See docs/design/DIAGRAMS.md.
+    """
+    g = "G7 diagrams"
+    d = ROOT / "docs" / "design"
+    docs = [p for p in d.glob("*.md") if p.name != "DIAGRAMS.md"] if d.exists() else []
+    if not docs:
+        warn(g, "no design documents yet (expected by Sprint 3)")
+        return
+    for p in docs:
+        text = p.read_text(encoding="utf-8", errors="replace")
+        has_mermaid = "```mermaid" in text
+        has_image = re.search(r"!\[[^\]]*\]\([^)]+\)", text) is not None
+        if not (has_mermaid or has_image):
+            fail(g, f"{p.relative_to(ROOT).as_posix()} has no diagram - embed a "
+                    f"```mermaid block or an exported image (docs/design/DIAGRAMS.md)")
+    print(f"  {g}: checked {len(docs)} design document(s)")
+
+
 def main() -> int:
     strict = "--strict" in sys.argv
     print("CPSC 490 repository harness\n" + "=" * 34)
     for gate in (gate_proposal_structure, gate_traceability, gate_issue_refs_exist,
-                 gate_links, gate_secrets, gate_placeholders):
+                 gate_links, gate_secrets, gate_diagrams, gate_placeholders):
         gate()
     print()
     for w in warnings:

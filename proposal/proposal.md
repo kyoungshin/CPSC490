@@ -1,76 +1,141 @@
-# Project Proposal — <Project Title>
+# Project Proposal — 〈Project Title〉
 
 **CPSC 490 Undergraduate Seminar in Computer Science — Proposal for Capstone Project**
-**Group <N> — <Group Name>** · Sponsor: <code, e.g. RTX-3, or "independent">
-Members: <Name (GitHub username)>, …
+Department of Computer Science, California State University, Fullerton
 
-> Skeleton follows the course template exactly. Replace every 〈angle-bracket〉
-> block. Keep this file the single source of truth — the Word document you
-> submit to Canvas must match it.
+**Group 〈N〉 — 〈Group Name〉** · Sponsor: 〈RTX-3 / EL-1 / SNX-n / independent〉
+Authors: 〈Last, First (GitHub username)〉, 〈…〉
+Date: 〈YYYY-MM-DD〉
 
-## Abstract
+> **This file is the proposal document, not a README.** Section numbers and
+> titles below match the course Word template exactly, so it converts
+> cleanly for Canvas submission. Write continuous academic prose — no task
+> lists, no emoji, no repo jargon. Keep figures numbered and referenced.
+> Delete this note and every 〈bracket〉 before submitting.
+>
+> **Converting to the Word template** (keeps the template's styles):
+>
+> ```bash
+> pandoc proposal/proposal.md -o proposal.docx \
+>   --reference-doc="CPSC 490 Project Proposal Template Fall 2026.docx"
+> ```
+>
+> Then open it in Word, check the heading numbering and figure placement,
+> and submit that file. If your team would rather write in Word directly,
+> commit the `.docx` here as well — but keep this Markdown copy current,
+> because it is what review and CI can actually read.
 
-〈150–250 words: problem, approach, expected outcome.〉
+---
 
-## Introduction
+## 0. Abstract
 
-〈Context and motivation. Why does this project matter, and to whom?〉
+〈150–250 words: the problem, your approach, and the expected outcome. Written
+last, read first.〉
 
-## Related Work
+## 1. Introduction
 
-〈Survey of existing solutions/papers/products; what gap remains. Cite via [n].〉
+〈Context and motivation. What is the setting, who has this problem, and why
+does solving it matter? End with a short roadmap of the document.〉
 
-## Problem Statements
+### 1.1 Related Work
 
-〈Briefly state the problem to solve in this project.〉
+〈Survey existing solutions, products, and published work, and say what gap
+remains for your project. Cite with bracketed numbers matching §7 — every
+reference must be a source your team has actually read.〉
 
-## Goals and Objectives
+### 1.2 Problem Statements
 
-Each **goal is an Epic** and each **objective is a User Story** on our issue
-board (see the repository README §4). Example of the required format:
+〈State the problem this project solves, precisely enough to be falsifiable.
+One paragraph per distinct problem; number them P1, P2, … if there are
+several so later sections can refer back.〉
+
+### 1.3 Goals and Objectives
+
+Each **goal** is tracked as an **Epic** issue and each **objective** under it
+as a **User Story** issue in the team repository (see the repository README
+§4). Reference the issue numbers so the document and the board stay in step.
 
 - **Goal 1: Secure account management** (Epic #1)
   - Objective 1.1: As a member, I want to register and log in, so that my
     data is private. (#2)
   - Objective 1.2: As a reviewer, I want a runnable login prototype, so that
-    the riskiest flow is proven. (#3)
+    the riskiest flow is proven early. (#3)
   - Objective 1.3: As a developer, I want a documented architecture, so that
-    implementation in 491 is unambiguous. (#4)
+    implementation in CPSC 491 is unambiguous. (#4)
 - **Goal 2: 〈your second goal〉** (Epic #〈n〉)
-  - Objective 2.1: 〈…〉 (#〈n〉)
+  - Objective 2.1: 〈As a …, I want …, so that …〉 (#〈n〉)
 
-*(Goal 1 above is the live example in this repository — issues #1–#4 and the
-board show exactly these items with owner, sprint, priority, LOE, and
-points. Replace it with your own goals.)*
+〈Goal 1 above is the live example in this repository — issues #1–#4 and the
+project board show exactly these items with owner, sprint, priority, level of
+effort, and story points. Replace it with your own goals and objectives.〉
 
-## Proposed Approaches
+## 2. Proposed Approaches
 
-〈Candidate approaches, trade-offs, and the chosen direction with rationale.〉
+〈The candidate approaches you considered, the trade-offs between them, and
+the direction you chose with the reasoning that decided it. Where a choice is
+still open, say so and say when it will be closed.〉
 
-## Required Environment, Resources, and Planned Activities
+## 3. Required Environment, Resources, and Planned Activities
 
-〈Software development process, languages/frameworks, data, hardware, sponsor
-resources; the activities that achieve the stated goals.〉
+〈Development process, languages and frameworks, datasets, hardware, cloud
+services, sponsor-provided resources and access, and the activities that will
+achieve the stated goals.〉
 
-## Project Outcomes
+**Diagrams belong in this section.** At minimum include a high-level
+architecture diagram and a system (context) diagram; add the ER/EER model and
+a data-flow diagram where they help the reader understand what you are
+building and what it depends on. Draw them with any graphical tool
+(Lucidchart, draw.io, Miro, Mermaid, ERDPlus, Figma), keep the authoritative
+copies in `docs/design/` with both editable source and exported image, and
+reference them here.
 
-〈What exists at the end: deliverables, measurable success criteria.〉
+〈Number every figure, caption it, and point at it from the prose — "Figure 1
+shows the three deployment tiers and the trust boundary between them." A
+figure the text never mentions is decoration. See `docs/design/DIAGRAMS.md`
+for tools, file conventions, and the rule that every box and arrow must be
+verified against reality.〉
 
-## Project Timeline
+## 4. Project Outcomes
 
-| Sprint | Dates | Planned epics / stories |
-|---|---|---|
-| Sprint 1 | Sep 28 – Oct 11 | 〈…〉 |
-| Sprint 2 | Oct 12 – Oct 25 | 〈…〉 |
-| Sprint 3 | Oct 26 – Nov 8 | 〈…〉 |
-| Sprint 4 | Nov 9 – Nov 22 | 〈…〉 |
+〈What will exist at the end: concrete deliverables and the measurable
+criteria by which each is judged complete. Distinguish what this semester
+produces (proposal, specifications, designs, prototype) from what the
+implementation semester produces.〉
 
-## AI Usage
+## 5. Project Timeline
 
-〈Which AI tools the team uses, for what, and how outputs are verified.〉
+〈**This is the plan for CPSC 491 next semester — the implementation
+timeline, not this semester's proposal work.** Lay out the spring schedule:
+what gets built in each phase, in what order, with which dependencies and
+milestones, and who owns each area. Show it as a table or a Gantt chart, and
+state the assumptions it rests on (sponsor availability, data access,
+hardware).〉
 
-## References
+| Phase / Sprint (Spring) | Dates | Planned work | Deliverable |
+|---|---|---|---|
+| 〈Sprint 1〉 | 〈…〉 | 〈…〉 | 〈…〉 |
+| 〈Sprint 2〉 | 〈…〉 | 〈…〉 | 〈…〉 |
+| 〈Sprint 3〉 | 〈…〉 | 〈…〉 | 〈…〉 |
+| 〈Sprint 4〉 | 〈…〉 | 〈…〉 | 〈…〉 |
 
-[1] 〈author, title, venue, year〉
-[2] 〈…〉
-[3] 〈For a web source, specify the URL plus date accessed〉
+〈Do **not** put this fall's four proposal sprints here — those live on the
+project board and in `docs/sprint-reviews/`. This section answers "how will
+the project actually be built next semester?"〉
+
+## 6. AI Usage
+
+〈Which AI tools the team used, for what parts of this proposal and the
+prototype, and how the output was verified. Be specific and honest: naming
+the tool is not disclosure — naming what it drafted and what you checked is.
+The course requires human-in-the-loop practice, so describe the verification,
+not just the generation.〉
+
+## 7. References
+
+〈Number references in the order first cited; cite them in the text as [1],
+[2]. Every entry must be a source a team member has actually read and can
+produce on request.〉
+
+[1] 〈Author(s), "Title," Venue/Publisher, Year.〉
+[2] 〈Author(s), "Title," Venue/Publisher, Year. DOI or URL.〉
+[3] 〈For a web source: Author/Organization, "Title," URL, accessed YYYY-MM-DD.〉
