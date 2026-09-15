@@ -384,8 +384,11 @@ on `main` — all in
 **Course AIDLC materials** are in the repository so everything lives in one
 place: [`docs/aidlc/lectures/`](docs/aidlc/lectures/) (Lecture 1 From SDLC to
 AIDLC / HITL vs HOTL · Lecture 2 Prompt Engineering · Lecture 3 Harness Loop
-Engineering · Lecture 4 Benchmarks, Quality and ROI) and the
-[AIDLC Field Guide](docs/aidlc/AIDLC-Field-Guide.html).
+Engineering · Lecture 4 Benchmarks, Quality and ROI) and the **AIDLC Field
+Guide**, which reads in your browser here:
+**<https://kyoungshin.github.io/CPSC490/aidlc/AIDLC-Field-Guide.html>**
+(the [file in the repo](docs/aidlc/AIDLC-Field-Guide.html) is the same
+document as source).
 
 ## 8. How sprint performance is measured
 

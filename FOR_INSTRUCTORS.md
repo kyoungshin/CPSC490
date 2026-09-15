@@ -36,6 +36,7 @@ the material and that authorship stays clear. Once granted, please cite:
 | [`.github/scripts/check_repo.py`](.github/scripts/check_repo.py) | the harness: 9 gates, standard library only, same command locally and in CI |
 | [`.github/workflows/ci.yml`](.github/workflows/ci.yml) | runs the harness, the prototype's tests, and a PR-discipline check |
 | [`docs/aidlc/`](docs/aidlc/) | the AI-use curriculum: the seven gates, a prompt library, harness/loop engineering, a harness log, four lecture decks, and a sourced evidence appendix |
+| [AIDLC Field Guide](https://kyoungshin.github.io/CPSC490/aidlc/AIDLC-Field-Guide.html) | the four-week course companion, served via GitHub Pages (`docs/.nojekyll` keeps Jekyll from mangling the `{{…}}` prompt placeholders) |
 | [`docs/design/DIAGRAMS.md`](docs/design/DIAGRAMS.md) | which diagram answers which question, tools, and file conventions |
 | [`proposal/proposal.md`](proposal/proposal.md) | proposal skeleton matching our Word template section-for-section |
 | `docs/specs/`, `docs/design/`, `prototype/` | worked examples, not stubs — a real specification, a design doc with three Mermaid diagrams, and a runnable prototype with tests |
