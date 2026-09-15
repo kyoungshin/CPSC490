@@ -104,6 +104,11 @@ From your proposal's *Goals and Objectives*:
 - link every epic and story from proposal §2, and every task/bug/feature
   from proposal §4
 
+Also in week one: fill in [`docs/development-plan.md`](docs/development-plan.md)
+together — the team charter's accountability rules need **numbers**
+("misses 20% of meetings in a sprint → …"), because that is what lets anyone
+raise a problem later without it being personal.
+
 ## 6. Everyone: make your first real pull request (15 min)
 
 ```bash
@@ -140,6 +145,8 @@ read it all at once.
 | When you start design work | [`docs/design/DIAGRAMS.md`](docs/design/DIAGRAMS.md) — which diagram, which tool, where it lives |
 | When something keeps going wrong | [`docs/aidlc/loop-engineering.md`](docs/aidlc/loop-engineering.md) — harness building and the stopping rules |
 | At every sprint boundary | [`docs/sprint-reviews/sprint-1.md`](docs/sprint-reviews/sprint-1.md) — copy it for the new sprint |
+| Before your first review of someone's PR | [`docs/checklists.md`](docs/checklists.md) — what you review against, and name |
+| With the proposal, then every sprint | [`docs/development-plan.md`](docs/development-plan.md) — team charter with real triggers, QA owner, risk register |
 | The full reference | [`README.md`](README.md) — the complete setup guide |
 | When you want the research behind a rule | [`docs/aidlc/evidence.md`](docs/aidlc/evidence.md) — sources and measured failure rates |
 

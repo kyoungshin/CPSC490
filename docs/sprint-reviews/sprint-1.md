@@ -38,6 +38,28 @@ requirements during implementation?〉
 〈What the prototype can do at the end of this sprint that it couldn't at the
 start; how it was demonstrated.〉
 
+## Feedback we received, and what we did about it
+
+Every item of feedback from the instructor, the sponsor, or a reviewer gets a
+row. "We were told and did nothing" is a legitimate row — with a reason.
+
+| Feedback (source) | What we changed | Issue / PR |
+|---|---|---|
+| 〈advisor meeting, issue #n: "the ER model has no cardinality"〉 | 〈added cardinality and reviewed against checklist D4〉 | 〈#n / PR #n〉 |
+
+## Contribution snapshot
+
+Three metrics the team chose, per member. Not a grade — a conversation
+starter, and an early warning the team can act on itself.
+
+| Member | Meetings attended | Merged PRs | Issues closed | Reviews given |
+|---|---|---|---|---|
+| @〈user〉 | 〈n〉 | 〈n〉 | 〈n〉 | 〈n〉 |
+
+〈If one member is far below the others, say what the team is doing about it
+here — and note anything the numbers hide, e.g. pairing (use
+`Co-authored-by:` so it shows up), or a big unmerged branch.〉
+
 ## What we change next sprint
 
 - 〈one concrete process change, if any〉

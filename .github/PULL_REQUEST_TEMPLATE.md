@@ -24,3 +24,8 @@ Closes #<story>
 - [ ] No unrelated changes bundled in
 - [ ] AI-assisted commits carry an `Assisted-by:` trailer
 - [ ] Reviewed by a teammate who is not the author
+
+## Reviewer: which checklist items did you check?
+<!-- Reviewing is graded work. Name the items from docs/checklists.md you
+     actually checked, e.g. "C1, C3, C5 checked; C5 failed - see comment".
+     "LGTM" is not a review. -->

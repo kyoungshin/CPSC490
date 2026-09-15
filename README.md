@@ -72,6 +72,8 @@ CPSC490-G03-California/
 │   ├── design/             ← design documents + diagrams/ (§3, DIAGRAMS.md)
 │   ├── sprint-reviews/     ← one file per sprint boundary (§6 ritual)
 │   ├── git-workflow.md     ← Gitflow + CI/CD (§7)
+│   ├── development-plan.md ← team charter (quantified triggers) + risk register
+│   ├── checklists.md       ← what reviewers review against (§8)
 │   └── aidlc/              ← the seven gates, prompt library, harness log, lectures (§7)
 ├── prototype/              ← prototype v0: running proof-of-concept (due Sep 27)
 │   └── README.md           ← how to build/run it
@@ -295,7 +297,18 @@ proof-of-concept committed to this repository**. Keep prototype code in a
 is issue-tracked like everything else.
 
 Sprint ritual (30 minutes at each boundary, leader drives) — **write it down
-in `docs/sprint-reviews/sprint-N.md`** (template in the example repo):
+in `docs/sprint-reviews/sprint-N.md`** (template in the example repo), and
+**revisit [`docs/development-plan.md`](docs/development-plan.md)**: the team
+charter, the QA/harness owner rotation, and the risk register all change as
+the project does. A charter nobody revises is a charter nobody uses.
+
+Due with the proposal: the **development plan** — a team charter whose
+accountability rules carry *quantified triggers and real consequences*
+("misses 20% of meetings in a sprint → …"), a QA owner per sprint, your
+team's own AI rules, and a risk register. The numbers matter: when something
+goes wrong, nobody has to find the courage to accuse a teammate — they point
+at the rule everyone agreed to.
+
 - **Close out:** move finished stories to Done (via merged PRs — not by
   dragging cards); carry over or re-scope what didn't finish, with a
   one-line note on why.
@@ -390,6 +403,31 @@ At each sprint checkpoint the repository is reviewed against five metrics
 Red flags that cost points: unassigned or field-less issues, documents with
 no linked issue, one member with all the commits, a board updated only the
 night before review, "Done" columns full of unmerged work.
+
+**Three floors, published up front so nobody is surprised:**
+
+- **At least 2 merged contributions per member per sprint.** Blunt, but it is
+  the thing that separates a team from a solo project with spectators.
+- **Pull requests under ~10 files / 500 lines**, except by agreement. A PR
+  nobody can review is a PR nobody reviews.
+- **Unmerged work earns nothing.** If it is not merged by the sprint
+  boundary it carries over, with a reason, in the sprint review.
+
+**What I read at each sprint review**, beyond the board and the diffs:
+your `docs/sprint-reviews/sprint-N.md` — velocity, carry-overs *with
+reasons*, the **feedback-response table** (every item of feedback and what
+you changed; "we decided not to, because…" is a legitimate row), and the
+**contribution snapshot** (three metrics of your choosing, per member). The
+snapshot is not a grade; it is an early warning the team can act on itself.
+Research on capstone teams finds contribution is unequal in essentially
+every team and does not by itself predict quality — what matters is whether
+the team noticed and did something.
+
+**Reviewing is graded work.** Review against
+[`docs/checklists.md`](docs/checklists.md) and name the items you checked in
+the PR. "LGTM" is a ceremony, not a review; across published capstone
+research, how often teams performed agile ceremonies did not separate strong
+teams from weak ones — only how deeply they used them did.
 
 ---
 
