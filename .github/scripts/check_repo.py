@@ -132,6 +132,8 @@ def gate_proposal_structure() -> None:
     found, missing = [], []
     for num, title in REQUIRED_PROPOSAL_SECTIONS:
         accepted = (f"{num} {title}".lower(), f"{num}. {title}".lower())
+        if num == "0":   # the Word template leaves Abstract unnumbered
+            accepted += (title.lower(),)
         hit = next((h for h in lowered if h in accepted), None)
         if hit is None:
             missing.append(f"{num}. {title}")

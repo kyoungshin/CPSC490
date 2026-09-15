@@ -113,16 +113,21 @@ quote block; delete those blocks as you write.
 CI gate G1 checks these headings and their numbering, because the numbering
 is what makes the file convert cleanly into the Word template.
 
-**Converting for Canvas submission** — keep one source, submit the Word
-file:
+**Getting it into Word for Canvas.** The template numbers its headings
+automatically (a multilevel list: top-level sections at level 1, *Related
+Work* and *Problem Statements* at level 2), so do not end up with both its
+numbers and the ones typed in the Markdown. Most teams should simply **open
+the course template and paste their prose in section by section** — ten
+minutes, no surprises. If you prefer to convert, `pandoc` works
+(`winget install pandoc`):
 
-```bash
-pandoc proposal/proposal.md -o proposal.docx   --reference-doc="CPSC 490 Project Proposal Template Fall 2026.docx"
+```
+pandoc proposal/proposal.md -o proposal.docx --reference-doc="CPSC 490 Project Proposal Template Fall 2026.docx"
 ```
 
-Open the result in Word, check heading numbering and figure placement, and
-submit that. (Writing in Word instead is fine — but commit the `.docx` here
-*and* keep the Markdown current, since that is what review and CI can read.)
+…then in Word delete the typed `0.`/`1.`/`1.1` prefixes and set *Related
+Work* and *Problem Statements* to the template's level-2 heading. Either way,
+keep the Markdown copy current — it is what peer review and CI can read.
 
 Six sections need particular care:
 

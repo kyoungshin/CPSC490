@@ -15,17 +15,29 @@ Date: 〈YYYY-MM-DD〉
 > Each section below opens with the template's own guidance in a quote block.
 > **Delete the quote blocks and every 〈bracket〉 before submitting.**
 >
-> **Converting to the Word template** (keeps the template's styles):
+> **Getting this into the Word template for Canvas.** The template numbers
+> its headings **automatically** (a multilevel list: top-level sections at
+> level 1, *Related Work* and *Problem Statements* at level 2). The numbers
+> typed below exist so the repo copy is readable and checkable — so when you
+> move the text into Word, do not end up with both sets.
 >
-> ```bash
-> pandoc proposal/proposal.md -o proposal.docx \
->   --reference-doc="CPSC 490 Project Proposal Template Fall 2026.docx"
-> ```
+> The reliable route, and the one most teams should use: **open the course
+> template and paste your prose section by section**, leaving Word's own
+> numbering to do the numbering. Ten minutes, no surprises.
 >
-> Open the result in Word, check heading numbering and figure placement, and
-> submit that file. If your team prefers to write in Word directly, commit
-> the `.docx` here too — but keep this Markdown copy current, because it is
-> what peer review and CI can actually read.
+> If you prefer to convert, `pandoc` can do it (install with
+> `winget install pandoc`):
+>
+>     pandoc proposal/proposal.md -o proposal.docx --reference-doc="CPSC 490 Project Proposal Template Fall 2026.docx"
+>
+> Then in Word: delete the typed `0.` / `1.` / `1.1` prefixes (Word re-adds
+> them from the list), and set *Related Work* and *Problem Statements* to the
+> template's level-2 heading so they number as 1.1 and 1.2. Check figure
+> placement, then submit.
+>
+> Either way, keep this Markdown copy current — it is what peer review and CI
+> can actually read. If your team writes in Word instead, commit the `.docx`
+> here as well.
 
 ---
 
