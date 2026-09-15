@@ -1,27 +1,48 @@
-CPSC 490 course scaffold — licensing
-====================================
+CPSC 490 course scaffold — copyright and licensing
+=================================================
 
-Two licences, because this repository holds two different kinds of thing.
+Copyright (c) 2026 **Kyoung Shin**
+Department of Computer Science, California State University, Fullerton
+Contact: kshin@fullerton.edu
 
-1. COURSE MATERIALS  (all Markdown documents, the AIDLC lecture slides in
-   docs/aidlc/lectures/, and the AIDLC Field Guide)
+All course materials, lecture slides, documents, templates, scripts and the
+AIDLC curriculum in this repository are the original work of Kyoung Shin,
+created for CPSC 490 Undergraduate Seminar in Computer Science. Sole author
+and copyright holder: Kyoung Shin.
 
-   Copyright (c) 2026 Kyoung Shin, Department of Computer Science,
-   California State University, Fullerton.
 
-   Licensed under the Creative Commons Attribution 4.0 International
-   licence (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/
+1. COURSE MATERIALS
+   (every Markdown document, the four AIDLC lecture decks in
+   docs/aidlc/lectures/, the AIDLC Field Guide, and all templates)
 
-   You may share and adapt these materials, including for your own course
-   and commercially, provided you give appropriate credit and indicate
-   whether changes were made.
+   Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+   International (CC BY-NC-SA 4.0):
+   https://creativecommons.org/licenses/by-nc-sa/4.0/
 
-2. CODE  (scripts/bootstrap.sh, .github/scripts/check_repo.py,
-   .github/workflows/ci.yml, prototype/, and the templates)
+   You may share and adapt these materials for **non-commercial** teaching
+   and research, provided you:
+     - give credit to Kyoung Shin (CSU Fullerton) and link back to this
+       repository,
+     - indicate any changes you made, and
+     - license your adaptation under the same terms.
 
-   MIT License
+   Commercial use — including paid training, bootcamps, or inclusion in a
+   commercial product or textbook — requires written permission from the
+   author: kshin@fullerton.edu
 
-   Copyright (c) 2026 Kyoung Shin
+   Suggested citation:
+
+       Shin, K. (2026). CPSC 490 AIDLC course scaffold: human-in-the-loop
+       AI-driven development for undergraduate capstone projects.
+       Department of Computer Science, California State University,
+       Fullerton. https://github.com/kyoungshin/CPSC490
+
+
+2. CODE
+   (scripts/bootstrap.sh, .github/scripts/check_repo.py,
+   .github/workflows/ci.yml, prototype/)
+
+   MIT License — Copyright (c) 2026 Kyoung Shin
 
    Permission is hereby granted, free of charge, to any person obtaining a
    copy of this software and associated documentation files (the
@@ -42,6 +63,7 @@ Two licences, because this repository holds two different kinds of thing.
    TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
    SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+
 Third-party content: the research appendix (docs/aidlc/evidence.md) cites
-external work under the citing conventions of academic fair use; those
-sources remain the property of their authors.
+external work under normal academic citation practice; those sources remain
+the property of their respective authors.

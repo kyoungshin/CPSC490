@@ -6,11 +6,21 @@ run their capstone proposal like a real software project: issues and a board,
 four 2-week sprints, Gitflow, GitHub Actions as an automated harness, and an
 explicitly **human-in-the-loop** AI policy.
 
-You are welcome to take it. Licensing is in [`LICENSE`](LICENSE) — course
-materials CC BY 4.0, code MIT — so adapt freely with attribution.
+**Author and copyright:** Kyoung Shin, Department of Computer Science,
+California State University, Fullerton — <kshin@fullerton.edu>. This
+curriculum, the AIDLC lecture series, and the harness are his original course
+work.
 
-Questions or improvements: open an issue, or contact Kyoung Shin
-(Department of Computer Science, CSUF).
+You are welcome to use it in your own teaching. See [`LICENSE`](LICENSE):
+course materials under **CC BY-NC-SA 4.0** (non-commercial, credit Kyoung
+Shin, share alike) and the code under MIT. Commercial use needs written
+permission. If you adopt or adapt it, a note to <kshin@fullerton.edu> is
+appreciated — and please cite:
+
+> Shin, K. (2026). *CPSC 490 AIDLC course scaffold: human-in-the-loop
+> AI-driven development for undergraduate capstone projects.* Department of
+> Computer Science, California State University, Fullerton.
+> https://github.com/kyoungshin/CPSC490
 
 ---
 
