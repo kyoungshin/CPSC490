@@ -7,6 +7,24 @@
 > This is what makes **Transparency** and carry-over decisions visible at
 > grading time — don't reconstruct it later.
 
+## Progress this sprint — the substance
+
+This is what the sprint's 5% is assessed on. Be concrete and link things.
+
+**Proposal moved:**
+| Section | What changed | Where |
+|---|---|---|
+| 〈§1.1 Related Work〉 | 〈comparative table added, 6 sources〉 | 〈PR #n〉 |
+| 〈docs/specs/x.md〉 | 〈new specification for epic #n〉 | 〈PR #n〉 |
+
+**Prototype moved:** 〈what it can do now that it could not at the start of
+this sprint, and how you demonstrated it — a command, a screenshot, a test
+name.〉
+
+〈If either line is thin, say so plainly and say why. An honest "the sponsor
+data never arrived, so we built against a synthetic fixture instead" reads
+far better than a padded list.〉
+
 ## Velocity
 
 | | Story points | Stories |

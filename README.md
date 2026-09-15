@@ -18,7 +18,9 @@
 >
 > **The syllabus governs grades and deadlines.** Repository work is assessed
 > under the syllabus's **20% Prototype & repository practice — 5% per
-> sprint**; this guide adds no requirements of its own.
+> sprint**, and what earns it is **progress on the proposal and the
+> prototype**, evidenced in the repo. This guide adds no requirements of its
+> own.
 
 ---
 
@@ -428,14 +430,29 @@ document as source).
 > the evidence is visible to you before it is visible to me. The syllabus
 > governs.
 >
-> Practically: each sprint is worth the same 5%, and each is assessed on the
-> state of the repository **at that sprint's boundary** — not retroactively
-> at the end. A sprint you let slide is 5% you cannot earn back by working
-> twice as hard in the next one, and a sprint where the board, the documents
-> and the merged PRs tell one consistent story is 5% that needs no argument.
+> Practically: each sprint is worth the same 5%, assessed at that sprint's
+> **boundary** — not retroactively at the end of term. A sprint you let slide
+> is 5% you cannot earn back by working twice as hard in the next one. What
+> earns it is **progress on the proposal and the prototype**, evidenced in
+> the repository so it can be seen and attributed.
 
-At each sprint checkpoint I look at the repository through five lenses (the
-same ones that carry into CPSC 491's implementation sprints):
+**What is actually measured each sprint: progress.** Did the **proposal**
+move — new or improved sections, specifications, designs with diagrams — and
+did the **prototype** move — something it can do now that it could not at the
+start of the sprint? That is the substance, judged against the rubrics for
+those deliverables (§3 for the proposal, the checklists in
+[`docs/checklists.md`](docs/checklists.md) for specs, designs and code).
+
+The five lenses below are **how the repository evidences that progress** —
+they are not a substitute for it. A spotless board, perfect labels and a
+current sprint review, with a proposal and prototype that did not advance,
+does not earn the sprint's 5%. Equally, real progress that leaves no trail —
+no issues, no linked documents, one person's commits, nothing merged — cannot
+be assessed as a team's work even when the artifact is good. You need both:
+the movement, and the evidence of who moved it.
+
+At each sprint checkpoint I read the repository through five lenses (the same
+ones that carry into CPSC 491's implementation sprints):
 
 | Metric | What I look for in YOUR repo |
 |---|---|
