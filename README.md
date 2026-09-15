@@ -546,5 +546,22 @@ as fact is not.
 
 ---
 
+## 10. Sponsored projects and your industry mentor
+
+Nine projects from three companies — Edwards Lifesciences, RTX, and SonarX —
+are on offer this year, each with a named industry mentor who is your team's
+technical contact for both semesters.
+
+**→ [Sponsored projects: titles, summaries, and mentors](docs/sponsored-projects.md)**
+
+That page carries a condensed summary of every project (`EL-1`, `RTX-1`…
+`SNX-4`), the mentor and contact address for each company, what each sponsor
+says success looks like, and the etiquette for emailing a mentor — one voice
+per team, the instructor copied, questions batched, and **no sponsor data in
+the repository**. Read the original sponsor document in Canvas before you
+write proposal §1; the summary is a starting point, not a requirement set.
+
+---
+
 *Questions or a blocker with GitHub setup? Post in the course channel or
 bring it to the project meeting — do not lose sprint days to tooling.*
