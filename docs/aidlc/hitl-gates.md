@@ -91,7 +91,7 @@ harness — green; opened the two cited papers; ran `npm test` — 4 passing").
 
 ---
 
-## Gate 3 — CI harness: the automated gates (G1–G6)
+## Gate 3 — CI harness: the automated gates
 
 Pushing a branch and opening a PR runs `.github/workflows/ci.yml`. Each
 check is small on purpose so a red run tells you exactly what is wrong.
@@ -146,6 +146,51 @@ Reports leftover `〈…〉`, `TODO`, `FIXME`, lorem ipsum outside template file
 It is advisory because templates *should* have brackets — this example
 repository reports a few by design. In your repo the count should fall to
 zero as you fill things in; reviewers read this list at Gate 4.
+
+### G7 · every design document has a diagram
+Each of your own files in `docs/design/` must contain a ```mermaid block or
+an exported image.
+**Catches design-by-prose:** asked for a design document, an assistant
+writes four confident paragraphs about layers. Paragraphs hide the questions
+a picture forces you to answer — what calls what, and with what data.
+**Fix:** draw it. [`../design/DIAGRAMS.md`](../design/DIAGRAMS.md) says which
+diagram answers which question.
+
+### G8 · every issue is linked from the right proposal section
+Epics and user stories must be linked from proposal §2; every other work
+item — feature, enhancement, bug, task, sub-task — from §4.
+**Catches the document and the board drifting apart:** work the proposal
+never mentions is work your reader cannot see, and a proposal listing issues
+nobody filed is fiction. Both cost you *Traceability*.
+**Fix:** add the `#n` to the right section, or close the issue if it is not
+real work. While §2 or §4 is still the untouched skeleton the gate says so
+once instead of listing every issue.
+
+### G9 · every specification and design document is indexed in §4
+Proposal §4 is the index of your specifications and design documents.
+**Catches detail nobody can find:** a good specification that no reader of
+the proposal is ever pointed at may as well not exist — and §4 is the
+section that has to carry it.
+**Fix:** list the document under §4 with a one-line description.
+
+### G10 · every non-epic issue names a parent
+The chain is epic → user story → feature / enhancement / bug → task /
+sub-task, and nothing floats off it. Link a child with GitHub's
+**sub-issues** (*Create sub-issue* → *Add existing issue*) or name the
+parent's number under the issue's `## Epic` / `## Parent` heading.
+**Catches work nobody traced to an objective:** the whole reason for the
+chain is that a reader can open §2, pick a goal, and walk down to the
+smallest piece of work being done about it. One unparented issue breaks that
+walk, and it is usually a task somebody filed without asking which objective
+it serves.
+**Fix:** parent it. If nothing above it fits, that is the gate telling you
+something real — either the objective is missing from §2, or the issue is
+not project work.
+
+**G8, G9 and G10 are advisory on `feature → develop` and blocking into
+`main`.** Filing an issue mid-sprint and parenting or linking it an hour
+later costs you nothing; shipping a release whose document and board
+disagree is what they stop.
 
 ### Plus two job-level gates
 - **prototype** — installs and tests `prototype/` (Node or Python,

@@ -157,7 +157,12 @@ def collect(only: int | None, trace_scope: bool) -> list[dict]:
                 continue
             p = points(x)
             if p == 0:
-                r["unpointed"] += 1
+                # Only an objective is meant to carry points. A feature, task
+                # or sub-task without an `sp:` label is correct, not missing -
+                # its parent objective holds the estimate - so saying otherwise
+                # would scold every team that followed the rule.
+                if "user-story" in names:
+                    r["unpointed"] += 1
                 continue
             if x["number"] in rolled_up:
                 r["double_pointed"] += p     # its parent already carries these
@@ -176,7 +181,9 @@ def collect(only: int | None, trace_scope: bool) -> list[dict]:
             elif closed:
                 r["late"] += p
             else:
-                r["carried"] += p
+                r["carried"] += p       # still open: in flight, or carried
+                                        # over, depending on whether the
+                                        # sprint has ended (see the header)
         rows.append(r)
     return rows
 
@@ -195,9 +202,11 @@ def advise(rows: list[dict]) -> list[str]:
                        "user story, not its tasks (setup guide §4).")
     unpointed = sum(r["unpointed"] for r in rows)
     if unpointed:
-        quality.append(f"{unpointed} issue(s) carry no `sp:` label, so they are "
-                       "invisible to this report. Point every story at planning "
-                       "time.")
+        quality.append(f"{unpointed} user story/stories carry no `sp:` label, so "
+                       "they are invisible to this report. Point every objective "
+                       "at planning time. (Features, tasks and sub-tasks are "
+                       "*meant* to be unpointed - their objective holds the "
+                       "estimate.)")
 
     done = [r for r in rows if r["end"] and r["end"] < datetime.now(timezone.utc)
             and (r["committed"] + r["added_mid"]) > 0]
@@ -242,7 +251,8 @@ def main() -> int:
         print("No `Sprint N` milestones found — run scripts/bootstrap.sh first.")
         return 0
 
-    head = ["Sprint", "Window", "Committed", "Added mid", "Completed", "Carried", "Closed late", "Done %"]
+    head = ["Sprint", "Window", "Committed", "Added mid", "Completed",
+            "Open/carried", "Closed late", "Done %"]
     body = []
     for r in rows:
         total = r["committed"] + r["added_mid"]
@@ -258,6 +268,8 @@ def main() -> int:
         print("|" + "---|" * len(head))
         for row in body:
             print("| " + " | ".join(str(c) for c in row) + " |")
+        print("\n*Open/carried* is work still open: in flight while the sprint "
+              "runs, carried over once it has ended.\n")
         print("\n### What this says\n")
         for line in advise(rows):
             print(f"- {line}")

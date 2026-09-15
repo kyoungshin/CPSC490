@@ -181,8 +181,8 @@ Preview and Final Project Proposal Papers grow out of it.
 
 ## 4. Epics and user stories on the issue board
 
-CPSC 490 uses **GitHub Issues + one GitHub Projects board** (no Jira
-needed; 491 teams may move to Jira later — the discipline is identical).
+CPSC 490 uses **GitHub Issues + one GitHub Projects board** — everything
+lives in the repository, so there is no second tool to keep in step.
 
 **Epic = a Goal.** One issue per goal from *Goals and Objectives*.
 Label `epic`. An epic's body lists its user stories as a task list
@@ -496,7 +496,7 @@ when the table in `QUICKSTART.md` says to:
    (fabrication, plausible-but-wrong, requirement drift, scope creep,
    unverified claims, check-gaming) and, gate by gate, what catches each:
    framing criteria before prompting → your own verification → the CI
-   harness (G1–G6) → peer review → protected merge → sprint review.
+   harness → peer review → protected merge → sprint review.
 
 4. **[`docs/aidlc/loop-engineering.md`](docs/aidlc/loop-engineering.md) —
    the harness and the loop.** What a harness is (guides that steer before,
