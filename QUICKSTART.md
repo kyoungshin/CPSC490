@@ -64,7 +64,7 @@ gh auth refresh -s project,repo     # lets it create the board
 bash scripts/bootstrap.sh
 ```
 
-That creates all 17 labels, the four sprint milestones with dates, the
+That creates all 18 labels, the four sprint milestones with dates, the
 `develop` branch, branch protection on `main` and `develop`, and the project
 board with its Status / Story Points / Sprint fields. It is safe to re-run —
 it skips whatever already exists — and it prints what is left for you.

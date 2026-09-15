@@ -182,7 +182,9 @@ def gate_traceability() -> None:
             if p.parent.name in ("specs", "design") and is_deliverable(p)
             ] if (ROOT / "docs").exists() else []
     if not docs:
-        warn(g, "no documents in docs/specs or docs/design yet")
+        warn(g, "no specification or design documents of your own yet - the "
+                "example-* files that ship with the scaffold are reference, "
+                "not deliverables")
         return
     for p in docs:
         head = "\n".join(p.read_text(encoding="utf-8", errors="replace").splitlines()[:8])
@@ -334,7 +336,8 @@ def gate_diagrams() -> None:
     d = ROOT / "docs" / "design"
     docs = [p for p in d.glob("*.md") if is_deliverable(p)] if d.exists() else []
     if not docs:
-        warn(g, "no design documents yet (expected by Sprint 3)")
+        warn(g, "no design documents of your own yet (expected by Sprint 3; the "
+                "shipped example-design.md is reference)")
         return
     for p in docs:
         text = p.read_text(encoding="utf-8", errors="replace")
@@ -445,7 +448,8 @@ def gate_documents_linked() -> None:
             if p.parent.name in ("specs", "design") and is_deliverable(p)
             ] if (ROOT / "docs").exists() else []
     if not docs:
-        warn(g, "no specification or design documents yet")
+        warn(g, "nothing to index in section 4 yet - no specification or design "
+                "documents of your own")
         return
     section = _proposal_section(prop.read_text(encoding="utf-8", errors="replace"), "4")
     if section is None:
