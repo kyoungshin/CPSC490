@@ -15,35 +15,10 @@
 >
 > `scripts/bootstrap.sh` does the whole labels/milestones/branches/board
 > setup in one command. This document is the reference behind QUICKSTART.
-
-**Fall 2026 · Prof. Kyoung Shin · Department of Computer Science, CSUF**
-
-Author: **Kyoung Shin** · <kshin@fullerton.edu> · © 2026 — original course
-work, **all rights reserved** ([`LICENSE`](LICENSE)). Enrolled CPSC 490/491
-students may copy and build on this for their coursework; any other use,
-including adoption for another course, needs written permission — just ask.
-
-*Instructors from other courses: [`FOR_INSTRUCTORS.md`](FOR_INSTRUCTORS.md)
-covers what is here, what to change for your course, and how to cite it.*
-
-Every group runs its capstone like a real software project starting now.
-CPSC 490 has **two deliverables that grow together all semester**: the
-**project proposal** (with its specification and design documents) and a
-**working prototype** — proof-of-concept code that de-risks the proposal
-and evolves after every feedback round. Your team's GitHub repository holds
-both, plus the issue board that shows who did what, when. In CPSC 491
-(spring) the same repository carries you into full implementation, so set
-it up right once.
-
-> **New here? Start with [`QUICKSTART.md`](QUICKSTART.md)** — the whole setup
-> as ~25 numbered steps you can finish in an hour. This document is the
-> reference behind it: read a section when you need it, not all at once.
-> There is a "what to read, and when" table at the end of the quick start.
-
-> **Why this matters for your grade:** at each sprint checkpoint I review
-> your repository directly — issues, board, documents, and pull requests —
-> and score the team on five metrics (§7). A repo that makes your work
-> visible is a repo that earns points.
+>
+> **The syllabus governs grades and deadlines.** Repository work is assessed
+> under the syllabus's **20% Prototype & repository practice — 5% per
+> sprint**; this guide adds no requirements of its own.
 
 ---
 
@@ -281,7 +256,8 @@ points *now***, not later. Sum the points you pulled: that is your plan.
 move a card yourself when you branch, and to `In Review` when you open the
 pull request. **Nothing reaches `Done` except by a merged PR** — dragging a
 card to Done is not how work finishes, and a Done column full of unmerged
-cards is the fastest way to lose points on *transparency*.
+cards is the fastest way to undercut the *transparency* evidence behind
+that 20%.
 
 **At the sprint boundary** — in the Sprint Plan view, read the `Sprint 1`
 group: points planned versus points actually in `Done`. That ratio is your
@@ -327,6 +303,10 @@ folder; you do not need to write them.
 
 Four 2-week sprints between the proposal submission and the Preview Paper
 (dates may be adjusted in class — Canvas announcements win):
+
+Each sprint carries **5%** of the course grade (the syllabus's 20%
+*Prototype & repository practice*, split evenly across the four), assessed
+on the repository at that sprint's boundary.
 
 | Sprint | Dates (planned) | Focus | Syllabus anchor |
 |---|---|---|---|
@@ -438,10 +418,24 @@ Guide**, which reads in your browser here:
 (the [file in the repo](docs/aidlc/AIDLC-Field-Guide.html) is the same
 document as source).
 
-## 8. How sprint performance is measured
+## 8. What I look at in your repository
 
-At each sprint checkpoint the repository is reviewed against five metrics
-(the same rubric continues into CPSC 491's implementation sprints):
+> **Where this lands in your grade.** The syllabus allocates **20% to
+> Prototype & repository practice**, assessed **5% per sprint across the four
+> sprints**. That is the only grade item this page feeds — nothing here adds
+> an item, changes a weight, or creates a requirement the syllabus does not
+> have. It tells you *what I read in the repository* at each checkpoint, so
+> the evidence is visible to you before it is visible to me. The syllabus
+> governs.
+>
+> Practically: each sprint is worth the same 5%, and each is assessed on the
+> state of the repository **at that sprint's boundary** — not retroactively
+> at the end. A sprint you let slide is 5% you cannot earn back by working
+> twice as hard in the next one, and a sprint where the board, the documents
+> and the merged PRs tell one consistent story is 5% that needs no argument.
+
+At each sprint checkpoint I look at the repository through five lenses (the
+same ones that carry into CPSC 491's implementation sprints):
 
 | Metric | What I look for in YOUR repo |
 |---|---|
@@ -451,17 +445,22 @@ At each sprint checkpoint the repository is reviewed against five metrics
 | **Separation of duties** | PRs reviewed by a non-author; review rotation; work distribution isn't one person's repo |
 | **Relevance** | Sprint work maps to the proposal's Goals & Objectives — no orphan busywork, no goals with zero movement |
 
-Red flags that cost points: unassigned or field-less issues, documents with
-no linked issue, one member with all the commits, a board updated only the
-night before review, "Done" columns full of unmerged work.
+What makes the work hard to see — and therefore hard to credit:
+unassigned or field-less issues, documents with no linked issue, one member
+with all the commits, a board updated only the night before review, and
+"Done" columns full of unmerged work.
 
-**Three floors, published up front so nobody is surprised:**
+**Working agreements your team sets for itself.** These are *not* course
+rules and carry no separate grade; they are the defaults recommended in
+[`docs/development-plan.md`](docs/development-plan.md) and
+[`CONTRIBUTING.md`](CONTRIBUTING.md) because they make the five lenses above
+easy to satisfy. Adopt, adjust, or replace them in your charter:
 
-- **At least 2 merged contributions per member per sprint.** Blunt, but it is
-  the thing that separates a team from a solo project with spectators.
-- **Pull requests under ~10 files / 500 lines**, except by agreement. A PR
-  nobody can review is a PR nobody reviews.
-- **Unmerged work earns nothing.** If it is not merged by the sprint
+- at least **2 merged contributions per member per sprint**, so the project
+  is a team's and not one person's with spectators;
+- pull requests under about **10 files / 500 lines**, because a PR nobody can
+  review is a PR nobody reviews;
+- treat **unmerged work as unfinished** — if it is not merged by the sprint
   boundary it carries over, with a reason, in the sprint review.
 
 **What I read at each sprint review**, beyond the board and the diffs:
@@ -474,7 +473,8 @@ Research on capstone teams finds contribution is unequal in essentially
 every team and does not by itself predict quality — what matters is whether
 the team noticed and did something.
 
-**Reviewing is graded work.** Review against
+**Reviewing counts as real work in this course** — it is part of the
+*separation of duties* lens above, not a separate grade item. Review against
 [`docs/checklists.md`](docs/checklists.md) and name the items you checked in
 the PR. "LGTM" is a ceremony, not a review; across published capstone
 research, how often teams performed agile ceremonies did not separate strong

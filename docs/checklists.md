@@ -1,8 +1,10 @@
 # Review checklists
 
-Reviewing is graded work in this course, not a favour. These are the lists
-you review *against* — name the items you actually checked in your PR
-review, the way the pull-request template asks.
+Reviewing is real work in this course, not a favour. These are the lists you
+review *against* — name the items you actually checked in your PR review, the
+way the pull-request template asks. (No separate grade attaches to these
+checklists; the syllabus governs grades. They exist because a review that
+names what it checked is worth something to the author, and a "LGTM" is not.)
 
 Why it matters: across capstone research, how *often* teams performed agile
 ceremonies did not separate high from low performers — only how *deeply* they

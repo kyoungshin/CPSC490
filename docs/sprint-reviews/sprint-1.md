@@ -1,6 +1,9 @@
 # Sprint 1 review — 〈Sep 28 – Oct 11〉
 
-> One file per sprint, written at the sprint boundary (the setup guide's *The four sprints* section).
+> One file per sprint, written at the sprint boundary (the setup guide's
+> *The four sprints* section). This file, the board, and the merged PRs are
+> what the sprint's **5%** (of the syllabus's 20% *Prototype & repository
+> practice*) is assessed on — as they stand at the boundary.
 > This is what makes **Transparency** and carry-over decisions visible at
 > grading time — don't reconstruct it later.
 

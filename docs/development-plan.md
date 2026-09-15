@@ -59,10 +59,12 @@ just calls it?〉
 
 - Branching, PRs, review and CI: [`git-workflow.md`](git-workflow.md).
 - Issues, labels, sprints and the board: setup guide §4.
-- **Process floors we hold ourselves to** (see setup guide §8): every member
+- **Working agreements we set for ourselves** (recommended defaults, not
+  course requirements — see setup guide §8): every member
   makes at least **2 merged contributions per sprint**; pull requests stay
-  under **10 files / 500 lines** except by agreement; **unmerged work earns
-  nothing** — if it is not merged by the sprint boundary it carries over.
+  under **10 files / 500 lines** except by agreement; and we treat
+  **unmerged work as unfinished** — if it is not merged by the sprint
+  boundary it carries over.
 
 ## 3. Use of AI and LLMs
 
