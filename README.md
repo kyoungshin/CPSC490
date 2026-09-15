@@ -2,10 +2,11 @@
 
 > **This repository is itself the example.** It is laid out exactly the way
 > your group repository should be — browse the folders, the issue templates,
-> the labels, the `Sprint 1`–`Sprint 4` milestones, the sample issues, and
-> the [CPSC490 project board](https://github.com/users/kyoungshin/projects/1)
-> (5 columns + Story Points field, sample issues placed) — then build yours
-> the same way. Start with §1 below.
+> the labels, the `Sprint 1`–`Sprint 4` milestones, the sample issues (#1–#4),
+> and the [CPSC490 project board](https://github.com/users/kyoungshin/projects/1)
+> (Sprint Board + Sprint Plan table views; Status / Sprint / Story Points
+> fields) — then build yours the same way. Your team README starts from
+> [`README_TEMPLATE.md`](README_TEMPLATE.md). Start with §1 below.
 
 **Fall 2026 · Prof. Kyoung Shin · Department of Computer Science, CSUF**
 
@@ -57,18 +58,23 @@ CPSC490-G03-California/
 ├── docs/
 │   ├── specs/              ← specification documents (one .md per epic)
 │   └── design/             ← design documents (architecture, UI, data, APIs)
+│   └── sprint-reviews/     ← one file per sprint boundary (§6 ritual)
 ├── prototype/              ← prototype v0: running proof-of-concept (due Sep 27)
 │   └── README.md           ← how to build/run it
 └── .github/
     ├── ISSUE_TEMPLATE/
     │   ├── epic.md         ← §5
-    │   └── user-story.md   ← §5
+    │   ├── user-story.md   ← §5
+    │   ├── task.md         ← §5
+    │   └── bug.md          ← §5
     └── PULL_REQUEST_TEMPLATE.md
 ```
 
 **README.md** must contain: project title · sponsor code (e.g. RTX-3) if
 sponsored · member table (name, GitHub username, role) · leader/contact ·
-link to `proposal/proposal.md` · link to your Project board.
+link to `proposal/proposal.md` · link to your Project board. **Start from
+[`README_TEMPLATE.md`](README_TEMPLATE.md) in the example repository** —
+copy it to your repo as `README.md` and fill in the 〈brackets〉.
 
 ---
 
@@ -186,7 +192,9 @@ The single habit that most affects your sprint grade:
 4. **Author ≠ reviewer.** A different team member approves each PR before
    merge. Rotate reviewers; don't let one person approve everything.
 
-Suggested issue templates (put in `.github/ISSUE_TEMPLATE/`):
+Issue templates live in `.github/ISSUE_TEMPLATE/`. The example repository
+ships four ready to copy — `epic.md`, `user-story.md`, `task.md`, `bug.md`
+— plus `PULL_REQUEST_TEMPLATE.md`. The two required ones are:
 
 `epic.md`
 ```markdown
@@ -262,7 +270,8 @@ proof-of-concept committed to this repository**. Keep prototype code in a
 `prototype/` folder with a README that says how to run it; prototype work
 is issue-tracked like everything else.
 
-Sprint ritual (30 minutes at each boundary, leader drives):
+Sprint ritual (30 minutes at each boundary, leader drives) — **write it down
+in `docs/sprint-reviews/sprint-N.md`** (template in the example repo):
 - **Close out:** move finished stories to Done (via merged PRs — not by
   dragging cards); carry over or re-scope what didn't finish, with a
   one-line note on why.
@@ -296,12 +305,12 @@ night before review, "Done" columns full of unmerged work.
 ## 8. Quick-start checklist (do in week one of Sprint 1)
 
 - [ ] Repo created with course naming; all members + `kyoungshin` added
-- [ ] README filled in (team table, project title, links)
+- [ ] README filled in from `README_TEMPLATE.md` (team table, project title, links)
 - [ ] `proposal/proposal.md` skeleton committed with all 11 template headings
 - [ ] Issue templates + PR template committed
 - [ ] Labels created: `epic`, `user-story`, `priority: high/medium/low`, `loe: S/M/L`
 - [ ] Milestones created: `Sprint 1`–`Sprint 4` with dates
-- [ ] Project board created (5 columns + Story Points field), linked in README
+- [ ] Project board created (5 columns + Story Points number field + Sprint iteration field), linked in README
 - [ ] Every goal filed as an epic; every objective as a user story under it
 - [ ] Sprint 1 stories pulled into the `Sprint 1` milestone with owner/priority/LOE/points — including prototype stories, not only writing
 - [ ] Prototype v0 committed under `prototype/` with run instructions in its README

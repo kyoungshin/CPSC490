@@ -1,6 +1,6 @@
 # Design — 〈area, e.g. System Architecture〉
 
-> Epic: #1 · Stories: #3
+> Epic: #1 · Stories: #4
 > Owner: 〈name〉 · Sprint: 3 · Status: draft
 
 ## Overview
