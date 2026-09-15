@@ -95,7 +95,9 @@ for `develop`:
 - Require branches to be up to date before merging
 - Block force pushes
 
-**Labels** — Issues → Labels → New label. Create exactly these:
+**Labels** — Issues → Labels → New label. Add these 15 (GitHub pre-creates a
+few of its own such as `documentation` and `question`, so your total will be
+higher — leaving them alone is harmless):
 
 ```
 epic  user-story  feature  enhancement  bug  task  sub-task
