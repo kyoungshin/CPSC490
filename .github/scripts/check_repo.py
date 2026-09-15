@@ -319,13 +319,33 @@ def gate_diagrams() -> None:
 
 
 # ---------------------------------------------------------------- gate 8
-def gate_activities_linked() -> None:
-    """G8 - every epic and user story is linked from the proposal's
-    "Required Environment, Resources, and Planned Activities" section.
+SECTION_FOR_LABEL = {
+    # section number in proposal.md -> issue labels that must be linked there
+    "2": ("epic", "user-story"),
+    "4": ("feature", "enhancement", "bug", "task", "sub-task"),
+}
+SECTION_TITLE = {"2": "Goals and Objectives",
+                 "4": "Required Environment, Resources, and Planned Activities"}
 
-    Catches: the board and the document drifting apart. Planned activities
-    ARE the issues; a story nobody listed in the proposal is work the reader
-    cannot see, and a proposal that lists work nobody filed is fiction.
+
+def _proposal_section(text: str, num: str) -> str | None:
+    """Return the body of '## <num>. <title>' up to the next '## ' heading."""
+    pat = r"^##\s+" + re.escape(num) + r"\.?\s+.*?$(.*?)(?=^##\s|\Z)"
+    m = re.search(pat, text, re.M | re.S)
+    return m.group(1) if m else None
+
+
+def gate_activities_linked() -> None:
+    """G8 - every issue is linked from the right proposal section.
+
+    Section 2 (Goals and Objectives) carries the epics and user stories -
+    the what. Section 4 (Required Environment, Resources, and Planned
+    Activities) carries every other work item - feature, enhancement, bug,
+    task, sub-task - the how.
+
+    Catches: the board and the document drifting apart. An issue the proposal
+    never mentions is work the reader cannot see; a proposal listing work
+    nobody filed is fiction.
     """
     g = "G8 activities-linked"
     repo = os.environ.get("GITHUB_REPOSITORY")
@@ -337,37 +357,40 @@ def gate_activities_linked() -> None:
     if not prop.exists():
         return  # G1 already reported it
     text = prop.read_text(encoding="utf-8", errors="replace")
-    m = re.search(r"^##\s+4\.?\s+Required Environment.*?$(.*?)(?=^##\s|\Z)",
-                  text, re.M | re.S)
-    if not m:
-        fail(g, "could not find section 4 (Required Environment, Resources, and "
-                "Planned Activities) in proposal/proposal.md")
-        return
-    section = m.group(1)
-    linked = {int(n) for n in re.findall(r"#(\d{1,5})", section)}
-    linked |= {int(n) for n in re.findall(r"/issues/(\d{1,5})", section)}
-    missing = []
-    for label in ("epic", "user-story"):
-        url = (f"https://api.github.com/repos/{repo}/issues"
-               f"?state=open&labels={label}&per_page=100")
-        req = urllib.request.Request(url, headers={
-            "Authorization": f"Bearer {token}", "User-Agent": "cpsc490-harness",
-            "Accept": "application/vnd.github+json"})
-        try:
-            with urllib.request.urlopen(req, timeout=20) as r:
-                for issue in json.load(r):
-                    if "pull_request" in issue:
-                        continue
-                    if issue["number"] not in linked:
-                        missing.append(f'#{issue["number"]} ({label}) "'
-                                       f'{issue["title"][:50]}"')
-        except Exception as e:
-            warn(g, f"could not list {label} issues: {e}")
-            return
-    for mi in sorted(missing):
-        fail(g, f"not linked from proposal section 4: {mi}")
-    print(f"  {g}: {len(linked)} issue link(s) in section 4, "
-          f"{len(missing)} unlinked epic/story")
+    total_links = 0
+    unlinked = 0
+    for num, labels in SECTION_FOR_LABEL.items():
+        section = _proposal_section(text, num)
+        if section is None:
+            fail(g, f"could not find section {num} ({SECTION_TITLE[num]}) in "
+                    f"proposal/proposal.md")
+            continue
+        linked = {int(n) for n in re.findall(r"#(\d{1,5})", section)}
+        linked |= {int(n) for n in re.findall(r"/issues/(\d{1,5})", section)}
+        total_links += len(linked)
+        for label in labels:
+            url = (f"https://api.github.com/repos/{repo}/issues"
+                   f"?state=open&labels={label}&per_page=100")
+            req = urllib.request.Request(url, headers={
+                "Authorization": f"Bearer {token}", "User-Agent": "cpsc490-harness",
+                "Accept": "application/vnd.github+json"})
+            try:
+                with urllib.request.urlopen(req, timeout=20) as r:
+                    issues = json.load(r)
+            except Exception as e:
+                warn(g, f"could not list '{label}' issues: {e}")
+                continue
+            for issue in issues:
+                if "pull_request" in issue:
+                    continue
+                if issue["number"] not in linked:
+                    unlinked += 1
+                    fail(g, f'#{issue["number"]} ({label}) "{issue["title"][:45]}" '
+                            f'is not linked from proposal section {num} '
+                            f'({SECTION_TITLE[num]})')
+    if not unlinked:
+        print(f"  {g}: {total_links} issue link(s) across sections 2 and 4, "
+              f"nothing unlinked")
 
 
 def main() -> int:

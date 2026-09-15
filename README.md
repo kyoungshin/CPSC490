@@ -2,7 +2,7 @@
 
 > **This repository is itself the example.** It is laid out exactly the way
 > your group repository should be — browse the folders, the issue templates,
-> the labels, the `Sprint 1`–`Sprint 4` milestones, the sample issues (#1–#4),
+> the labels, the `Sprint 1`–`Sprint 4` milestones, the sample issues (#1–#5),
 > and the [CPSC490 project board](https://github.com/users/kyoungshin/projects/1)
 > (Sprint Board + Sprint Plan table views; Status / Sprint / Story Points
 > fields) — then build yours the same way. Your team README starts from
@@ -120,18 +120,21 @@ submit that. (Writing in Word instead is fine — but commit the `.docx` here
 Three sections need particular care:
 
 - **2 Goals and Objectives** — each *goal* is an **Epic** issue, each
-  *objective* under it a **User Story** issue (§4). Cite the issue numbers in
-  the prose so the document and the board stay in step.
+  *objective* under it a **User Story** issue (§4). **Every epic and user
+  story is linked from this section**, so the goals in the document and the
+  work on the board cannot drift apart.
 - **4 Required Environment, Resources, and Planned Activities** — two things
   live here. First, your **diagrams**: high-level architecture and
   system/context at minimum, plus ER/EER and data-flow views where they earn
   their place. Keep the authoritative copies in `docs/design/` (editable
   source *and* exported image) and reference them here — tools and
   conventions in [`docs/design/DIAGRAMS.md`](docs/design/DIAGRAMS.md).
-  Second, **every epic and user story must be linked from this section** as
-  the planned-activities inventory, so a reader can walk from the proposal to
-  the issue to the document or code it produced. Gate G8 fails if an epic or
-  story exists that this section does not link.
+  Second, the **planned-activities inventory**: this section links every
+  *other* work item — **feature, enhancement, bug, task, sub-task** — each
+  traceable to the objective it serves (epics and stories themselves are
+  linked from §2). Together the two sections give a reader every planned
+  activity in one place. Gate G8 fails if an issue of either kind exists that
+  its section does not link.
 - **5 Project Outcomes** — one or two paragraphs of prose explaining the
   outcome overall (not a checklist): what will exist when the project is
   done, the deliverables named inside those paragraphs, and briefly what

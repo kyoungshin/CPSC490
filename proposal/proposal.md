@@ -90,8 +90,11 @@ later sections can refer back.〉
 > when you turn in your final project report.
 
 Each **goal** is tracked as an **Epic** issue and each **objective** as a
-**User Story** issue in the team repository (repository README §4). Cite the
-issue numbers so this document and the board stay in step.
+**User Story** issue in the team repository (repository README §4).
+**Every epic and user story in the repository is linked from this section** —
+CI gate G8 fails if one exists that this section does not link. That is what
+keeps the goals in this document and the work on the board from drifting
+apart.
 
 - **Goal 1: Secure account management** (Epic #1)
   - Objective 1.1: As a member, I want to register and log in, so that my
@@ -142,22 +145,19 @@ verified against reality.〉
 
 ### Planned activities — the work items
 
-**Every epic and user story in the repository is linked from here.** This is
-the planned-activities inventory: it ties the document to the issue board, so
-a reader can follow any activity from this proposal to the issue, to the
-document or code it produced, to the pull request that merged it. CI gate G8
-fails if an epic or story exists that this section does not link.
+The goals and objectives live in §2 as epics and user stories. **This section
+links every *other* work item: features, enhancements, bugs, tasks, and
+sub-tasks** — the concrete activities that deliver those objectives. CI gate
+G8 fails if such an issue exists that this section does not link.
 
-| Issue | Type | Activity | Owner | Sprint |
-|---|---|---|---|---|
-| [#1](../../issues/1) | epic | Secure account management | 〈owner〉 | — |
-| [#2](../../issues/2) | story | Register and log in (specification) | 〈owner〉 | Sprint 1 |
-| [#3](../../issues/3) | story | Runnable login prototype | 〈owner〉 | Sprint 1 |
-| [#4](../../issues/4) | story | Documented architecture | 〈owner〉 | Sprint 3 |
+| Issue | Type | Activity | Parent | Owner | Sprint |
+|---|---|---|---|---|---|
+| [#5](../../issues/5) | task | Stand up the prototype login endpoint | #3 | 〈owner〉 | Sprint 1 |
+| 〈#n〉 | 〈feature/enhancement/bug/task/sub-task〉 | 〈…〉 | 〈#story〉 | 〈…〉 | 〈…〉 |
 
-〈Replace these rows with your own epics and stories, and keep the table
-current as you file new ones — it is the single place a reader sees all
-planned activities at once.〉
+〈Replace these rows with your own, and keep the table current as you file new
+issues — with §2 it gives a reader every planned activity in one place, each
+traceable to the objective it serves.〉
 
 ## 5. Project Outcomes
 
