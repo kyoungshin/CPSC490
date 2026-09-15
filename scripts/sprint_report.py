@@ -79,6 +79,23 @@ def task_children(body: str | None) -> set:
     return {int(n) for n in TASK_CHILD_RE.findall(body or "")}
 
 
+def sub_issue_children(number: int) -> set:
+    """Issue numbers GitHub records as native sub-issues of this issue.
+
+    The "Create sub-issue" button in the GitHub UI makes a real relationship
+    rather than a checklist line, so both have to be read or a team using the
+    button would double-count without being told. Access can fail harmlessly
+    (older API, restricted token); task lists still cover that case.
+    """
+    try:
+        kids = api(f"/issues/{number}/sub_issues?per_page=100")
+    except SystemExit:
+        return set()
+    if not isinstance(kids, list):
+        return set()
+    return {k["number"] for k in kids if isinstance(k, dict) and "number" in k}
+
+
 def when(value: str | None) -> datetime | None:
     if not value:
         return None
@@ -118,13 +135,16 @@ def collect(only: int | None, trace_scope: bool) -> list[dict]:
                   if "pull_request" not in x]
 
         # Points belong to the item the team COMMITS to the sprint - normally
-        # the user story. If a pointed story also has pointed sub-issues, a
+        # the user story. If a pointed story also has pointed children, a
         # plain sum counts the same work twice, so children of a pointed
         # parent are rolled up into it and reported as a labelling fix.
+        # Hierarchy is read BOTH ways teams express it: `- [ ] #12` task
+        # lists and GitHub's native sub-issues.
         rolled_up = set()
         for x in issues:
             if points(x) > 0:
                 rolled_up |= task_children(x.get("body"))
+                rolled_up |= sub_issue_children(x["number"])
 
         r = {"sprint": num, "title": ms["title"], "start": start, "end": end,
              "committed": 0, "completed": 0, "late": 0, "carried": 0,
