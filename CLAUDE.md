@@ -38,7 +38,7 @@ merely suggested; see `docs/aidlc/loop-engineering.md`.
 
 - Work is tracked as GitHub issues: **epic = goal**, **user story =
   objective**; every story carries assignee, sprint milestone, `priority:`,
-  `loe:`, and story points.
+  and a `sp:` story-point label.
 - Four 2-week sprints (`Sprint 1`–`Sprint 4`).
 - Every change lands through a **pull request** that says `Closes #<story>`
   and is **approved by a teammate who is not the author**. CI must be green.

@@ -32,7 +32,7 @@ the material and that authorship stays clear. Once granted, please cite:
 |---|---|
 | [`QUICKSTART.md`](QUICKSTART.md) | the student entry point: whole setup in ~1 hour of numbered steps |
 | [`README.md`](README.md) | the full reference guide (repo layout, proposal rules, board conventions, sprint cadence, grading metrics) |
-| [`scripts/bootstrap.sh`](scripts/bootstrap.sh) | one command creates the 18 labels, 4 sprint milestones, `develop`, branch protection, and a project board with Status / Story Points / Sprint fields |
+| [`scripts/bootstrap.sh`](scripts/bootstrap.sh) | one command creates the 15 labels, 4 sprint milestones, `develop`, branch protection, and a project board with its Status columns |
 | [`.github/scripts/check_repo.py`](.github/scripts/check_repo.py) | the harness: 9 gates, standard library only, same command locally and in CI |
 | [`.github/workflows/ci.yml`](.github/workflows/ci.yml) | runs the harness, the prototype's tests, and a PR-discipline check |
 | [`docs/aidlc/`](docs/aidlc/) | the AI-use curriculum: the seven gates, a prompt library, harness/loop engineering, a harness log, four lecture decks, and a sourced evidence appendix |

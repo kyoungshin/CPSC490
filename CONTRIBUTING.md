@@ -3,7 +3,7 @@
 The short version. Details are linked from each line.
 
 1. **Pick up work as an issue.** Every change starts from an issue with an
-   assignee, a sprint milestone, `priority:`, `loe:`, story points, and
+   assignee, a sprint milestone, `priority:`, a `sp:` story-point label, and
    acceptance criteria — see the setup guide §4.
 2. **Branch per issue:** `feature/<issue>-<slug>` off `develop`
    ([`docs/git-workflow.md`](docs/git-workflow.md)).

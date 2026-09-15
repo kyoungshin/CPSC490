@@ -40,7 +40,7 @@ exists in writing; it absolutely will drift from a vague ask. This is also
 the cheapest gate — thirty seconds here saves an hour at review.
 
 **Evidence:** the issue itself — story text, acceptance criteria checklist,
-owner, sprint, priority, LOE, points.
+owner, sprint, priority, points.
 
 **Red flag:** you are prompting to find out what you want. Stop and write the
 criteria.
@@ -265,5 +265,5 @@ everything after them). After **three** failed attempts at the story, the
 *specification* is the problem, not the prompt. The four tells, and what to
 do about each, are in
 [`loop-engineering.md` §4](loop-engineering.md#4-running-the-loop). Take it
-to the team, split the story (`loe: L` means split), or fix the criteria
+to the team, split the story (`sp: 8` means split it), or fix the criteria
 deliberately in their own PR.

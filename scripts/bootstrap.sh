@@ -3,7 +3,7 @@
 #
 # Creates everything QUICKSTART step 4 asks for: labels, Sprint 1-4
 # milestones, the develop branch, branch protection on main and develop, and
-# a project board with Status / Story Points / Sprint fields.
+# a project board with its Status columns.
 #
 # Run it ONCE, from inside your own repository:
 #
@@ -69,10 +69,8 @@ add_label "sub-task"          "d4e5f7" "Breakdown of a task; smallest tracked un
 add_label "priority: high"    "d93f0b" ""
 add_label "priority: medium"  "fbca04" ""
 add_label "priority: low"     "0e8a16" ""
-add_label "loe: S"            "c2e0c6" "about half a day"
-add_label "loe: M"            "f9d0c4" "one to two days"
-add_label "loe: L"            "e99695" "too big - split it"
-for sp in 1 2 3 5 8; do add_label "sp: $sp" "ededed" "story points"; done
+for sp in 1 2 3 5; do add_label "sp: $sp" "ededed" "story points"; done
+add_label "sp: 8"             "ededed" "story points - too big, split it"
 
 # ---------------------------------------------------------------- milestones
 step "Creating Sprint 1-4 milestones"
@@ -181,22 +179,6 @@ else
       fi
     fi
 
-    if [ -n "$(field_id 'Story Points')" ]; then
-      skip "field Story Points"
-    else
-      gh api graphql -f query="mutation { createProjectV2Field(input: {projectId: \"$PID\", dataType: NUMBER, name: \"Story Points\"}) { projectV2Field { ... on ProjectV2FieldCommon { id } } } }" >/dev/null 2>&1         && ok "field Story Points (number)" || warn "could not add Story Points"
-    fi
-
-    if [ -n "$(field_id 'Sprint')" ]; then
-      skip "field Sprint"
-    else
-      IF=$(gh api graphql -f query="mutation { createProjectV2Field(input: {projectId: \"$PID\", dataType: ITERATION, name: \"Sprint\"}) { projectV2Field { ... on ProjectV2IterationField { id } } } }" -q .data.createProjectV2Field.projectV2Field.id 2>/dev/null)
-      if [ -n "$IF" ]; then
-        gh api graphql -f query="mutation { updateProjectV2Field(input: {fieldId: \"$IF\", iterationConfiguration: {duration: 14, startDate: \"2026-09-28\", iterations: [{title: \"Sprint 1\", startDate: \"2026-09-28\", duration: 14}, {title: \"Sprint 2\", startDate: \"2026-10-12\", duration: 14}, {title: \"Sprint 3\", startDate: \"2026-10-26\", duration: 14}, {title: \"Sprint 4\", startDate: \"2026-11-09\", duration: 14}]}}) { projectV2Field { ... on ProjectV2IterationField { id } } } }" >/dev/null 2>&1           && ok "field Sprint (4 x 2-week iterations from Sep 28)"           || warn "Sprint field added but its iterations could not be set"
-      else
-        warn "could not add the Sprint field"
-      fi
-    fi
   fi
 fi
 
@@ -208,7 +190,8 @@ cat <<EOS
   2. Paste your board URL into README.md${BOARD_URL:+   ->  $BOARD_URL}
   3. Add every teammate AND 'kyoungshin' under Settings -> Collaborators.
   4. File your goals as 'epic' issues and objectives as 'user-story' issues,
-     each with assignee, milestone, priority, loe and story points.
+     each with assignee, milestone and priority. Story points go on the
+     user stories only - not on epics, not on a story's own tasks.
   5. Run the harness before your first push:
         python .github/scripts/check_repo.py
 

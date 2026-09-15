@@ -64,15 +64,15 @@ gh auth refresh -s project,repo     # lets it create the board
 bash scripts/bootstrap.sh
 ```
 
-That creates all 18 labels, the four sprint milestones with dates, the
+That creates all 15 labels, the four sprint milestones with dates, the
 `develop` branch, branch protection on `main` and `develop`, and the project
-board with its Status / Story Points / Sprint fields. It is safe to re-run —
+board with its Status columns. It is safe to re-run —
 it skips whatever already exists — and it prints what is left for you.
 
 **One thing you must add by hand** (GitHub's API cannot create board views):
 three view tabs on the board — a **Sprint Board**, a **Current Sprint** board
-filtered to `sprint:@current`, and a **Sprint Plan** table grouped by
-`Sprint`. Two minutes, and it is what makes the board usable during a sprint.
+filtered to `milestone:"Sprint 1"`, and a **Sprint Plan** table grouped by
+`Milestone`. Two minutes, and it is what makes the board usable during a sprint.
 The recipe is in the setup guide §4 ("Running a sprint on the board"), and the
 [example board](https://github.com/users/kyoungshin/projects/1) has all three
 set up to copy.
@@ -100,7 +100,6 @@ for `develop`:
 ```
 epic  user-story  feature  enhancement  bug  task  sub-task
 priority: high   priority: medium   priority: low
-loe: S   loe: M   loe: L
 sp: 1   sp: 2   sp: 3   sp: 5   sp: 8
 ```
 
@@ -109,8 +108,8 @@ with the due dates from the setup guide §6.
 
 **Board** — Projects → New project → **Board**:
 - Status column values: `Backlog`, `Sprint To-Do`, `In Progress`, `In Review`, `Done`
-- add a **number** field named `Story Points`
-- add an **iteration** field named `Sprint` with four 2-week iterations
+- no custom fields — the sprint is the issue's milestone and the size is its
+  `sp:` label, so the board never holds a second copy of either
 - paste the board URL into your README
 
 </details>
@@ -121,8 +120,8 @@ From your proposal's *Goals and Objectives*:
 
 - one **epic** issue per goal (label `epic`)
 - one **user-story** issue per objective (label `user-story`), each with
-  **assignee, milestone, `priority:`, `loe:`, story points, and acceptance
-  criteria** — filled in when the story enters a sprint, not later
+  **assignee, milestone, `priority:`, a `sp:` story-point label, and
+  acceptance criteria** — filled in when the story enters a sprint, not later
 - list the story numbers in the epic body as `- [ ] #12` so progress shows
 - link every epic and story from proposal §2, and every task/bug/feature
   from proposal §4

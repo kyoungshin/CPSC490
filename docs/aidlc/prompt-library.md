@@ -205,7 +205,7 @@ apply the fix rather than prompting harder.
 
 **Two failed corrections → new session. Three failed attempts at the story →
 the specification is the problem, not the prompt.** Take it back to the team
-and fix the criteria or split the story (that is what `loe: L` means).
+and fix the criteria or split the story (that is what `sp: 8` means).
 
 ---
 

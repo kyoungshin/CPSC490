@@ -32,6 +32,9 @@ from datetime import datetime, timedelta, timezone
 API = "https://api.github.com"
 SPRINT_DAYS = 14
 SP_LABEL = re.compile(r"^sp:\s*(\d+)$", re.I)
+# `- [ ] #12` - the task-list checklist the setup guide uses to make an
+# epic name its stories and a story name its tasks.
+TASK_CHILD_RE = re.compile(r"^\s*[-*]\s*\[[ xX]\]\s*[^\n]*?#(\d+)", re.M)
 
 
 def api(path: str) -> list | dict:
@@ -71,6 +74,11 @@ def points(issue: dict) -> int:
     return 0
 
 
+def task_children(body: str | None) -> set:
+    """Issue numbers this issue lists as task-list children (`- [ ] #12`)."""
+    return {int(n) for n in TASK_CHILD_RE.findall(body or "")}
+
+
 def when(value: str | None) -> datetime | None:
     if not value:
         return None
@@ -108,9 +116,20 @@ def collect(only: int | None, trace_scope: bool) -> list[dict]:
 
         issues = [x for x in api(f"/issues?milestone={ms['number']}&state=all&per_page=100")
                   if "pull_request" not in x]
+
+        # Points belong to the item the team COMMITS to the sprint - normally
+        # the user story. If a pointed story also has pointed sub-issues, a
+        # plain sum counts the same work twice, so children of a pointed
+        # parent are rolled up into it and reported as a labelling fix.
+        rolled_up = set()
+        for x in issues:
+            if points(x) > 0:
+                rolled_up |= task_children(x.get("body"))
+
         r = {"sprint": num, "title": ms["title"], "start": start, "end": end,
              "committed": 0, "completed": 0, "late": 0, "carried": 0,
-             "added_mid": 0, "unpointed": 0, "n": len(issues), "epics": 0}
+             "added_mid": 0, "unpointed": 0, "n": len(issues), "epics": 0,
+             "double_pointed": 0}
         for x in issues:
             names = [l["name"] for l in x.get("labels", [])]
             if "epic" in names:          # epics span sprints; not capacity
@@ -119,6 +138,9 @@ def collect(only: int | None, trace_scope: bool) -> list[dict]:
             p = points(x)
             if p == 0:
                 r["unpointed"] += 1
+                continue
+            if x["number"] in rolled_up:
+                r["double_pointed"] += p     # its parent already carries these
                 continue
             mid = False
             if trace_scope and start:
@@ -141,11 +163,28 @@ def collect(only: int | None, trace_scope: bool) -> list[dict]:
 
 def advise(rows: list[dict]) -> list[str]:
     """Turn the history into a recommendation, honestly hedged."""
+    # Labelling problems are reported FIRST and regardless of whether a sprint
+    # has ended - a board that measures itself wrongly is worth fixing in week
+    # one, not after the sprint it spoiled.
+    quality = []
+    dbl = sum(r["double_pointed"] for r in rows)
+    if dbl:
+        quality.append(f"{dbl} point(s) sit on sub-issues whose parent story is "
+                       "pointed too. They are counted once, at the parent, so "
+                       "these totals are right — but fix the labels: point the "
+                       "user story, not its tasks (setup guide §4).")
+    unpointed = sum(r["unpointed"] for r in rows)
+    if unpointed:
+        quality.append(f"{unpointed} issue(s) carry no `sp:` label, so they are "
+                       "invisible to this report. Point every story at planning "
+                       "time.")
+
     done = [r for r in rows if r["end"] and r["end"] < datetime.now(timezone.utc)
             and (r["committed"] + r["added_mid"]) > 0]
     if not done:
-        return ["No completed sprint yet — after Sprint 1 this section will "
-                "suggest a commitment based on what you actually finished."]
+        return quality + ["No completed sprint yet — after Sprint 1 this section "
+                          "will suggest a commitment based on what you actually "
+                          "finished."]
     vel = [r["completed"] for r in done]
     avg = sum(vel) / len(vel)
     last3 = vel[-3:]
@@ -165,15 +204,11 @@ def advise(rows: list[dict]) -> list[str]:
         if total and r["completed"] / total < 0.6:
             lines.append(f"{r['title']}: finished {r['completed']} of {total} points "
                          f"({r['completed']/total:.0%}). Either the stories were too big "
-                         "(`loe: L` means split) or the commitment was optimistic.")
+                         "(`sp: 8` means split it) or the commitment was optimistic.")
         if r["added_mid"] > max(3, 0.25 * max(total, 1)):
             lines.append(f"{r['title']}: {r['added_mid']} points were added *after* the "
                          "sprint began. Mid-sprint scope is the usual reason a plan misses.")
-    unpointed = sum(r["unpointed"] for r in rows)
-    if unpointed:
-        lines.append(f"{unpointed} issue(s) carry no `sp:` label, so they are invisible "
-                     "to this report. Point every story at planning time.")
-    return lines
+    return lines + quality
 
 
 def main() -> int:

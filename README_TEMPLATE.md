@@ -34,9 +34,9 @@ will exist at the end of the semester.〉
 
 ## How we work
 
-- Sprints: four 2-week sprints (`Sprint 1`–`Sprint 4` milestones + board
-  Sprint field). Sprint boundary ritual every other 〈day〉.
+- Sprints: four 2-week sprints (`Sprint 1`–`Sprint 4` milestones).
+  Sprint boundary ritual every other 〈day〉.
 - Every change lands by pull request; **the author never approves their own PR**.
 - Every issue carries: assignee (owner), milestone (sprint), `priority:`,
-  `loe:`, story points.
+  and a `sp:` story-point label.
 - AI tools are used and disclosed — see the proposal's *AI Usage* section.

@@ -196,10 +196,9 @@ sprint:
 | Field | How | Values |
 |---|---|---|
 | **Owner** | GitHub **Assignee** (exactly one) | a team member |
-| **Sprint** | **Milestone** on the issue + the board's **Sprint iteration field** (keep both set — the milestone is what grading queries; the iteration drives the board's sprint view) | `Sprint 1` … `Sprint 4` |
+| **Sprint** | **Milestone** on the issue | `Sprint 1` … `Sprint 4` |
 | **Priority** | label | `priority: high / medium / low` |
-| **Level of effort** | label | `loe: S / M / L` (≤½ day / ~1–2 days / needs splitting) |
-| **Story points** | Projects board field (or `sp: n` label) | 1, 2, 3, 5, 8 |
+| **Story points** | `sp: N` label | 1, 2, 3, 5, 8 — and `sp: 8` means *too big, split it* |
 | **Acceptance criteria** | issue body checklist | what "done" means, checkable |
 
 **The full agile work-item taxonomy.** Epics and user stories are the two
@@ -218,35 +217,63 @@ there when your work needs them (the labels exist in the example repo):
 
 Hierarchy: **epic ⊃ user story ⊃ task ⊃ sub-task**, while
 feature / enhancement / bug describe *what kind* of work an item is (an
-item can carry both, e.g. `task` + `bug`). Every non-epic item, whatever
-its type, still gets the fields above (owner, sprint, priority, LOE,
-points). In CPSC 490 most of your board is epics, stories, and tasks;
-bugs and enhancements become the daily vocabulary in CPSC 491.
+item can carry both, e.g. `task` + `bug`). Every item gets an owner, a
+sprint milestone and a priority. In CPSC 490 most of your board is epics,
+stories, and tasks; bugs and enhancements become the daily vocabulary in
+CPSC 491.
+
+**Where the story points go: on the item you commit to the sprint, once.**
+Estimate the **user story** — the unit of user-visible value your team
+pulls into a sprint — and leave its tasks and sub-tasks unpointed. Tasks
+are *how* the story gets done, not extra work on top of it.
+
+| Item | `sp:` label? | Why |
+|---|---|---|
+| `epic` (a goal) | no | it spans sprints; its size is the sum of its stories |
+| `user-story` (an objective) | **yes** | this is what gets committed to a sprint |
+| `task` / `sub-task` beneath a pointed story | no | already inside that story's estimate |
+| a `feature` / `bug` / `task` with no parent story | **yes** | nothing else carries its estimate |
+
+Point both a story and its tasks and you count the same work twice — a
+sprint that reads as 15 points of capacity when the team really committed
+to 8, which makes every velocity number afterwards wrong.
+`scripts/sprint_report.py` catches it (it reads the `- [ ] #12` checklists
+to find each story's children), counts the work once at the parent, and
+tells you to fix the labels. The habit to build is simply: **estimate the
+story, break it into tasks, do not re-estimate the pieces.**
 
 **Board:** create one Project (*Projects → New project → Board*) with
 columns **Backlog → Sprint To-Do → In Progress → In Review → Done**. Add
-every epic and story to it, plus two custom fields:
+every epic and story to it. It needs **no custom fields**: the `Status`
+column field GitHub gives you is the whole board configuration.
 
 > 📋 **The example board is live — open it and copy what you see:**
 > **<https://github.com/users/kyoungshin/projects/1>**
-> (issues #1–#5 placed across the columns, with Status, Sprint and Story
-> Points set, and the three views described below.) Put **your** board's URL
-> in your team `README.md`.
-- a **Story Points** number field, so per-sprint totals (planned vs.
-  completed) can be read off at the sprint review — that ratio is your
-  team's velocity;
-- a **Sprint iteration field** (*field type: Iteration*, four 2-week
-  iterations `Sprint 1`–`Sprint 4` matching §6's dates) — this is GitHub's
-  native sprint mechanism, and it must agree with each issue's milestone.
+> (issues #1–#5 placed across the columns with their Status set, and the
+> three views described below.) Put **your** board's URL in your team
+> `README.md`.
 
-`bash scripts/bootstrap.sh` creates the board and all three fields for you.
+**Every fact about an issue lives in exactly one place**, which is why the
+board carries no fields of its own:
+
+| Fact | Lives in | Not in |
+|---|---|---|
+| which sprint | the issue's **milestone** | ~~a board Sprint field~~ |
+| how big | the issue's **`sp: N` label** | ~~a board Story Points field~~ |
+| where in its life | the board's **Status** column | — |
+
+Earlier drafts of this course had the sprint and the points in two places
+each — on the issue *and* on the board — and the two copies drifted apart
+within a sprint. One copy cannot disagree with itself.
+
+`bash scripts/bootstrap.sh` creates the board and its Status columns for you.
 
 ### Running a sprint on the board
 
 Two things confuse people at first, so to be explicit: **the Status columns
-are not sprints.** Columns are *where a card is in its life*; the Sprint
-field is *which fortnight it belongs to*. A card moves across the columns
-within one sprint.
+are not sprints.** Columns are *where a card is in its life*; the
+**milestone** is *which fortnight it belongs to*. A card moves across the
+columns within one sprint.
 
 **Set up three views once** (view tabs at the top of the board — the API
 cannot create these, so do it by hand; the
@@ -255,13 +282,13 @@ to copy):
 
 | View | Layout | How | What it is for |
 |---|---|---|---|
-| **Sprint Board** | Board | column field = `Status`; turn on the `Sprint` and `Story Points` fields so they show on the cards | daily work |
-| **Current Sprint** | Board | same, plus filter `sprint:@current` | the only view you need most days — it hides the other three sprints |
-| **Sprint Plan** | Table | show `Sprint`, `Status`, `Story Points`, `Assignees`, `Milestone`; group by `Sprint` | planning and the sprint review |
+| **Sprint Board** | Board | column field = `Status`; turn on `Milestone` and `Labels` so the sprint and the `sp:` points show on the cards | daily work |
+| **Current Sprint** | Board | same, plus filter `milestone:"Sprint 1"` — move it on at each sprint boundary | the only view you need most days — it hides the other three sprints |
+| **Sprint Plan** | Table | show `Milestone`, `Status`, `Labels`, `Assignees`; **group by `Milestone`** | planning and the sprint review |
 
 **At sprint planning** — pull work from `Backlog` into `Sprint To-Do`, and
-for each card set **assignee, Sprint, milestone, priority, LOE and story
-points *now***, not later. Sum the points you pulled: that is your plan.
+for each card set **assignee, milestone, priority and story points
+*now***, not later. Sum the points you pulled: that is your plan.
 
 **During the sprint** — one card per person in `In Progress` is the ideal;
 move a card yourself when you branch, and to `In Review` when you open the
@@ -271,31 +298,23 @@ cards is the fastest way to undercut the *transparency* evidence behind
 that 20%.
 
 **Seeing the story-point totals per sprint.** GitHub's milestone pages count
-issues, not points, so set the totals up in two places:
+issues, not points, and the board has no points field to sum — so one
+command does it:
 
-- **On the board (live, no tooling):** in the **Sprint Plan** table view,
-  group by `Sprint`, then open the `Story Points` column menu and turn on
-  **Sum**. Each sprint's group header then shows its total points. Group by
-  `Status` instead and you get the same sum split into Backlog / In Progress
-  / Done — which *is* committed versus completed, live, while the sprint runs.
-- **Automatically, with the history:** run
+```bash
+python scripts/sprint_report.py            # or --markdown for the review
+```
 
-  ```bash
-  python scripts/sprint_report.py            # or --markdown for the review
-  ```
+It prints, per sprint, the points the sprint **started** with, the points
+that **closed** inside it, what carried over, what scope was **added after
+the sprint began**, and the completion percentage — then reads your own
+history back to you: *"completed 8, 11, 9 → commit about 9 next sprint."*
 
-  It prints, per sprint, the points the sprint **started** with, the points
-  that **closed** inside it, what carried over, what scope was **added after
-  the sprint began**, and the completion percentage — then reads your own
-  history back to you: *"completed 8, 11, 9 → commit about 9 next sprint."*
-  It uses the `sp:` labels and the `Sprint N` milestones (not the board), so
-  the workflow `.github/workflows/sprint-report.yml` runs it weekly with
-  GitHub's own token, no extra setup. That answer — your team's real capacity
-  — is the number worth knowing by Sprint 3.
-
-> **So put the points in the `sp:` label**, and mirror them in the board's
-> Story Points field if you want the live sums. The label is what the
-> automated report reads.
+It reads the `sp:` labels and the `Sprint N` milestones straight off the
+issues, never the board, so `.github/workflows/sprint-report.yml` runs it
+weekly on GitHub's own token — no Projects permission, no personal access
+token, no setup. That answer — your team's real capacity — is the number
+worth knowing by Sprint 3.
 
 **At the sprint boundary** — read the `Sprint N` group: points planned versus
 points actually in `Done`. That ratio is your velocity; it goes in
@@ -380,7 +399,7 @@ at the rule everyone agreed to.
   dragging cards); carry over or re-scope what didn't finish, with a
   one-line note on why.
 - **Plan:** pull next stories from Backlog into the new sprint's milestone;
-  every pulled story gets owner, priority, LOE, and story points *at
+  every pulled story gets owner, priority, and story points *at
   planning time*, not retroactively.
 - Points planned vs. completed per sprint = your velocity; I look at the
   trend, not the absolute number.
