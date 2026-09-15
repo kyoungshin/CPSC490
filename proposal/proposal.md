@@ -112,8 +112,8 @@ is what the final project report is graded against.
 
 | Problem | Addressed by |
 |---|---|
-| P1 〈one line〉 | Goal 1 (#1) |
-| P2 〈one line〉 | Goal 2 (#〈n〉) |
+| P1 〈one line〉 | 〈Goal 1 (#n)〉 |
+| P2 〈one line〉 | 〈Goal 2 (#n)〉 |
 
 ## 2. Goals and Objectives
 

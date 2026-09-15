@@ -1,22 +1,29 @@
 # CPSC 490 — Group Repository Setup Guide
 
+**Fall 2026 · Prof. Kyoung Shin · Department of Computer Science, CSUF**
+
+Author: **Kyoung Shin** · <kshin@fullerton.edu> · © 2026 — original course
+work, **all rights reserved** ([`LICENSE`](LICENSE)). Enrolled CPSC 490/491
+students may copy and build on this for their coursework; any other use,
+including adoption for another course, needs written permission — just ask.
+Instructors: see [`FOR_INSTRUCTORS.md`](FOR_INSTRUCTORS.md).
+
 **Project board (live example): <https://github.com/users/kyoungshin/projects/1>**
 · **Field Guide: <https://kyoungshin.github.io/CPSC490/aidlc/AIDLC-Field-Guide.html>**
 · **Start here: [`QUICKSTART.md`](QUICKSTART.md)**
 
 > **This repository is itself the example.** It is laid out exactly the way
-> your group repository should be — browse the folders, the issue templates,
-> the labels, the `Sprint 1`–`Sprint 4` milestones, the sample issues, the
+> your group repository should be — the folders, the issue templates, the
+> labels, the `Sprint 1`–`Sprint 4` milestones, the sample issues, the
 > runnable `prototype/`, the worked
 > [specification](docs/specs/example-spec.md) and
 > [design document](docs/design/example-design.md), and the
-> [project board](https://github.com/users/kyoungshin/projects/1) — then
-> build yours the same way.
+> [project board](https://github.com/users/kyoungshin/projects/1) — so build
+> yours the same way.
 >
 > `scripts/bootstrap.sh` does the whole labels/milestones/branches/board
 > setup in one command, and `scripts/sprint_report.py` measures story points
-> committed versus closed each sprint. This document is the reference behind
-> QUICKSTART.
+> committed versus closed each sprint.
 >
 > **The syllabus governs grades and deadlines.** Repository work is assessed
 > under the syllabus's **20% Prototype & repository practice — 5% per
