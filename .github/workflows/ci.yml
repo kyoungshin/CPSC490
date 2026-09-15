@@ -116,7 +116,10 @@ jobs:
           if ! grep -qiE '(clos(e|es|ed)|fix(e|es|ed)?|resolv(e|es|ed))[[:space:]]+#[0-9]+' /tmp/body.txt; then
             echo "::error::PR body must link its story, e.g. 'Closes #12'."; fail=1
           fi
-          if ! grep -qiE '^[[:space:]]*-?[[:space:]]*\*{0,2}AI (use|usage)' /tmp/body.txt; then
+          # Accept the section however it is written: "## AI use", "**AI use**",
+          # "- AI use:", "AI usage". The earlier pattern rejected the heading
+          # form the PR template itself uses.
+          if ! grep -qiE '^[[:space:]]*[#>*-]{0,4}[[:space:]]*\**[[:space:]]*AI[[:space:]]+(use|usage)' /tmp/body.txt; then
             echo "::error::PR body must keep the 'AI use' section from the PR template and fill it in."; fail=1
           fi
           if grep -qE '<!--|〈|your answer here' /tmp/body.txt; then
