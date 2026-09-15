@@ -3,10 +3,12 @@
 > **This repository is itself the example.** It is laid out exactly the way
 > your group repository should be — browse the folders, the issue templates,
 > the labels, the `Sprint 1`–`Sprint 4` milestones, the sample issues (#1–#5),
-> and the [CPSC490 project board](https://github.com/users/kyoungshin/projects/1)
-> (Sprint Board + Sprint Plan table views; Status / Sprint / Story Points
-> fields) — then build yours the same way. Your team README starts from
-> [`README_TEMPLATE.md`](README_TEMPLATE.md). Start with §1 below.
+> the runnable `prototype/`, and the
+> [CPSC490 project board](https://github.com/users/kyoungshin/projects/1) —
+> then build yours the same way.
+>
+> **Start with [`QUICKSTART.md`](QUICKSTART.md)** (one hour, numbered steps).
+> This document is the reference behind it.
 
 **Fall 2026 · Prof. Kyoung Shin · Department of Computer Science, CSUF**
 
@@ -18,6 +20,11 @@ and evolves after every feedback round. Your team's GitHub repository holds
 both, plus the issue board that shows who did what, when. In CPSC 491
 (spring) the same repository carries you into full implementation, so set
 it up right once.
+
+> **New here? Start with [`QUICKSTART.md`](QUICKSTART.md)** — the whole setup
+> as ~25 numbered steps you can finish in an hour. This document is the
+> reference behind it: read a section when you need it, not all at once.
+> There is a "what to read, and when" table at the end of the quick start.
 
 > **Why this matters for your grade:** at each sprint checkpoint I review
 > your repository directly — issues, board, documents, and pull requests —
@@ -117,7 +124,18 @@ Open the result in Word, check heading numbering and figure placement, and
 submit that. (Writing in Word instead is fine — but commit the `.docx` here
 *and* keep the Markdown current, since that is what review and CI can read.)
 
-Three sections need particular care:
+Five sections need particular care:
+
+- **1.1 Related Work** — a **comparative analysis**, not a list of summaries.
+  Compare the existing ideas/products/papers against each other on the
+  dimensions that matter, with honest pros and cons in a table, then argue in
+  prose what your project does differently and why that is worth doing.
+  "Nothing like this exists" reads as a missing survey.
+- **1.2 Problem Statements** — **concise** (a few sentences each; no
+  background, no solution) and **traceable both ways**: every problem must be
+  addressed by a goal in §2, and every goal in §2 must trace back to a
+  problem here. The skeleton includes a small mapping table for that check —
+  it is what your final report is graded against.
 
 - **2 Goals and Objectives** — each *goal* is an **Epic** issue, each
   *objective* under it a **User Story** issue (§4). **Every epic and user

@@ -1,6 +1,6 @@
 # Sprint 1 review — 〈Sep 28 – Oct 11〉
 
-> One file per sprint, written at the sprint boundary (README §6 ritual).
+> One file per sprint, written at the sprint boundary (the setup guide's *The four sprints* section).
 > This is what makes **Transparency** and carry-over decisions visible at
 > grading time — don't reconstruct it later.
 

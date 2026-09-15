@@ -67,12 +67,41 @@ Date: 〈YYYY-MM-DD〉
 〈Your survey. Cite with bracketed numbers matching §8 — every reference must
 be a source your team has actually read.〉
 
+**Do a comparative analysis, not a list of summaries.** Find the existing
+ideas, products, papers, or tools that attack the same problem and compare
+them against each other on the dimensions that matter for your project, with
+honest pros and cons. Then say plainly what your project does differently and
+why that difference is worth the effort.
+
+| Existing approach | What it does | Pros | Cons | Why ours differs |
+|---|---|---|---|---|
+| 〈product / paper [1]〉 | 〈…〉 | 〈…〉 | 〈…〉 | 〈…〉 |
+| 〈product / paper [2]〉 | 〈…〉 | 〈…〉 | 〈…〉 | 〈…〉 |
+| 〈product / paper [3]〉 | 〈…〉 | 〈…〉 | 〈…〉 | 〈…〉 |
+
+〈Discuss the table in prose — the table is evidence, the paragraph is the
+argument. "Nothing like this exists" is almost never true and reads as a
+missing survey; if a close competitor exists, say so and explain why you are
+still building this.〉
+
 ### 1.2 Problem Statements
 
 > Briefly state the problem to solve in this project.
 
-〈Your problem statement(s). Number them P1, P2, … if there are several, so
-later sections can refer back.〉
+〈Your problem statement(s), **concise** — a few sentences each, no
+background (that was §1) and no solution (that is §3). Number them P1, P2, …
+so later sections can refer back.〉
+
+**Every problem here must connect to the goals and objectives in §2, and
+every goal in §2 must trace back to a problem here.** A goal with no problem
+behind it is scope you invented; a problem with no goal is a problem you are
+not actually solving. Check both directions before you submit — this mapping
+is what the final project report is graded against.
+
+| Problem | Addressed by |
+|---|---|
+| P1 〈one line〉 | Goal 1 (#1) |
+| P2 〈one line〉 | Goal 2 (#〈n〉) |
 
 ## 2. Goals and Objectives
 
@@ -90,7 +119,7 @@ later sections can refer back.〉
 > when you turn in your final project report.
 
 Each **goal** is tracked as an **Epic** issue and each **objective** as a
-**User Story** issue in the team repository (repository README §4).
+**User Story** issue in the team repository (see the setup guide's *Epics and user stories* section).
 **Every epic and user story in the repository is linked from this section** —
 CI gate G8 fails if one exists that this section does not link. That is what
 keeps the goals in this document and the work on the board from drifting

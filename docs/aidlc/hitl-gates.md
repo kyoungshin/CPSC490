@@ -128,6 +128,11 @@ now" is a normal-looking suggestion and a permanent mistake in a public repo.
 **Fix:** remove it, rotate the key, use an environment variable or a GitHub
 Actions secret. Never "fix" it by deleting only the latest commit — the key
 stays in history; rotate it.
+**Test fixtures and examples:** a fake password in a test is not a secret, so
+add `# pragma: allowlist secret` on that line (the prototype's test file shows
+one). The marker is deliberate and greppable — `grep -rn "allowlist secret" .`
+lists every exemption, so a reviewer can audit them. Never use it to silence
+a real credential.
 
 ### G6 · placeholders *(warning, not a failure)*
 Reports leftover `〈…〉`, `TODO`, `FIXME`, lorem ipsum outside template files.

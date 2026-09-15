@@ -266,6 +266,13 @@ def gate_secrets() -> None:
             for m in re.finditer(pattern, text):
                 if "check_repo.py" in rel:  # this file lists the patterns
                     continue
+                # Explicit, greppable escape hatch for test fixtures and
+                # documentation examples. Audit every use with:
+                #   grep -rn "allowlist secret" .
+                line_no = text.count(chr(10), 0, m.start())
+                line = text.splitlines()[line_no]
+                if "allowlist secret" in line:
+                    continue
                 fail(g, f"possible {label} in {rel} (line {text[:m.start()].count(chr(10)) + 1})")
                 hits += 1
     if not hits:
