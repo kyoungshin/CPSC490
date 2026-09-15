@@ -127,6 +127,27 @@ sprint:
 | **Story points** | Projects board field (or `sp: n` label) | 1, 2, 3, 5, 8 |
 | **Acceptance criteria** | issue body checklist | what "done" means, checkable |
 
+**The full agile work-item taxonomy.** Epics and user stories are the two
+types this course *requires*; the rest of the standard agile categories are
+there when your work needs them (the labels exist in the example repo):
+
+| Type label | What it is | Typical CPSC 490 use |
+|---|---|---|
+| `epic` | A **goal** — container of user stories | one per Goal in the proposal |
+| `user-story` | An **objective** — user-visible value ("As a …") | one per Objective |
+| `feature` | A new capability that delivers (part of) a story | prototype capabilities |
+| `enhancement` | Improvement to something that already works | polish after check feedback |
+| `bug` | Defect — built behavior ≠ spec | prototype defects |
+| `task` | Concrete unit of work under a story/feature | "draft spec §3", "set up repo CI" |
+| `sub-task` | Breakdown of a task — smallest tracked unit | child checklist items |
+
+Hierarchy: **epic ⊃ user story ⊃ task ⊃ sub-task**, while
+feature / enhancement / bug describe *what kind* of work an item is (an
+item can carry both, e.g. `task` + `bug`). Every non-epic item, whatever
+its type, still gets the fields above (owner, sprint, priority, LOE,
+points). In CPSC 490 most of your board is epics, stories, and tasks;
+bugs and enhancements become the daily vocabulary in CPSC 491.
+
 **Board:** create one Project (*Projects → New project → Board*) with
 columns **Backlog → Sprint To-Do → In Progress → In Review → Done**. Add
 every epic and story to it. Add a **Story Points** number field to the
