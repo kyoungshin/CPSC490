@@ -2,8 +2,10 @@
 
 > **This repository is itself the example.** It is laid out exactly the way
 > your group repository should be — browse the folders, the issue templates,
-> the labels, the `Sprint 1`–`Sprint 4` milestones, and the sample issues,
-> then build yours the same way. Start with §1 below.
+> the labels, the `Sprint 1`–`Sprint 4` milestones, the sample issues, and
+> the [CPSC490 project board](https://github.com/users/kyoungshin/projects/1)
+> (5 columns + Story Points field, sample issues placed) — then build yours
+> the same way. Start with §1 below.
 
 **Fall 2026 · Prof. Kyoung Shin · Department of Computer Science, CSUF**
 
