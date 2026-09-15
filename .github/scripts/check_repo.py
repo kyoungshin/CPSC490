@@ -179,8 +179,7 @@ def gate_traceability() -> None:
     """
     g = "G2 traceability"
     docs = [p for p in (ROOT / "docs").rglob("*.md")
-            if p.parent.name in ("specs", "design")
-            and not p.stem.isupper()  # ALL-CAPS = course reference doc, not a deliverable
+            if p.parent.name in ("specs", "design") and is_deliverable(p)
             ] if (ROOT / "docs").exists() else []
     if not docs:
         warn(g, "no documents in docs/specs or docs/design yet")
@@ -333,7 +332,7 @@ def gate_diagrams() -> None:
     """
     g = "G7 diagrams"
     d = ROOT / "docs" / "design"
-    docs = [p for p in d.glob("*.md") if p.name != "DIAGRAMS.md"] if d.exists() else []
+    docs = [p for p in d.glob("*.md") if is_deliverable(p)] if d.exists() else []
     if not docs:
         warn(g, "no design documents yet (expected by Sprint 3)")
         return
@@ -443,7 +442,7 @@ def gate_documents_linked() -> None:
     if not prop.exists():
         return  # G1 already reported it
     docs = [p for p in (ROOT / "docs").rglob("*.md")
-            if p.parent.name in ("specs", "design") and not p.stem.isupper()
+            if p.parent.name in ("specs", "design") and is_deliverable(p)
             ] if (ROOT / "docs").exists() else []
     if not docs:
         warn(g, "no specification or design documents yet")
