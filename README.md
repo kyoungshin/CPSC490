@@ -123,7 +123,7 @@ sprint:
 | Field | How | Values |
 |---|---|---|
 | **Owner** | GitHub **Assignee** (exactly one) | a team member |
-| **Sprint** | **Milestone** | `Sprint 1` … `Sprint 4` |
+| **Sprint** | **Milestone** on the issue + the board's **Sprint iteration field** (keep both set — the milestone is what grading queries; the iteration drives the board's sprint view) | `Sprint 1` … `Sprint 4` |
 | **Priority** | label | `priority: high / medium / low` |
 | **Level of effort** | label | `loe: S / M / L` (≤½ day / ~1–2 days / needs splitting) |
 | **Story points** | Projects board field (or `sp: n` label) | 1, 2, 3, 5, 8 |
@@ -152,9 +152,14 @@ bugs and enhancements become the daily vocabulary in CPSC 491.
 
 **Board:** create one Project (*Projects → New project → Board*) with
 columns **Backlog → Sprint To-Do → In Progress → In Review → Done**. Add
-every epic and story to it. Add a **Story Points** number field to the
-board so per-sprint totals (planned vs. completed) can be read off at the
-sprint review — that ratio is your team's velocity.
+every epic and story to it, plus two custom fields:
+- a **Story Points** number field, so per-sprint totals (planned vs.
+  completed) can be read off at the sprint review — that ratio is your
+  team's velocity;
+- a **Sprint iteration field** (*field type: Iteration*, four 2-week
+  iterations `Sprint 1`–`Sprint 4` matching §6's dates) — this is GitHub's
+  native sprint mechanism: group or slice the board by it to get a
+  per-sprint view, and it must agree with each issue's milestone.
 
 **What "done" means in CPSC 490:** stories come in two kinds and both are
 first-class. *Document stories* deliver a section of the proposal or a
