@@ -82,8 +82,8 @@ def warn(gate: str, msg: str) -> None:
 
 
 def inventory_issue(gate: str, msg: str) -> None:
-    """Inventory gates (G8, G9) are advisory during a sprint and blocking on
-    the way to main.
+    """Inventory gates (G8, G9, G10) are advisory during a sprint and blocking
+    on the way to main.
 
     Rationale: an issue filed mid-sprint that nobody has added to the
     proposal yet should not redden an unrelated pull request - that teaches
@@ -463,12 +463,95 @@ def gate_documents_linked() -> None:
     print(f"  {g}: checked {len(docs)} document(s) against proposal section 4")
 
 
+# ---------------------------------------------------------------- gate 10
+NEEDS_PARENT = ("user-story", "feature", "enhancement", "bug", "task", "sub-task")
+# `## Epic` / `## Parent` followed by a #n - the shape the issue templates ask for.
+PARENT_HEADING_RE = re.compile(r"^#{2,}\s*(?:epic|parent)\b[^\n]*\n+[^\n]*?#(\d{1,5})",
+                               re.I | re.M)
+
+
+def _gh_json(repo: str, token: str, path: str):
+    """One GET against the issues API, parsed. Raises on failure."""
+    req = urllib.request.Request(f"https://api.github.com/repos/{repo}{path}",
+                                 headers={"Authorization": f"Bearer {token}",
+                                          "User-Agent": "cpsc490-harness",
+                                          "Accept": "application/vnd.github+json"})
+    with urllib.request.urlopen(req, timeout=20) as r:
+        return json.load(r)
+
+
+def gate_hierarchy() -> None:
+    """G10 - the work breakdown is one unbroken chain.
+
+    epic (goal) -> user story (objective) -> feature / enhancement / bug ->
+    task / sub-task. The whole point is that a reader can start at a goal in
+    proposal section 2 and walk all the way down to the smallest piece of
+    work. An item with no parent breaks that walk, and it is usually a sign
+    of work nobody traced back to an objective.
+
+    Parents are found by asking every issue for its CHILDREN
+    (/issues/N/sub_issues) - GitHub does not put a parent pointer on the
+    issue payload - and by the `#n` under a `## Epic` / `## Parent` heading,
+    which is what the issue templates ask for.
+
+    Advisory during a sprint, blocking into main, like G8 and G9: an item
+    filed mid-sprint that nobody has parented yet should not redden an
+    unrelated pull request.
+    """
+    g = "G10 hierarchy"
+    repo = os.environ.get("GITHUB_REPOSITORY")
+    token = os.environ.get("GITHUB_TOKEN")
+    if not (repo and token):
+        print(f"  {g}: skipped (no GITHUB_REPOSITORY/GITHUB_TOKEN - runs in CI)")
+        return
+    try:
+        issues = [i for i in _gh_json(repo, token, "/issues?state=open&per_page=100")
+                  if "pull_request" not in i]
+    except Exception as e:
+        warn(g, f"could not list issues: {e}")
+        return
+    if not issues:
+        print(f"  {g}: no open issues yet")
+        return
+
+    parented = set()
+    for i in issues:
+        try:
+            kids = _gh_json(repo, token,
+                            f"/issues/{i['number']}/sub_issues?per_page=100")
+        except Exception:
+            kids = []               # sub-issues unavailable; body refs still count
+        if isinstance(kids, list):
+            parented |= {k["number"] for k in kids
+                         if isinstance(k, dict) and "number" in k}
+        if PARENT_HEADING_RE.search(i.get("body") or ""):
+            parented.add(i["number"])
+
+    orphans = 0
+    for i in issues:
+        labels = [l["name"] for l in i.get("labels", [])]
+        if "epic" in labels:
+            continue                # an epic is the top of the chain by definition
+        kind = next((l for l in NEEDS_PARENT if l in labels), None)
+        if kind is None:
+            continue                # untyped issue: G8's business, not this gate
+        if i["number"] not in parented:
+            orphans += 1
+            inventory_issue(g, f'#{i["number"]} ({kind}) "{i["title"][:42]}" names no '
+                               f"parent - put it under the item it belongs to "
+                               f"(epic -> user story -> feature/enhancement/bug -> "
+                               f"task/sub-task)")
+    if not orphans:
+        print(f"  {g}: all {len(issues)} open issue(s) sit on the chain")
+
+
+
 def main() -> int:
     strict = "--strict" in sys.argv
     print("CPSC 490 repository harness\n" + "=" * 34)
     for gate in (gate_proposal_structure, gate_traceability, gate_issue_refs_exist,
                  gate_links, gate_secrets, gate_diagrams, gate_activities_linked,
-                 gate_documents_linked, gate_placeholders):
+                 gate_documents_linked, gate_hierarchy, gate_placeholders):
         gate()
     print()
     for w in warnings:

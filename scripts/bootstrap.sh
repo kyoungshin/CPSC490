@@ -103,7 +103,7 @@ cat > "$PROTECT_JSON" <<'JSON'
 {
   "required_status_checks": {
     "strict": true,
-    "contexts": ["Repository harness (G1-G6)", "Prototype build & tests", "PR links an issue and discloses AI use"]
+    "contexts": ["Repository harness", "Prototype build & tests", "PR links an issue and discloses AI use"]
   },
   "enforce_admins": false,
   "required_pull_request_reviews": {

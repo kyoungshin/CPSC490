@@ -27,7 +27,7 @@ Two directions, two kinds of check:
 
 | | **Guides** — steer *before* it acts | **Sensors** — detect *after* it acts |
 |---|---|---|
-| **Deterministic** (milliseconds, same answer every time) | typed interfaces, project scaffolds, issue/PR templates, `CLAUDE.md` | tests, type checker, linters, link checker, schema validators, build exit code, the repo harness (G1–G6) |
+| **Deterministic** (milliseconds, same answer every time) | typed interfaces, project scaffolds, issue/PR templates, `CLAUDE.md` | tests, type checker, linters, link checker, schema validators, build exit code, the repo harness |
 | **Inferential** (an LLM does the checking; slow, non-deterministic) | the spec, acceptance criteria, worked examples | a reviewer prompt in a fresh session, LLM-as-judge |
 
 **Prefer deterministic over inferential, and sensors over prompts.** A rule

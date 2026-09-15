@@ -137,13 +137,17 @@ CI gate G8 fails if one exists that this section does not link. That is what
 keeps the goals in this document and the work on the board from drifting
 apart.
 
+Write each objective the way the guidance above asks — **an action word plus
+the measure that says it is done**, not a role-play sentence:
+
 - **Goal 1: 〈e.g. Secure account management〉** (Epic #〈n〉)
-  - Objective 1.1: 〈As a member, I want to register and log in, so that my
-    data is private.〉 (#〈n〉)
-  - Objective 1.2: 〈As a reviewer, I want a runnable prototype of the riskiest
-    flow, so that it is proven early.〉 (#〈n〉)
+  - Objective 1.1: 〈Implement member registration and login with hashed
+    credentials, session expiry, and rejection of malformed input.〉 (#〈n〉)
+  - Objective 1.2: 〈Demonstrate the login round-trip in a runnable prototype
+    at the Week-8 in-class check.〉 (#〈n〉)
 - **Goal 2: 〈your second goal〉** (Epic #〈n〉)
-  - Objective 2.1: 〈As a …, I want …, so that …〉 (#〈n〉)
+  - Objective 2.1: 〈Action word + what you will complete + how it will be
+    measured〉 (#〈n〉)
 
 〈Replace the brackets with your own 2–3 goals and their objectives, and put
 the **real issue numbers** in as you file them — gate G8 checks that every

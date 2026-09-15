@@ -188,10 +188,49 @@ needed; 491 teams may move to Jira later — the discipline is identical).
 Label `epic`. An epic's body lists its user stories as a task list
 (`- [ ] #12`) so progress is visible automatically.
 
-**User story = an Objective.** One issue per objective, written in the
-standard form: *"As a 〈who〉, I want 〈what〉, so that 〈why〉."*
-Label `user-story`. Every story must have, from the moment it enters a
-sprint:
+**User story = an Objective.** One issue per objective, and **title it with
+the objective itself, in the words proposal §2 uses** — an action word plus
+what gets completed. Someone reading §2 beside your board has to see the same
+sentence in both places; that one-to-one match *is* the traceability the
+rubric looks for, and it disappears the moment a title is a paraphrase.
+
+The classic user-story sentence — *"As a 〈who〉, I want 〈what〉, so that
+〈why〉."* — earns its keep on objectives that deliver a user-facing
+capability, because naming the *who* and the *why* is what makes acceptance
+criteria writeable. Put it in the issue **body** when it helps, and leave it
+out when there is no user in the objective: *"Achieve ≥ 90% precision on the
+held-out set"* is a perfectly good objective, and *"as a user, I want 90%
+precision"* is a worse version of it. The label stays `user-story` either
+way — that is the agile category for an objective, whatever its prose.
+
+**What a good objective looks like.** These came through this course in real
+proposals, lightly trimmed — action word first, and a number wherever a
+number is possible:
+
+- *Create a 3-act system, including setup, confrontation, and resolution.*
+- *Design a clean home layout with large, colourful buttons that let children
+  express needs and feelings quickly.*
+- *Integrate multilayered safety protocols, including account verification,
+  reporting tools, and trust scoring.*
+- *Maintain traversal times of ~2 minutes between points of interest.*
+- *Include at least two encounter types per zone.*
+- *Classify updates as breaking, potentially breaking or informational, with
+  roughly 75–80% accuracy.*
+- *Aim for 10–15 minutes from source change to internal processing.*
+
+Note how many of them carry a figure — *3 acts*, *~2 minutes*, *at least
+two*, *75–80%*, *10–15 minutes*. That is the "measurable" half of the
+template's instruction, and it is what makes the objective checkable at the
+end of CPSC 491 rather than arguable.
+
+The two ways objectives go wrong, both of which I have actually received: a
+goal written as **a paragraph of prose with no objectives enumerated under
+it** — nothing to file as an issue, nothing to measure at the end — and
+objectives that are **feature names rather than completions**. "The voting
+system" is not an objective; *"Implement one-vote-per-user-per-song with
+rate limiting"* is.
+
+Every story must have, from the moment it enters a sprint:
 
 | Field | How | Values |
 |---|---|---|
@@ -208,39 +247,64 @@ there when your work needs them (the labels exist in the example repo):
 | Type label | What it is | Typical CPSC 490 use |
 |---|---|---|
 | `epic` | A **goal** — container of user stories | one per Goal in the proposal |
-| `user-story` | An **objective** — user-visible value ("As a …") | one per Objective |
+| `user-story` | An **objective** from proposal §2 | one per Objective |
 | `feature` | A new capability that delivers (part of) a story | prototype capabilities |
 | `enhancement` | Improvement to something that already works | polish after check feedback |
 | `bug` | Defect — built behavior ≠ spec | prototype defects |
 | `task` | Concrete unit of work under a story/feature | "draft spec §3", "set up repo CI" |
 | `sub-task` | Breakdown of a task — smallest tracked unit | child checklist items |
 
-Hierarchy: **epic ⊃ user story ⊃ task ⊃ sub-task**, while
-feature / enhancement / bug describe *what kind* of work an item is (an
-item can carry both, e.g. `task` + `bug`). Every item gets an owner, a
-sprint milestone and a priority. In CPSC 490 most of your board is epics,
-stories, and tasks; bugs and enhancements become the daily vocabulary in
-CPSC 491.
+### The chain, and nothing off it
 
-**Where the story points go: on the item you commit to the sprint, once.**
-Estimate the **user story** — the unit of user-visible value your team
-pulls into a sprint — and leave its tasks and sub-tasks unpointed. Tasks
-are *how* the story gets done, not extra work on top of it.
+Every item hangs off the one above it:
+
+```
+epic  (a goal, from proposal §2)
+ └─ user story  (an objective, from proposal §2)
+     └─ feature / enhancement / bug
+         └─ task
+             └─ sub-task
+```
+
+That chain is the whole point: a reader opens proposal §2, picks a goal, and
+walks down to the smallest piece of work being done about it. The example
+repository is wired exactly that way, so you can click straight through it —
+[#1 goal](https://github.com/kyoungshin/CPSC490/issues/1) → [#3 objective](https://github.com/kyoungshin/CPSC490/issues/3) → [#6 feature](https://github.com/kyoungshin/CPSC490/issues/6) →
+[#5 task](https://github.com/kyoungshin/CPSC490/issues/5) → [#7 sub-task](https://github.com/kyoungshin/CPSC490/issues/7).
+
+Link a child to its parent with GitHub's **sub-issues**: open the parent
+issue, *Create sub-issue* → *Add existing issue*. The board then gives you a
+**Parent issue** column and a **Sub-issues progress** bar for nothing — both
+are built-in fields, so there is no extra field to keep in step. The issue
+templates also ask for the parent's number under a `## Epic` or `## Parent`
+heading, and either one satisfies the gate.
+
+**Gate G10 blocks a merge into `main` while any non-epic issue has no
+parent**, because an unparented item is work nobody traced back to an
+objective — and it is exactly what goes missing when a reader tries to
+follow a goal down to the code. On `feature → develop` it is only a warning,
+so filing something mid-sprint and parenting it an hour later costs nothing.
+
+`feature` / `enhancement` / `bug` also describe *what kind* of change an item
+is, so one item can carry two labels (`task` + `bug`). In CPSC 490 most of
+your board is goals, objectives and tasks; enhancements and bugs become the
+daily vocabulary in CPSC 491.
+
+### Where the story points go: on the objective, once
 
 | Item | `sp:` label? | Why |
 |---|---|---|
-| `epic` (a goal) | no | it spans sprints; its size is the sum of its stories |
-| `user-story` (an objective) | **yes** | this is what gets committed to a sprint |
-| `task` / `sub-task` beneath a pointed story | no | already inside that story's estimate |
-| a `feature` / `bug` / `task` with no parent story | **yes** | nothing else carries its estimate |
+| `epic` (a goal) | no | spans sprints; its size is the sum of its objectives |
+| `user-story` (an objective) | **yes** | this is the thing committed to a sprint |
+| everything below it | no | already inside that objective's estimate |
 
-Point both a story and its tasks and you count the same work twice — a
-sprint that reads as 15 points of capacity when the team really committed
-to 8, which makes every velocity number afterwards wrong.
-`scripts/sprint_report.py` catches it (it reads the `- [ ] #12` checklists
-to find each story's children), counts the work once at the parent, and
-tells you to fix the labels. The habit to build is simply: **estimate the
-story, break it into tasks, do not re-estimate the pieces.**
+Point an objective *and* its tasks and you have counted the same work twice
+— a sprint that reads as 15 points of capacity when the team committed to 8,
+which makes every velocity figure after it wrong.
+`scripts/sprint_report.py` catches that, reading both the `- [ ] #12`
+checklists and GitHub's native sub-issues, counting the work once at the
+objective and naming the labels to fix. The habit is simply: **estimate the
+objective, break it down, do not re-estimate the pieces.**
 
 **Board:** create one Project (*Projects → New project → Board*) with
 columns **Backlog → Sprint To-Do → In Progress → In Review → Done**. Add

@@ -91,7 +91,7 @@ for `develop`:
 - Require a pull request before merging
 - Require approvals: **1**
 - Dismiss stale approvals when new commits are pushed
-- Require status checks: `Repository harness (G1–G6)`, `Prototype build & tests`, `PR links an issue and discloses AI use`
+- Require status checks: `Repository harness`, `Prototype build & tests`, `PR links an issue and discloses AI use`
 - Require branches to be up to date before merging
 - Block force pushes
 

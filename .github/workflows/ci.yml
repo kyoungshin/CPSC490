@@ -6,7 +6,7 @@
 # is the checkpoint that catches AI output nobody verified.
 #
 # Jobs:
-#   harness       — repository gates G1–G6 (.github/scripts/check_repo.py)
+#   harness       — the repository gates (.github/scripts/check_repo.py)
 #   prototype     — builds/tests prototype/ if it has anything to build
 #   pr-discipline — the PR itself links an issue and discloses AI use
 name: CI
@@ -24,7 +24,7 @@ permissions:
 
 jobs:
   harness:
-    name: Repository harness (G1–G6)
+    name: Repository harness
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

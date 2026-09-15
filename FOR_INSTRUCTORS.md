@@ -33,7 +33,7 @@ the material and that authorship stays clear. Once granted, please cite:
 | [`QUICKSTART.md`](QUICKSTART.md) | the student entry point: whole setup in ~1 hour of numbered steps |
 | [`README.md`](README.md) | the full reference guide (repo layout, proposal rules, board conventions, sprint cadence, grading metrics) |
 | [`scripts/bootstrap.sh`](scripts/bootstrap.sh) | one command creates the 15 labels, 4 sprint milestones, `develop`, branch protection, and a project board with its Status columns |
-| [`.github/scripts/check_repo.py`](.github/scripts/check_repo.py) | the harness: 9 gates, standard library only, same command locally and in CI |
+| [`.github/scripts/check_repo.py`](.github/scripts/check_repo.py) | the harness: 10 gates, standard library only, same command locally and in CI |
 | [`.github/workflows/ci.yml`](.github/workflows/ci.yml) | runs the harness, the prototype's tests, and a PR-discipline check |
 | [`docs/aidlc/`](docs/aidlc/) | the AI-use curriculum: the seven gates, a prompt library, harness/loop engineering, a harness log, four lecture decks, and a sourced evidence appendix |
 | [AIDLC Field Guide](https://kyoungshin.github.io/CPSC490/aidlc/AIDLC-Field-Guide.html) | the four-week course companion, served via GitHub Pages (`docs/.nojekyll` keeps Jekyll from mangling the `{{…}}` prompt placeholders) |
@@ -41,7 +41,7 @@ the material and that authorship stays clear. Once granted, please cite:
 | [`proposal/proposal.md`](proposal/proposal.md) | proposal skeleton matching our Word template section-for-section |
 | `docs/specs/`, `docs/design/`, `prototype/` | worked examples, not stubs — a real specification, a design doc with three Mermaid diagrams, and a runnable prototype with tests |
 
-## The nine gates, in one line each
+## The ten gates, in one line each
 
 The harness exists because LLM output fails in recognizable ways. Each gate
 targets one; `docs/aidlc/hitl-gates.md` explains them to students.
@@ -57,9 +57,10 @@ targets one; `docs/aidlc/hitl-gates.md` explains them to students.
 | G7 | every design document contains a diagram | design-by-prose |
 | G8 | epics/stories linked from proposal §2; other work items from §4 | the document and the board drifting apart |
 | G9 | every specification and design document indexed in proposal §4 | technical detail a reader cannot find |
+| G10 | every non-epic issue names a parent | work nobody traced back to an objective |
 
-G8 and G9 are advisory on `feature → develop` and blocking into `main`, so a
-mid-sprint issue nobody has linked yet cannot redden an unrelated PR.
+G8, G9 and G10 are advisory on `feature → develop` and blocking into `main`,
+so a mid-sprint issue nobody has linked yet cannot redden an unrelated PR.
 
 ## What to change for your course
 

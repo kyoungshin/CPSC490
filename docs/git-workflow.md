@@ -101,7 +101,7 @@ each a gate you can reason about:
 
 | Job | What it does | What it catches |
 |---|---|---|
-| **harness** | runs `.github/scripts/check_repo.py` — gates G1–G6 | template drift, orphan documents, invented issue numbers, dead links, committed secrets |
+| **harness** | runs `.github/scripts/check_repo.py` — every gate | template drift, orphan documents, invented issue numbers, dead links, committed secrets |
 | **prototype** | installs and tests `prototype/` (Node or Python, auto-detected) | code that looks right but does not run; missing tests |
 | **pr-discipline** | reads the PR body | PRs with no linked story, no AI disclosure, no statement of what was verified |
 
@@ -128,7 +128,7 @@ reviewed, green code can ever ship.
 - ✅ Require approvals: **1** — GitHub will not let you approve your own PR,
   so this is what guarantees a second pair of human eyes
 - ✅ Dismiss stale approvals when new commits are pushed
-- ✅ Require status checks to pass: `Repository harness (G1–G6)`,
+- ✅ Require status checks to pass: `Repository harness`,
   `Prototype build & tests`, `PR links an issue and discloses AI use`
 - ✅ Require branches to be up to date before merging
 - ✅ Require conversation resolution before merging
