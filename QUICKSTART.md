@@ -124,6 +124,13 @@ That is the loop you will repeat all semester.
 
 ## What to read, and when
 
+**Required reading, whole team, before Sprint 1 — about 17 minutes:** this
+page (4 min) + [`docs/aidlc/hitl-gates.md`](docs/aidlc/hitl-gates.md) (9 min)
++ [`README.md`](README.md) §3, the proposal rules (4 min). That is the
+mandatory set. **Everything else below is reference** — look it up when the
+right-hand column applies to what you are doing today. Nobody is expected to
+read it all at once.
+
 | When | Read |
 |---|---|
 | Before Sprint 1, everyone | [`docs/aidlc/hitl-gates.md`](docs/aidlc/hitl-gates.md) — the seven gates and the LLM failure each one catches |

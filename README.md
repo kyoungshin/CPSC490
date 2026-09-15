@@ -3,7 +3,9 @@
 > **This repository is itself the example.** It is laid out exactly the way
 > your group repository should be — browse the folders, the issue templates,
 > the labels, the `Sprint 1`–`Sprint 4` milestones, the sample issues (#1–#5),
-> the runnable `prototype/`, and the
+> the runnable `prototype/`, the worked
+> [specification](docs/specs/example-spec.md) and
+> [design document](docs/design/example-design.md), and the
 > [CPSC490 project board](https://github.com/users/kyoungshin/projects/1) —
 > then build yours the same way.
 >
@@ -34,25 +36,18 @@ it up right once.
 
 ---
 
-## 1. Create the repository (leader, once — ~15 minutes)
+## 1. Create the repository
 
-1. Every member creates a **GitHub account** (free) with a recognizable
-   username. Add your name to your GitHub profile.
-2. The **group leader** creates ONE repository:
-   - Name: `CPSC490-G<number>-<groupname>` (e.g. `CPSC490-G03-California`)
-     — use your group number and name from the course group list.
-   - Visibility: **Private**, unless the whole team prefers public.
-   - Check "Add a README file".
-3. Leader adds every member AND the instructor as collaborators:
-   *Settings → Collaborators → Add people* — add each teammate's username
-   and **`kyoungshin`** (instructor; required so I can grade).
-4. Fill in the README (team contract, §2).
-5. One member posts the repository URL where the course announces it
-   (this was your HW#2 "Team GitHub repository URL" — keep it current if
-   the repo moves).
+All of this is [`QUICKSTART.md`](QUICKSTART.md) steps 1–4, and
+`scripts/bootstrap.sh` does most of it in one command. In short: the leader
+creates one **private** repo named `CPSC490-G<number>-<groupname>`, adds every
+teammate **and `kyoungshin`** as collaborators, copies this example's
+scaffolding in, then runs the bootstrap script for labels, milestones,
+`develop`, branch protection and the board. Post the repo URL where the
+course asks for it.
 
-**Every member must commit at least once in every sprint.** GitHub's
-contributor graph is part of how individual participation is seen.
+**Every member commits in every sprint.** The contributor graph is part of how
+individual participation is seen.
 
 ---
 
@@ -263,60 +258,10 @@ The single habit that most affects your sprint grade:
 4. **Author ≠ reviewer.** A different team member approves each PR before
    merge. Rotate reviewers; don't let one person approve everything.
 
-Issue templates live in `.github/ISSUE_TEMPLATE/`. The example repository
-ships four ready to copy — `epic.md`, `user-story.md`, `task.md`, `bug.md`
-— plus `PULL_REQUEST_TEMPLATE.md`. The two required ones are:
-
-`epic.md`
-```markdown
----
-name: Epic (Goal)
-about: One project goal from Goals & Objectives
-labels: epic
----
-## Goal
-<one sentence — copy the goal from the proposal>
-
-## User stories (objectives)
-- [ ] #
-- [ ] #
-
-## Success measure
-<how we know this goal is achieved>
-```
-
-`user-story.md`
-```markdown
----
-name: User story (Objective)
-about: One objective under a goal
-labels: user-story
----
-## Story
-As a <who>, I want <what>, so that <why>.
-
-## Epic
-#<epic number>
-
-## Deliverable
-docs/<specs|design>/<file>.md
-
-## Acceptance criteria
-- [ ]
-- [ ]
-```
-
-`PULL_REQUEST_TEMPLATE.md`
-```markdown
-Closes #<story>
-
-## What changed
--
-
-## Checklist
-- [ ] Acceptance criteria of the linked story are met
-- [ ] Reviewed by a teammate who is not the author
-```
+Issue templates live in `.github/ISSUE_TEMPLATE/` — the example ships
+`epic.md`, `user-story.md`, `task.md`, `bug.md` and
+`PULL_REQUEST_TEMPLATE.md`, already wired for the fields above. Copy the
+folder; you do not need to write them.
 
 ---
 
@@ -361,8 +306,8 @@ project — that is encouraged, and it is what the AIDLC lectures are about.
 The discipline is **human-in-the-loop**: the assistant drafts, *you* verify,
 and a *second human* approves. Nothing reaches `main` otherwise.
 
-Three things make that real in your repository, and all three are in the
-example repo ready to copy:
+Four documents in the example repo make that real — copy them and read them
+when the table in `QUICKSTART.md` says to:
 
 1. **[`CLAUDE.md`](CLAUDE.md) — standardized context.** One file naming the
    project, conventions, what the assistant may draft, and what only a human
@@ -440,25 +385,7 @@ night before review, "Done" columns full of unmerged work.
 
 ---
 
-## 9. Quick-start checklist (do in week one of Sprint 1)
-
-- [ ] Repo created with course naming; all members + `kyoungshin` added
-- [ ] README filled in from `README_TEMPLATE.md` (team table, project title, links)
-- [ ] `proposal/proposal.md` skeleton committed with all 11 template headings
-- [ ] Issue templates + PR template committed
-- [ ] Labels created (all 17: the 7 agile types + priority/loe/sp) — `bootstrap.sh` does this
-- [ ] Milestones created: `Sprint 1`–`Sprint 4` with dates
-- [ ] Project board created (5 columns + Story Points number field + Sprint iteration field), linked in README
-- [ ] Every goal filed as an epic; every objective as a user story under it
-- [ ] Sprint 1 stories pulled into the `Sprint 1` milestone with owner/priority/LOE/points — including prototype stories, not only writing
-- [ ] Prototype v0 committed under `prototype/` with run instructions in its README
-- [ ] `bash scripts/bootstrap.sh` run (labels, milestones, `develop`, branch protection, board — one command; safe to re-run)
-- [ ] `CLAUDE.md` copied and filled in; team agreed to read `docs/aidlc/hitl-gates.md`
-- [ ] CI green on a first real pull request, reviewed by a non-author
-
----
-
-## 10. AI usage
+## 9. AI usage
 
 AI tools (Claude, Copilot, ChatGPT, …) are **encouraged** for drafting,
 reviewing, and organizing — and their use must be disclosed in the
