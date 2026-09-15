@@ -144,8 +144,21 @@ and story points. Replace it with your own 2–3 goals.〉
 > Describe your proposed approach to solve the problem, specifying how you
 > will achieve the stated goals. List some possible strategies.
 
-〈Your approach, the alternatives you considered, and the reasoning that
-decided between them.〉
+〈Your approach — **clear and concise**. State the strategy you chose, the
+alternatives you considered, and the reasoning that decided between them.
+Think of this as the argument, not the manual: a reader should finish this
+section understanding *what* you will do and *why that* rather than the
+alternatives.〉
+
+**Keep the details out of this section.** Tooling, platforms, frameworks,
+DBMS choices, environment setup, diagrams, and the work breakdown all belong
+in §4 (Required Environment, Resources, and Planned Activities). If a
+sentence here names a version number, a library, or a configuration, it
+probably belongs in §4 — leave a pointer instead ("the implementation stack
+is detailed in §4").
+
+〈A few paragraphs, or a short list of candidate strategies with one line of
+trade-off each. If it runs past a page, you are writing §4.〉
 
 ## 4. Required Environment, Resources, and Planned Activities
 

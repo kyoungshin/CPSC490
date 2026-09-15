@@ -124,7 +124,7 @@ Open the result in Word, check heading numbering and figure placement, and
 submit that. (Writing in Word instead is fine — but commit the `.docx` here
 *and* keep the Markdown current, since that is what review and CI can read.)
 
-Five sections need particular care:
+Six sections need particular care:
 
 - **1.1 Related Work** — a **comparative analysis**, not a list of summaries.
   Compare the existing ideas/products/papers against each other on the
@@ -141,6 +141,11 @@ Five sections need particular care:
   *objective* under it a **User Story** issue (§4). **Every epic and user
   story is linked from this section**, so the goals in the document and the
   work on the board cannot drift apart.
+- **3 Proposed Approaches** — **clear and concise**: the strategy you chose,
+  the alternatives, and the reasoning. This is the argument, not the manual —
+  all the detail (tooling, platforms, frameworks, DBMS, environment,
+  diagrams, work breakdown) goes in §4. If a sentence here names a version
+  number or a library, it belongs in §4.
 - **4 Required Environment, Resources, and Planned Activities** — two things
   live here. First, your **diagrams**: high-level architecture and
   system/context at minimum, plus ER/EER and data-flow views where they earn
