@@ -1,17 +1,20 @@
 # CPSC 490 — Group Repository Setup Guide
 
+**Project board (live example): <https://github.com/users/kyoungshin/projects/1>**
+· **Field Guide: <https://kyoungshin.github.io/CPSC490/aidlc/AIDLC-Field-Guide.html>**
+· **Start here: [`QUICKSTART.md`](QUICKSTART.md)**
+
 > **This repository is itself the example.** It is laid out exactly the way
 > your group repository should be — browse the folders, the issue templates,
 > the labels, the `Sprint 1`–`Sprint 4` milestones, the sample issues (#1–#5),
 > the runnable `prototype/`, the worked
 > [specification](docs/specs/example-spec.md) and
 > [design document](docs/design/example-design.md), and the
-> [CPSC490 project board](https://github.com/users/kyoungshin/projects/1) —
-> then build yours the same way.
+> [project board](https://github.com/users/kyoungshin/projects/1) — then
+> build yours the same way.
 >
-> **Start with [`QUICKSTART.md`](QUICKSTART.md)** — one hour, numbered steps,
-> and `scripts/bootstrap.sh` does the whole labels/milestones/branches/board
-> setup in one command. This document is the reference behind it.
+> `scripts/bootstrap.sh` does the whole labels/milestones/branches/board
+> setup in one command. This document is the reference behind QUICKSTART.
 
 **Fall 2026 · Prof. Kyoung Shin · Department of Computer Science, CSUF**
 
@@ -88,7 +91,9 @@ CPSC490-G03-California/
 
 **README.md** must contain: project title · sponsor code (e.g. RTX-3) if
 sponsored · member table (name, GitHub username, role) · leader/contact ·
-link to `proposal/proposal.md` · link to your Project board. **Start from
+link to `proposal/proposal.md` · **link to your Project board** (the way the
+[example board](https://github.com/users/kyoungshin/projects/1) is linked
+from this guide). **Start from
 [`README_TEMPLATE.md`](README_TEMPLATE.md) in the example repository** —
 copy it to your repo as `README.md` and fill in the 〈brackets〉.
 
@@ -235,6 +240,12 @@ bugs and enhancements become the daily vocabulary in CPSC 491.
 **Board:** create one Project (*Projects → New project → Board*) with
 columns **Backlog → Sprint To-Do → In Progress → In Review → Done**. Add
 every epic and story to it, plus two custom fields:
+
+> 📋 **The example board is live — open it and copy what you see:**
+> **<https://github.com/users/kyoungshin/projects/1>**
+> (issues #1–#5 placed across the columns, with Status, Sprint and Story
+> Points set, and the three views described below.) Put **your** board's URL
+> in your team `README.md`.
 - a **Story Points** number field, so per-sprint totals (planned vs.
   completed) can be read off at the sprint review — that ratio is your
   team's velocity;
@@ -252,7 +263,9 @@ field is *which fortnight it belongs to*. A card moves across the columns
 within one sprint.
 
 **Set up three views once** (view tabs at the top of the board — the API
-cannot create these, so do it by hand; the example board shows all three):
+cannot create these, so do it by hand; the
+[example board](https://github.com/users/kyoungshin/projects/1) has all three
+to copy):
 
 | View | Layout | How | What it is for |
 |---|---|---|---|
