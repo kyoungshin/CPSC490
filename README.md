@@ -240,8 +240,43 @@ every epic and story to it, plus two custom fields:
   team's velocity;
 - a **Sprint iteration field** (*field type: Iteration*, four 2-week
   iterations `Sprint 1`–`Sprint 4` matching §6's dates) — this is GitHub's
-  native sprint mechanism: group or slice the board by it to get a
-  per-sprint view, and it must agree with each issue's milestone.
+  native sprint mechanism, and it must agree with each issue's milestone.
+
+`bash scripts/bootstrap.sh` creates the board and all three fields for you.
+
+### Running a sprint on the board
+
+Two things confuse people at first, so to be explicit: **the Status columns
+are not sprints.** Columns are *where a card is in its life*; the Sprint
+field is *which fortnight it belongs to*. A card moves across the columns
+within one sprint.
+
+**Set up three views once** (view tabs at the top of the board — the API
+cannot create these, so do it by hand; the example board shows all three):
+
+| View | Layout | How | What it is for |
+|---|---|---|---|
+| **Sprint Board** | Board | column field = `Status`; turn on the `Sprint` and `Story Points` fields so they show on the cards | daily work |
+| **Current Sprint** | Board | same, plus filter `sprint:@current` | the only view you need most days — it hides the other three sprints |
+| **Sprint Plan** | Table | show `Sprint`, `Status`, `Story Points`, `Assignees`, `Milestone`; group by `Sprint` | planning and the sprint review |
+
+**At sprint planning** — pull work from `Backlog` into `Sprint To-Do`, and
+for each card set **assignee, Sprint, milestone, priority, LOE and story
+points *now***, not later. Sum the points you pulled: that is your plan.
+
+**During the sprint** — one card per person in `In Progress` is the ideal;
+move a card yourself when you branch, and to `In Review` when you open the
+pull request. **Nothing reaches `Done` except by a merged PR** — dragging a
+card to Done is not how work finishes, and a Done column full of unmerged
+cards is the fastest way to lose points on *transparency*.
+
+**At the sprint boundary** — in the Sprint Plan view, read the `Sprint 1`
+group: points planned versus points actually in `Done`. That ratio is your
+velocity, and it goes in `docs/sprint-reviews/sprint-N.md` with anything
+that carried over and why. Then plan the next sprint from the same view.
+
+**Epics stay on the board but carry no Sprint** — they span sprints, and
+their progress shows through the task list of stories in the epic body.
 
 **What "done" means in CPSC 490:** stories come in two kinds and both are
 first-class. *Document stories* deliver a section of the proposal or a

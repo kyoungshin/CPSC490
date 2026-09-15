@@ -54,6 +54,14 @@ That creates all 17 labels, the four sprint milestones with dates, the
 board with its Status / Story Points / Sprint fields. It is safe to re-run —
 it skips whatever already exists — and it prints what is left for you.
 
+**One thing you must add by hand** (GitHub's API cannot create board views):
+three view tabs on the board — a **Sprint Board**, a **Current Sprint** board
+filtered to `sprint:@current`, and a **Sprint Plan** table grouped by
+`Sprint`. Two minutes, and it is what makes the board usable during a sprint.
+The recipe is in the setup guide §4 ("Running a sprint on the board"), and the
+[example board](https://github.com/users/kyoungshin/projects/1) has all three
+set up to copy.
+
 <details>
 <summary>Or do it by hand (click-by-click, ~20 minutes)</summary>
 
