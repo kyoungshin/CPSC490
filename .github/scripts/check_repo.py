@@ -25,7 +25,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 
 # The sections of the CPSC 490 proposal template, with the template's own
-# numbering (0 Abstract; 1 Introduction with 1.1-1.3; 2 onward). Headings in
+# numbering (0 Abstract; 1 Introduction with 1.1-1.2; 2 onward). Headings in
 # proposal.md must match these so the document converts into the Word
 # template for Canvas submission.
 REQUIRED_PROPOSAL_SECTIONS = [
@@ -33,13 +33,13 @@ REQUIRED_PROPOSAL_SECTIONS = [
     ("1", "Introduction"),
     ("1.1", "Related Work"),
     ("1.2", "Problem Statements"),
-    ("1.3", "Goals and Objectives"),
-    ("2", "Proposed Approaches"),
-    ("3", "Required Environment, Resources, and Planned Activities"),
-    ("4", "Project Outcomes"),
-    ("5", "Project Timeline"),
-    ("6", "AI Usage"),
-    ("7", "References"),
+    ("2", "Goals and Objectives"),
+    ("3", "Proposed Approaches"),
+    ("4", "Required Environment, Resources, and Planned Activities"),
+    ("5", "Project Outcomes"),
+    ("6", "Project Timeline"),
+    ("7", "AI Usage"),
+    ("8", "References"),
 ]
 
 # Files that are meant to contain 〈placeholders〉 — templates and examples.
@@ -89,6 +89,22 @@ def md_files() -> list[Path]:
             continue
         out.append(p)
     return sorted(out)
+
+
+def is_deliverable(path: Path) -> bool:
+    """True for files the TEAM authors as project work.
+
+    Course scaffolding — docs/aidlc/, docs/git-workflow.md, README*,
+    CLAUDE.md, .github/ — is reference material. It legitimately contains
+    example issue numbers and placeholders, so the content gates below would
+    otherwise flag the very documents that explain them.
+    """
+    rel = path.relative_to(ROOT).as_posix()
+    if rel.startswith(("proposal/", "docs/specs/", "docs/sprint-reviews/")):
+        return True
+    if rel.startswith("docs/design/"):
+        return not path.stem.isupper()   # DIAGRAMS.md is reference material
+    return False
 
 
 def is_template(path: Path) -> bool:
@@ -171,9 +187,9 @@ def gate_issue_refs_exist() -> None:
         return
     refs: dict[int, set[str]] = {}
     for p in md_files():
-        rel = p.relative_to(ROOT).as_posix()
-        if rel.startswith(".github/") or rel in ("README.md", "README_TEMPLATE.md", "CLAUDE.md"):
+        if not is_deliverable(p):
             continue
+        rel = p.relative_to(ROOT).as_posix()
         for m in re.finditer(r"(?<![\w/])#(\d{1,5})\b", p.read_text(encoding="utf-8", errors="replace")):
             refs.setdefault(int(m.group(1)), set()).add(rel)
     if not refs:
@@ -267,7 +283,7 @@ def gate_placeholders() -> None:
     g = "G6 placeholders"
     total = 0
     for p in md_files():
-        if is_template(p):
+        if not is_deliverable(p) or is_template(p):
             continue
         text = p.read_text(encoding="utf-8", errors="replace")
         n = sum(len(re.findall(pat, text)) for pat in PLACEHOLDER_PATTERNS)
@@ -302,11 +318,64 @@ def gate_diagrams() -> None:
     print(f"  {g}: checked {len(docs)} design document(s)")
 
 
+# ---------------------------------------------------------------- gate 8
+def gate_activities_linked() -> None:
+    """G8 - every epic and user story is linked from the proposal's
+    "Required Environment, Resources, and Planned Activities" section.
+
+    Catches: the board and the document drifting apart. Planned activities
+    ARE the issues; a story nobody listed in the proposal is work the reader
+    cannot see, and a proposal that lists work nobody filed is fiction.
+    """
+    g = "G8 activities-linked"
+    repo = os.environ.get("GITHUB_REPOSITORY")
+    token = os.environ.get("GITHUB_TOKEN")
+    prop = ROOT / "proposal" / "proposal.md"
+    if not (repo and token):
+        print(f"  {g}: skipped (no GITHUB_REPOSITORY/GITHUB_TOKEN - runs in CI)")
+        return
+    if not prop.exists():
+        return  # G1 already reported it
+    text = prop.read_text(encoding="utf-8", errors="replace")
+    m = re.search(r"^##\s+4\.?\s+Required Environment.*?$(.*?)(?=^##\s|\Z)",
+                  text, re.M | re.S)
+    if not m:
+        fail(g, "could not find section 4 (Required Environment, Resources, and "
+                "Planned Activities) in proposal/proposal.md")
+        return
+    section = m.group(1)
+    linked = {int(n) for n in re.findall(r"#(\d{1,5})", section)}
+    linked |= {int(n) for n in re.findall(r"/issues/(\d{1,5})", section)}
+    missing = []
+    for label in ("epic", "user-story"):
+        url = (f"https://api.github.com/repos/{repo}/issues"
+               f"?state=open&labels={label}&per_page=100")
+        req = urllib.request.Request(url, headers={
+            "Authorization": f"Bearer {token}", "User-Agent": "cpsc490-harness",
+            "Accept": "application/vnd.github+json"})
+        try:
+            with urllib.request.urlopen(req, timeout=20) as r:
+                for issue in json.load(r):
+                    if "pull_request" in issue:
+                        continue
+                    if issue["number"] not in linked:
+                        missing.append(f'#{issue["number"]} ({label}) "'
+                                       f'{issue["title"][:50]}"')
+        except Exception as e:
+            warn(g, f"could not list {label} issues: {e}")
+            return
+    for mi in sorted(missing):
+        fail(g, f"not linked from proposal section 4: {mi}")
+    print(f"  {g}: {len(linked)} issue link(s) in section 4, "
+          f"{len(missing)} unlinked epic/story")
+
+
 def main() -> int:
     strict = "--strict" in sys.argv
     print("CPSC 490 repository harness\n" + "=" * 34)
     for gate in (gate_proposal_structure, gate_traceability, gate_issue_refs_exist,
-                 gate_links, gate_secrets, gate_diagrams, gate_placeholders):
+                 gate_links, gate_secrets, gate_diagrams, gate_activities_linked,
+                 gate_placeholders):
         gate()
     print()
     for w in warnings:

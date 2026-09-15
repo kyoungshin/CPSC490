@@ -85,7 +85,9 @@ copy it to your repo as `README.md` and fill in the 〈brackets〉.
 
 `proposal/proposal.md` **is the proposal document, not a README.** Write
 continuous academic prose — no task lists, no emoji, no repo jargon — with
-the section numbers and titles of the course Word template, exactly:
+the section numbers and titles of the course Word template, exactly. **Each
+section in the skeleton opens with the template's own guidance text** in a
+quote block; delete those blocks as you write.
 
 | § | Section |
 |---|---|
@@ -93,13 +95,13 @@ the section numbers and titles of the course Word template, exactly:
 | 1 | Introduction |
 | 1.1 | Related Work |
 | 1.2 | Problem Statements |
-| 1.3 | **Goals and Objectives** ← drives your issue board (§4) |
-| 2 | Proposed Approaches |
-| 3 | Required Environment, Resources, and Planned Activities ← **diagrams go here** |
-| 4 | Project Outcomes |
-| 5 | Project Timeline ← **next semester's implementation plan** |
-| 6 | AI Usage |
-| 7 | References |
+| 2 | **Goals and Objectives** ← drives your issue board (§4) |
+| 3 | Proposed Approaches |
+| 4 | Required Environment, Resources, and Planned Activities ← **diagrams go here** |
+| 5 | Project Outcomes |
+| 6 | Project Timeline ← **next semester's implementation plan** |
+| 7 | AI Usage |
+| 8 | References |
 
 CI gate G1 checks these headings and their numbering, because the numbering
 is what makes the file convert cleanly into the Word template.
@@ -117,16 +119,24 @@ submit that. (Writing in Word instead is fine — but commit the `.docx` here
 
 Three sections need particular care:
 
-- **1.3 Goals and Objectives** — each *goal* is an **Epic** issue, each
+- **2 Goals and Objectives** — each *goal* is an **Epic** issue, each
   *objective* under it a **User Story** issue (§4). Cite the issue numbers in
   the prose so the document and the board stay in step.
-- **3 Required Environment, Resources, and Planned Activities** — this is
-  where your **diagrams** appear: high-level architecture and system/context
-  at minimum, plus ER/EER and data-flow views where they earn their place.
-  Keep the authoritative copies in `docs/design/` (editable source *and*
-  exported image) and reference them here. Tools and conventions:
-  [`docs/design/DIAGRAMS.md`](docs/design/DIAGRAMS.md).
-- **5 Project Timeline** — this is the plan for **CPSC 491 next semester**:
+- **4 Required Environment, Resources, and Planned Activities** — two things
+  live here. First, your **diagrams**: high-level architecture and
+  system/context at minimum, plus ER/EER and data-flow views where they earn
+  their place. Keep the authoritative copies in `docs/design/` (editable
+  source *and* exported image) and reference them here — tools and
+  conventions in [`docs/design/DIAGRAMS.md`](docs/design/DIAGRAMS.md).
+  Second, **every epic and user story must be linked from this section** as
+  the planned-activities inventory, so a reader can walk from the proposal to
+  the issue to the document or code it produced. Gate G8 fails if an epic or
+  story exists that this section does not link.
+- **5 Project Outcomes** — one or two paragraphs of prose explaining the
+  outcome overall (not a checklist): what will exist when the project is
+  done, the deliverables named inside those paragraphs, and briefly what
+  prototype v0 demonstrates today and how to run it.
+- **6 Project Timeline** — this is the plan for **CPSC 491 next semester**:
   how the system actually gets built, in what order, with which milestones.
   It is *not* this semester's four proposal sprints — those live on the
   project board and in `docs/sprint-reviews/`.
