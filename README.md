@@ -146,13 +146,17 @@ Six sections need particular care:
   all the detail (tooling, platforms, frameworks, DBMS, environment,
   diagrams, work breakdown) goes in §4. If a sentence here names a version
   number or a library, it belongs in §4.
-- **4 Required Environment, Resources, and Planned Activities** — two things
-  live here. First, your **diagrams**: high-level architecture and
+- **4 Required Environment, Resources, and Planned Activities** — this is
+  where all the concrete detail lives, and it has three inventories.
+  **Literally every specification and design document** the team writes is
+  listed here with the objective it serves (gate G9), so §3 stays the
+  argument and §4 is the index of everything buildable. Also your
+  **diagrams**: high-level architecture and
   system/context at minimum, plus ER/EER and data-flow views where they earn
   their place. Keep the authoritative copies in `docs/design/` (editable
   source *and* exported image) and reference them here — tools and
   conventions in [`docs/design/DIAGRAMS.md`](docs/design/DIAGRAMS.md).
-  Second, the **planned-activities inventory**: this section links every
+  And the **planned-activities inventory**: this section links every
   *other* work item — **feature, enhancement, bug, task, sub-task** — each
   traceable to the objective it serves (epics and stories themselves are
   linked from §2). Together the two sections give a reader every planned

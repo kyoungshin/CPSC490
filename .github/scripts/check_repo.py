@@ -400,12 +400,43 @@ def gate_activities_linked() -> None:
               f"nothing unlinked")
 
 
+# ---------------------------------------------------------------- gate 9
+def gate_documents_linked() -> None:
+    """G9 - every specification and design document is listed in proposal
+    section 4 (Required Environment, Resources, and Planned Activities).
+
+    Catches: technical detail that exists but that no reader of the proposal
+    can find. Section 4 is the index of the project's specifications and
+    designs; a document missing from it is invisible work.
+    """
+    g = "G9 documents-linked"
+    prop = ROOT / "proposal" / "proposal.md"
+    if not prop.exists():
+        return  # G1 already reported it
+    docs = [p for p in (ROOT / "docs").rglob("*.md")
+            if p.parent.name in ("specs", "design") and not p.stem.isupper()
+            ] if (ROOT / "docs").exists() else []
+    if not docs:
+        warn(g, "no specification or design documents yet")
+        return
+    section = _proposal_section(prop.read_text(encoding="utf-8", errors="replace"), "4")
+    if section is None:
+        fail(g, "could not find section 4 in proposal/proposal.md")
+        return
+    for d in docs:
+        rel = d.relative_to(ROOT).as_posix()
+        if rel not in section and d.name not in section:
+            fail(g, f"{rel} is not listed in proposal section 4 "
+                    f"(Specification and design documents)")
+    print(f"  {g}: checked {len(docs)} document(s) against proposal section 4")
+
+
 def main() -> int:
     strict = "--strict" in sys.argv
     print("CPSC 490 repository harness\n" + "=" * 34)
     for gate in (gate_proposal_structure, gate_traceability, gate_issue_refs_exist,
                  gate_links, gate_secrets, gate_diagrams, gate_activities_linked,
-                 gate_placeholders):
+                 gate_documents_linked, gate_placeholders):
         gate()
     print()
     for w in warnings:

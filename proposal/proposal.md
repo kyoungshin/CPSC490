@@ -185,6 +185,23 @@ figure the text never mentions is decoration. See `docs/design/DIAGRAMS.md`
 for tools, conventions, and the rule that every box and arrow must be
 verified against reality.〉
 
+### Specification and design documents
+
+**Every specification and design document the team writes is listed here**
+with the objective it serves. This section is the index of the project's
+technical detail: §3 holds the argument, §4 holds the documents that make it
+buildable. CI gate G9 fails if a document exists in `docs/specs/` or
+`docs/design/` that this section does not link.
+
+| Document | Kind | Covers | Issues |
+|---|---|---|---|
+| [docs/specs/example-spec.md](../docs/specs/example-spec.md) | specification | account management requirements | #1, #2, #3 |
+| [docs/design/example-design.md](../docs/design/example-design.md) | design | system architecture + data model | #1, #4 |
+| 〈docs/specs/…〉 | 〈specification/design〉 | 〈…〉 | 〈#n〉 |
+
+〈Replace these rows with your own. Each document names its epic and stories
+in its own first lines too (gate G2), so the trail runs both ways.〉
+
 ### Planned activities — the work items
 
 The goals and objectives live in §2 as epics and user stories. **This section
