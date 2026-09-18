@@ -198,4 +198,4 @@ HW #3 preference form in Canvas, not by this page. Sponsor summaries are
 reproduced from the companies' own 2026–2027 capstone proposal documents for
 course use.
 
-*Maintained by Kyoung Shin · <kshin@fullerton.edu> · see [`../LICENSE`](../LICENSE).*
+*Maintained by Kyoung Shin · <kshin@fullerton.edu> · terms: [all rights reserved](https://github.com/kyoungshin/CPSC490/blob/main/LICENSE) — the licence lives in the course repository, not in your copy.*
