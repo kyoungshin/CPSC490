@@ -32,15 +32,34 @@ username, then add **`kyoungshin`** (required, so your work can be graded).
 
 ## 3. Leader: copy the scaffolding from this example repo (10 min)
 
-Download this example repo (green **Code** button → **Download ZIP**) and
-copy these into your new repository, then commit:
+**Copy it with the command below, not by dragging files.** `.github/` is a
+*hidden* folder: unzip-and-drag silently leaves it behind, and without it you
+get no CI, no harness, and no issue templates — with nothing to tell you they
+are missing. (This is not hypothetical; it happened to a team in 2026.)
+
+From inside your new, empty repository:
+
+```bash
+git clone --depth 1 https://github.com/kyoungshin/CPSC490.git ../cpsc490-scaffold
+(cd ../cpsc490-scaffold && git archive HEAD) | tar -x -C .
+rm -rf ../cpsc490-scaffold
+
+# VERIFY before you commit — all four must print
+ls -d .github .gitignore docs scripts
+```
+
+If `ls` cannot find `.github`, your copy is incomplete — re-run the three
+lines above. `git archive` includes hidden files and excludes the example
+repo's own git history, which is what you want.
+
+What you just copied:
 
 | Copy this | To | What it is |
 |---|---|---|
-| `README_TEMPLATE.md` | your `README.md` | your team's front page — fill in the 〈brackets〉 |
+| `README_TEMPLATE.md` | rename to your `README.md` | your team's front page — fill in the 〈brackets〉 |
 | `CLAUDE.md` | `CLAUDE.md` | shared AI context — fill in the 〈brackets〉 |
 | `proposal/proposal.md` | `proposal/proposal.md` | the proposal skeleton (already matches the Word template) |
-| `.github/` (whole folder) | `.github/` | issue + PR templates, CI workflow, the harness script |
+| `.github/` (whole folder) | `.github/` | issue + PR templates, CI workflow, the harness script — **hidden; the command above is the only reliable way to get it** |
 | `docs/` (whole folder) | `docs/` | reference docs, diagram guide, sprint-review template |
 | `scripts/` (whole folder) | `scripts/` | the setup script and the sprint story-point report |
 | `prototype/` | `prototype/` | the runnable starter — replace the code with yours |
