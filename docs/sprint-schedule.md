@@ -37,35 +37,35 @@ Two things before the calendar:
 *(All Sprint 1 meetings are in person.)*
 
 **Tuesday, September 29 — Section 01**
-- 7:00–7:30 PM: Group 01
-- 7:30–8:00 PM: Group 02
-- 8:00–8:30 PM: Group 03
-- 8:30–9:00 PM: Group 04
-- 9:00–9:30 PM: Group 05
+- 7:00–7:30 PM: Group 01 — BGAF
+- 7:30–8:00 PM: Group 02 — Linux Larpers
+- 8:00–8:30 PM: Group 03 — California
+- 8:30–9:00 PM: Group 04 — Epic Engineers
+- 9:00–9:30 PM: Group 05 — Fighting Mongooses
 - 9:30–9:45 PM: Open hours — any Sprint 1 issue, by appointment
 
 **Thursday, October 1 — Section 05**
-- 7:00–7:30 PM: Group 11
-- 7:30–8:00 PM: Group 12
-- 8:00–8:30 PM: Group 13
-- 8:30–9:00 PM: Group 14
-- 9:00–9:30 PM: Group 15
+- 7:00–7:30 PM: Group 11 — 5 Guys
+- 7:30–8:00 PM: Group 12 — ACJMM
+- 8:00–8:30 PM: Group 13 — BYKX
+- 8:30–9:00 PM: Group 14 — Cyber Squad
+- 9:00–9:30 PM: Group 15 — HIBBI-01
 - 9:30–9:45 PM: Open hours — any Sprint 1 issue, by appointment
 
 **Tuesday, October 6 — Section 01**
-- 7:00–7:30 PM: Group 06
-- 7:30–8:00 PM: Group 07
-- 8:00–8:30 PM: Group 08
-- 8:30–9:00 PM: Group 09
-- 9:00–9:30 PM: Group 10
+- 7:00–7:30 PM: Group 06 — Forecast Market Analytics
+- 7:30–8:00 PM: Group 07 — Mighty Morphines
+- 8:00–8:30 PM: Group 08 — Crime Busters
+- 8:30–9:00 PM: Group 09 — Sigma Squad
+- 9:00–9:30 PM: Group 10 — Team Jiddak
 - 9:30–9:45 PM: Open hours — any Sprint 1 issue, by appointment
 
 **Thursday, October 8 — Section 05**
-- 7:00–7:30 PM: Group 16
-- 7:30–8:00 PM: Group 17
-- 8:00–8:30 PM: Group 18
-- 8:30–9:00 PM: Group 19
-- 9:00–9:30 PM: Group 20
+- 7:00–7:30 PM: Group 16 — Neuroprosthetic
+- 7:30–8:00 PM: Group 17 — Sonic Scape
+- 8:00–8:30 PM: Group 18 — Team ProStrats
+- 8:30–9:00 PM: Group 19 — Titan Security
+- 9:00–9:30 PM: Group 20 — Solos
 - 9:30–9:45 PM: Open hours — any Sprint 1 issue, by appointment
 
 **Sunday, October 11 — Homework #5 (Topics and Survey) due**
@@ -76,35 +76,35 @@ Two things before the calendar:
 *(All Sprint 2 meetings are in person.)*
 
 **Tuesday, October 13 — Section 01**
-- 7:00–7:30 PM: Group 01
-- 7:30–8:00 PM: Group 02
-- 8:00–8:30 PM: Group 03
-- 8:30–9:00 PM: Group 04
-- 9:00–9:30 PM: Group 05
+- 7:00–7:30 PM: Group 01 — BGAF
+- 7:30–8:00 PM: Group 02 — Linux Larpers
+- 8:00–8:30 PM: Group 03 — California
+- 8:30–9:00 PM: Group 04 — Epic Engineers
+- 9:00–9:30 PM: Group 05 — Fighting Mongooses
 - 9:30–9:45 PM: Open hours — any Sprint 2 issue, by appointment
 
 **Thursday, October 15 — Section 05**
-- 7:00–7:30 PM: Group 11
-- 7:30–8:00 PM: Group 12
-- 8:00–8:30 PM: Group 13
-- 8:30–9:00 PM: Group 14
-- 9:00–9:30 PM: Group 15
+- 7:00–7:30 PM: Group 11 — 5 Guys
+- 7:30–8:00 PM: Group 12 — ACJMM
+- 8:00–8:30 PM: Group 13 — BYKX
+- 8:30–9:00 PM: Group 14 — Cyber Squad
+- 9:00–9:30 PM: Group 15 — HIBBI-01
 - 9:30–9:45 PM: Open hours — any Sprint 2 issue, by appointment
 
 **Tuesday, October 20 — Section 01**
-- 7:00–7:30 PM: Group 06
-- 7:30–8:00 PM: Group 07
-- 8:00–8:30 PM: Group 08
-- 8:30–9:00 PM: Group 09
-- 9:00–9:30 PM: Group 10
+- 7:00–7:30 PM: Group 06 — Forecast Market Analytics
+- 7:30–8:00 PM: Group 07 — Mighty Morphines
+- 8:00–8:30 PM: Group 08 — Crime Busters
+- 8:30–9:00 PM: Group 09 — Sigma Squad
+- 9:00–9:30 PM: Group 10 — Team Jiddak
 - 9:30–9:45 PM: Open hours — any Sprint 2 issue, by appointment
 
 **Thursday, October 22 — Section 05**
-- 7:00–7:30 PM: Group 16
-- 7:30–8:00 PM: Group 17
-- 8:00–8:30 PM: Group 18
-- 8:30–9:00 PM: Group 19
-- 9:00–9:30 PM: Group 20
+- 7:00–7:30 PM: Group 16 — Neuroprosthetic
+- 7:30–8:00 PM: Group 17 — Sonic Scape
+- 8:00–8:30 PM: Group 18 — Team ProStrats
+- 8:30–9:00 PM: Group 19 — Titan Security
+- 9:00–9:30 PM: Group 20 — Solos
 - 9:30–9:45 PM: Open hours — any Sprint 2 issue, by appointment
 
 ---
@@ -113,35 +113,35 @@ Two things before the calendar:
 *(All Sprint 3 meetings are in person.)*
 
 **Tuesday, October 27 — Section 01**
-- 7:00–7:30 PM: Group 01
-- 7:30–8:00 PM: Group 02
-- 8:00–8:30 PM: Group 03
-- 8:30–9:00 PM: Group 04
-- 9:00–9:30 PM: Group 05
+- 7:00–7:30 PM: Group 01 — BGAF
+- 7:30–8:00 PM: Group 02 — Linux Larpers
+- 8:00–8:30 PM: Group 03 — California
+- 8:30–9:00 PM: Group 04 — Epic Engineers
+- 9:00–9:30 PM: Group 05 — Fighting Mongooses
 - 9:30–9:45 PM: Open hours — any Sprint 3 issue, by appointment
 
 **Thursday, October 29 — Section 05**
-- 7:00–7:30 PM: Group 11
-- 7:30–8:00 PM: Group 12
-- 8:00–8:30 PM: Group 13
-- 8:30–9:00 PM: Group 14
-- 9:00–9:30 PM: Group 15
+- 7:00–7:30 PM: Group 11 — 5 Guys
+- 7:30–8:00 PM: Group 12 — ACJMM
+- 8:00–8:30 PM: Group 13 — BYKX
+- 8:30–9:00 PM: Group 14 — Cyber Squad
+- 9:00–9:30 PM: Group 15 — HIBBI-01
 - 9:30–9:45 PM: Open hours — any Sprint 3 issue, by appointment
 
 **Tuesday, November 3 — Section 01**
-- 7:00–7:30 PM: Group 06
-- 7:30–8:00 PM: Group 07
-- 8:00–8:30 PM: Group 08
-- 8:30–9:00 PM: Group 09
-- 9:00–9:30 PM: Group 10
+- 7:00–7:30 PM: Group 06 — Forecast Market Analytics
+- 7:30–8:00 PM: Group 07 — Mighty Morphines
+- 8:00–8:30 PM: Group 08 — Crime Busters
+- 8:30–9:00 PM: Group 09 — Sigma Squad
+- 9:00–9:30 PM: Group 10 — Team Jiddak
 - 9:30–9:45 PM: Open hours — any Sprint 3 issue, by appointment
 
 **Thursday, November 5 — Section 05**
-- 7:00–7:30 PM: Group 16
-- 7:30–8:00 PM: Group 17
-- 8:00–8:30 PM: Group 18
-- 8:30–9:00 PM: Group 19
-- 9:00–9:30 PM: Group 20
+- 7:00–7:30 PM: Group 16 — Neuroprosthetic
+- 7:30–8:00 PM: Group 17 — Sonic Scape
+- 8:00–8:30 PM: Group 18 — Team ProStrats
+- 8:30–9:00 PM: Group 19 — Titan Security
+- 9:00–9:30 PM: Group 20 — Solos
 - 9:30–9:45 PM: Open hours — any Sprint 3 issue, by appointment
 
 ---
@@ -150,35 +150,35 @@ Two things before the calendar:
 *(All Sprint 4 meetings are in person.)*
 
 **Tuesday, November 10 — Section 01**
-- 7:00–7:30 PM: Group 01
-- 7:30–8:00 PM: Group 02
-- 8:00–8:30 PM: Group 03
-- 8:30–9:00 PM: Group 04
-- 9:00–9:30 PM: Group 05
+- 7:00–7:30 PM: Group 01 — BGAF
+- 7:30–8:00 PM: Group 02 — Linux Larpers
+- 8:00–8:30 PM: Group 03 — California
+- 8:30–9:00 PM: Group 04 — Epic Engineers
+- 9:00–9:30 PM: Group 05 — Fighting Mongooses
 - 9:30–9:45 PM: Open hours — any Sprint 4 issue, by appointment
 
 **Thursday, November 12 — Section 05**
-- 7:00–7:30 PM: Group 11
-- 7:30–8:00 PM: Group 12
-- 8:00–8:30 PM: Group 13
-- 8:30–9:00 PM: Group 14
-- 9:00–9:30 PM: Group 15
+- 7:00–7:30 PM: Group 11 — 5 Guys
+- 7:30–8:00 PM: Group 12 — ACJMM
+- 8:00–8:30 PM: Group 13 — BYKX
+- 8:30–9:00 PM: Group 14 — Cyber Squad
+- 9:00–9:30 PM: Group 15 — HIBBI-01
 - 9:30–9:45 PM: Open hours — any Sprint 4 issue, by appointment
 
 **Tuesday, November 17 — Section 01**
-- 7:00–7:30 PM: Group 06
-- 7:30–8:00 PM: Group 07
-- 8:00–8:30 PM: Group 08
-- 8:30–9:00 PM: Group 09
-- 9:00–9:30 PM: Group 10
+- 7:00–7:30 PM: Group 06 — Forecast Market Analytics
+- 7:30–8:00 PM: Group 07 — Mighty Morphines
+- 8:00–8:30 PM: Group 08 — Crime Busters
+- 8:30–9:00 PM: Group 09 — Sigma Squad
+- 9:00–9:30 PM: Group 10 — Team Jiddak
 - 9:30–9:45 PM: Open hours — any Sprint 4 issue, by appointment
 
 **Thursday, November 19 — Section 05**
-- 7:00–7:30 PM: Group 16
-- 7:30–8:00 PM: Group 17
-- 8:00–8:30 PM: Group 18
-- 8:30–9:00 PM: Group 19
-- 9:00–9:30 PM: Group 20
+- 7:00–7:30 PM: Group 16 — Neuroprosthetic
+- 7:30–8:00 PM: Group 17 — Sonic Scape
+- 8:00–8:30 PM: Group 18 — Team ProStrats
+- 8:30–9:00 PM: Group 19 — Titan Security
+- 9:00–9:30 PM: Group 20 — Solos
 - 9:30–9:45 PM: Open hours — any Sprint 4 issue, by appointment
 
 ---
@@ -198,32 +198,32 @@ Presentation-week Zoom links (sprint meetings stay in person):
 - **Section 05 (Thursdays, Dec 3 & Dec 10):** https://fullerton.zoom.us/j/82059186690
 
 **Tuesday, December 1 — Section 01**
-- 7:00–7:30 PM: Group 01
-- 7:30–8:00 PM: Group 02
-- 8:00–8:30 PM: Group 03
-- 8:30–9:00 PM: Group 04
-- 9:00–9:30 PM: Group 05
+- 7:00–7:30 PM: Group 01 — BGAF
+- 7:30–8:00 PM: Group 02 — Linux Larpers
+- 8:00–8:30 PM: Group 03 — California
+- 8:30–9:00 PM: Group 04 — Epic Engineers
+- 9:00–9:30 PM: Group 05 — Fighting Mongooses
 
 **Thursday, December 3 — Section 05**
-- 7:00–7:30 PM: Group 11
-- 7:30–8:00 PM: Group 12
-- 8:00–8:30 PM: Group 13
-- 8:30–9:00 PM: Group 14
-- 9:00–9:30 PM: Group 15
+- 7:00–7:30 PM: Group 11 — 5 Guys
+- 7:30–8:00 PM: Group 12 — ACJMM
+- 8:00–8:30 PM: Group 13 — BYKX
+- 8:30–9:00 PM: Group 14 — Cyber Squad
+- 9:00–9:30 PM: Group 15 — HIBBI-01
 
 **Tuesday, December 8 — Section 01**
-- 7:00–7:30 PM: Group 06
-- 7:30–8:00 PM: Group 07
-- 8:00–8:30 PM: Group 08
-- 8:30–9:00 PM: Group 09
-- 9:00–9:30 PM: Group 10
+- 7:00–7:30 PM: Group 06 — Forecast Market Analytics
+- 7:30–8:00 PM: Group 07 — Mighty Morphines
+- 8:00–8:30 PM: Group 08 — Crime Busters
+- 8:30–9:00 PM: Group 09 — Sigma Squad
+- 9:00–9:30 PM: Group 10 — Team Jiddak
 
 **Thursday, December 10 — Section 05**
-- 7:00–7:30 PM: Group 16
-- 7:30–8:00 PM: Group 17
-- 8:00–8:30 PM: Group 18
-- 8:30–9:00 PM: Group 19
-- 9:00–9:30 PM: Group 20
+- 7:00–7:30 PM: Group 16 — Neuroprosthetic
+- 7:30–8:00 PM: Group 17 — Sonic Scape
+- 8:00–8:30 PM: Group 18 — Team ProStrats
+- 8:30–9:00 PM: Group 19 — Titan Security
+- 9:00–9:30 PM: Group 20 — Solos
 
 **Sunday, December 13 — Presentation Rating & Survey due**
 
