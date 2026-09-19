@@ -126,6 +126,17 @@ pandoc proposal/proposal.md -o proposal.docx --reference-doc="CPSC 490 Project P
 Work* and *Problem Statements* to the template's level-2 heading. Either way,
 keep the Markdown copy current — it is what peer review and CI can read.
 
+**Formatting requirements for the submitted Word document** (graded
+explicitly): **Times New Roman, 11-point · 1.5 line spacing · 1.0-inch
+margins** on all sides — the template's **cover page used unchanged** (fill
+its fields, keep its layout) — and the template's **section format, numbering
+and indentation followed exactly** (its styles set all of this; paste with
+*Keep Text Only* so they apply, and verify after a pandoc conversion). **The Final
+Project Proposal Paper (due Sun Dec 20) must exceed 50 pages** under this
+formatting; the fixed font/spacing/margins are what make that page count mean
+the same thing for every team. Full details sit at the top of
+`proposal/proposal.md`.
+
 Six sections need particular care:
 
 - **1.1 Related Work** — a **comparative analysis**, not a list of summaries.

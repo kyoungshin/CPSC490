@@ -35,6 +35,34 @@ Date: 〈YYYY-MM-DD〉
 > template's level-2 heading so they number as 1.1 and 1.2. Check figure
 > placement, then submit.
 >
+> **Formatting requirements — the submitted Word document is graded against
+> these, explicitly:**
+>
+> - **Cover page: use the template's cover page, unchanged in layout.** Fill
+>   in only its fields — project title, group number and name, sponsor,
+>   authors, date — and keep the template's own placement, fonts and spacing
+>   for it. The header block at the top of this file carries the same fields
+>   so the paste is a transcription, not a redesign.
+> - **Font: Times New Roman, 11-point.** Body text, headings and captions
+>   take their size and style from the template's own styles — do not
+>   restyle anything by hand.
+> - **Line spacing: 1.5.** **Margins: 1.0 inch** on all four sides.
+> - **Section format, numbering and indentation must match the Word template
+>   exactly** — the multilevel-list numbering, heading levels, and paragraph
+>   indentation are the template's, not yours. If your document's §1.1 looks
+>   different from the template's §1.1, fix yours.
+> - **Length: the Final Project Proposal Paper (due Sun Dec 20) must exceed
+>   50 pages** under exactly this formatting — font, spacing and margins are
+>   fixed above precisely so page count means the same thing for every team.
+>   The Preview paper (due Sun Nov 29) is the same document part-way; it has
+>   no minimum, but it is graded on the same formatting.
+>
+> A paste into the template inherits all of this automatically **if you paste
+> as text and let Word's styles apply** (Home → Paste → *Keep Text Only*, or
+> apply the template's styles after pasting). A pandoc conversion with
+> `--reference-doc` inherits it too — but verify font, spacing and margins
+> afterward rather than assuming.
+>
 > Either way, keep this Markdown copy current — it is what peer review and CI
 > can actually read. If your team writes in Word instead, commit the `.docx`
 > here as well.
