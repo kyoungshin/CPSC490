@@ -192,6 +192,9 @@ Two things before the calendar:
 ## Presentations & demo
 *(All presentations are held on Zoom.)*
 
+**Section 01 (Tuesday) Zoom link:** https://fullerton.zoom.us/j/87975533692
+**Section 05 (Thursday) Zoom link:** will be posted here before December 3.
+
 **Tuesday, December 1 — Section 01**
 - 7:00–7:30 PM: Group 01
 - 7:30–8:00 PM: Group 02
