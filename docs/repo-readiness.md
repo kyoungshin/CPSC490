@@ -1,14 +1,14 @@
 # Group repository readiness
 
-**CPSC 490 · Fall 2026 · swept 19 Sep 2026, 01:18 UTC** (first sweep 18 Sep, 20:00 UTC)
+**CPSC 490 · Fall 2026 · swept 19 Sep 2026, 16:26 UTC** (first sweep 18 Sep, 20:00 UTC)
 
 All 20 teams, ordered by group number. **Four repositories are ready. Nine have problems. Seven teams have no repository at all.** Three earlier failures traced to bugs in the course scaffold, since fixed — affected teams have instructor PRs open, so no team is blamed for them. This page is re-swept every morning.
 
-### Since the 18 Sep email
+### Since the last sweep (19 Sep, 01:18 UTC)
 
-**One change.** Group 06 (Forecast Market Analytics) renamed its repository to `CPSC490-G06-Forecast-Market-Analytics`, added the instructor and copied the scaffold — from *not shared* to *ready*. Nothing else moved: no instructor pull request has been merged yet, no new repositories, no other renames, no new collaborator grants.
+**No changes.** Every repository, status, and count below is exactly where the morning sweep found it. Since the 18 Sep email the one mover remains Group 06 (renamed, shared, scaffolded — now *ready*).
 
-**Still waiting:** instructor PRs open and green in **G01** (#2), **G02** (#1), **G17** (#1), **G20** (#1, #4). Issues filed by teams across all 20 groups: **1**.
+**Still waiting:** instructor PRs open and green in **G01** (#2), **G02** (#1), **G17** (#1), **G20** (#1, #4) — none merged yet. Issues filed by teams across all 20 groups: **1** (G11's project-brainstorm issue).
 
 ### Summary
 
@@ -109,4 +109,4 @@ Group 16 is `CPSC490` with no group at all; Group 09 is missing its leading zero
 
 ---
 
-*Re-swept 19 Sep 2026 (01:18 UTC) against every repository the instructor can see, plus a public GitHub search for `CPSC490` and `CPSC-490` repos created since August; the first sweep was 18 Sep, 20:00 UTC. A private repository that has not added `kyoungshin` is invisible to both, so "no repository" means none was findable — not proof none exists. Group attributions for unshared repos are inferred from usernames, profile names and commit identities, and one empty repo could not be attributed to any team.*
+*Re-swept 19 Sep 2026 (16:26 UTC) against every repository the instructor can see, plus a public GitHub search for `CPSC490` and `CPSC-490` repos created since August (repos from earlier semesters are excluded); the first sweep was 18 Sep, 20:00 UTC. A private repository that has not added `kyoungshin` is invisible to both, so "no repository" means none was findable — not proof none exists. Group attributions for unshared repos are inferred from usernames, profile names and commit identities, and one empty repo could not be attributed to any team.*
