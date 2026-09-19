@@ -6,7 +6,7 @@ All 20 teams, ordered by group number. **Four repositories are ready. Nine have 
 
 ### Since the last sweep (19 Sep, 01:18 UTC)
 
-**No changes.** Every repository, status, and count below is exactly where the morning sweep found it. Since the 18 Sep email the one mover remains Group 06 (renamed, shared, scaffolded — now *ready*).
+**No team changes.** Every group's repository, status, and count below is exactly where the morning sweep found it. Since the 18 Sep email the one mover remains Group 06 (renamed, shared, scaffolded — now *ready*). One row removed: the unattributed empty repo `chroyy/CPSC-490-` matches no enrolled student on the 19 Sep roster in either section, so it is not a class repo and no longer tracked here.
 
 **Still waiting:** instructor PRs open and green in **G01** (#2), **G02** (#1), **G17** (#1), **G20** (#1, #4) — none merged yet. Issues filed by teams across all 20 groups: **1** (G11's project-brainstorm issue).
 
@@ -47,7 +47,6 @@ All 20 teams, ordered by group number. **Four repositories are ready. Nine have 
 | 18 | Team ProStrats | — | ⬜ no repo | No repository found. | Create it, copy the scaffold, add `kyoungshin`, run bootstrap. |
 | 19 | Titan Security | `23jdo5/CPSC-490-Capstone-Project` *(likely)* | ❌ not shared | A repo exists that probably belongs to this team, but **the instructor was never added** and the owner could not be confirmed from the roster. No scaffold. Unchanged. | Confirm ownership, add `kyoungshin`, rename, copy the scaffold, run bootstrap. |
 | 20 | Solos | `muntay89/CPSC490-G20-California` | ⚠️ partial | **Team name is wrong: it reads California, which is Group 03.** They copied it from the naming example in QUICKSTART, which used a real team's name — the number is theirs and correct. Also had no `.github/`, so zero CI ever ran, and bootstrap was never run. Instructor PRs #1 and #4 still unmerged. | Merge instructor PRs #1 and #4, rename to `CPSC490-G20-Solos`, then run bootstrap. |
-| ? | unidentified | `chroyy/CPSC-490-` | ⬜ unattributed | An empty CPSC 490 repo with no commits and no profile name — cannot be matched to any team. | Ask in class who owns it. |
 
 ## The fixes
 
@@ -109,4 +108,4 @@ Group 16 is `CPSC490` with no group at all; Group 09 is missing its leading zero
 
 ---
 
-*Re-swept 19 Sep 2026 (16:26 UTC) against every repository the instructor can see, plus a public GitHub search for `CPSC490` and `CPSC-490` repos created since August (repos from earlier semesters are excluded); the first sweep was 18 Sep, 20:00 UTC. A private repository that has not added `kyoungshin` is invisible to both, so "no repository" means none was findable — not proof none exists. Group attributions for unshared repos are inferred from usernames, profile names and commit identities, and one empty repo could not be attributed to any team.*
+*Re-swept 19 Sep 2026 (16:26 UTC) against every repository the instructor can see, plus a public GitHub search for `CPSC490` and `CPSC-490` repos created since August (repos from earlier semesters are excluded); the first sweep was 18 Sep, 20:00 UTC. A private repository that has not added `kyoungshin` is invisible to both, so "no repository" means none was findable — not proof none exists. Group attributions for unshared repos are inferred from usernames, profile names and commit identities. Repos whose owner matches no enrolled student are excluded.*
