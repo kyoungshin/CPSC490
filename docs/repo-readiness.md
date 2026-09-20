@@ -1,14 +1,14 @@
 # Group repository readiness
 
-**CPSC 490 · Fall 2026 · swept 20 Sep 2026, 12:25 UTC** (first sweep 18 Sep, 20:00 UTC)
+**CPSC 490 · Fall 2026 · swept 20 Sep 2026, 16:37 UTC** (first sweep 18 Sep, 20:00 UTC)
 
 All 20 teams, ordered by group number. **Seven repositories are ready. Eight have problems. Five teams have no repository at all.** Three earlier failures traced to bugs in the course scaffold, since fixed — affected teams have instructor PRs open, so no team is blamed for them. This page is re-swept every morning.
 
-### Since the last sweep (20 Sep, 02:54 UTC)
+### Since the last sweep (20 Sep, 12:25 UTC)
 
-**Two movers.** Group 03 (California) finished the setup — scaffold copied and bootstrap complete (4 milestones, `develop`) — from *partial* to **ready** within hours of creating the repo. Group 19 (Titan Security) created `sopper75/CPSC490-G19-TitanSecurity` — correctly named, instructor added with write access, scaffold copied — from *not shared* to *partial*: bootstrap has not run yet. The old `23jdo5/CPSC-490-Capstone-Project` is superseded by the new repo and no longer tracked. Instructor PRs in G01/G02/G17/G20 remain unmerged; team-filed issues still **1**.
+**No changes.** Every status holds from the 12:25 edition — this morning's movers (G03 → *ready*, G19 → *partial*, bootstrap still pending) unchanged, instructor PRs in G01/G02/G17/G20 still unmerged, team-filed issues still **1** (G11). Sprint 1 starts in eight days; epics and stories are the graded artifact and nineteen of twenty groups have filed none.
 
-**New course-repo requirement, posted 19 Sep:** the proposal's formatting rules are now explicit in the scaffold (`proposal/proposal.md` + README): the template's **cover page unchanged**, **Times New Roman 11-point**, **1.5 line spacing**, **1.0-inch margins**, the template's **section numbering and indentation exactly**, and the **Final Project Proposal Paper must exceed 50 pages**. Teams that copied the scaffold before 19 Sep: read the course repo's copy.
+**Notice (19 Sep):** proposal formatting rules are explicit in the scaffold (`proposal/proposal.md` + README) — template cover page unchanged, Times New Roman 11-pt, 1.5 spacing, 1.0-inch margins, template numbering/indentation exactly, Final Paper > 50 pages. Pre-19-Sep scaffold copies: read the course repo's copy.
 
 **Still waiting:** instructor PRs open and green in **G01** (#2), **G02** (#1), **G17** (#1), **G20** (#1, #4) — none merged yet. Issues filed by teams across all 20 groups: **1** (G11's project-brainstorm issue).
 
@@ -110,4 +110,4 @@ Group 16 is `CPSC490` with no group at all; Group 09 is missing its leading zero
 
 ---
 
-*Re-swept 20 Sep 2026 (12:25 UTC) against every repository the instructor can see, plus a public GitHub search for `CPSC490` and `CPSC-490` repos created since August (repos from earlier semesters are excluded); the first sweep was 18 Sep, 20:00 UTC. A private repository that has not added `kyoungshin` is invisible to both, so "no repository" means none was findable — not proof none exists. Group attributions for unshared repos are inferred from usernames, profile names and commit identities. Repos whose owner matches no enrolled student are excluded.*
+*Re-swept 20 Sep 2026 (16:37 UTC) against every repository the instructor can see, plus a public GitHub search for `CPSC490` and `CPSC-490` repos created since August (repos from earlier semesters are excluded); the first sweep was 18 Sep, 20:00 UTC. A private repository that has not added `kyoungshin` is invisible to both, so "no repository" means none was findable — not proof none exists. Group attributions for unshared repos are inferred from usernames, profile names and commit identities. Repos whose owner matches no enrolled student are excluded.*
