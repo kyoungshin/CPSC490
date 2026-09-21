@@ -1,12 +1,12 @@
 # Group repository readiness
 
-**CPSC 490 · Fall 2026 · swept 20 Sep 2026, 16:37 UTC** (first sweep 18 Sep, 20:00 UTC)
+**CPSC 490 · Fall 2026 · swept 21 Sep 2026, 16:40 UTC** (first sweep 18 Sep, 20:00 UTC)
 
-All 20 teams, ordered by group number. **Seven repositories are ready. Eight have problems. Five teams have no repository at all.** Three earlier failures traced to bugs in the course scaffold, since fixed — affected teams have instructor PRs open, so no team is blamed for them. This page is re-swept every morning.
+All 20 teams, ordered by group number. **Eight repositories are ready. Seven have problems. Five teams have no repository at all.** Three earlier failures traced to bugs in the course scaffold, since fixed — affected teams have instructor PRs open, so no team is blamed for them. This page is re-swept every morning.
 
-### Since the last sweep (20 Sep, 12:25 UTC)
+### Since the last sweep (20 Sep, 16:37 UTC)
 
-**No changes.** Every status holds from the 12:25 edition — this morning's movers (G03 → *ready*, G19 → *partial*, bootstrap still pending) unchanged, instructor PRs in G01/G02/G17/G20 still unmerged, team-filed issues still **1** (G11). Sprint 1 starts in eight days; epics and stories are the graded artifact and nineteen of twenty groups have filed none.
+**One mover.** Group 11 (5 Guys) re-copied the scaffold (`.github/` present now) and re-ran bootstrap to completion (4 milestones, `develop`) — from *partial* to **ready**, exactly the recovery its row prescribed. Everything else holds: G19's bootstrap still pending, instructor PRs in G01/G02/G17/G20 still unmerged, team-filed issues still **1** (G11). Sprint 1 starts **Sunday** — epics and stories are the graded artifact and nineteen of twenty groups have filed none.
 
 **Notice (19 Sep):** proposal formatting rules are explicit in the scaffold (`proposal/proposal.md` + README) — template cover page unchanged, Times New Roman 11-pt, 1.5 spacing, 1.0-inch margins, template numbering/indentation exactly, Final Paper > 50 pages. Pre-19-Sep scaffold copies: read the course repo's copy.
 
@@ -16,8 +16,8 @@ All 20 teams, ordered by group number. **Seven repositories are ready. Eight hav
 
 | Count | Status |
 |---:|---|
-| **7** *(was 6)* | ✅ **Ready** — scaffold, bootstrap, CI green |
-| **6** | ⚠️ **Partial** — repo exists, setup incomplete |
+| **8** *(was 7)* | ✅ **Ready** — scaffold, bootstrap, CI green |
+| **5** *(was 6)* | ⚠️ **Partial** — repo exists, setup incomplete |
 | **2** *(was 3)* | ❌ **Empty or never shared** — nothing gradeable |
 | **5** | ⬜ **No repository** found anywhere |
 
@@ -39,7 +39,7 @@ All 20 teams, ordered by group number. **Seven repositories are ready. Eight hav
 | 08 | Crime Busters | `miketruong91/CPSC490-G08-Crime-Busters` | ✅ ready · 🆕 moved | Created, named to convention, shared with write access, scaffolded and bootstrapped — all since the afternoon sweep. No team-filed issues yet. | File epics and stories. |
 | 09 | Sigma Squad | `TylerWard741/CPSC490-G9-SigmaSquad` | ❌ empty | **Zero commits.** Repo was created and the instructor added, but nothing has ever been pushed. Name missing the leading zero (`G9`). Unchanged. | Copy the scaffold and push, then run bootstrap. Rename to `G09`. |
 | 10 | Team Jiddak | `Alexander-Sanchez2/CPSC490-G10-Team_Jiddak` | ⚠️ partial | Scaffold copied but **no `.github/`** — so no CI, no harness, no templates. Bootstrap never run: 0 milestones, no `develop`. A second repo, `Alexander-Sanchez2/CPSC490`, exists under the same owner without instructor access — probably a stray. | Re-copy the scaffold with the command below (it includes hidden folders), then run bootstrap. Delete or share the stray repo. |
-| 11 | 5 Guys | `markachavez2003-lab/CPSC490-G11-5Guys` | ⚠️ partial | **Bootstrap died partway** — exactly 1 milestone of 4, default labels only, no `develop`. No `.github/` either. Unchanged. | Re-copy the scaffold, then re-run bootstrap — it is safe to re-run and skips what exists. |
+| 11 | 5 Guys | `markachavez2003-lab/CPSC490-G11-5Guys` | ✅ ready · 🆕 moved | Re-copied the scaffold (`.github/` now present) and re-ran bootstrap to completion (4 milestones, `develop`) on 20 Sep — the exact recovery this row prescribed. The team also has the class's only filed issue. | File epics and stories. |
 | 12 | ACJMM | `CharlesSinde/CPSC490-G12-ACJMM` | ✅ ready · 🆕 moved | Was empty since 3 Sep; scaffold pushed and bootstrap completed since the afternoon sweep (4 milestones, `develop`, `.github/` present). No team-filed issues yet. | File epics and stories. |
 | 13 | BYKX | — | ⬜ no repo | No repository found. | Create it, copy the scaffold, add `kyoungshin`, run bootstrap. |
 | 14 | Cyber Squad | `The-Cyber-Squad/CPSC490-G14-Cyber-Squad` | ⚠️ partial | Only `LICENSE` and `README.md` in the repo — **scaffold essentially not copied**. Also the only team that granted **read-only** access, so the instructor cannot open fix PRs here. Unchanged. | Grant `kyoungshin` **write** access, copy the scaffold, run bootstrap. |
@@ -72,7 +72,7 @@ git add -A && git commit -m "chore: course scaffolding" && git push
 
 Then Settings → Collaborators → add every teammate *and* `kyoungshin`.
 
-### Scaffold missing or incomplete — groups 09 · 10 · 11 · 14 · 19 · 20 (06, 08, 12 and 03 have done this)
+### Scaffold missing or incomplete — groups 09 · 10 · 14 · 19 · 20 (06, 08, 12, 03 and 11 have done this)
 
 Run the same copy command as above — it overwrites cleanly and, unlike dragging files from an unzipped download, it cannot lose the hidden `.github/` folder. Then complete the setup:
 
@@ -110,4 +110,4 @@ Group 16 is `CPSC490` with no group at all; Group 09 is missing its leading zero
 
 ---
 
-*Re-swept 20 Sep 2026 (16:37 UTC) against every repository the instructor can see, plus a public GitHub search for `CPSC490` and `CPSC-490` repos created since August (repos from earlier semesters are excluded); the first sweep was 18 Sep, 20:00 UTC. A private repository that has not added `kyoungshin` is invisible to both, so "no repository" means none was findable — not proof none exists. Group attributions for unshared repos are inferred from usernames, profile names and commit identities. Repos whose owner matches no enrolled student are excluded.*
+*Re-swept 21 Sep 2026 (16:40 UTC) against every repository the instructor can see, plus a public GitHub search for `CPSC490` and `CPSC-490` repos created since August (repos from earlier semesters are excluded); the first sweep was 18 Sep, 20:00 UTC. A private repository that has not added `kyoungshin` is invisible to both, so "no repository" means none was findable — not proof none exists. Group attributions for unshared repos are inferred from usernames, profile names and commit identities. Repos whose owner matches no enrolled student are excluded.*
