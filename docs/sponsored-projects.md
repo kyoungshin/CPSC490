@@ -72,11 +72,17 @@ risk register, not an assumption.
 
 ## RTX
 
-**Mentors: named per project below.** RTX does not publish individual
-engineer addresses, so **introductions go through the instructor** — email
-<kshin@fullerton.edu> and I will put your team lead in touch with the
-employee named on your project. RTX's published corporate contacts are
-department-level only ([rtx.com/contacts](https://www.rtx.com/contacts)).
+**RTX mentor team** (updated 22 Sep 2026 — always cc <kshin@fullerton.edu>;
+per-project assignments will be confirmed with your team's match):
+
+| Mentor | Email |
+|---|---|
+| Kristopher Curry | <kristopher.curry@rtx.com> |
+| David DeTinne | <david.detienne@rtx.com> |
+| Michelle Doung | <Michelle.H.Duong@rtx.com> |
+| Cara Failer | <Cara.Failer@rtx.com> |
+| Tracy Nguyen | <Tracy.Nguyen@rtx.com> |
+| Alan Quach | <Alan.Quach@rtx.com> |
 
 Aerospace and defense (Collins Aerospace, Pratt & Whitney, Raytheon). All
 four projects are signal-processing or AI-for-RF work.
