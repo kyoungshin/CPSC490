@@ -25,8 +25,8 @@ Two things before the calendar:
 | Due | Deliverable |
 |---|---|
 | Sun Sep 20 | Homework #3 — Application Form |
-| Sun Sep 27 | Homework #4 — Brief Project Proposal |
-| Sun Oct 11 | Homework #5 — Topics and Survey |
+| Sun Oct 4 | Homework #4 — Brief Project Proposal |
+| Sun Oct 11 | Homework #5 — Topic and Survey |
 | Sun Nov 29 | Preview Project Proposal Paper |
 | Sun Dec 13 | Presentation Rating & Survey |
 | Sun Dec 20 | Final Project Proposal Paper |
@@ -52,6 +52,8 @@ Two things before the calendar:
 - 9:00–9:30 PM: Group 15 — HIBBI-01
 - 9:30–9:45 PM: Open hours — any Sprint 1 issue, by appointment
 
+**Sunday, October 4 — Homework #4 (Brief Project Proposal) due**
+
 **Tuesday, October 6 — Section 01**
 - 7:00–7:30 PM: Group 06 — Forecast Market Analytics
 - 7:30–8:00 PM: Group 07 — Mighty Morphines
@@ -68,7 +70,7 @@ Two things before the calendar:
 - 9:00–9:30 PM: Group 20 — Solos
 - 9:30–9:45 PM: Open hours — any Sprint 1 issue, by appointment
 
-**Sunday, October 11 — Homework #5 (Topics and Survey) due**
+**Sunday, October 11 — Homework #5 (Topic and Survey) due**
 
 ---
 
