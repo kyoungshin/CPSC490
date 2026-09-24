@@ -1,14 +1,16 @@
 # Group repository readiness
 
-**CPSC 490 · Fall 2026 · swept 24 Sep 2026, 15:36 UTC** (first sweep 18 Sep, 20:00 UTC).
+**CPSC 490 · Fall 2026 · swept 24 Sep 2026, 17:06 UTC** (first sweep 18 Sep, 20:00 UTC).
 
-All 20 teams, ordered by group number. **Sixteen repositories are ready. Three have problems. One team has no repository at all.** Three earlier failures traced to bugs in the course scaffold, since fixed — affected teams have instructor PRs open, so no team is blamed for them. This page is re-swept every morning.
+All 20 teams, ordered by group number. **Seventeen repositories are ready. Two have problems. One team has no repository at all.** Three earlier failures traced to bugs in the course scaffold, since fixed — affected teams have instructor PRs open, so no team is blamed for them. This page is re-swept every morning.
 
-### Since the last sweep (24 Sep, 03:30 UTC)
+### Since the last sweep (24 Sep, 15:36 UTC)
 
-**No group moved.** No repository changed status, and none received a push in the twelve hours between sweeps. Team-filed issues are still **5** across five groups (G04 ×2, G07, G11, G12).
+**Group 14 (Cyber Squad) went *partial* → ready.** The repository moved from the `The-Cyber-Squad` organization to `jvillacorte/CPSC490-G14-Cyber-Squad` (same repo; the old address redirects), and at 16:37 UTC the team granted `kyoungshin` **write** access, copied the full scaffold (`.github/` intact) and ran bootstrap (4 milestones, `develop`) — all three items this page asked for. Nothing else moved; team-filed issues are still **5**.
 
-**Correction:** the last edition said no team had filed an epic yet. That was wrong — **Group 07's issue #1 (*project objectives*) is labeled `epic`** and is real project content, the class's first. Group 04's two issues also carry the `epic` label, but they are README setup tasks. No team has filed a user story yet.
+*Morning, 24 Sep:* no group moved overnight.
+
+**Correction (24 Sep morning):** the last edition said no team had filed an epic yet. That was wrong — **Group 07's issue #1 (*project objectives*) is labeled `epic`** and is real project content, the class's first. Group 04's two issues also carry the `epic` label, but they are README setup tasks. No team has filed a user story yet.
 
 *Evening, 23 Sep:* Group 15 shared its repository with the instructor and went *partial* → ready.
 
@@ -24,8 +26,8 @@ All 20 teams, ordered by group number. **Sixteen repositories are ready. Three h
 
 | Count | Status |
 |---:|---|
-| **16** *(was 16)* | ✅ **Ready** — scaffold, bootstrap, CI green |
-| **3** *(was 3)* | ⚠️ **Partial** — repo exists, setup incomplete or unshared |
+| **17** *(was 16)* | ✅ **Ready** — scaffold, bootstrap, CI green |
+| **2** *(was 3)* | ⚠️ **Partial** — repo exists, setup incomplete or unshared |
 | **0** *(was 0)* | ❌ **Empty or never shared** — nothing gradeable |
 | **1** *(was 1)* | ⬜ **No repository** found anywhere |
 
@@ -50,7 +52,7 @@ All 20 teams, ordered by group number. **Sixteen repositories are ready. Three h
 | 11 | 5 Guys | `markachavez2003-lab/CPSC490-G11-5Guys` | ✅ ready | Re-copied the scaffold and re-ran bootstrap to completion on 20 Sep. Filed the class's first team issue. | File epics and stories. |
 | 12 | ACJMM | `CharlesSinde/CPSC490-G12-ACJMM` | ✅ ready | Scaffold pushed 19 Sep, bootstrap complete. Filed a team issue on 22 Sep (#3, *Find Case Study Topic*). | File epics and stories. |
 | 13 | BYKX | `ktnwin/CPSC490-G13-BYKX` | ✅ ready | **Found** 23 Sep. A private repo created 13 Sep, invisible until `kyoungshin` was added (with write access) — arrives fully scaffolded and bootstrapped (4 milestones, `develop`). No team-filed issues yet. | File epics and stories. |
-| 14 | Cyber Squad | `The-Cyber-Squad/CPSC490-G14-Cyber-Squad` | ⚠️ partial | Only `LICENSE` and `README.md` in the repo — **scaffold essentially not copied**. Also granted only **read-only** access, so the instructor cannot open fix PRs here. Unchanged since 14 Sep. | Grant `kyoungshin` **write** access, copy the scaffold, run bootstrap. |
+| 14 | Cyber Squad | `jvillacorte/CPSC490-G14-Cyber-Squad` | ✅ ready | **Fixed everything on 24 Sep:** moved from the `The-Cyber-Squad` organization (old address redirects), granted `kyoungshin` **write** access, copied the full scaffold (`.github/` intact) and ran bootstrap (4 milestones, `develop`). No team-filed issues yet. | File epics and stories. |
 | 15 | HIBBI-01 | `Isaiah714/CPSC490-G15-HIBBI-01` | ✅ ready | **Shared with the instructor** (write access) on 23 Sep — the one step it was missing. Scaffolded and bootstrapped (4 milestones, `develop`, `.github/` present). No team-filed issues yet. | File epics and stories. |
 | 16 | Neuroprosthetic | `garybs16/CPSC490` | ✅ ready | Fully set up — 4 milestones, all labels, `develop`, harness present. **But the name is just `CPSC490`**, which identifies no group. No team-filed issues. | Rename to `CPSC490-G16-Neuroprosthetic`. Then file epics and stories. |
 | 17 | Sonic Scape | `vibhorbh/CPSC490-G17-SonicScape` | ⚠️ partial | Was missing `proposal/proposal.md`, which failed two gates. Bootstrap never run. Instructor PR #1 restores the file and is green — still unmerged. Unchanged since 18 Sep. | Merge PR #1, then run bootstrap. |
@@ -60,7 +62,7 @@ All 20 teams, ordered by group number. **Sixteen repositories are ready. Three h
 
 ## The fixes
 
-Four recipes cover every row above. All of them are run by the team, from inside their own repository.
+Three recipes cover every row above. All of them are run by the team, from inside their own repository.
 
 ### No repository yet — group 18
 
@@ -80,7 +82,7 @@ git add -A && git commit -m "chore: course scaffolding" && git push
 
 Then Settings → Collaborators → add every teammate *and* `kyoungshin`.
 
-### Scaffold missing or incomplete — groups 14 · 17 · 20 (03–13 and 19 have all done this)
+### Scaffold missing or incomplete — groups 17 · 20 (03–14 and 19 have all done this)
 
 Run the same copy command as above — it overwrites cleanly and, unlike dragging files from an unzipped download, it cannot lose the hidden `.github/` folder. Then complete the setup:
 
@@ -93,12 +95,6 @@ python .github/scripts/check_repo.py   # expect HARNESS GREEN
 ```
 
 `bootstrap.sh` is safe to re-run and skips whatever already exists — Group 17 only needs to merge PR #1 and run this one command.
-
-### Instructor access is read-only — group 14
-
-Your work cannot be graded and no fix PRs can reach you until the instructor has write access.
-
-**Settings → Collaborators → `kyoungshin` → change role to write.** Read-only is not enough. (Group 15 did exactly this on 23 Sep and went straight to ready.)
 
 ### Repository needs renaming — groups 01 · 16 · 20
 
@@ -116,4 +112,4 @@ Group 16 is `CPSC490` with no group at all; Group 01 is missing the `G`; Group 2
 
 ---
 
-*Re-swept 24 Sep 2026 (15:36 UTC) against every repository the instructor can see, plus a public GitHub search for `CPSC490` and `CPSC-490` repos created since August (repos from earlier semesters are excluded); the first sweep was 18 Sep, 20:00 UTC. A private repository that has not added `kyoungshin` is invisible to both, so "no repository" means none was findable — not proof none exists (Group 13's repo existed for ten days before it became visible). Group attributions for unshared repos are inferred from usernames, profile names and commit identities. Repos whose owner matches no enrolled student are excluded.*
+*Re-swept 24 Sep 2026 (17:06 UTC) against every repository the instructor can see, plus a public GitHub search for `CPSC490` and `CPSC-490` repos created since August (repos from earlier semesters are excluded); the first sweep was 18 Sep, 20:00 UTC. A private repository that has not added `kyoungshin` is invisible to both, so "no repository" means none was findable — not proof none exists (Group 13's repo existed for ten days before it became visible). Group attributions for unshared repos are inferred from usernames, profile names and commit identities. Repos whose owner matches no enrolled student are excluded.*
