@@ -22,7 +22,7 @@ Group 17 merged instructor PR #1 (restores `proposal/proposal.md`).
 
 Group 14 filed two team issues (#4 *CODEOWNERS*, #6 *sync develop with main*).
 
-**Sponsored projects (24 Sep):** Raytheon selected four teams — **G02 → RTX-4** *Distributed Signal Capture for Multi-Node Analysis*, **G03 → RTX-3** *Three AIs and Literate Programming*, **G12 → RTX-1** *Explainable 6G Waveform Classification*, **G19 → RTX-2** *Radar Over WiFi (ROW)*. **G07** already has Edwards **EL-1** *Online Materials Database*. SonarX's picks are still pending.
+**Sponsored projects (24–25 Sep, all 9 filled):** Raytheon selected four teams — **G02 → RTX-4** *Distributed Signal Capture for Multi-Node Analysis*, **G03 → RTX-3** *Three AIs and Literate Programming*, **G12 → RTX-1** *Explainable 6G Waveform Classification*, **G19 → RTX-2** *Radar Over WiFi (ROW)*. **G07** already has Edwards **EL-1** *Online Materials Database*. SonarX selected four — **G01 → SNX-4** *Hyperliquid Order Book Reconstruction and Algorithmic Strategy Backtesting*, **G04 → SNX-1** *Polygon Prediction Market PNL and Trader Profitability Analytics*, **G10 → SNX-2** *On-Chain Stablecoin Flow and Wash Trading Detection*, **G16 → SNX-3** *Cross-Chain Bridge Activity and Exploit Detection*. Every other group runs its own project.
 
 *Midday, 24 Sep:* **Group 14 (Cyber Squad) went *partial* → ready.** The repository moved from the `The-Cyber-Squad` organization to `jvillacorte/CPSC490-G14-Cyber-Squad` (same repo; the old address redirects), and at 16:37 UTC the team granted `kyoungshin` **write** access, copied the full scaffold (`.github/` intact) and ran bootstrap (4 milestones, `develop`) — all three items this page asked for.
 
