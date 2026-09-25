@@ -1,16 +1,26 @@
 # Group repository readiness
 
-**CPSC 490 · Fall 2026 · swept 24 Sep 2026, 23:08 UTC** (first sweep 18 Sep, 20:00 UTC).
+**CPSC 490 · Fall 2026 · swept 25 Sep 2026, 03:54 UTC** (first sweep 18 Sep, 20:00 UTC).
 
-All 20 teams, ordered by group number. **Seventeen repositories are ready. Three have problems. Every team now has a repository.** Three earlier failures traced to bugs in the course scaffold, since fixed — affected teams have instructor PRs open, so no team is blamed for them. This page is re-swept every morning.
+All 20 teams, ordered by group number. **Nineteen repositories are ready. One has problems. Every team has a repository.** Three earlier failures traced to bugs in the course scaffold, since fixed — affected teams have instructor PRs open, so no team is blamed for them. This page is re-swept every morning.
 
-### Since the last sweep (24 Sep, 17:06 UTC)
+### Since the last sweep (24 Sep, 23:08 UTC)
 
-**Group 18 (Team ProStrats) — repository found.** `austin2578/490ProjectRogue` was created 13 Sep and shared with `kyoungshin` (write access) today, so for the first time **all 20 teams have a findable repository**. It holds only a README — no scaffold, no `.github/`, no bootstrap, and the name does not follow the convention — so it lands at *partial*, not ready.
+**Group 17 (Sonic Scape) went *partial* → ready.** Bootstrap ran this evening (4 milestones, `develop`) — the one step it had left.
 
-**Group 17 (Sonic Scape) merged instructor PR #1** (restores `proposal/proposal.md`). One step left: run bootstrap.
+**Group 18 (Team ProStrats) went *partial* → ready.** Renamed `490ProjectRogue` → `austin2578/CPSC490-G18-ProStrats` (same repository; the old address redirects), copied the full scaffold (`.github/` intact) and ran bootstrap (4 milestones, `develop`) — all three items this page asked for, within hours of being found.
 
-**Group 14 filed two team issues** (#4 *CODEOWNERS*, #6 *sync develop with main*), both sized and prioritized. Team-filed issues across the class: **7** (was 5).
+**Group 16 (Neuroprosthetic) renamed** `garybs16/CPSC490` → `garybs16/CPSC490-G16-Neuroprosthetic` (same repository). It was already ready; now its name identifies the group.
+
+**Group 14 filed the class's second project epic** — issue #8, *Create web scanner*, labeled `epic`. Team-filed issues across the class: **8** (was 7).
+
+*Evening, 24 Sep (23:08 UTC):*
+
+Group 18's repository was found (then named `490ProjectRogue`, README only), so for the first time **all 20 teams had a findable repository**.
+
+Group 17 merged instructor PR #1 (restores `proposal/proposal.md`).
+
+Group 14 filed two team issues (#4 *CODEOWNERS*, #6 *sync develop with main*).
 
 **Sponsored projects (24 Sep):** Raytheon selected four teams — **G02 → RTX-4** *Distributed Signal Capture for Multi-Node Analysis*, **G03 → RTX-3** *Three AIs and Literate Programming*, **G12 → RTX-1** *Explainable 6G Waveform Classification*, **G19 → RTX-2** *Radar Over WiFi (ROW)*. **G07** already has Edwards **EL-1** *Online Materials Database*. SonarX's picks are still pending.
 
@@ -28,22 +38,22 @@ All 20 teams, ordered by group number. **Seventeen repositories are ready. Three
 
 **Notice (23 Sep):** the sprint schedule's **Homework #4 due date is Sun 4 Oct**, not 27 Sep — corrected in the course repo's `docs/sprint-schedule.md` (commit `6a12d4c`). Canvas has the authoritative dates; if your copy of the schedule says 27 Sep, it is the old one.
 
-**Still waiting:** instructor PRs open and green in **G20** (#1, #4). Issues filed by teams across all 20 groups: **7** (G04's two setup issues, G07's project-objectives issue, G11's project-brainstorm issue, G12's case-study-topic issue, G14's two repo-maintenance tasks).
+**Still waiting:** instructor PRs open and green in **G20** (#1, #4). Issues filed by teams across all 20 groups: **8** (G04's two setup issues, G07's project-objectives epic, G11's project-brainstorm issue, G12's case-study-topic issue, G14's two repo-maintenance tasks and its web-scanner epic).
 
 ### Summary
 
 | Count | Status |
 |---:|---|
-| **17** *(was 17)* | ✅ **Ready** — scaffold, bootstrap, CI green |
-| **3** *(was 2)* | ⚠️ **Partial** — repo exists, setup incomplete or unshared |
+| **19** *(was 17)* | ✅ **Ready** — scaffold, bootstrap, CI green |
+| **1** *(was 3)* | ⚠️ **Partial** — repo exists, setup incomplete or unshared |
 | **0** *(was 0)* | ❌ **Empty or never shared** — nothing gradeable |
-| **0** *(was 1)* | ⬜ **No repository** found anywhere |
+| **0** *(was 0)* | ⬜ **No repository** found anywhere |
 
-> **Sprint 1 starts Sun 28 Sep** and runs to 11 Oct. First sprint reviews: **Tue 29 Sep** (§01) and **Thu 1 Oct** (§05). Issues filed *by teams* across all 20 groups so far: **7**. Epics and user stories are the graded artifact: **one project epic exists (Group 07), and no user story has been filed by any team.**
+> **Sprint 1 starts Sun 28 Sep** and runs to 11 Oct. First sprint reviews: **Tue 29 Sep** (§01) and **Thu 1 Oct** (§05). Issues filed *by teams* across all 20 groups so far: **8**. Epics and user stories are the graded artifact: **two project epics exist (Groups 07 and 14), and no user story has been filed by any team.**
 
 ## Every group, by number
 
-"Instructor PR" means a pull request is already open in that repo fixing a scaffold bug — the team only needs to review and merge it. Everything in the *What to do* column is the team's own next step. Even a *ready* repository has work to do: only Group 07 has filed a project epic, no team has filed a user story, and only five groups have filed any issue at all (G04, G07, G11, G12, G14).
+"Instructor PR" means a pull request is already open in that repo fixing a scaffold bug — the team only needs to review and merge it. Everything in the *What to do* column is the team's own next step. Even a *ready* repository has work to do: only Groups 07 and 14 have filed a project epic, no team has filed a user story, and only five groups have filed any issue at all (G04, G07, G11, G12, G14).
 
 | Grp | Team | Repository | Status | What's wrong | What to do |
 |---|---|---|---|---|---|
@@ -60,11 +70,11 @@ All 20 teams, ordered by group number. **Seventeen repositories are ready. Three
 | 11 | 5 Guys | `markachavez2003-lab/CPSC490-G11-5Guys` | ✅ ready | Re-copied the scaffold and re-ran bootstrap to completion on 20 Sep. Filed the class's first team issue. | File epics and stories. |
 | 12 | ACJMM | `CharlesSinde/CPSC490-G12-ACJMM` | ✅ ready | Scaffold pushed 19 Sep, bootstrap complete. Filed a team issue on 22 Sep (#3, *Find Case Study Topic*). | File epics and stories. |
 | 13 | BYKX | `ktnwin/CPSC490-G13-BYKX` | ✅ ready | **Found** 23 Sep. A private repo created 13 Sep, invisible until `kyoungshin` was added (with write access) — arrives fully scaffolded and bootstrapped (4 milestones, `develop`). No team-filed issues yet. | File epics and stories. |
-| 14 | Cyber Squad | `jvillacorte/CPSC490-G14-Cyber-Squad` | ✅ ready | **Fixed everything on 24 Sep:** moved from the `The-Cyber-Squad` organization (old address redirects), granted `kyoungshin` **write** access, copied the full scaffold (`.github/` intact) and ran bootstrap (4 milestones, `develop`). **Filed two team issues on 24 Sep** (#4, #6) — sized and prioritized, repo maintenance rather than project work. | File your project epics and stories. |
+| 14 | Cyber Squad | `jvillacorte/CPSC490-G14-Cyber-Squad` | ✅ ready | **Fixed everything on 24 Sep:** moved from the `The-Cyber-Squad` organization (old address redirects), granted `kyoungshin` **write** access, copied the full scaffold (`.github/` intact) and ran bootstrap (4 milestones, `develop`). Filed two repo-maintenance issues on 24 Sep (#4, #6), then **issue #8, *Create web scanner*, labeled `epic` — the class's second project epic.** | Break the epic into user stories. |
 | 15 | HIBBI-01 | `Isaiah714/CPSC490-G15-HIBBI-01` | ✅ ready | **Shared with the instructor** (write access) on 23 Sep — the one step it was missing. Scaffolded and bootstrapped (4 milestones, `develop`, `.github/` present). No team-filed issues yet. | File epics and stories. |
-| 16 | Neuroprosthetic | `garybs16/CPSC490` | ✅ ready | Fully set up — 4 milestones, all labels, `develop`, harness present. **But the name is just `CPSC490`**, which identifies no group. No team-filed issues. | Rename to `CPSC490-G16-Neuroprosthetic`. Then file epics and stories. |
-| 17 | Sonic Scape | `vibhorbh/CPSC490-G17-SonicScape` | ⚠️ partial | **Merged instructor PR #1 on 24 Sep** (restores `proposal/proposal.md`). Bootstrap still never run — 0 milestones, no `develop`. | Run bootstrap — the only step left. |
-| 18 | Team ProStrats | `austin2578/490ProjectRogue` | ⚠️ partial | **Found 24 Sep:** created 13 Sep, shared with `kyoungshin` (write access) today. Holds only a README — no scaffold, no `.github/`, no bootstrap. Name does not follow the convention. | Copy the scaffold, run bootstrap, rename to `CPSC490-G18-TeamProStrats`. |
+| 16 | Neuroprosthetic | `garybs16/CPSC490-G16-Neuroprosthetic` | ✅ ready | Fully set up — 4 milestones, all labels, `develop`, harness present. **Renamed to the convention 24 Sep** (was just `CPSC490`). No team-filed issues. | File epics and stories. |
+| 17 | Sonic Scape | `vibhorbh/CPSC490-G17-SonicScape` | ✅ ready | Merged instructor PR #1 on 24 Sep, then **ran bootstrap** the same evening (4 milestones, `develop`). No team-filed issues yet. | File epics and stories. |
+| 18 | Team ProStrats | `austin2578/CPSC490-G18-ProStrats` | ✅ ready | Found 24 Sep as a README-only repo; the same evening **renamed to the convention, copied the full scaffold (`.github/` intact) and ran bootstrap** (4 milestones, `develop`). No team-filed issues yet. | File epics and stories. |
 | 19 | Titan Security | `sopper75/CPSC490-G19-TitanSecurity` | ✅ ready | **Bootstrap run** 23 Sep (4 milestones, `develop`) — the one item this row asked for. No team-filed issues yet. | File epics and stories. |
 | 20 | Solos | `muntay89/CPSC490-G20-California` | ⚠️ partial | **Team name is wrong: it reads California, which is Group 03.** They copied it from the naming example in QUICKSTART — the number is theirs and correct. Also has no `.github/`, so zero CI ever ran, and bootstrap was never run. Instructor PRs #1 and #4 still unmerged. Unchanged since 18 Sep. | Merge instructor PRs #1 and #4, rename to `CPSC490-G20-Solos`, then run bootstrap. |
 
@@ -72,9 +82,9 @@ All 20 teams, ordered by group number. **Seventeen repositories are ready. Three
 
 Three recipes cover every row above. All of them are run by the team, from inside their own repository.
 
-### Scaffold never copied — group 18
+### Scaffold missing — group 20
 
-Your repository exists but holds only a README. From inside it, copy the scaffold (and name future repos `CPSC490-G<NN>-<TeamName>` — two digits, so sorting works):
+From inside your repository, copy the scaffold (repos are named `CPSC490-G<NN>-<TeamName>` — two digits, so sorting works):
 
 ```bash
 # from inside your repo
@@ -88,9 +98,9 @@ ls -d .github .gitignore docs scripts
 git add -A && git commit -m "chore: course scaffolding" && git push
 ```
 
-Make sure every teammate *and* `kyoungshin` are collaborators (Settings → Collaborators) — Group 18 has already added `kyoungshin`.
+Make sure every teammate *and* `kyoungshin` are collaborators (Settings → Collaborators).
 
-### Scaffold missing or incomplete — groups 17 · 18 · 20 (01–16 and 19 have all done this)
+### Complete the setup — group 20 (01–19 have all done this)
 
 Run the same copy command as above — it overwrites cleanly and, unlike dragging files from an unzipped download, it cannot lose the hidden `.github/` folder. Then complete the setup:
 
@@ -102,9 +112,9 @@ bash scripts/bootstrap.sh
 python .github/scripts/check_repo.py   # expect HARNESS GREEN
 ```
 
-`bootstrap.sh` is safe to re-run and skips whatever already exists — Group 17 has merged PR #1 and only needs to run this one command.
+`bootstrap.sh` is safe to re-run and skips whatever already exists.
 
-### Repository needs renaming — groups 01 · 16 · 18 · 20
+### Repository needs renaming — groups 01 · 20
 
 Only the repo **owner** can rename — the instructor cannot do this for you. Settings → General → Repository name.
 
@@ -116,8 +126,8 @@ git remote set-url origin \
 git remote -v   # confirm
 ```
 
-Group 16 is `CPSC490` with no group at all; Group 18 is `490ProjectRogue`; Group 01 is missing the `G`; Group 20 carries another team's name. Groups 03, 07 and 09 all renamed this week — it takes a minute.
+Group 01 is missing the `G`; Group 20 carries another team's name. Groups 03, 07, 09, 16 and 18 all renamed this week — it takes a minute.
 
 ---
 
-*Re-swept 24 Sep 2026 (23:08 UTC) against every repository the instructor can see, plus a public GitHub search for `CPSC490` and `CPSC-490` repos created since August (repos from earlier semesters are excluded); the first sweep was 18 Sep, 20:00 UTC. A private repository that has not added `kyoungshin` is invisible to both, so "no repository" means none was findable — not proof none exists (Group 13's repo existed for ten days, and Group 18's for eleven, before becoming visible). Group attributions for unshared repos are inferred from usernames, profile names and commit identities. Repos whose owner matches no enrolled student are excluded.*
+*Re-swept 25 Sep 2026 (03:54 UTC) against every repository the instructor can see, plus a public GitHub search for `CPSC490` and `CPSC-490` repos created since August (repos from earlier semesters are excluded); the first sweep was 18 Sep, 20:00 UTC. A private repository that has not added `kyoungshin` is invisible to both, so "no repository" means none was findable — not proof none exists (Group 13's repo existed for ten days, and Group 18's for eleven, before becoming visible). Group attributions for unshared repos are inferred from usernames, profile names and commit identities. Repos whose owner matches no enrolled student are excluded.*
