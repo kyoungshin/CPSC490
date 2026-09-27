@@ -1,10 +1,18 @@
 # Group repository readiness
 
-**CPSC 490 · Fall 2026 · swept 25 Sep 2026, 03:54 UTC** (first sweep 18 Sep, 20:00 UTC).
+**CPSC 490 · Fall 2026 · swept 27 Sep 2026, 16:42 UTC** (first sweep 18 Sep, 20:00 UTC).
 
 All 20 teams, ordered by group number. **Nineteen repositories are ready. One has problems. Every team has a repository.** Three earlier failures traced to bugs in the course scaffold, since fixed — affected teams have instructor PRs open, so no team is blamed for them. This page is re-swept every morning.
 
-### Since the last sweep (24 Sep, 23:08 UTC)
+### Since the last sweep (25 Sep, 03:54 UTC)
+
+**Group 03 (California) filed its first team issue** — #1, *Meeting #1 - 9/26/26* (no labels yet). Team-filed issues across the class: **9** (was 8), from six groups.
+
+No other group changed status. Group 20 is still the only *partial* repository.
+
+**Sprint 1 starts tomorrow (Sun 28 Sep).** Sprint reviews Tue 29 Sep (§01) and Thu 1 Oct (§05) look at epics and user stories — two project epics exist class-wide (Groups 07 and 14) and **no team has filed a user story yet**.
+
+*Earlier (25 Sep, 03:54 UTC edition):*
 
 **Group 17 (Sonic Scape) went *partial* → ready.** Bootstrap ran this evening (4 milestones, `develop`) — the one step it had left.
 
@@ -38,28 +46,28 @@ Group 14 filed two team issues (#4 *CODEOWNERS*, #6 *sync develop with main*).
 
 **Notice (23 Sep):** the sprint schedule's **Homework #4 due date is Sun 4 Oct**, not 27 Sep — corrected in the course repo's `docs/sprint-schedule.md` (commit `6a12d4c`). Canvas has the authoritative dates; if your copy of the schedule says 27 Sep, it is the old one.
 
-**Still waiting:** instructor PRs open and green in **G20** (#1, #4). Issues filed by teams across all 20 groups: **8** (G04's two setup issues, G07's project-objectives epic, G11's project-brainstorm issue, G12's case-study-topic issue, G14's two repo-maintenance tasks and its web-scanner epic).
+**Still waiting:** instructor PRs open and green in **G20** (#1, #4). Issues filed by teams across all 20 groups: **9** (G03's meeting-notes issue, G04's two setup issues, G07's project-objectives epic, G11's project-brainstorm issue, G12's case-study-topic issue, G14's two repo-maintenance tasks and its web-scanner epic).
 
 ### Summary
 
 | Count | Status |
 |---:|---|
-| **19** *(was 17)* | ✅ **Ready** — scaffold, bootstrap, CI green |
-| **1** *(was 3)* | ⚠️ **Partial** — repo exists, setup incomplete or unshared |
+| **19** *(was 19)* | ✅ **Ready** — scaffold, bootstrap, CI green |
+| **1** *(was 1)* | ⚠️ **Partial** — repo exists, setup incomplete or unshared |
 | **0** *(was 0)* | ❌ **Empty or never shared** — nothing gradeable |
 | **0** *(was 0)* | ⬜ **No repository** found anywhere |
 
-> **Sprint 1 starts Sun 28 Sep** and runs to 11 Oct. First sprint reviews: **Tue 29 Sep** (§01) and **Thu 1 Oct** (§05). Issues filed *by teams* across all 20 groups so far: **8**. Epics and user stories are the graded artifact: **two project epics exist (Groups 07 and 14), and no user story has been filed by any team.**
+> **Sprint 1 starts Sun 28 Sep** and runs to 11 Oct. First sprint reviews: **Tue 29 Sep** (§01) and **Thu 1 Oct** (§05). Issues filed *by teams* across all 20 groups so far: **9**. Epics and user stories are the graded artifact: **two project epics exist (Groups 07 and 14), and no user story has been filed by any team.**
 
 ## Every group, by number
 
-"Instructor PR" means a pull request is already open in that repo fixing a scaffold bug — the team only needs to review and merge it. Everything in the *What to do* column is the team's own next step. Even a *ready* repository has work to do: only Groups 07 and 14 have filed a project epic, no team has filed a user story, and only five groups have filed any issue at all (G04, G07, G11, G12, G14).
+"Instructor PR" means a pull request is already open in that repo fixing a scaffold bug — the team only needs to review and merge it. Everything in the *What to do* column is the team's own next step. Even a *ready* repository has work to do: only Groups 07 and 14 have filed a project epic, no team has filed a user story, and only six groups have filed any issue at all (G03, G04, G07, G11, G12, G14).
 
 | Grp | Team | Repository | Status | What's wrong | What to do |
 |---|---|---|---|---|---|
 | 01 | BGAF | `LeDuy23/CPSC490-01-BGAF` | ✅ ready | Nothing blocking. Instructor PR #2 **merged** 23 Sep. Repo name reads `01` rather than `G01`. No team-filed issues. | File your epics and stories. Optionally rename to the `G01` form. |
 | 02 | Linux Larpers | `eliThomass/CPSC490-G02-Linux-Larpers` | ✅ ready | Nothing blocking. Instructor PR #1 **merged** 22 Sep. No team-filed issues. | File epics and stories. |
-| 03 | California | `eccortes4/CPSC490-G03-California` | ✅ ready | Created, shared, scaffolded and bootstrapped within hours on 20 Sep; **renamed to the `CPSC490` convention** overnight. No team-filed issues yet. | File epics and stories. |
+| 03 | California | `eccortes4/CPSC490-G03-California` | ✅ ready | Created, shared, scaffolded and bootstrapped within hours on 20 Sep; **renamed to the `CPSC490` convention** overnight. Filed its first team issue 26 Sep (#1, *Meeting #1 - 9/26/26*). | File epics and stories — meeting notes are a good place to capture the first ones. |
 | 04 | Epic Engineers | `Bryancostco/CPSC490-G04-EpicEngineers` | ✅ ready | Created 22 Sep and done right the first time: correctly named, write access granted, scaffold intact, bootstrap complete. Two team issues filed (#1, #3); new commits 23 Sep. | File your epics and stories — the two setup issues are a good start. |
 | 05 | Fighting Mongooses | `M-Kwatcher/CPSC490-G05-Fighting-Mongooses` | ✅ ready | New, correctly-named repo created 22 Sep with write access, scaffold and bootstrap complete — supersedes the old unshared `a-t-tran/CPSC490-Project`. No team-filed issues yet. | File epics and stories. |
 | 06 | Forecast Market Analytics | `Joshbolus/CPSC490-G06-Forecast-Market-Analytics` | ✅ ready | Renamed, shared and scaffolded since the email; new commits 23 Sep. No team-filed issues yet. | File epics and stories. |
@@ -130,4 +138,4 @@ Group 01 is missing the `G`; Group 20 carries another team's name. Groups 03, 07
 
 ---
 
-*Re-swept 25 Sep 2026 (03:54 UTC) against every repository the instructor can see, plus a public GitHub search for `CPSC490` and `CPSC-490` repos created since August (repos from earlier semesters are excluded); the first sweep was 18 Sep, 20:00 UTC. A private repository that has not added `kyoungshin` is invisible to both, so "no repository" means none was findable — not proof none exists (Group 13's repo existed for ten days, and Group 18's for eleven, before becoming visible). Group attributions for unshared repos are inferred from usernames, profile names and commit identities. Repos whose owner matches no enrolled student are excluded.*
+*Re-swept 27 Sep 2026 (16:42 UTC) against every repository the instructor can see, plus a public GitHub search for `CPSC490` and `CPSC-490` repos created since August (repos from earlier semesters are excluded); the first sweep was 18 Sep, 20:00 UTC. A private repository that has not added `kyoungshin` is invisible to both, so "no repository" means none was findable — not proof none exists (Group 13's repo existed for ten days, and Group 18's for eleven, before becoming visible). Group attributions for unshared repos are inferred from usernames, profile names and commit identities. Repos whose owner matches no enrolled student are excluded.*
