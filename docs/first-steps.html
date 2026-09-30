@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Step-by-step, beginner-level git guide for CPSC 490 teams: HW#4 and HW#5 in proposal.md, goals and objectives locked as epics and stories by the end of Sprint 1, the Sprint Board, and measuring Sprint 1 story points.">
+<title>CPSC 490 First Steps</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bitter:wght@600;700;800&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: a field manual — sticky contents rail on the left, one reading column, terminal blocks as the recurring object. */
+:root {
+  --bg: #f6f7fa;
+  --surface: #ffffff;
+  --ink: #16213a;
+  --muted: #56617a;
+  --line: #d9dde7;
+  --navy: #0b2a5b;
+  --orange: #d95f0e;
+  --orange-soft: #fdeee3;
+  --term-bg: #0f1a30;
+  --term-ink: #e3e8f3;
+  --term-dim: #8e9ab3;
+  --term-accent: #ffb27a;
+  --note-bg: #eaf0fb;
+  --warn-bg: #fff4e5;
+  --warn-line: #e9a23b;
+  --ok: #1d7a4b;
+  --f-display: "Bitter", Georgia, "Times New Roman", serif;
+  --f-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, Consolas, "Courier New", monospace;
+  --step: 1rem;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1322; --surface: #141c2f; --ink: #e5e9f2; --muted: #9ca7bf; --line: #283552;
+    --navy: #9dbbf2; --orange: #ff9d57; --orange-soft: #2e2016;
+    --term-bg: #070c18; --term-ink: #e3e8f3; --term-dim: #7f8ba5; --term-accent: #ffb27a;
+    --note-bg: #16223b; --warn-bg: #2a2012; --warn-line: #c98a2e; --ok: #5fd198;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1322; --surface: #141c2f; --ink: #e5e9f2; --muted: #9ca7bf; --line: #283552;
+  --navy: #9dbbf2; --orange: #ff9d57; --orange-soft: #2e2016;
+  --term-bg: #070c18; --term-ink: #e3e8f3; --term-dim: #7f8ba5; --term-accent: #ffb27a;
+  --note-bg: #16223b; --warn-bg: #2a2012; --warn-line: #c98a2e; --ok: #5fd198;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 17px; line-height: 1.6; }
+a { color: var(--navy); text-underline-offset: 2px; }
+a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible { outline: 3px solid var(--orange); outline-offset: 2px; border-radius: 4px; }
+code { font-family: var(--f-mono); font-size: .88em; background: var(--note-bg); padding: .08em .35em; border-radius: 4px; overflow-wrap: anywhere; }
+h1, h2, h3 { font-family: var(--f-display); color: var(--navy); text-wrap: balance; line-height: 1.2; }
+
+.wrap { max-width: 1180px; margin: 0 auto; padding-inline: 20px; padding-block: 0 80px; display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 48px; }
+@media (max-width: 900px) { .wrap { grid-template-columns: minmax(0, 1fr); gap: 0; padding-inline: 16px; } }
+
+/* header */
+.masthead { max-width: 1180px; margin: 0 auto; padding-inline: 20px; padding-block: 44px 28px; }
+@media (max-width: 900px) { .masthead { padding-inline: 16px; padding-block: 28px 16px; } }
+.eyebrow { font-family: var(--f-mono); font-size: 12.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--orange); font-weight: 600; }
+.masthead h1 { font-size: clamp(2rem, 4.6vw, 3.1rem); margin: .25em 0 .3em; font-weight: 800; }
+.lede { max-width: 68ch; font-size: 1.1rem; color: var(--muted); margin: 0; }
+.outcome { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+.outcome div { flex: 1 1 260px; min-width: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+.outcome b { display: block; font-family: var(--f-mono); font-size: 13px; color: var(--orange); letter-spacing: .03em; }
+
+/* timeline strip */
+.timeline { max-width: 1180px; margin: 0 auto 28px; padding-inline: 20px; }
+@media (max-width: 900px) { .timeline { padding-inline: 16px; } }
+.tl { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+.tl ol { list-style: none; margin: 0; padding: 14px 16px; display: flex; gap: 0; min-width: 760px; }
+.tl li { flex: 1; position: relative; padding: 0 10px 0 0; font-size: 14px; }
+.tl li::before { content: ""; display: block; height: 4px; background: var(--line); border-radius: 2px; margin-bottom: 10px; }
+.tl li.due::before { background: var(--orange); }
+.tl li.meet::before { background: var(--navy); }
+.tl .d { font-family: var(--f-mono); font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; display: block; }
+.tl .t { font-weight: 700; }
+
+/* toc */
+nav.toc { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 20px); align-self: start; max-height: calc(100vh - 40px); overflow-y: auto; padding-top: 4px; }
+nav.toc p { font-family: var(--f-mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 8px; }
+nav.toc ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; counter-reset: toc; }
+nav.toc a { display: flex; gap: 10px; align-items: baseline; padding: 6px 10px; border-radius: 6px; text-decoration: none; color: var(--ink); font-size: 15px; line-height: 1.35; }
+nav.toc a:hover { background: var(--surface); }
+nav.toc a .n { font-family: var(--f-mono); font-size: 12px; color: var(--orange); min-width: 1.6em; font-variant-numeric: tabular-nums; }
+nav.toc a.done .n::after { content: " ✓"; color: var(--ok); }
+@media (max-width: 900px) { nav.toc { position: static; max-height: none; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); padding: 12px; margin-bottom: 28px; } }
+
+main { min-width: 0; }
+section.step { padding-top: 12px; margin-bottom: 56px; scroll-margin-top: 16px; }
+.step-head { display: flex; gap: 14px; align-items: baseline; border-bottom: 2px solid var(--navy); padding-bottom: 8px; margin-bottom: 18px; }
+.step-head .num { font-family: var(--f-mono); font-weight: 600; color: var(--orange); font-size: 15px; }
+.step-head h2 { margin: 0; font-size: clamp(1.45rem, 3vw, 1.9rem); flex: 1; }
+.step-head label { font-size: 13px; color: var(--muted); display: inline-flex; gap: 6px; align-items: center; white-space: nowrap; cursor: pointer; }
+.who { font-family: var(--f-mono); font-size: 12.5px; color: var(--muted); margin: -8px 0 14px; }
+main p, main li { max-width: 70ch; }
+main h3 { font-size: 1.2rem; margin: 30px 0 8px; }
+main ul, main ol.plain { padding-left: 1.25em; }
+main li { margin: 4px 0; }
+
+/* terminal blocks */
+.term { background: var(--term-bg); color: var(--term-ink); border-radius: 10px; margin: 14px 0 18px; overflow: hidden; }
+.term-bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 7px 12px; border-bottom: 1px solid #ffffff14; font-family: var(--f-mono); font-size: 12px; color: var(--term-dim); }
+.term-bar button { font-family: var(--f-mono); font-size: 12px; background: #ffffff12; color: var(--term-ink); border: 1px solid #ffffff26; border-radius: 5px; padding: 3px 10px; cursor: pointer; }
+.term-bar button:hover { background: #ffffff22; }
+.term pre { margin: 0; padding: 14px 16px; overflow-x: auto; font-family: var(--f-mono); font-size: 14px; line-height: 1.6; }
+.term .c { color: var(--term-dim); }
+.term .h { color: var(--term-accent); }
+
+/* callouts */
+.note, .warn { border-radius: 8px; padding: 12px 16px; margin: 16px 0; max-width: 72ch; }
+.note { background: var(--note-bg); }
+.warn { background: var(--warn-bg); border-left: 4px solid var(--warn-line); }
+.note p, .warn p { margin: .3em 0; }
+.note b:first-child, .warn b:first-child { font-family: var(--f-mono); font-size: 12.5px; letter-spacing: .05em; text-transform: uppercase; }
+
+/* tables */
+.tbl { overflow-x: auto; margin: 14px 0 18px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 15px; }
+th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-family: var(--f-mono); font-size: 12.5px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); font-weight: 600; background: var(--bg); }
+tr:last-child td { border-bottom: 0; }
+td.num { font-variant-numeric: tabular-nums; font-family: var(--f-mono); }
+
+/* chain diagram */
+.chain { display: grid; gap: 8px; margin: 16px 0 20px; max-width: 640px; }
+.chain div { display: flex; gap: 12px; align-items: baseline; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 9px 14px; }
+.chain div:nth-child(2) { margin-left: 24px; } .chain div:nth-child(3) { margin-left: 48px; } .chain div:nth-child(4) { margin-left: 72px; } .chain div:nth-child(5) { margin-left: 96px; }
+@media (max-width: 520px) { .chain div:nth-child(n) { margin-left: 0; } }
+.chain .lbl { font-family: var(--f-mono); font-size: 13px; color: var(--orange); font-weight: 600; min-width: 108px; }
+.chain .sp { margin-left: auto; font-family: var(--f-mono); font-size: 12px; color: var(--muted); white-space: nowrap; }
+.chain .sp.yes { color: var(--ok); font-weight: 600; }
+
+/* loop */
+.loop { counter-reset: loop; list-style: none; padding: 0; margin: 14px 0; display: grid; gap: 8px; max-width: 72ch; }
+.loop li { counter-increment: loop; display: grid; grid-template-columns: 2.2em minmax(0, 1fr); gap: 10px; align-items: baseline; margin: 0; }
+.loop li::before { content: counter(loop); font-family: var(--f-mono); font-weight: 600; color: var(--surface); background: var(--navy); border-radius: 50%; width: 1.8em; height: 1.8em; display: inline-grid; place-items: center; font-size: 13px; }
+
+main ul.checklist { list-style: none; padding-left: 0; display: grid; gap: 6px; }
+.checklist li { position: relative; padding-left: 1.8em; margin: 0; }
+.checklist li::before { content: "☐"; color: var(--orange); position: absolute; left: 0; top: 0; }
+
+footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); padding-top: 16px; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+<style>
+html{-webkit-text-size-adjust:100%}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+</style>
+</head>
+<body>
+<header class="masthead">
+  <div class="eyebrow">CPSC 490 · Fall 2026 · Sprint 1 → Sprint 2</div>
+  <h1>CPSC 490 First Steps</h1>
+  <p class="lede">A step-by-step path from an empty <code>proposal.md</code> to a working Sprint Board, written for someone who has never used git. Every step lists the exact command to type. Do the steps in order; each one builds on the last.</p>
+  <div class="outcome">
+    <div><b>OUTCOME 1</b><code>proposal/proposal.md</code> in your team repo with §0 Abstract through §2 Goals and Objectives written, merged through reviewed pull requests.</div>
+    <div><b>OUTCOME 2</b>A Sprint Board under <em>Projects</em> holding every epic, story, feature, task and bug, with Sprint 1 story points measured at the start and at the end.</div>
+    <div><b>LOCKED BY OCT 11</b>Goals and Objectives in §2, each goal an <code>epic</code> and each objective a <code>user-story</code>, linked both ways. Sprint 2 is planned from exactly this set.</div>
+    <div><b>THEN</b>Sprint 2 (Oct 12 – 25): specifications, design, and prototype implementation, planned from the board you built here.</div>
+  </div>
+</header>
+
+<div class="timeline" aria-label="Key dates">
+  <div class="tl"><ol>
+    <li><span class="d">Sep 28</span><span class="t">Sprint 1 starts</span></li>
+    <li class="meet"><span class="d">Sep 29 / Oct 1</span><span class="t">Sprint 1 reviews (G01–05, G11–15)</span></li>
+    <li class="due"><span class="d">Sun Oct 4</span><span class="t">HW#4 due</span></li>
+    <li class="meet"><span class="d">Oct 6 / Oct 8</span><span class="t">Sprint 1 reviews (G06–10, G16–20)</span></li>
+    <li class="due"><span class="d">Sun Oct 11</span><span class="t">HW#5 due · Goals &amp; Objectives locked as epics/stories · Sprint 1 ends</span></li>
+    <li class="meet"><span class="d">Oct 13 / Oct 15</span><span class="t">Sprint 2 meetings</span></li>
+  </ol></div>
+</div>
+
+<div class="wrap">
+<nav class="toc" aria-label="Contents">
+  <p>Steps</p>
+  <ol>
+    <li><a href="#setup"><span class="n">1</span>Set up your laptop</a></li>
+    <li><a href="#loop"><span class="n">2</span>The git loop you repeat</a></li>
+    <li><a href="#hw4"><span class="n">3</span>HW#4: Abstract &amp; Introduction</a></li>
+    <li><a href="#hw5"><span class="n">4</span>HW#5: Related Work → Goals</a></li>
+    <li><a href="#issues"><span class="n">5</span>File epics, stories, tasks</a></li>
+    <li><a href="#board"><span class="n">6</span>Set up the Sprint Board</a></li>
+    <li><a href="#points"><span class="n">7</span>Measure story points</a></li>
+    <li><a href="#sprint2"><span class="n">8</span>Get ready for Sprint 2</a></li>
+    <li><a href="#trouble"><span class="n">9</span>When git goes wrong</a></li>
+  </ol>
+</nav>
+
+<main>
+
+<div class="note">
+  <p><b>Before you start</b></p>
+  <p>Your team repository already exists and is set up: every one of the 20 group repos has the course scaffold, the <code>develop</code> branch, the labels and the four sprint milestones. This guide starts from there. In the commands, replace <code>OWNER/REPO</code> with your repository, for example <code>your-username/CPSC490-G00-Example</code>, and replace <code>12</code> with your real issue number.</p>
+  <p>On Windows, type the commands in <strong>Git Bash</strong> (installed with Git). Where PowerShell needs something different, the guide shows both.</p>
+</div>
+
+<!-- ============================ 1 ============================ -->
+<section class="step" id="setup">
+  <div class="step-head"><span class="num">STEP 1</span><h2>Set up your laptop</h2><label><input type="checkbox" id="ck-setup" data-step="setup"> done</label></div>
+  <p class="who">Everyone · once · about 20 minutes</p>
+
+  <h3>Install three tools</h3>
+  <p><strong>Git</strong> tracks every change. <strong>GitHub CLI</strong> (<code>gh</code>) creates issues and pull requests from the terminal. <strong>Python</strong> runs the course checks and the story-point report.</p>
+  <div class="term"><div class="term-bar"><span>Windows · PowerShell (run as yourself)</span><button type="button">Copy</button></div><pre>winget install --id Git.Git -e
+winget install --id GitHub.cli -e
+winget install --id Python.Python.3.12 -e
+<span class="c"># close and reopen the terminal, then open "Git Bash" from the Start menu</span></pre></div>
+  <div class="term"><div class="term-bar"><span>macOS · Terminal</span><button type="button">Copy</button></div><pre>xcode-select --install          <span class="c"># gives you git</span>
+brew install gh python          <span class="c"># needs Homebrew: https://brew.sh</span></pre></div>
+  <p>Check that all three answer with a version number:</p>
+  <div class="term"><div class="term-bar"><span>Git Bash / Terminal</span><button type="button">Copy</button></div><pre>git --version
+gh --version
+python --version      <span class="c"># on Windows, if this fails try:  py --version</span></pre></div>
+
+  <h3>Tell git who you are</h3>
+  <p>Use the <strong>same email as your GitHub account</strong>. If it differs, your commits do not count on the contributor graph, which is how individual work is seen.</p>
+  <div class="term"><div class="term-bar"><span>Git Bash / Terminal</span><button type="button">Copy</button></div><pre>git config --global user.name "First Last"
+git config --global user.email "you@csu.fullerton.edu"
+git config --global init.defaultBranch main</pre></div>
+
+  <h3>Log in to GitHub from the terminal</h3>
+  <div class="term"><div class="term-bar"><span>Git Bash / Terminal</span><button type="button">Copy</button></div><pre>gh auth login
+<span class="c">#   ? Where do you use GitHub?            GitHub.com
+#   ? Preferred protocol for Git?         HTTPS
+#   ? Authenticate Git with credentials?  Yes
+#   ? How would you like to authenticate? Login with a web browser</span>
+gh auth refresh -s project     <span class="c"># lets gh work with your Sprint Board</span>
+gh auth status                 <span class="c"># should say "Logged in to github.com"</span></pre></div>
+
+  <h3>Download your team repository</h3>
+  <p><em>Cloning</em> copies the whole repository, with its history, into a folder on your laptop.</p>
+  <div class="term"><div class="term-bar"><span>Git Bash / Terminal</span><button type="button">Copy</button></div><pre>cd ~/Documents                                   <span class="c"># or wherever you keep projects</span>
+git clone https://github.com/OWNER/REPO.git
+cd REPO
+git switch develop                               <span class="c"># your team's working branch</span>
+git pull                                         <span class="c"># get the latest</span>
+ls -a                                            <span class="c"># you should see .github  docs  proposal  prototype  scripts</span></pre></div>
+  <div class="warn"><p><b>If <code>git switch develop</code> fails</b></p><p>Your team leader has not run <code>bash scripts/bootstrap.sh</code> yet (QUICKSTART step 4). Ask them to run it, then try again.</p></div>
+</section>
+
+<!-- ============================ 2 ============================ -->
+<section class="step" id="loop">
+  <div class="step-head"><span class="num">STEP 2</span><h2>The git loop you repeat for every change</h2><label><input type="checkbox" id="ck-loop" data-step="loop"> done</label></div>
+  <p class="who">Everyone · learn once, use all semester</p>
+  <p>Every change, whether a proposal paragraph or prototype code, follows the same eleven steps. Learn this once; Steps 3 to 8 just apply it.</p>
+
+  <div class="tbl"><table>
+    <thead><tr><th>Word</th><th>What it means here</th></tr></thead>
+    <tbody>
+      <tr><td><code>main</code></td><td>Released work only: what you submitted or demoed. Nobody commits to it directly.</td></tr>
+      <tr><td><code>develop</code></td><td>The team's shared working copy. Finished work lands here through pull requests.</td></tr>
+      <tr><td>branch</td><td>Your private copy for one issue, e.g. <code>feature/12-abstract</code>. Always starts from <code>develop</code>.</td></tr>
+      <tr><td>commit</td><td>A saved snapshot of your changes, with a message.</td></tr>
+      <tr><td>push</td><td>Upload your branch's commits to GitHub.</td></tr>
+      <tr><td>pull request (PR)</td><td>A request to merge your branch into <code>develop</code>. A teammate reviews it; CI checks it.</td></tr>
+    </tbody>
+  </table></div>
+
+  <ol class="loop">
+    <li><div><strong>Know your issue number.</strong> Every change belongs to an issue (Step 5 shows how to file one). Say it is <code>#12</code>.</div></li>
+    <li><div><strong>Start from the latest <code>develop</code>.</strong></div></li>
+    <li><div><strong>Make a branch named after the issue.</strong></div></li>
+    <li><div><strong>Edit the files</strong> in VS Code or any editor.</div></li>
+    <li><div><strong>See what changed.</strong></div></li>
+    <li><div><strong>Stage the files you meant to change</strong>, by name. Never stage everything blindly.</div></li>
+    <li><div><strong>Commit</strong> with a message that says what and names the issue.</div></li>
+    <li><div><strong>Run the course check</strong> (the harness). Fix anything red.</div></li>
+    <li><div><strong>Push</strong> your branch to GitHub.</div></li>
+    <li><div><strong>Open a pull request</strong> into <code>develop</code>. The template asks you to link the issue (<code>Closes #12</code>), say what you verified, and disclose AI use.</div></li>
+    <li><div><strong>A teammate who is not the author approves</strong>, CI is green, then squash-merge and go back to <code>develop</code>.</div></li>
+  </ol>
+
+  <div class="term"><div class="term-bar"><span>Git Bash / Terminal · the whole loop</span><button type="button">Copy</button></div><pre><span class="c"># 2. start from the latest develop</span>
+git switch develop
+git pull
+
+<span class="c"># 3. one branch per issue: feature/&lt;issue-number&gt;-&lt;short-name&gt;</span>
+git switch -c feature/12-abstract
+
+<span class="c"># 4. edit, for example:</span>
+code proposal/proposal.md          <span class="c"># opens VS Code; any editor works</span>
+
+<span class="c"># 5. see what changed</span>
+git status                         <span class="c"># which files changed</span>
+git diff                           <span class="c"># the exact lines (press q to quit)</span>
+
+<span class="c"># 6. stage the file(s) by name</span>
+git add proposal/proposal.md
+
+<span class="c"># 7. commit</span>
+git commit -m "docs(proposal): draft §0 abstract (#12)"
+
+<span class="c"># 8. the course check — must end green</span>
+python .github/scripts/check_repo.py
+
+<span class="c"># 9. push (the -u is only needed the first time for this branch)</span>
+git push -u origin feature/12-abstract
+
+<span class="c"># 10. open the PR in your browser with the template filled in</span>
+gh pr create --base develop --web</pre></div>
+
+  <div class="term"><div class="term-bar"><span>Reviewer (a different teammate)</span><button type="button">Copy</button></div><pre>gh pr list                          <span class="c"># find the PR number, e.g. 15</span>
+gh pr view 15 --web                 <span class="c"># read the diff and leave comments on GitHub</span>
+gh pr review 15 --approve -b "Checked §0 against the template guidance; reads clearly."</pre></div>
+
+  <div class="term"><div class="term-bar"><span>Author, after approval + green CI</span><button type="button">Copy</button></div><pre>gh pr merge 15 --squash --delete-branch
+git switch develop
+git pull                            <span class="c"># your merged change is now in develop</span></pre></div>
+
+  <div class="note"><p><b>Commit often, push daily</b></p><p>You can repeat steps 4 to 9 many times on one branch: every <code>git push</code> updates the same pull request. Small, frequent commits are easier to review and much easier to undo.</p></div>
+  <div class="note"><p><b>Used an AI tool?</b></p><p>Add a trailer line to the commit message, and say so in the PR. Prose in the proposal must be your own writing; AI may check grammar and give feedback.</p></div>
+  <div class="term"><div class="term-bar"><span>A commit with an AI trailer</span><button type="button">Copy</button></div><pre>git commit -m "feat(prototype): add login endpoint (#27)" -m "Assisted-by: Claude"</pre></div>
+</section>
+
+<!-- ============================ 3 ============================ -->
+<section class="step" id="hw4">
+  <div class="step-head"><span class="num">STEP 3</span><h2>HW#4: write the Abstract and Introduction</h2><label><input type="checkbox" id="ck-hw4" data-step="hw4"> done</label></div>
+  <p class="who">Whole team · due Sun Oct 4, 11:59 PM · one Word file per team on Canvas</p>
+
+  <p>HW#4 is the short version of the proposal: the cover page, <strong>§0 Abstract</strong> and <strong>§1 Introduction</strong>, plus prototype v0 in your repo. You write it in <code>proposal/proposal.md</code>, which already has every section heading and the template's own guidance in quote blocks (<code>&gt;</code> lines).</p>
+
+  <h3>3.1 Split the writing so people are not editing the same lines</h3>
+  <p>Two people editing the same paragraph on two branches causes a merge conflict. Give each person a section. A good split for a 4-person team:</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Issue</th><th>Section of <code>proposal.md</code></th><th>Branch</th></tr></thead>
+    <tbody>
+      <tr><td>Task: Fill the cover fields</td><td>header block (title, group, sponsor, authors, date, repo URL)</td><td><code>feature/&lt;n&gt;-cover</code></td></tr>
+      <tr><td>Task: Draft §1 background</td><td>§1 Introduction, first half: the field, for a reader with a CS degree</td><td><code>feature/&lt;n&gt;-intro-background</code></td></tr>
+      <tr><td>Task: Draft §1 problem &amp; difference</td><td>§1 Introduction, second half: the problem, why it matters, how you differ</td><td><code>feature/&lt;n&gt;-intro-problem</code></td></tr>
+      <tr><td>Task: Draft §0 Abstract</td><td>§0 Abstract, <strong>written last</strong>, after §1 is merged</td><td><code>feature/&lt;n&gt;-abstract</code></td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>3.2 File one task issue per row</h3>
+  <p>Quote the labels exactly; some contain a colon and a space. The command prints the new issue's number; that is the <code>&lt;n&gt;</code> you use in the branch name.</p>
+  <div class="term"><div class="term-bar"><span>Git Bash / Terminal</span><button type="button">Copy</button></div><pre>gh issue create \
+  --title "Task: Draft §1 Introduction background" \
+  --label task --label documentation --label "priority: high" \
+  --milestone "Sprint 1" \
+  --assignee @me \
+  --body "## Task
+Draft the background half of §1 Introduction for HW#4.
+
+## Deliverable
+proposal/proposal.md §1
+
+## Definition of done
+- [ ] Background readable by someone with a CS degree who does not know our area
+- [ ] Every claim that needs a source cites one [n] in §8
+- [ ] Quote-block guidance for this part deleted"</pre></div>
+  <p>In PowerShell, replace each trailing <code>\</code> with a backtick <code>`</code>, or put the whole command on one line.</p>
+  <div class="note"><p><b>No story points on these</b></p><p>Story points go only on <em>objectives</em> (user stories), filed in Step 5. Writing tasks carry no <code>sp:</code> label. On <code>develop</code> the check only warns that a task has no parent yet; you can link it later.</p></div>
+
+  <h3>3.3 Write, one branch per task</h3>
+  <p>Follow the loop from Step 2. For the background task, say its issue is <code>#14</code>:</p>
+  <div class="term"><div class="term-bar"><span>Git Bash / Terminal</span><button type="button">Copy</button></div><pre>git switch develop && git pull
+git switch -c feature/14-intro-background
+code proposal/proposal.md             <span class="c"># write under "## 1. Introduction"; delete its &gt; guidance lines as you go</span>
+git add proposal/proposal.md
+git commit -m "docs(proposal): §1 background (#14)"
+python .github/scripts/check_repo.py
+git push -u origin feature/14-intro-background
+gh pr create --base develop --web     <span class="c"># body must include:  Closes #14</span></pre></div>
+
+  <h3>3.4 What each section must contain</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Section</th><th>Must include</th><th>Common mistake</th></tr></thead>
+    <tbody>
+      <tr><td>§0 Abstract</td><td>Background/motivation (1–2 paragraphs), the problem, your proposed idea, why it is non-trivial or significant, goals and outcomes (1 paragraph), and a 1–2 sentence outline of the document. <strong>At most one page.</strong></td><td>Writing it first. Write it last, from the finished §1.</td></tr>
+      <tr><td>§1 Introduction</td><td>Background for a reader with a B.S. in CS who does not know your area; motivation; the problem; why solving it matters; what makes yours different from existing work.</td><td>Assuming the instructor is the only reader.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>3.5 Turn it in on Canvas as Word</h3>
+  <p>Canvas takes one Word file per team, formatted in the course template: Times New Roman 11-pt, 1.5 line spacing, 1.0-inch margins, the template's cover page unchanged.</p>
+  <p><strong>Easiest route:</strong> open <em>CPSC 490 Project Proposal Template Fall 2026.docx</em>, and paste each section's text in with <em>Home → Paste → Keep Text Only</em>, so the template's styles and numbering apply. Do not type the <code>0.</code> / <code>1.</code> numbers; Word numbers the headings itself.</p>
+  <p><strong>Or convert</strong> with pandoc, then delete the typed numbers in Word and check the formatting:</p>
+  <div class="term"><div class="term-bar"><span>Git Bash / PowerShell</span><button type="button">Copy</button></div><pre>winget install pandoc                  <span class="c"># once (macOS: brew install pandoc)</span>
+pandoc proposal/proposal.md -o proposal.docx --reference-doc="CPSC 490 Project Proposal Template Fall 2026.docx"</pre></div>
+  <div class="warn"><p><b>The Markdown stays the source</b></p><p>Keep <code>proposal/proposal.md</code> current after you submit. The Preview (Nov 29) and Final (Dec 20) papers grow out of it, and CI can only read the Markdown.</p></div>
+</section>
+
+<!-- ============================ 4 ============================ -->
+<section class="step" id="hw5">
+  <div class="step-head"><span class="num">STEP 4</span><h2>HW#5: Related Work, Problem Statements, Goals and Objectives</h2><label><input type="checkbox" id="ck-hw5" data-step="hw5"> done</label></div>
+  <p class="who">Whole team · due Sun Oct 11, 11:59 PM · Word on Canvas</p>
+  <p>HW#5 grows the proposal into its formal shape: Abstract and Introduction (revised from HW#4 feedback), then <strong>§1.1 Related Work</strong>, <strong>§1.2 Problem Statements</strong> and <strong>§2 Goals and Objectives</strong>. The goals and objectives are what you turn into issues in Step 5, so they are the bridge to Sprint 2.</p>
+
+  <h3>4.1 File the tasks, then branch per section</h3>
+  <div class="term"><div class="term-bar"><span>Git Bash / Terminal · one issue per section</span><button type="button">Copy</button></div><pre>gh issue create --title "Task: Revise §0–§1 from HW#4 feedback" --label task --label documentation --label "priority: high" --milestone "Sprint 1" --assignee @me --body "Deliverable: proposal/proposal.md §0–§1"
+gh issue create --title "Task: Write §1.1 Related Work (comparative table)" --label task --label documentation --label "priority: high" --milestone "Sprint 1" --assignee @me --body "Deliverable: proposal/proposal.md §1.1"
+gh issue create --title "Task: Write §1.2 Problem Statements P1..Pn" --label task --label documentation --label "priority: high" --milestone "Sprint 1" --assignee @me --body "Deliverable: proposal/proposal.md §1.2"
+gh issue create --title "Task: Write §2 Goals and Objectives" --label task --label documentation --label "priority: high" --milestone "Sprint 1" --assignee @me --body "Deliverable: proposal/proposal.md §2"</pre></div>
+  <p>Assign each to a different person: replace <code>@me</code> with a teammate's GitHub username.</p>
+
+  <h3>4.2 What each section must contain</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Section</th><th>Write</th><th>Check before you open the PR</th></tr></thead>
+    <tbody>
+      <tr><td>§1.1 Related Work</td><td>A <strong>comparative analysis</strong>, not a list of summaries. Fill the table in the skeleton (existing approach · what it does · pros · cons · why ours differs), then argue in prose what you do differently and why it is worth doing.</td><td>At least 3 real sources, each cited <code>[n]</code> and listed in §8. Every source is one you actually read. AI tools invent citations; verify each one exists.</td></tr>
+      <tr><td>§1.2 Problem Statements</td><td>Short, numbered <strong>P1, P2, …</strong>, a few sentences each. No background (that is §1) and no solution (that is §3). Fill the <em>Problem → Addressed by</em> table.</td><td>Every problem maps to a goal in §2, and every goal maps back to a problem.</td></tr>
+      <tr><td>§2 Goals and Objectives</td><td>2–3 <strong>goals</strong> (general). Under each, <strong>objectives</strong> that start with an action word and carry a measure: <em>"Classify updates as breaking, potentially breaking or informational, with roughly 75–80% accuracy."</em></td><td>No goal is a paragraph with no objectives under it. No objective is just a feature name ("the voting system").</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>4.3 Leave room for issue numbers in §2</h3>
+  <p>Write §2 in this shape. After Step 5 you replace each <code>#〈n〉</code> with the real issue number. The course check (gate G8) fails if an epic or story exists that §2 does not link.</p>
+  <div class="term"><div class="term-bar"><span>proposal/proposal.md · §2 shape</span><button type="button">Copy</button></div><pre>- **Goal 1: Secure account management** (Epic #〈n〉)
+  - Objective 1.1: Implement member registration and login with hashed
+    credentials, session expiry, and rejection of malformed input. (#〈n〉)
+  - Objective 1.2: Demonstrate the login round-trip in a runnable
+    prototype at the Week-8 in-class check. (#〈n〉)
+- **Goal 2: …** (Epic #〈n〉)
+  - Objective 2.1: … (#〈n〉)</pre></div>
+</section>
+
+<!-- ============================ 5 ============================ -->
+<section class="step" id="issues">
+  <div class="step-head"><span class="num">STEP 5</span><h2>Turn goals and objectives into issues</h2><label><input type="checkbox" id="ck-issues" data-step="issues"> done</label></div>
+  <p class="who">Whole team · start as soon as §2 has a draft · <strong>locked by Sun Oct 11, the end of Sprint 1</strong></p>
+  <div class="warn"><p><b>Deadline: end of Sprint 1</b></p><p>By <strong>Sun Oct 11</strong> your Goals and Objectives must be locked in: every goal in §2 filed as an <code>epic</code>, every objective as a <code>user-story</code> with assignee, milestone, priority, points and acceptance criteria, and every issue number written back into §2. Sprint 2 specifications, designs and prototype work are planned from exactly this set, and the final report is graded against it.</p></div>
+  <p>Your board is built from §2. Each <strong>goal</strong> becomes an <code>epic</code> issue, each <strong>objective</strong> a <code>user-story</code>. The work that delivers an objective hangs underneath it. Click through the course example to see a finished chain: <a href="https://github.com/kyoungshin/CPSC490/issues/1">#1 goal</a> → <a href="https://github.com/kyoungshin/CPSC490/issues/3">#3 objective</a> → <a href="https://github.com/kyoungshin/CPSC490/issues/6">#6 feature</a> → <a href="https://github.com/kyoungshin/CPSC490/issues/5">#5 task</a> → <a href="https://github.com/kyoungshin/CPSC490/issues/7">#7 sub-task</a>.</p>
+
+  <div class="chain" aria-label="Issue hierarchy">
+    <div><span class="lbl">epic</span><span>Goal 1: … — one per goal in §2</span><span class="sp">no points</span></div>
+    <div><span class="lbl">user-story</span><span>Objective 1.1: … — one per objective</span><span class="sp yes">sp: 1 2 3 5 8</span></div>
+    <div><span class="lbl">feature · enhancement · bug</span><span>Feature 1.1.a: …</span><span class="sp">no points</span></div>
+    <div><span class="lbl">task</span><span>Task 1.1.1: …</span><span class="sp">no points</span></div>
+    <div><span class="lbl">sub-task</span><span>Sub-task 1.1.1.a: …</span><span class="sp">no points</span></div>
+  </div>
+
+  <div class="tbl"><table>
+    <thead><tr><th>Label</th><th>Use it for</th><th>Example title</th></tr></thead>
+    <tbody>
+      <tr><td><code>epic</code></td><td>A goal from §2</td><td>Goal 1: Secure account management</td></tr>
+      <tr><td><code>user-story</code></td><td>An objective from §2, <strong>in the same words</strong></td><td>Objective 1.2: Demonstrate the login round-trip in a runnable prototype at the Week-8 check</td></tr>
+      <tr><td><code>feature</code></td><td>A new capability that delivers part of a story</td><td>Feature 1.2.a: Login endpoint with session issuance</td></tr>
+      <tr><td><code>enhancement</code></td><td>Improving something that already works</td><td>Enhancement 1.2.b: Clearer error on expired session</td></tr>
+      <tr><td><code>bug</code></td><td>Built behavior that does not match the spec</td><td>Bug: login accepts an empty password</td></tr>
+      <tr><td><code>task</code></td><td>A concrete unit of work</td><td>Task 1.2.1: Stand up the prototype login endpoint</td></tr>
+      <tr><td><code>sub-task</code></td><td>The smallest tracked piece of a task</td><td>Sub-task 1.2.1.a: Hash and verify passwords with a salted digest</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>5.1 File the epic (one per goal)</h3>
+  <div class="term"><div class="term-bar"><span>Git Bash / Terminal</span><button type="button">Copy</button></div><pre>gh issue create --title "Goal 1: Secure account management" --label epic --body "## Goal
+Members' data is private: only authenticated users reach their own records.
+
+## User stories (objectives)
+- [ ] #
+
+## Success measure
+A user can register, log in, and see only their own data in the prototype."</pre></div>
+  <p>Epics get <strong>no milestone and no points</strong>; they span several sprints.</p>
+
+  <h3>5.2 File the stories (one per objective), with every field</h3>
+  <p>A story needs five things the moment it enters a sprint: <strong>one assignee</strong>, a <strong>milestone</strong>, a <strong>priority</strong>, <strong>story points</strong> and <strong>acceptance criteria</strong>.</p>
+  <div class="term"><div class="term-bar"><span>Git Bash / Terminal · epic is #20 in this example</span><button type="button">Copy</button></div><pre>gh issue create \
+  --title "Objective 1.2: Demonstrate the login round-trip in a runnable prototype at the Week-8 check" \
+  --label user-story --label "priority: high" --label "sp: 3" \
+  --milestone "Sprint 1" \
+  --assignee your-teammate \
+  --body "## Objective
+Demonstrate the login round-trip in a runnable prototype at the Week-8 in-class check.
+
+## Epic
+#20
+
+## Deliverable
+prototype/ (run instructions in prototype/README.md)
+
+## Acceptance criteria
+- [ ] When a registered user submits valid credentials, the system shall return a session token.
+- [ ] When the password is wrong, the system shall reject the login without revealing which field was wrong."</pre></div>
+
+  <div class="tbl"><table>
+    <thead><tr><th>Points</th><th>Rough meaning</th></tr></thead>
+    <tbody>
+      <tr><td class="num">sp: 1</td><td>A few hours; you know exactly what to do.</td></tr>
+      <tr><td class="num">sp: 2</td><td>About a day of focused work.</td></tr>
+      <tr><td class="num">sp: 3</td><td>Several days; one or two unknowns.</td></tr>
+      <tr><td class="num">sp: 5</td><td>Most of a sprint for one person; real unknowns.</td></tr>
+      <tr><td class="num">sp: 8</td><td><strong>Too big.</strong> Split it into smaller objectives.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>5.3 Link children to parents</h3>
+  <p><strong>Web (recommended):</strong> open the parent issue → <em>Create sub-issue</em> → <em>Add existing issue</em> → pick the child. The board then shows a parent column and a progress bar for free.</p>
+  <p><strong>Also</strong> keep the parent's checklist current, so progress is visible in the text too. Open the epic, edit its body, and list its stories:</p>
+  <div class="term"><div class="term-bar"><span>Git Bash / Terminal · update the epic's checklist</span><button type="button">Copy</button></div><pre>gh issue edit 20 --body "## Goal
+Members' data is private: only authenticated users reach their own records.
+
+## User stories (objectives)
+- [ ] #21
+- [ ] #22
+
+## Success measure
+A user can register, log in, and see only their own data in the prototype."</pre></div>
+  <p>Tasks, features and bugs name their parent in their body under <code>## Parent</code> (the issue templates already have that heading). Merging into <code>main</code> is blocked while any non-epic issue has no parent.</p>
+
+  <h3>5.4 Put the real numbers into the proposal</h3>
+  <p>Open a branch and replace every <code>#〈n〉</code> in §2 with the epic and story numbers. List every other item (feature, enhancement, bug, task, sub-task) in the <em>Planned activities</em> table in §4.</p>
+  <div class="term"><div class="term-bar"><span>Git Bash / Terminal</span><button type="button">Copy</button></div><pre>gh issue list --state all --limit 100      <span class="c"># every issue with its number</span>
+git switch develop && git pull
+git switch -c feature/23-link-issues
+code proposal/proposal.md
+git add proposal/proposal.md
+git commit -m "docs(proposal): link epics and stories in §2, activities in §4 (#23)"
+python .github/scripts/check_repo.py         <span class="c"># gate G8 must pass now</span>
+git push -u origin feature/23-link-issues
+gh pr create --base develop --web</pre></div>
+</section>
+
+<!-- ============================ 6 ============================ -->
+<section class="step" id="board">
+  <div class="step-head"><span class="num">STEP 6</span><h2>Set up the Sprint Board under Projects</h2><label><input type="checkbox" id="ck-board" data-step="board"> done</label></div>
+  <p class="who">Leader drives, team watches · about 15 minutes</p>
+  <p>The board is one GitHub Project. Its columns show where a card is in its life; the <strong>milestone</strong> on the issue says which sprint it belongs to; the <strong><code>sp:</code> label</strong> says how big it is. Copy the live example: <a href="https://github.com/users/kyoungshin/projects/1">github.com/users/kyoungshin/projects/1</a>.</p>
+
+  <h3>6.1 Find the board (bootstrap usually made it)</h3>
+  <div class="term"><div class="term-bar"><span>Git Bash / Terminal</span><button type="button">Copy</button></div><pre>gh project list --owner OWNER          <span class="c"># OWNER = the account that owns your repo</span></pre></div>
+  <p>If nothing is listed, create it: on GitHub go to your repo → <em>Projects</em> → <em>New project</em> → <em>Board</em>, name it after your repo. Then open <em>Settings → Status</em> on the board and make the columns exactly:</p>
+  <p><code>Backlog</code> → <code>Sprint To-Do</code> → <code>In Progress</code> → <code>In Review</code> → <code>Done</code></p>
+  <p>On the board's menu, choose <em>Link to repository</em> and pick your repo, so it shows under the repo's <em>Projects</em> tab.</p>
+
+  <h3>6.2 Add every issue to the board</h3>
+  <p>Use the project number from <code>gh project list</code> (say <code>3</code>):</p>
+  <div class="term"><div class="term-bar"><span>Git Bash / Terminal · one issue</span><button type="button">Copy</button></div><pre>gh project item-add 3 --owner OWNER --url https://github.com/OWNER/REPO/issues/21</pre></div>
+  <div class="term"><div class="term-bar"><span>Git Bash · all open issues at once</span><button type="button">Copy</button></div><pre>for n in $(gh issue list --state open --limit 200 --json number --jq '.[].number'); do
+  gh project item-add 3 --owner OWNER --url "https://github.com/OWNER/REPO/issues/$n"
+done</pre></div>
+  <p>Or, on the board, click <em>+ Add item</em> at the bottom of a column, type <code>#</code>, and pick the issue.</p>
+
+  <h3>6.3 Add the three views by hand</h3>
+  <p>GitHub cannot create views from the command line. At the top of the board, use <em>+ New view</em> three times:</p>
+  <div class="tbl"><table>
+    <thead><tr><th>View name</th><th>Layout</th><th>Settings</th><th>Use it for</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Sprint Board</strong></td><td>Board</td><td>Column field: <em>Status</em>. In <em>Fields</em>, turn on <em>Milestone</em>, <em>Labels</em>, <em>Assignees</em> so the sprint and points show on each card.</td><td>daily work</td></tr>
+      <tr><td><strong>Current Sprint</strong></td><td>Board</td><td>Same as above, plus filter <code>milestone:"Sprint 1"</code>. Change it to <code>"Sprint 2"</code> at the boundary.</td><td>what you look at most days</td></tr>
+      <tr><td><strong>Sprint Plan</strong></td><td>Table</td><td>Show <em>Milestone</em>, <em>Status</em>, <em>Labels</em>, <em>Assignees</em>. <em>Group by</em>: Milestone.</td><td>planning and the sprint review</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>6.4 Plan Sprint 1 on the board</h3>
+  <ul>
+    <li>Drag the stories you commit to from <code>Backlog</code> into <code>Sprint To-Do</code>. Each one must already have assignee, milestone <code>Sprint 1</code>, priority and <code>sp:</code>.</li>
+    <li>Move your card to <code>In Progress</code> when you create its branch, and to <code>In Review</code> when you open the PR.</li>
+    <li><strong>Nothing goes to <code>Done</code> by dragging.</strong> A card is done when its PR is merged (the <code>Closes #n</code> line closes the issue).</li>
+    <li>Paste the board's URL into your team <code>README.md</code> (it is a README requirement).</li>
+  </ul>
+</section>
+
+<!-- ============================ 7 ============================ -->
+<section class="step" id="points">
+  <div class="step-head"><span class="num">STEP 7</span><h2>Measure story points at the start and end of Sprint 1</h2><label><input type="checkbox" id="ck-points" data-step="points"> done</label></div>
+  <p class="who">Leader or QA owner · at planning, then again on Oct 11</p>
+  <p>You need two numbers for the Sprint 2 meeting: how many points Sprint 1 <strong>started</strong> with, and how many it <strong>finished</strong>. Nobody counts by hand; <code>scripts/sprint_report.py</code> reads the <code>sp:</code> labels and <code>Sprint N</code> milestones straight from your issues.</p>
+
+  <h3>7.1 Run the report</h3>
+  <div class="term"><div class="term-bar"><span>Git Bash / macOS Terminal</span><button type="button">Copy</button></div><pre>GITHUB_REPOSITORY=OWNER/REPO GITHUB_TOKEN=$(gh auth token) python scripts/sprint_report.py --sprint 1</pre></div>
+  <div class="term"><div class="term-bar"><span>Windows PowerShell</span><button type="button">Copy</button></div><pre>$env:GITHUB_REPOSITORY = "OWNER/REPO"
+$env:GITHUB_TOKEN = (gh auth token)
+python scripts/sprint_report.py --sprint 1</pre></div>
+  <p>It prints one row per sprint:</p>
+  <div class="term"><div class="term-bar"><span>example output</span><span></span></div><pre>Sprint    Window           Committed  Added mid  Completed  Open/carried  Closed late  Done %
+-------------------------------------------------------------------------------------------
+Sprint 1  Sep 27 – Oct 11  0          13         0          13            0            0%</pre></div>
+  <div class="tbl"><table>
+    <thead><tr><th>Column</th><th>Meaning</th></tr></thead>
+    <tbody>
+      <tr><td>Committed</td><td>Points on stories that were in the <code>Sprint 1</code> milestone <strong>before the sprint began</strong> (Sep 27).</td></tr>
+      <tr><td>Added mid</td><td>Points on stories put into <code>Sprint 1</code> <strong>after</strong> it began.</td></tr>
+      <tr><td>Completed</td><td>Points on stories closed inside the sprint window.</td></tr>
+      <tr><td>Open/carried</td><td>Points still open: in progress now, carried over once the sprint has ended.</td></tr>
+      <tr><td>Done %</td><td>Completed ÷ (Committed + Added mid).</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="warn"><p><b>Sprint 1 is a special case</b></p><p>Sprint 1 began Sep 27, and most teams are filing their stories now, so the report counts them as <em>Added mid</em>, with <em>Committed</em> near 0. That is expected this once. For Sprint 1, your <strong>starting total = Committed + Added mid on the day you finish planning</strong>. Save that number now, because it keeps growing if you add stories later. From Sprint 2 on, plan before the sprint starts so it lands in <em>Committed</em>.</p></div>
+
+  <h3>7.2 Save the starting snapshot (do this the day you finish planning)</h3>
+  <div class="term"><div class="term-bar"><span>Git Bash / Terminal</span><button type="button">Copy</button></div><pre>git switch develop && git pull
+git switch -c feature/24-sprint1-baseline
+GITHUB_REPOSITORY=OWNER/REPO GITHUB_TOKEN=$(gh auth token) python scripts/sprint_report.py --sprint 1 --markdown &gt; docs/sprint-reviews/sprint-1-start.md
+git add docs/sprint-reviews/sprint-1-start.md
+git commit -m "docs(sprint): Sprint 1 starting story points (#24)"
+git push -u origin feature/24-sprint1-baseline
+gh pr create --base develop --web</pre></div>
+  <p>The file is dated by its commit, so it proves what you committed to and when.</p>
+
+  <h3>7.3 Take the end snapshot (Sun Oct 11, after the last merge)</h3>
+  <div class="term"><div class="term-bar"><span>Git Bash / Terminal</span><button type="button">Copy</button></div><pre>GITHUB_REPOSITORY=OWNER/REPO GITHUB_TOKEN=$(gh auth token) python scripts/sprint_report.py --sprint 1 --markdown</pre></div>
+  <p>Copy the numbers into the <em>Velocity</em> table of <code>docs/sprint-reviews/sprint-1.md</code>:</p>
+  <div class="tbl"><table>
+    <thead><tr><th></th><th>Story points</th><th>Stories</th><th>Where the number comes from</th></tr></thead>
+    <tbody>
+      <tr><td>Planned</td><td class="num">13</td><td class="num">4</td><td><code>sprint-1-start.md</code>: Committed + Added mid</td></tr>
+      <tr><td>Completed</td><td class="num">8</td><td class="num">3</td><td>end run: Completed</td></tr>
+    </tbody>
+  </table></div>
+  <p>Completed ÷ Planned is your <strong>velocity</strong>: 8 ÷ 13 ≈ 62% in this example. The instructor looks at the trend over four sprints, not the absolute number. Use it to decide how much to commit to in Sprint 2.</p>
+  <div class="note"><p><b>Also runs on GitHub every Sunday</b></p><p>The workflow <em>Sprint report</em> runs automatically each week. Run it now from the terminal and read the result in the run's summary:</p></div>
+  <div class="term"><div class="term-bar"><span>Git Bash / Terminal</span><button type="button">Copy</button></div><pre>gh workflow run sprint-report.yml
+gh run list --workflow sprint-report.yml --limit 1
+gh run view --web                     <span class="c"># the table is in the run's Summary</span></pre></div>
+</section>
+
+<!-- ============================ 8 ============================ -->
+<section class="step" id="sprint2">
+  <div class="step-head"><span class="num">STEP 8</span><h2>Get ready for the Sprint 2 meeting</h2><label><input type="checkbox" id="ck-sprint2" data-step="sprint2"> done</label></div>
+  <p class="who">Whole team · Oct 11–12 · meetings Tue Oct 13 (§01) / Thu Oct 15 (§05)</p>
+  <p>Come with your repository open. The meeting is a look at your board, your issues and your proposal, not a presentation. If the board does not match what you say, the board is what counts.</p>
+
+  <h3>8.1 Close out Sprint 1</h3>
+  <ul class="checklist">
+    <li>Every finished story reached <code>Done</code> through a merged PR, not by dragging.</li>
+    <li>Unfinished stories stay open and move to <code>Sprint 2</code>, each with a one-line reason.</li>
+    <li><code>docs/sprint-reviews/sprint-1.md</code> is filled in: progress, velocity (Step 7), carried-over items with reasons, feedback and what you did about it, contribution snapshot.</li>
+    <li>§0–§2 of <code>proposal.md</code> are merged into <code>develop</code> and match what you submitted for HW#5.</li>
+    <li><strong>Goals and Objectives are locked:</strong> every goal is an epic, every objective a story, §2 links all of them, and <code>python .github/scripts/check_repo.py</code> passes gate G8.</li>
+  </ul>
+  <div class="term"><div class="term-bar"><span>Git Bash / Terminal · move an unfinished story to Sprint 2</span><button type="button">Copy</button></div><pre>gh issue edit 22 --milestone "Sprint 2"
+gh issue comment 22 --body "Carried over from Sprint 1: sponsor data arrived Oct 9; re-scoped to synthetic fixture first."</pre></div>
+
+  <h3>8.2 Plan Sprint 2 before it starts (Oct 12)</h3>
+  <p>Sprint 2 is where you specify, design and start building the prototype. Pull a mix of kinds of work for each epic:</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Kind of story</th><th>Delivers</th><th>Lands in</th></tr></thead>
+    <tbody>
+      <tr><td>Specification</td><td>Requirements and acceptance criteria for one epic</td><td><code>docs/specs/&lt;epic&gt;.md</code> (start from <code>example-spec.md</code>)</td></tr>
+      <tr><td>Design</td><td>Architecture, system context, ER/EER, data flow diagrams</td><td><code>docs/design/</code> (see <code>DIAGRAMS.md</code>)</td></tr>
+      <tr><td>Prototype</td><td>Working code: the next slice past v0, reworked from feedback</td><td><code>prototype/</code></td></tr>
+    </tbody>
+  </table></div>
+  <ul class="checklist">
+    <li>Every Sprint 2 story has assignee, milestone <code>Sprint 2</code>, priority and <code>sp:</code>, set <strong>before Oct 12</strong> so the report counts it as Committed.</li>
+    <li>Total points ≈ what you completed in Sprint 1, not what you hope for. The report suggests a number.</li>
+    <li>Every member owns at least one story, and at least 2 merged PRs each is the default team target.</li>
+    <li>The <em>Current Sprint</em> view's filter now says <code>milestone:"Sprint 2"</code>.</li>
+    <li>Each new spec or design document names its issues on its first line, and §4 of the proposal lists it.</li>
+  </ul>
+  <div class="term"><div class="term-bar"><span>Git Bash / Terminal · a Sprint 2 spec story</span><button type="button">Copy</button></div><pre>gh issue create \
+  --title "Objective 1.1 spec: Specify registration and login requirements" \
+  --label user-story --label "priority: high" --label "sp: 3" \
+  --milestone "Sprint 2" --assignee your-teammate \
+  --body "## Epic
+#20
+
+## Deliverable
+docs/specs/account-management.md
+
+## Acceptance criteria
+- [ ] Every requirement is testable (When &lt;trigger&gt;, the system shall &lt;response&gt;)
+- [ ] The spec's first line names its epic and stories"</pre></div>
+</section>
+
+<!-- ============================ 9 ============================ -->
+<section class="step" id="trouble">
+  <div class="step-head"><span class="num">STEP 9</span><h2>When git goes wrong</h2><label><input type="checkbox" id="ck-trouble" data-step="trouble"> done</label></div>
+  <p class="who">Anyone · reference</p>
+  <div class="tbl"><table>
+    <thead><tr><th>What you see</th><th>What it means</th><th>Fix</th></tr></thead>
+    <tbody>
+      <tr><td><code>! [rejected] … (fetch first)</code> on push</td><td>Someone else pushed to this branch.</td><td><code>git pull</code>, then <code>git push</code> again.</td></tr>
+      <tr><td>You edited files while on <code>develop</code></td><td>You forgot to branch.</td><td><code>git switch -c feature/12-name</code>. Your uncommitted edits come with you.</td></tr>
+      <tr><td><code>protected branch</code> / push to develop refused</td><td>Direct pushes are blocked on purpose.</td><td>Push a feature branch and open a PR.</td></tr>
+      <tr><td><code>CONFLICT (content)</code></td><td>You and a teammate changed the same lines.</td><td>See the commands below.</td></tr>
+      <tr><td>CI red: <em>PR links an issue…</em></td><td>The PR body is missing <code>Closes #n</code>, the AI disclosure or the "verified" line.</td><td>Edit the PR description on GitHub; CI re-runs.</td></tr>
+      <tr><td>CI red: <em>Repository harness</em></td><td>A course check failed (headings, links, unlinked issues).</td><td>Run <code>python .github/scripts/check_repo.py</code> locally; it names the file and the rule.</td></tr>
+      <tr><td><code>git branch -d</code> says <em>not fully merged</em></td><td>Squash-merge made a new commit, so git cannot see your branch inside develop.</td><td>If the PR shows <em>Merged</em>, use <code>git branch -D feature/12-name</code>.</td></tr>
+      <tr><td>Committed the wrong file, not pushed yet</td><td>The last commit needs changing.</td><td><code>git reset --soft HEAD~1</code>, fix, and commit again.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="term"><div class="term-bar"><span>Resolving a merge conflict</span><button type="button">Copy</button></div><pre>git switch feature/12-abstract
+git pull origin develop              <span class="c"># bring in the latest develop; git reports CONFLICT</span>
+git status                           <span class="c"># lists the conflicted files</span>
+code proposal/proposal.md            <span class="c"># find &lt;&lt;&lt;&lt;&lt;&lt;&lt;  =======  &gt;&gt;&gt;&gt;&gt;&gt;&gt; and keep the right text; delete the markers</span>
+git add proposal/proposal.md
+git commit -m "merge develop into feature/12-abstract"
+git push</pre></div>
+  <div class="term"><div class="term-bar"><span>Where am I? (safe to run any time)</span><button type="button">Copy</button></div><pre>git status                     <span class="c"># current branch + changed files</span>
+git branch                     <span class="c"># your branches; * marks the current one</span>
+git log --oneline -5           <span class="c"># last five commits</span>
+gh pr status                   <span class="c"># your open PRs and their checks</span></pre></div>
+  <p>Stuck on tooling for more than 20 minutes? Ask in the course channel or bring it to the project meeting. Do not lose sprint days to setup.</p>
+</section>
+
+<footer>
+  <p>Reference: <a href="https://github.com/kyoungshin/CPSC490/blob/main/QUICKSTART.md">QUICKSTART.md</a> · <a href="https://github.com/kyoungshin/CPSC490/blob/main/README.md">Setup guide</a> · <a href="https://github.com/kyoungshin/CPSC490/blob/main/docs/git-workflow.md">Git workflow</a> · <a href="https://github.com/users/kyoungshin/projects/1">Example board</a>. Canvas has the authoritative due dates. Your checkmarks on this page are saved only in your browser.</p>
+</footer>
+</main>
+</div>
+
+<script>
+(function () {
+  // copy buttons
+  document.querySelectorAll(".term-bar button").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var pre = btn.closest(".term").querySelector("pre");
+      var text = pre.innerText;
+      var done = function () { btn.textContent = "Copied"; setTimeout(function () { btn.textContent = "Copy"; }, 1400); };
+      var fallback = function () {
+        var r = document.createRange(); r.selectNodeContents(pre);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        btn.textContent = "Press Ctrl+C";
+      };
+      try {
+        navigator.clipboard.writeText(text).then(done, fallback);
+      } catch (e) { fallback(); }
+    });
+  });
+  // per-viewer step checkmarks
+  var KEY = "cpsc490-first-steps";
+  var state = {};
+  try { state = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) { state = {}; }
+  function paint() {
+    document.querySelectorAll("input[data-step]").forEach(function (cb) {
+      var s = cb.getAttribute("data-step");
+      cb.checked = !!state[s];
+      var a = document.querySelector('nav.toc a[href="#' + s + '"]');
+      if (a) a.classList.toggle("done", !!state[s]);
+    });
+  }
+  document.querySelectorAll("input[data-step]").forEach(function (cb) {
+    cb.addEventListener("change", function () {
+      state[cb.getAttribute("data-step")] = cb.checked;
+      try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+      paint();
+    });
+  });
+  paint();
+})();
+</script>
+</body>
+</html>
