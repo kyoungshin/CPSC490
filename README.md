@@ -11,6 +11,7 @@ Instructors: see [`FOR_INSTRUCTORS.md`](FOR_INSTRUCTORS.md).
 **Project board (live example): <https://github.com/users/kyoungshin/projects/1>**
 · **Field Guide: <https://kyoungshin.github.io/CPSC490/aidlc/AIDLC-Field-Guide.html>**
 · **Start here: [`QUICKSTART.md`](QUICKSTART.md)**
+· **New to git? [First Steps](https://kyoungshin.github.io/CPSC490/first-steps.html)** — HW#4/HW#5 to the Sprint Board, every command listed
 
 > **This repository is itself the example.** It is laid out exactly the way
 > your group repository should be — the folders, the issue templates, the

@@ -1,5 +1,10 @@
 # Quick start — one hour, start to finished setup
 
+> **New to git, or unsure how to start the proposal and the board?** Read
+> **[First Steps](https://kyoungshin.github.io/CPSC490/first-steps.html)** — HW#4 and HW#5 in `proposal.md`, goals and
+> objectives locked as epics and stories by the end of Sprint 1, the Sprint
+> Board, and Sprint 1 story points, step by step with every git command.
+
 **Read this page first.** It is the whole setup, in order, as commands and
 clicks. Everything else in this repository is reference material you read
 when you need it (map at the bottom).
@@ -181,6 +186,7 @@ read it all at once.
 
 | When | Read |
 |---|---|
+| New to git, or stuck on how to start | **[First Steps](https://kyoungshin.github.io/CPSC490/first-steps.html)** — proposal → epics/stories → board → story points, every command listed |
 | Before Sprint 1, everyone | [`docs/aidlc/hitl-gates.md`](docs/aidlc/hitl-gates.md) — the seven gates and the LLM failure each one catches |
 | Before you first use an LLM on this project | [`docs/aidlc/prompt-library.md`](docs/aidlc/prompt-library.md) — the standard prompts |
 | Before your first PR | [`docs/git-workflow.md`](docs/git-workflow.md) — Gitflow, CI, releases |
