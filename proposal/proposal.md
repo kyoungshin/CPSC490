@@ -270,15 +270,16 @@ traceable to the objective it serves.〉
 > Describe the outcomes or deliverables, e.g., final project report, user
 > manuals, source code, data or database files, etc.
 >
-> Note: the deliverables always include the team GitHub repository, which
-> must already contain prototype v0 (a thin end-to-end proof-of-concept,
-> however small, running when this proposal is submitted). Briefly describe
-> what your v0 demonstrates and how to run it.
+> Note: the deliverables always include the team GitHub repository and,
+> from Sprint 2 on, its prototype (a thin end-to-end proof-of-concept,
+> however small). Once the prototype exists, briefly describe what it
+> demonstrates and how to run it. Homework #4 does not require a prototype.
 
 〈**One or two paragraphs** explaining the project outcome overall — what will
 exist when the project is finished, and what it will let someone do. Keep it
-prose, not a checklist; name the deliverables inside the paragraphs, and say
-briefly what prototype v0 demonstrates today and how to run it.〉
+prose, not a checklist; name the deliverables inside the paragraphs, and —
+once the prototype exists (Sprint 2 on) — say briefly what it demonstrates and
+how to run it.〉
 
 ## 6. Project Timeline
 

@@ -29,7 +29,7 @@ feature       ●───●          ●───●                   feature
 **Naming.** Always lead with the issue number so the branch, the issue, and
 the PR are one trail: `feature/12-login-spec`, `feature/27-prototype-auth`,
 `hotfix/0.1.1-broken-link`. Versions are `MAJOR.MINOR.PATCH` (semver):
-`v0.1` = proposal + prototype v0 (Sep 27), `v0.2` = the Week-8 demo build,
+`v0.1` = the Homework #4 proposal (Oct 4), `v0.2` = the Week-8 demo build,
 `v0.3` = report draft #1, `v1.0` = final submission.
 
 > **Note on this example repository.** It ships with `main` only, because it

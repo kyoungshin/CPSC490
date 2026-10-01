@@ -65,7 +65,7 @@ CPSC490-G03-California/
 │   ├── development-plan.md ← team charter (quantified triggers) + risk register
 │   ├── checklists.md       ← what reviewers review against (§8)
 │   └── aidlc/              ← the seven gates, prompt library, harness log, lectures (§7)
-├── prototype/              ← prototype v0: running proof-of-concept (due Sep 27)
+├── prototype/              ← running proof-of-concept, built from Sprint 2
 │   └── README.md           ← how to build/run it
 └── .github/
     ├── ISSUE_TEMPLATE/
@@ -178,8 +178,8 @@ Six sections need particular care:
   its section does not link.
 - **5 Project Outcomes** — one or two paragraphs of prose explaining the
   outcome overall (not a checklist): what will exist when the project is
-  done, the deliverables named inside those paragraphs, and briefly what
-  prototype v0 demonstrates today and how to run it.
+  done, the deliverables named inside those paragraphs, and — once the
+  prototype exists (Sprint 2 on) — what it demonstrates and how to run it.
 - **6 Project Timeline** — this is the plan for **CPSC 491 next semester**:
   how the system actually gets built, in what order, with which milestones.
   It is *not* this semester's four proposal sprints — those live on the
@@ -444,19 +444,18 @@ on the repository at that sprint's boundary.
 
 | Sprint | Dates (planned) | Focus | Syllabus anchor |
 |---|---|---|---|
-| **Sprint 1** | Sep 28 – Oct 11 | Epics + stories filed from Goals & Objectives; board running; specs started; **prototype v0 → v1 demo path** for the in-class check | ends right before the **Week-8 in-class prototype check** (Oct 13 §01 / Oct 15 §05) |
-| **Sprint 2** | Oct 12 – Oct 25 | Specification documents per epic; proposed approach firmed; **prototype reworked from check feedback** | — |
+| **Sprint 1** | Sep 28 – Oct 11 | Epics + stories filed from Goals & Objectives; board running; specs started; no prototype yet — **prototype work starts in Sprint 2** | ends right before the **Week-8 in-class prototype check** (Oct 13 §01 / Oct 15 §05) |
+| **Sprint 2** | Oct 12 – Oct 25 | Specification documents per epic; proposed approach firmed; **prototype v0 — the first thin end-to-end slice** in `prototype/` | — |
 | **Sprint 3** | Oct 26 – Nov 8 | Design documents **with diagrams** (architecture, system context, ER/EER, DFD); **prototype proves the riskiest design choice**; spring timeline drafted | **report draft #1 due Nov 1** (mid-sprint) |
 | **Sprint 4** | Nov 9 – Nov 22 | Integration: proposal/report polished end-to-end; **prototype stable + demoable, README run instructions verified** | **report draft #2 due Nov 29** (the sprint's output) |
 
 Plan a healthy mix each sprint — document stories AND prototype stories.
 A sprint that is all writing or all code is usually a planning smell.
 
-Before Sprint 1 begins, two things are already due **Sep 27** per the
-syllabus: the **project proposal** (HW#4) and **prototype v0 — a running
-proof-of-concept committed to this repository**. Keep prototype code in a
-`prototype/` folder with a README that says how to run it; prototype work
-is issue-tracked like everything else.
+**Homework #4** (Brief Project Proposal, due **Sun Oct 4**) is the proposal
+only — **no prototype is due with it**. Prototype work starts in **Sprint 2**:
+keep prototype code in a `prototype/` folder with a README that says how to
+run it; prototype work is issue-tracked like everything else.
 
 Sprint ritual (30 minutes at each boundary, leader drives) — **write it down
 in `docs/sprint-reviews/sprint-N.md`** (template in the example repo), and
