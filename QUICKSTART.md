@@ -112,6 +112,9 @@ git switch -c develop && git push -u origin develop
 
 Then **Settings → Branches → Add branch ruleset**, once for `main` and once
 for `develop`:
+- **Target branches → Add target → Include by pattern** → type `main` (or
+  `develop`). **Do not pick *All branches*:** it blocks every push to every
+  branch, your `feature/…` branches included, and nobody can work
 - Require a pull request before merging
 - Require approvals: **1**
 - Dismiss stale approvals when new commits are pushed

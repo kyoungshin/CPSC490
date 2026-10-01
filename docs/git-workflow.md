@@ -124,6 +124,10 @@ reviewed, green code can ever ship.
 *Settings → Branches → Add branch ruleset* (or classic protection) for
 `main` **and** `develop`:
 
+- ✅ **Target branches → Add target → Include by pattern** → `main`, and
+  again → `develop`. ❌ Never *Include all branches* (`~ALL`): the rules
+  below would then apply to `feature/…` branches too, so no one could push
+  a branch to open a PR from
 - ✅ Require a pull request before merging
 - ✅ Require approvals: **1** — GitHub will not let you approve your own PR,
   so this is what guarantees a second pair of human eyes
