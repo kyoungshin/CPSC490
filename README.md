@@ -653,7 +653,7 @@ Nine projects from three companies — Edwards Lifesciences, RTX, and SonarX —
 are on offer this year, each with a named industry mentor who is your team's
 technical contact for both semesters.
 
-**→ [Sponsored projects: titles, summaries, and mentors](docs/sponsored-projects.md)**
+**→ [Sponsored projects: titles, summaries, and mentors](https://github.com/kyoungshin/CPSC490/blob/main/docs/sponsored-projects.md)**
 
 That page carries a condensed summary of every project (`EL-1`, `RTX-1`…
 `SNX-4`), the mentor and contact address for each company, what each sponsor
