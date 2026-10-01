@@ -345,7 +345,7 @@ git pull                            <span class="c"># your merged change is now 
   <p>Quote the labels exactly; some contain a colon and a space. The command prints the new issue's number; that is the <code>&lt;n&gt;</code> you use in the branch name.</p>
   <div class="term"><div class="term-bar"><span>Git Bash / Terminal</span><button type="button">Copy</button></div><pre>gh issue create \
   --title "Task: Draft §1 Introduction background" \
-  --label task --label documentation --label "priority: high" \
+  --label task --label documentation --label "priority: high" --label "sp: 2" \
   --milestone "Sprint 1" \
   --assignee @me \
   --body "## Task
@@ -359,7 +359,7 @@ proposal/proposal.md §1
 - [ ] Every claim that needs a source cites one [n] in §8
 - [ ] Quote-block guidance for this part deleted"</pre></div>
   <p>In PowerShell, replace each trailing <code>\</code> with a backtick <code>`</code>, or put the whole command on one line.</p>
-  <div class="note"><p><b>No story points on these</b></p><p>Story points go only on <em>objectives</em> (user stories), filed in Step 5. Writing tasks carry no <code>sp:</code> label. On <code>develop</code> the check only warns that a task has no parent yet; you can link it later.</p></div>
+  <div class="note"><p><b>Point every writing task</b></p><p>Give each writing task its own <code>sp:</code> label, using the scale in Step 5 (most sections are <code>sp: 1</code> or <code>sp: 2</code>). Sprint 1 is mostly writing, and a writing task has no objective above it to carry the estimate, so without points on these your Sprint 1 report reads zero. Writing tasks are the only tasks that carry points: tasks you later file <em>under an objective</em> stay unpointed (Step 5). On <code>develop</code> the check only warns that a task has no parent; a writing task does not need one.</p></div>
 
   <h3>3.3 Write, one branch per task</h3>
   <p>Follow the loop from Step 2. For the background task, say its issue is <code>#14</code>:</p>
@@ -397,11 +397,11 @@ pandoc proposal/proposal.md -o proposal.docx --reference-doc="CPSC 490 Project P
   <p>HW#5 grows the proposal into its formal shape: Abstract and Introduction (revised from HW#4 feedback), then <strong>§1.1 Related Work</strong>, <strong>§1.2 Problem Statements</strong> and <strong>§2 Goals and Objectives</strong>. The goals and objectives are what you turn into issues in Step 5, so they are the bridge to Sprint 2.</p>
 
   <h3>4.1 File the tasks, then branch per section</h3>
-  <div class="term"><div class="term-bar"><span>Git Bash / Terminal · one issue per section</span><button type="button">Copy</button></div><pre>gh issue create --title "Task: Revise §0–§1 from HW#4 feedback" --label task --label documentation --label "priority: high" --milestone "Sprint 1" --assignee @me --body "Deliverable: proposal/proposal.md §0–§1"
-gh issue create --title "Task: Write §1.1 Related Work (comparative table)" --label task --label documentation --label "priority: high" --milestone "Sprint 1" --assignee @me --body "Deliverable: proposal/proposal.md §1.1"
-gh issue create --title "Task: Write §1.2 Problem Statements P1..Pn" --label task --label documentation --label "priority: high" --milestone "Sprint 1" --assignee @me --body "Deliverable: proposal/proposal.md §1.2"
-gh issue create --title "Task: Write §2 Goals and Objectives" --label task --label documentation --label "priority: high" --milestone "Sprint 1" --assignee @me --body "Deliverable: proposal/proposal.md §2"</pre></div>
-  <p>Assign each to a different person: replace <code>@me</code> with a teammate's GitHub username.</p>
+  <div class="term"><div class="term-bar"><span>Git Bash / Terminal · one issue per section</span><button type="button">Copy</button></div><pre>gh issue create --title "Task: Revise §0–§1 from HW#4 feedback" --label task --label documentation --label "priority: high" --label "sp: 1" --milestone "Sprint 1" --assignee @me --body "Deliverable: proposal/proposal.md §0–§1"
+gh issue create --title "Task: Write §1.1 Related Work (comparative table)" --label task --label documentation --label "priority: high" --label "sp: 3" --milestone "Sprint 1" --assignee @me --body "Deliverable: proposal/proposal.md §1.1"
+gh issue create --title "Task: Write §1.2 Problem Statements P1..Pn" --label task --label documentation --label "priority: high" --label "sp: 1" --milestone "Sprint 1" --assignee @me --body "Deliverable: proposal/proposal.md §1.2"
+gh issue create --title "Task: Write §2 Goals and Objectives" --label task --label documentation --label "priority: high" --label "sp: 2" --milestone "Sprint 1" --assignee @me --body "Deliverable: proposal/proposal.md §2"</pre></div>
+  <p>Assign each to a different person: replace <code>@me</code> with a teammate's GitHub username. The <code>sp:</code> values are a starting guess; change them to your team's own estimate.</p>
 
   <h3>4.2 What each section must contain</h3>
   <div class="tbl"><table>
@@ -435,7 +435,7 @@ gh issue create --title "Task: Write §2 Goals and Objectives" --label task --la
     <div><span class="lbl">epic</span><span>Goal 1: … — one per goal in §2</span><span class="sp">no points</span></div>
     <div><span class="lbl">user-story</span><span>Objective 1.1: … — one per objective</span><span class="sp yes">sp: 1 2 3 5 8</span></div>
     <div><span class="lbl">feature · enhancement · bug</span><span>Feature 1.1.a: …</span><span class="sp">no points</span></div>
-    <div><span class="lbl">task</span><span>Task 1.1.1: …</span><span class="sp">no points</span></div>
+    <div><span class="lbl">task</span><span>Task 1.1.1: … (the writing tasks from Steps 3–4 have no parent and <em>do</em> carry points)</span><span class="sp">no points</span></div>
     <div><span class="lbl">sub-task</span><span>Sub-task 1.1.1.a: …</span><span class="sp">no points</span></div>
   </div>
 

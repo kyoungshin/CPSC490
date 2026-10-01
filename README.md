@@ -308,7 +308,8 @@ daily vocabulary in CPSC 491.
 |---|---|---|
 | `epic` (a goal) | no | spans sprints; its size is the sum of its objectives |
 | `user-story` (an objective) | **yes** | this is the thing committed to a sprint |
-| everything below it | no | already inside that objective's estimate |
+| everything below an objective | no | already inside that objective's estimate |
+| a **writing task** with no objective above it (e.g. *Task: Draft §1 background*) | **yes** | proposal writing is real sprint work, and nothing else carries its estimate — Sprint 1 is mostly this |
 
 Point an objective *and* its tasks and you have counted the same work twice
 — a sprint that reads as 15 points of capacity when the team committed to 8,
@@ -316,7 +317,10 @@ which makes every velocity figure after it wrong.
 `scripts/sprint_report.py` catches that, reading both the `- [ ] #12`
 checklists and GitHub's native sub-issues, counting the work once at the
 objective and naming the labels to fix. The habit is simply: **estimate the
-objective, break it down, do not re-estimate the pieces.**
+objective, break it down, do not re-estimate the pieces.** The one
+exception is a writing task that stands on its own — a proposal section
+with no objective above it. Point that task directly, or Sprint 1, which is
+mostly writing, measures as zero.
 
 **Board:** create one Project (*Projects → New project → Board*) with
 columns **Backlog → Sprint To-Do → In Progress → In Review → Done**. Add
