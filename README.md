@@ -405,7 +405,7 @@ their progress shows through the task list of stories in the epic body.
 first-class. *Document stories* deliver a section of the proposal or a
 spec/design document; *prototype stories* deliver working proof-of-concept
 code in `prototype/` (a feature spike, an integration with the sponsor's
-data, a demo path for the in-class check). Either kind is Done when its
+data, a demo path for the sprint-review demo). Either kind is Done when its
 change is **merged through a reviewed pull request** and its acceptance
 criteria are checked off. What waits for CPSC 491 is production-depth
 implementation — not coding itself.
@@ -444,10 +444,13 @@ on the repository at that sprint's boundary.
 
 | Sprint | Dates (planned) | Focus | Syllabus anchor |
 |---|---|---|---|
-| **Sprint 1** | Sep 28 – Oct 11 | Epics + stories filed from Goals & Objectives; board running; specs started; no prototype yet — **prototype work starts in Sprint 2** | ends right before the **Week-8 in-class prototype check** (Oct 13 §01 / Oct 15 §05) |
-| **Sprint 2** | Oct 12 – Oct 25 | Specification documents per epic; proposed approach firmed; **prototype v0 — the first thin end-to-end slice** in `prototype/` | — |
+| **Sprint 1** | Sep 28 – Oct 11 | Epics + stories filed from Goals & Objectives; board running; specs started; no prototype yet — **prototype work starts in Sprint 2** | **demo** at your group's Sprint 2 meeting (Oct 13–22): **proposal + board, no code** |
+| **Sprint 2** | Oct 12 – Oct 25 | Specification documents per epic; proposed approach firmed; **prototype v0 — the first thin end-to-end slice** in `prototype/` | **first prototype demo** at your group's Sprint 3 meeting (Oct 27 – Nov 5) |
 | **Sprint 3** | Oct 26 – Nov 8 | Design documents **with diagrams** (architecture, system context, ER/EER, DFD); **prototype proves the riskiest design choice**; spring timeline drafted | **report draft #1 due Nov 1** (mid-sprint) |
 | **Sprint 4** | Nov 9 – Nov 22 | Integration: proposal/report polished end-to-end; **prototype stable + demoable, README run instructions verified** | **report draft #2 due Nov 29** (the sprint's output) |
+
+**Every sprint ends with a demo** at your group's next sprint meeting: Sprint 1
+shows the proposal and the board; from Sprint 2 on, the prototype runs too.
 
 Plan a healthy mix each sprint — document stories AND prototype stories.
 A sprint that is all writing or all code is usually a planning smell.

@@ -81,8 +81,8 @@ add_milestone() {  # title, due (YYYY-MM-DD), description
     -f description="$3" >/dev/null 2>&1 && ok "milestone $1 (due $2)" \
     || warn "milestone $1 could not be created"
 }
-add_milestone "Sprint 1" "2026-10-11" "Sep 28 - Oct 11 - board running, specs started, prototype demo path"
-add_milestone "Sprint 2" "2026-10-25" "Oct 12 - Oct 25 - specs per epic, prototype reworked from check feedback"
+add_milestone "Sprint 1" "2026-10-11" "Sep 28 - Oct 11 - goals locked as epics/stories, board running; demo: proposal + board"
+add_milestone "Sprint 2" "2026-10-25" "Oct 12 - Oct 25 - specs per epic, prototype v0; first prototype demo"
 add_milestone "Sprint 3" "2026-11-08" "Oct 26 - Nov 8 - design docs with diagrams (report draft #1 Nov 1)"
 add_milestone "Sprint 4" "2026-11-22" "Nov 9 - Nov 22 - integration, prototype stable (report draft #2 Nov 29)"
 

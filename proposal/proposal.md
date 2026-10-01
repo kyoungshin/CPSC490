@@ -172,7 +172,7 @@ the measure that says it is done**, not a role-play sentence:
   - Objective 1.1: 〈Implement member registration and login with hashed
     credentials, session expiry, and rejection of malformed input.〉 (#〈n〉)
   - Objective 1.2: 〈Demonstrate the login round-trip in a runnable prototype
-    at the Week-8 in-class check.〉 (#〈n〉)
+    at the end-of-Sprint-2 demo.〉 (#〈n〉)
 - **Goal 2: 〈your second goal〉** (Epic #〈n〉)
   - Objective 2.1: 〈Action word + what you will complete + how it will be
     measured〉 (#〈n〉)

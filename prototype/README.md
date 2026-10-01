@@ -1,8 +1,8 @@
 # Prototype
 
 Proof-of-concept code for 〈project title〉. **Prototype work starts in Sprint 2**
-(Homework #4 needs no prototype), and it grows every sprint after that; the Week-8 in-class check demos from
-this folder.
+(Homework #4 needs no prototype), and it grows every sprint after that; every sprint-review demo from the end of
+Sprint 2 on runs from this folder.
 
 This example implements the login slice behind story
 [#3](../../../issues/3) and task [#5](../../../issues/5) — deliberately tiny,

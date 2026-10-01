@@ -176,7 +176,7 @@ img{max-width:100%}
     <li class="due"><span class="d">Sun Oct 4</span><span class="t">HW#4 due</span></li>
     <li class="meet"><span class="d">Oct 6 / Oct 8</span><span class="t">Sprint 1 reviews (G06–10, G16–20)</span></li>
     <li class="due"><span class="d">Sun Oct 11</span><span class="t">HW#5 due · Goals &amp; Objectives locked as epics/stories · Sprint 1 ends</span></li>
-    <li class="meet"><span class="d">Oct 13 / Oct 15</span><span class="t">Sprint 2 meetings</span></li>
+    <li class="meet"><span class="d">Oct 13 – 22</span><span class="t">Sprint 2 meetings: demo proposal + board</span></li>
   </ol></div>
 </div>
 
@@ -419,7 +419,7 @@ gh issue create --title "Task: Write §2 Goals and Objectives" --label task --la
   - Objective 1.1: Implement member registration and login with hashed
     credentials, session expiry, and rejection of malformed input. (#〈n〉)
   - Objective 1.2: Demonstrate the login round-trip in a runnable
-    prototype at the Week-8 in-class check. (#〈n〉)
+    prototype at the end-of-Sprint-2 demo. (#〈n〉)
 - **Goal 2: …** (Epic #〈n〉)
   - Objective 2.1: … (#〈n〉)</pre></div>
 </section>
@@ -443,7 +443,7 @@ gh issue create --title "Task: Write §2 Goals and Objectives" --label task --la
     <thead><tr><th>Label</th><th>Use it for</th><th>Example title</th></tr></thead>
     <tbody>
       <tr><td><code>epic</code></td><td>A goal from §2</td><td>Goal 1: Secure account management</td></tr>
-      <tr><td><code>user-story</code></td><td>An objective from §2, <strong>in the same words</strong></td><td>Objective 1.2: Demonstrate the login round-trip in a runnable prototype at the Week-8 check</td></tr>
+      <tr><td><code>user-story</code></td><td>An objective from §2, <strong>in the same words</strong></td><td>Objective 1.2: Demonstrate the login round-trip in a runnable prototype at the end-of-Sprint-2 demo</td></tr>
       <tr><td><code>feature</code></td><td>A new capability that delivers part of a story</td><td>Feature 1.2.a: Login endpoint with session issuance</td></tr>
       <tr><td><code>enhancement</code></td><td>Improving something that already works</td><td>Enhancement 1.2.b: Clearer error on expired session</td></tr>
       <tr><td><code>bug</code></td><td>Built behavior that does not match the spec</td><td>Bug: login accepts an empty password</td></tr>
@@ -466,12 +466,12 @@ A user can register, log in, and see only their own data in the prototype."</pre
   <h3>5.2 File the stories (one per objective), with every field</h3>
   <p>A story needs five things the moment it enters a sprint: <strong>one assignee</strong>, a <strong>milestone</strong>, a <strong>priority</strong>, <strong>story points</strong> and <strong>acceptance criteria</strong>.</p>
   <div class="term"><div class="term-bar"><span>Git Bash / Terminal · epic is #20 in this example</span><button type="button">Copy</button></div><pre>gh issue create \
-  --title "Objective 1.2: Demonstrate the login round-trip in a runnable prototype at the Week-8 check" \
+  --title "Objective 1.2: Demonstrate the login round-trip in a runnable prototype at the end-of-Sprint-2 demo" \
   --label user-story --label "priority: high" --label "sp: 3" \
   --milestone "Sprint 1" \
   --assignee your-teammate \
   --body "## Objective
-Demonstrate the login round-trip in a runnable prototype at the Week-8 in-class check.
+Demonstrate the login round-trip in a runnable prototype at the end-of-Sprint-2 demo.
 
 ## Epic
 #20
@@ -619,7 +619,8 @@ gh run view --web                     <span class="c"># the table is in the run'
 <!-- ============================ 8 ============================ -->
 <section class="step" id="sprint2">
   <div class="step-head"><span class="num">STEP 8</span><h2>Get ready for the Sprint 2 meeting</h2><label><input type="checkbox" id="ck-sprint2" data-step="sprint2"> done</label></div>
-  <p class="who">Whole team · Oct 11–12 · meetings Tue Oct 13 (§01) / Thu Oct 15 (§05)</p>
+  <p class="who">Whole team · Oct 11–12 · your group's Sprint 2 meeting, Oct 13–22 (see the sprint schedule)</p>
+  <div class="note"><p><b>The Sprint 1 demo</b></p><p>Every sprint ends with a demo. For Sprint 1 you demo <strong>the proposal and the board, no code</strong>: §0–§2 in <code>proposal.md</code>, your locked epics and stories, and the story points you started and finished with. The first <strong>prototype</strong> demo is at the end of Sprint 2, at your group's Sprint 3 meeting (Oct 27 – Nov 5).</p></div>
   <p>Come with your repository open. The meeting is a look at your board, your issues and your proposal, not a presentation. If the board does not match what you say, the board is what counts.</p>
 
   <h3>8.1 Close out Sprint 1</h3>
