@@ -445,7 +445,7 @@ on the repository at that sprint's boundary.
 | Sprint | Dates (planned) | Focus | Syllabus anchor |
 |---|---|---|---|
 | **Sprint 1** | Sep 28 – Oct 11 | Epics + stories filed from Goals & Objectives; board running; specs started; no prototype yet — **prototype work starts in Sprint 2** | **demo** at your group's Sprint 2 meeting (Oct 13–22): **proposal + board, no code** |
-| **Sprint 2** | Oct 12 – Oct 25 | Specification documents per epic; proposed approach firmed; **prototype v0 — the first thin end-to-end slice** in `prototype/` | **first prototype demo** at your group's Sprint 3 meeting (Oct 27 – Nov 5) |
+| **Sprint 2** | Oct 12 – Oct 25 | Specification documents per epic; proposed approach firmed; **prototype v0 — initial development** in `prototype/` (does not need to be functional yet) | **first prototype demo** (show the initial development) at your group's Sprint 3 meeting (Oct 27 – Nov 5) |
 | **Sprint 3** | Oct 26 – Nov 8 | Design documents **with diagrams** (architecture, system context, ER/EER, DFD); **prototype proves the riskiest design choice**; spring timeline drafted | **report draft #1 due Nov 1** (mid-sprint) |
 | **Sprint 4** | Nov 9 – Nov 22 | Integration: proposal/report polished end-to-end; **prototype stable + demoable, README run instructions verified** | **report draft #2 due Nov 29** (the sprint's output) |
 
