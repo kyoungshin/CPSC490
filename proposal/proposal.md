@@ -270,10 +270,10 @@ traceable to the objective it serves.〉
 > Describe the outcomes or deliverables, e.g., final project report, user
 > manuals, source code, data or database files, etc.
 >
-> Note: the deliverables always include the team GitHub repository and,
-> from Sprint 2 on, its prototype (a thin end-to-end proof-of-concept,
-> however small). Once the prototype exists, briefly describe what it
-> demonstrates and how to run it. Homework #4 does not require a prototype.
+> Note: the deliverables always include the team GitHub repository and its
+> prototype in the prototype/ folder, which starts in Sprint 2 (Homework #4
+> does not require a prototype). Briefly describe what the prototype
+> demonstrates so far and how to run it.
 
 〈**One or two paragraphs** explaining the project outcome overall — what will
 exist when the project is finished, and what it will let someone do. Keep it
