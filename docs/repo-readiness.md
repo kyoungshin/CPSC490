@@ -1,8 +1,21 @@
 # Group repository readiness
 
-**CPSC 490 · Fall 2026 · swept 1 Oct 2026, 23:25 UTC; fact-checked 2 Oct, 00:15 UTC** (first sweep 18 Sep, 20:00 UTC).
+**CPSC 490 · Fall 2026 · swept 1 Oct 2026, 23:25 UTC; fact-checked 2 Oct, 00:15 UTC; sprint dates updated 2 Oct, 00:45 UTC** (first sweep 18 Sep, 20:00 UTC).
 
 All 20 teams, ordered by group number. **Seventeen repositories are ready; three are partial** (Groups 12, 13 and 19 — see below). Four failures so far traced to bugs in the course scaffold, the fourth found today; all are fixed and no team is blamed for them. **Every group except 04, 14, 15 (all three merged) and 19 has an instructor pull request open: merge it.** During sprints this page is re-swept every Tuesday and Thursday at noon (Pacific).
+
+### Sprints are per group (update, 2 Oct 00:45 UTC)
+
+**Every sprint is 14 days and starts at your group's sprint meeting**, ending the day before your next one. Homework due dates are the class schedule and are the same for everyone, so **HW#5 and the Goals & Objectives lock stay Sun 11 Oct for every group**. That deadline is the class's, not the end of a sprint. All 80 team milestones (`Sprint 1`–`Sprint 4`) were reset to these dates on 1 Oct evening:
+
+| Groups | Sprint 1 | Sprint 2 | Sprint 3 | Sprint 4 |
+|---|---|---|---|---|
+| 01–05 (Tue) | Sep 29 – Oct 12 | Oct 13 – Oct 26 | Oct 27 – Nov 9 | Nov 10 – Nov 23 |
+| 06–10 (Tue) | Oct 6 – Oct 19 | Oct 20 – Nov 2 | Nov 3 – Nov 16 | Nov 17 – Nov 30 |
+| 11–15 (Thu) | Oct 1 – Oct 14 | Oct 15 – Oct 28 | Oct 29 – Nov 11 | Nov 12 – Nov 25 |
+| 16–20 (Thu) | Oct 8 – Oct 21 | Oct 22 – Nov 4 | Nov 5 – Nov 18 | Nov 19 – Dec 2 |
+
+`scripts/sprint_report.py` now counts a sprint through the whole of its last day (commit `fb85807`). Before, it ended a day early because GitHub stores a due date as midnight UTC. **Every open instructor PR already carries this version.** Groups 04, 14 and 15 merged the earlier copy, so their report ends each sprint one day early until they re-copy the script. The course guide, First Steps and `bootstrap.sh` follow the same calendar (commit `1015cc1`).
 
 ### Since the last sweep (1 Oct, 19:41 UTC)
 
@@ -137,7 +150,7 @@ Group 14 filed two team issues (#4 *CODEOWNERS*, #6 *sync develop with main*).
 | **0** *(was 0)* | ❌ **Empty or never shared** — nothing gradeable |
 | **0** *(was 0)* | ⬜ **No repository** found anywhere |
 
-> **Sprint 1 runs Sun 28 Sep – Sun 11 Oct; Goals & Objectives lock on the 11th.** Issues filed *by teams* across all 20 groups so far: **88**. Epics and user stories are the graded artifact:
+> **Sprints are per group (14 days from your sprint meeting; table above). Goals & Objectives lock Sun 11 Oct for everyone, with HW#5.** Issues filed *by teams* across all 20 groups so far: **88**. Epics and user stories are the graded artifact:
 > - project epics from **Groups 02, 07, 11, 13 and 14**;
 > - user stories from **Groups 02, 13 and 16** only;
 > - **nine groups have filed nothing**.
@@ -162,7 +175,7 @@ Everything in the *What to do* column is the team's own next step. For most grou
 | 08 | Crime Busters | `miketruong91/CPSC490-G08-Crime-Busters` | ✅ ready | Harness red on `develop` since the first push — **the instructor's bug**, not yours. **4 PM check, 1 Oct:** no commits since Sprint 1 began, `proposal.md` untouched. Created, named to convention, shared with write access, scaffolded and bootstrapped. No team-filed issues yet. | **Merge instructor PR #2** (fixes the harness). Start HW#4 in `proposal.md` (due Sun 4 Oct); file epics and stories. |
 | 09 | Sigma Squad | `TylerWard741/CPSC490-G09-SigmaSquad` | ✅ ready | Was **empty** for nine days; on 23 Sep: renamed to `G09`, full scaffold pushed (`.github/` intact), bootstrap complete (4 milestones, `develop`). **4 PM check, 1 Oct:** no commits since Sprint 1 began, `proposal.md` untouched, no team-filed issues. | **Merge instructor PR #2.** Start HW#4 in `proposal.md` (due Sun 4 Oct); file epics and stories. |
 | 10 | Team Jiddak | `Alexander-Sanchez2/CPSC490-G10-Team_Jiddak` | ✅ ready | Bootstrap complete 22 Sep. The re-copy's scaffold internals are still duplicated loose at the repo root — cosmetic. **4 PM check, 1 Oct:** no commits since Sprint 1 began, `proposal.md` untouched, no team-filed issues — the only sponsored team (SNX-2) with nothing filed. | **Merge instructor PR #2.** Start HW#4 in `proposal.md` (due Sun 4 Oct); file epics and stories. Optionally delete the stray root-level duplicates. |
-| 11 | 5 Guys | `markachavez2003-lab/CPSC490-G11-5Guys` | ✅ ready | Its hand-made Sprint 1 milestone was due 1 Oct, which made `sprint_report.py` treat Sprint 1 as over; **the instructor corrected it on 1 Oct evening to 15 Oct** (G11's Sprint 2 meeting). Twelve commits on `develop` since 28 Sep, five team PRs (four merged), and the proposal is being written. Re-copied the scaffold and re-ran bootstrap to completion on 20 Sep. Filed the class's first team issue; on 30 Sep–1 Oct added **epic #4 *Live runner tracking***, proposal-writing tasks (#3, #7–#9, #13) and meeting issues in Sprint 1 (#17 has no milestone yet). | **Merge instructor PR #16.** Break the epic into user stories with story points. |
+| 11 | 5 Guys | `markachavez2003-lab/CPSC490-G11-5Guys` | ✅ ready | Its hand-made Sprint 1 milestone was due 1 Oct, which made `sprint_report.py` treat Sprint 1 as over. **The instructor reset it on 1 Oct evening, with every other team's milestones, to its group's sprint: Sprint 1 Oct 1 – Oct 14.** Twelve commits on `develop` since 28 Sep, five team PRs (four merged), and the proposal is being written. Re-copied the scaffold and re-ran bootstrap to completion on 20 Sep. Filed the class's first team issue; on 30 Sep–1 Oct added **epic #4 *Live runner tracking***, proposal-writing tasks (#3, #7–#9, #13) and meeting issues in Sprint 1 (#17 has no milestone yet). | **Merge instructor PR #16.** Break the epic into user stories with story points. |
 | 12 | ACJMM | `CharlesSinde/CPSC490-G12-ACJMM` | ⚠️ partial | **Ruleset targets *All branches***, so no branch can be pushed (instructor PR #14 came from a fork). On 1 Oct filed twelve unlabeled issues — six titles, each twice (#8–#13 = #15–#20). Scaffold pushed 19 Sep, bootstrap complete. Filed a team issue on 22 Sep (#3, *Find Case Study Topic*), then three issues labeled `epic` (#4–#6). Those three are team process tasks rather than project goals. | **Team leader:** set the ruleset's *Target branches* to `main` and `develop` only. Close the duplicate issues; label goals `epic` and objectives `user-story`. Merge PR #14. |
 | 13 | BYKX | `ktnwin/CPSC490-G13-BYKX` | ⚠️ partial | **Ruleset targets *All branches***, so no branch can be pushed (instructor PR #29 came from a fork). On 1 Oct filed **the class's largest backlog**: project epics #16–#18, twelve user stories, and a Sprint 1 process epic #30. **Found** 23 Sep. A private repo created 13 Sep, invisible until `kyoungshin` was added (with write access) — arrives fully scaffolded and bootstrapped (4 milestones, `develop`). Filed its first six issues on 30 Sep–1 Oct: proposal tasks (#10, #11, #15) and design tasks (#8, #12, #13). | **Team leader:** set the ruleset's *Target branches* to `main` and `develop` only. Add `sp:` points to the user stories. Merge PR #29. |
 | 14 | Cyber Squad | `jvillacorte/CPSC490-G14-Cyber-Squad` | ✅ ready | **Fixed everything on 24 Sep:** moved from the `The-Cyber-Squad` organization (old address redirects), granted `kyoungshin` **write** access, copied the full scaffold (`.github/` intact) and ran bootstrap (4 milestones, `develop`). Filed two repo-maintenance issues on 24 Sep (#4, #6), then **issue #8, *Create web scanner*, labeled `epic` — the class's second project epic.** On 1 Oct **merged instructor PR #11**; its only story points are on the two setup tasks (#4, #6). | Break the epic into user stories. |
