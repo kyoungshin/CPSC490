@@ -2,7 +2,7 @@
 
 > **New to git, or unsure how to start the proposal and the board?** Read
 > **[First Steps](https://kyoungshin.github.io/CPSC490/first-steps.html)** — HW#4 and HW#5 in `proposal.md`, goals and
-> objectives locked as epics and stories by the end of Sprint 1, the Sprint
+> objectives locked as epics and stories by Sun Oct 11 (with HW#5), the Sprint
 > Board, and Sprint 1 story points, step by step with every git command.
 
 **Read this page first.** It is the whole setup, in order, as commands and

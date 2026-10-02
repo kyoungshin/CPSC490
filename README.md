@@ -440,18 +440,35 @@ folder; you do not need to write them.
 ## 6. The four sprints
 
 Four 2-week sprints between the proposal submission and the Preview Paper
-(dates may be adjusted in class — Canvas announcements win):
+(dates may be adjusted in class — Canvas announcements win).
+
+**Sprints are per group and staggered.** Each sprint is **14 days**: it
+starts on your group's sprint meeting and ends the day before your next one
+([meeting schedule](https://github.com/kyoungshin/CPSC490/blob/main/docs/sprint-schedule.md)). Your repository's `Sprint 1`–`Sprint 4`
+milestones carry your group's dates.
+
+| Groups | Sprint 1 | Sprint 2 | Sprint 3 | Sprint 4 |
+|---|---|---|---|---|
+| 01–05 (Tue) | Sep 29 – Oct 12 | Oct 13 – Oct 26 | Oct 27 – Nov 9 | Nov 10 – Nov 23 |
+| 06–10 (Tue) | Oct 6 – Oct 19 | Oct 20 – Nov 2 | Nov 3 – Nov 16 | Nov 17 – Nov 30 |
+| 11–15 (Thu) | Oct 1 – Oct 14 | Oct 15 – Oct 28 | Oct 29 – Nov 11 | Nov 12 – Nov 25 |
+| 16–20 (Thu) | Oct 8 – Oct 21 | Oct 22 – Nov 4 | Nov 5 – Nov 18 | Nov 19 – Dec 2 |
+
+**Homework and paper due dates are the class schedule, not the sprint
+schedule** — they are the same for every group (Canvas). In particular,
+**HW#5 and the Goals & Objectives lock are due Sun Oct 11 for everyone**,
+whichever sprint your group is in.
 
 Each sprint carries **5%** of the course grade (the syllabus's 20%
 *Prototype & repository practice*, split evenly across the four), assessed
 on the repository at that sprint's boundary.
 
-| Sprint | Dates (planned) | Focus | Syllabus anchor |
+| Sprint | Dates | Focus | Syllabus anchor |
 |---|---|---|---|
-| **Sprint 1** | Sep 28 – Oct 11 | Epics + stories filed from Goals & Objectives; board running; specs started; no prototype yet — **prototype work starts in Sprint 2** | **demo** at your group's Sprint 2 meeting (Oct 13–22): **proposal + board, no code** |
-| **Sprint 2** | Oct 12 – Oct 25 | Specification documents per epic; proposed approach firmed; **prototype v0 — initial development** in `prototype/` (does not need to be functional yet) | **first prototype demo** (show the initial development) at your group's Sprint 3 meeting (Oct 27 – Nov 5) |
-| **Sprint 3** | Oct 26 – Nov 8 | Design documents **with diagrams** (architecture, system context, ER/EER, DFD); **prototype proves the riskiest design choice**; spring timeline drafted | **report draft #1 due Nov 1** (mid-sprint) |
-| **Sprint 4** | Nov 9 – Nov 22 | Integration: proposal/report polished end-to-end; **prototype stable + demoable, README run instructions verified** | **report draft #2 due Nov 29** (the sprint's output) |
+| **Sprint 1** | your group's (table above) | Epics + stories filed from Goals & Objectives; board running; specs started; no prototype yet — **prototype work starts in Sprint 2** | Goals & Objectives locked **Sun Oct 11** (class deadline, with HW#5); **demo** at your group's Sprint 2 meeting (Oct 13–22): **proposal + board, no code** |
+| **Sprint 2** | your group's | Specification documents per epic; proposed approach firmed; **prototype v0 — initial development** in `prototype/` (does not need to be functional yet) | **first prototype demo** (show the initial development) at your group's Sprint 3 meeting (Oct 27 – Nov 5) |
+| **Sprint 3** | your group's | Design documents **with diagrams** (architecture, system context, ER/EER, DFD); **prototype proves the riskiest design choice**; spring timeline drafted | **report draft #1 due Nov 1** (mid-sprint) |
+| **Sprint 4** | your group's | Integration: proposal/report polished end-to-end; **prototype stable + demoable, README run instructions verified** | **report draft #2 due Nov 29** (the sprint's output) |
 
 **Every sprint ends with a demo** at your group's next sprint meeting: Sprint 1
 shows the proposal and the board; from Sprint 2 on, the prototype runs too.

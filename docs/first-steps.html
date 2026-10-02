@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Step-by-step, beginner-level git guide for CPSC 490 teams: HW#4 and HW#5 in proposal.md, goals and objectives locked as epics and stories by the end of Sprint 1, the Sprint Board, and measuring Sprint 1 story points.">
+<meta name="description" content="Step-by-step, beginner-level git guide for CPSC 490 teams: HW#4 and HW#5 in proposal.md, goals and objectives locked as epics and stories by Sun Oct 11, the Sprint Board, and measuring Sprint 1 story points.">
 <title>CPSC 490 First Steps</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -165,20 +165,33 @@ img{max-width:100%}
     <div><b>OUTCOME 1</b><code>proposal/proposal.md</code> in your team repo with §0 Abstract through §2 Goals and Objectives written, merged through reviewed pull requests.</div>
     <div><b>OUTCOME 2</b>A Sprint Board under <em>Projects</em> holding every epic, story, feature, task and bug, with Sprint 1 story points measured at the start and at the end.</div>
     <div><b>LOCKED BY OCT 11</b>Goals and Objectives in §2, each goal an <code>epic</code> and each objective a <code>user-story</code>, linked both ways. Sprint 2 is planned from exactly this set.</div>
-    <div><b>THEN</b>Sprint 2 (Oct 12 – 25): specifications, design, and prototype implementation, planned from the board you built here.</div>
+    <div><b>THEN</b>Sprint 2 (the 14 days from your group's Sprint 2 meeting): specifications, design, and prototype implementation, planned from the board you built here.</div>
   </div>
 </header>
 
 <div class="timeline" aria-label="Key dates">
   <div class="tl"><ol>
-    <li><span class="d">Sep 28</span><span class="t">Sprint 1 starts</span></li>
-    <li class="meet"><span class="d">Sep 29 / Oct 1</span><span class="t">Sprint 1 reviews (G01–05, G11–15)</span></li>
+    <li class="meet"><span class="d">Sep 29 / Oct 1</span><span class="t">Sprint 1 starts at your meeting (G01–05, G11–15)</span></li>
     <li class="due"><span class="d">Sun Oct 4</span><span class="t">HW#4 due</span></li>
-    <li class="meet"><span class="d">Oct 6 / Oct 8</span><span class="t">Sprint 1 reviews (G06–10, G16–20)</span></li>
-    <li class="due"><span class="d">Sun Oct 11</span><span class="t">HW#5 due · Goals &amp; Objectives locked as epics/stories · Sprint 1 ends</span></li>
-    <li class="meet"><span class="d">Oct 13 – 22</span><span class="t">Sprint 2 meetings: demo proposal + board</span></li>
+    <li class="meet"><span class="d">Oct 6 / Oct 8</span><span class="t">Sprint 1 starts at your meeting (G06–10, G16–20)</span></li>
+    <li class="due"><span class="d">Sun Oct 11</span><span class="t">HW#5 due · Goals &amp; Objectives locked as epics/stories (class deadline, all groups)</span></li>
+    <li class="meet"><span class="d">Oct 13 – 22</span><span class="t">Sprint 2 meetings: demo proposal + board; Sprint 2 starts</span></li>
   </ol></div>
 </div>
+
+<section class="step" id="sprints">
+  <h2>Your group's sprints</h2>
+  <p>Sprints are <strong>per group</strong> and staggered. Each one is <strong>14 days</strong>: it starts on your group's sprint meeting and ends the day before your next one (<a href="https://github.com/kyoungshin/CPSC490/blob/main/docs/sprint-schedule.md">meeting schedule</a>). Your repository's <code>Sprint 1</code>–<code>Sprint 4</code> milestones already carry these dates. Homework due dates are the class schedule and are the same for every group.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Groups</th><th>Sprint 1</th><th>Sprint 2</th><th>Sprint 3</th><th>Sprint 4</th></tr></thead>
+    <tbody>
+      <tr><td>01–05 (Tue)</td><td>Sep 29 – Oct 12</td><td>Oct 13 – Oct 26</td><td>Oct 27 – Nov 9</td><td>Nov 10 – Nov 23</td></tr>
+      <tr><td>06–10 (Tue)</td><td>Oct 6 – Oct 19</td><td>Oct 20 – Nov 2</td><td>Nov 3 – Nov 16</td><td>Nov 17 – Nov 30</td></tr>
+      <tr><td>11–15 (Thu)</td><td>Oct 1 – Oct 14</td><td>Oct 15 – Oct 28</td><td>Oct 29 – Nov 11</td><td>Nov 12 – Nov 25</td></tr>
+      <tr><td>16–20 (Thu)</td><td>Oct 8 – Oct 21</td><td>Oct 22 – Nov 4</td><td>Nov 5 – Nov 18</td><td>Nov 19 – Dec 2</td></tr>
+    </tbody>
+  </table></div>
+</section>
 
 <div class="wrap">
 <nav class="toc" aria-label="Contents">
@@ -427,8 +440,8 @@ gh issue create --title "Task: Write §2 Goals and Objectives" --label task --la
 <!-- ============================ 5 ============================ -->
 <section class="step" id="issues">
   <div class="step-head"><span class="num">STEP 5</span><h2>Turn goals and objectives into issues</h2><label><input type="checkbox" id="ck-issues" data-step="issues"> done</label></div>
-  <p class="who">Whole team · start as soon as §2 has a draft · <strong>locked by Sun Oct 11, the end of Sprint 1</strong></p>
-  <div class="warn"><p><b>Deadline: end of Sprint 1</b></p><p>By <strong>Sun Oct 11</strong> your Goals and Objectives must be locked in: every goal in §2 filed as an <code>epic</code>, every objective as a <code>user-story</code> with assignee, milestone, priority, points and acceptance criteria, and every issue number written back into §2. Sprint 2 specifications, designs and prototype work are planned from exactly this set, and the final report is graded against it.</p></div>
+  <p class="who">Whole team · start as soon as §2 has a draft · <strong>locked by Sun Oct 11 (class deadline, with HW#5)</strong></p>
+  <div class="warn"><p><b>Deadline: Sun Oct 11 (all groups)</b></p><p>By <strong>Sun Oct 11</strong> your Goals and Objectives must be locked in: every goal in §2 filed as an <code>epic</code>, every objective as a <code>user-story</code> with assignee, milestone, priority, points and acceptance criteria, and every issue number written back into §2. Sprint 2 specifications, designs and prototype work are planned from exactly this set, and the final report is graded against it.</p></div>
   <p>Your board is built from §2. Each <strong>goal</strong> becomes an <code>epic</code> issue, each <strong>objective</strong> a <code>user-story</code>. The work that delivers an objective hangs underneath it. Click through the course example to see a finished chain: <a href="https://github.com/kyoungshin/CPSC490/issues/1">#1 goal</a> → <a href="https://github.com/kyoungshin/CPSC490/issues/3">#3 objective</a> → <a href="https://github.com/kyoungshin/CPSC490/issues/6">#6 feature</a> → <a href="https://github.com/kyoungshin/CPSC490/issues/5">#5 task</a> → <a href="https://github.com/kyoungshin/CPSC490/issues/7">#7 sub-task</a>.</p>
 
   <div class="chain" aria-label="Issue hierarchy">
@@ -564,7 +577,7 @@ done</pre></div>
 <!-- ============================ 7 ============================ -->
 <section class="step" id="points">
   <div class="step-head"><span class="num">STEP 7</span><h2>Measure story points at the start and end of Sprint 1</h2><label><input type="checkbox" id="ck-points" data-step="points"> done</label></div>
-  <p class="who">Leader or QA owner · at planning, then again on Oct 11</p>
+  <p class="who">Leader or QA owner · at planning, then again on the last day of your Sprint 1</p>
   <p>You need two numbers for the Sprint 2 meeting: how many points Sprint 1 <strong>started</strong> with, and how many it <strong>finished</strong>. Nobody counts by hand; <code>scripts/sprint_report.py</code> reads the <code>sp:</code> labels and <code>Sprint N</code> milestones straight from your issues.</p>
 
   <h3>7.1 Run the report</h3>
@@ -575,11 +588,11 @@ python scripts/sprint_report.py --sprint 1</pre></div>
   <p>It prints one row per sprint:</p>
   <div class="term"><div class="term-bar"><span>example output</span><span></span></div><pre>Sprint    Window           Committed  Added mid  Completed  Open/carried  Closed late  Done %
 -------------------------------------------------------------------------------------------
-Sprint 1  Sep 27 – Oct 11  0          13         0          13            0            0%</pre></div>
+Sprint 1  Oct 01 – Oct 14  0          13         0          13            0            0%</pre></div>
   <div class="tbl"><table>
     <thead><tr><th>Column</th><th>Meaning</th></tr></thead>
     <tbody>
-      <tr><td>Committed</td><td>Points on stories that were in the <code>Sprint 1</code> milestone <strong>before the sprint began</strong> (Sep 27).</td></tr>
+      <tr><td>Committed</td><td>Points on stories that were in the <code>Sprint 1</code> milestone <strong>before the sprint began</strong> (your Sprint 1 meeting).</td></tr>
       <tr><td>Added mid</td><td>Points on stories put into <code>Sprint 1</code> <strong>after</strong> it began.</td></tr>
       <tr><td>Completed</td><td>Points on stories closed inside the sprint window.</td></tr>
       <tr><td>Open/carried</td><td>Points still open: in progress now, carried over once the sprint has ended.</td></tr>
@@ -587,7 +600,7 @@ Sprint 1  Sep 27 – Oct 11  0          13         0          13            0   
     </tbody>
   </table></div>
 
-  <div class="warn"><p><b>Sprint 1 is a special case</b></p><p>Sprint 1 began Sep 27, and most teams are filing their stories now, so the report counts them as <em>Added mid</em>, with <em>Committed</em> near 0. That is expected this once. For Sprint 1, your <strong>starting total = Committed + Added mid on the day you finish planning</strong>. Save that number now, because it keeps growing if you add stories later. From Sprint 2 on, plan before the sprint starts so it lands in <em>Committed</em>.</p></div>
+  <div class="warn"><p><b>Sprint 1 is a special case</b></p><p>Sprint 1 began at your first sprint meeting, and most teams are filing their stories now, so the report counts them as <em>Added mid</em>, with <em>Committed</em> near 0. That is expected this once. For Sprint 1, your <strong>starting total = Committed + Added mid on the day you finish planning</strong>. Save that number now, because it keeps growing if you add stories later. From Sprint 2 on, plan before the sprint starts so it lands in <em>Committed</em>.</p></div>
 
   <h3>7.2 Save the starting snapshot (do this the day you finish planning)</h3>
   <div class="term"><div class="term-bar"><span>Git Bash / Terminal</span><button type="button">Copy</button></div><pre>git switch develop && git pull
@@ -599,7 +612,7 @@ git push -u origin feature/24-sprint1-baseline
 gh pr create --base develop --web</pre></div>
   <p>The file is dated by its commit, so it proves what you committed to and when.</p>
 
-  <h3>7.3 Take the end snapshot (Sun Oct 11, after the last merge)</h3>
+  <h3>7.3 Take the end snapshot (last day of your Sprint 1, after the last merge)</h3>
   <div class="term"><div class="term-bar"><span>Git Bash / Terminal</span><button type="button">Copy</button></div><pre>GITHUB_REPOSITORY=OWNER/REPO GITHUB_TOKEN=$(gh auth token) python scripts/sprint_report.py --sprint 1 --markdown</pre></div>
   <p>Copy the numbers into the <em>Velocity</em> table of <code>docs/sprint-reviews/sprint-1.md</code>:</p>
   <div class="tbl"><table>
@@ -619,7 +632,7 @@ gh run view --web                     <span class="c"># the table is in the run'
 <!-- ============================ 8 ============================ -->
 <section class="step" id="sprint2">
   <div class="step-head"><span class="num">STEP 8</span><h2>Get ready for the Sprint 2 meeting</h2><label><input type="checkbox" id="ck-sprint2" data-step="sprint2"> done</label></div>
-  <p class="who">Whole team · Oct 11–12 · your group's Sprint 2 meeting, Oct 13–22 (see the sprint schedule)</p>
+  <p class="who">Whole team · the last days of your Sprint 1 · your group's Sprint 2 meeting, Oct 13–22 (see the sprint schedule)</p>
   <div class="note"><p><b>The Sprint 1 demo</b></p><p>Every sprint ends with a demo. For Sprint 1 you demo <strong>the proposal and the board, no code</strong>: §0–§2 in <code>proposal.md</code>, your locked epics and stories, and the story points you started and finished with. The first <strong>prototype</strong> demo is at the end of Sprint 2, at your group's Sprint 3 meeting (Oct 27 – Nov 5): show your initial development in <code>prototype/</code>. It does not need to be functional yet.</p></div>
   <p>Come with your repository open. The meeting is a look at your board, your issues and your proposal, not a presentation. If the board does not match what you say, the board is what counts.</p>
 
@@ -634,7 +647,7 @@ gh run view --web                     <span class="c"># the table is in the run'
   <div class="term"><div class="term-bar"><span>Git Bash / Terminal · move an unfinished story to Sprint 2</span><button type="button">Copy</button></div><pre>gh issue edit 22 --milestone "Sprint 2"
 gh issue comment 22 --body "Carried over from Sprint 1: sponsor data arrived Oct 9; re-scoped to synthetic fixture first."</pre></div>
 
-  <h3>8.2 Plan Sprint 2 before it starts (Oct 12)</h3>
+  <h3>8.2 Plan Sprint 2 before it starts (your Sprint 2 meeting)</h3>
   <p>Sprint 2 is where you specify, design and start building the prototype. Pull a mix of kinds of work for each epic:</p>
   <div class="tbl"><table>
     <thead><tr><th>Kind of story</th><th>Delivers</th><th>Lands in</th></tr></thead>
@@ -645,7 +658,7 @@ gh issue comment 22 --body "Carried over from Sprint 1: sponsor data arrived Oct
     </tbody>
   </table></div>
   <ul class="checklist">
-    <li>Every Sprint 2 story has assignee, milestone <code>Sprint 2</code>, priority and <code>sp:</code>, set <strong>before Oct 12</strong> so the report counts it as Committed.</li>
+    <li>Every Sprint 2 story has assignee, milestone <code>Sprint 2</code>, priority and <code>sp:</code>, set <strong>before your Sprint 2 starts</strong> (your Sprint 2 meeting) so the report counts it as Committed.</li>
     <li>Total points ≈ what you completed in Sprint 1, not what you hope for. The report suggests a number.</li>
     <li>Every member owns at least one story, and at least 2 merged PRs each is the default team target.</li>
     <li>The <em>Current Sprint</em> view's filter now says <code>milestone:"Sprint 2"</code>.</li>
