@@ -1,241 +1,68 @@
-# Group repository readiness
+# Group repository status: proposal vs. issue board
 
-**CPSC 490 · Fall 2026 · swept 1 Oct 2026, 23:25 UTC; fact-checked 2 Oct, 00:15 UTC; sprint dates updated 2 Oct, 00:45 UTC** (first sweep 18 Sep, 20:00 UTC).
+**CPSC 490 · Fall 2026 · swept 2026-10-05 15:09 UTC.** This is a fresh edition. It replaces the setup-readiness page, since every repository passed setup on 1 Oct.
 
-All 20 teams, ordered by group number. **Seventeen repositories are ready; three are partial** (Groups 12, 13 and 19 — see below). Four failures so far traced to bugs in the course scaffold, the fourth found today; all are fixed and no team is blamed for them. **Every group except 04, 14, 15 (all three merged) and 19 has an instructor pull request open: merge it.** During sprints this page is re-swept every Tuesday and Thursday at noon (Pacific).
+This edition compares each team's **issue board** with what its **own proposal** (the HW#4 Abstract and Introduction) says it will build. **Goals & Objectives lock Sun 11 Oct.** By then every core element of your proposal should be an epic with user stories, story points and a sprint milestone.
 
-### Sprints are per group (update, 2 Oct 00:45 UTC)
+### Class at a glance
 
-**Every sprint is 14 days and starts at your group's sprint meeting**, ending the day before your next one. Homework due dates are the class schedule and are the same for everyone, so **HW#5 and the Goals & Objectives lock stay Sun 11 Oct for every group**. That deadline is the class's, not the end of a sprint. All 80 team milestones (`Sprint 1`–`Sprint 4`) were reset to these dates on 1 Oct evening:
+- **Aligned:** 1 (13)
+- **Partial:** 5 (02, 11, 12, 15, 16)
+- **Process only** (writing, meeting and setup tasks; no project features): 6 (01, 03, 04, 07, 10, 18)
+- **Mismatch** (board or README about a different project): 1 (14)
+- **No issues yet:** 7 (05, 06, 08, 09, 17, 19, 20)
+- Team-filed issues: **115** across 13 groups (43 new since 1 Oct).
+- Using epics: 02, 07, 11, 13, 14, 15. User stories: 02, 13, 15, 16. Story points: 01, 02, 03, 04, 07, 10, 11, 12, 14, 15, 16.
+- README doesn't describe the proposal's project yet: 05, 06, 07, 08, 10, 11, 12, 14, 15, 16, 17, 20.
+
+### Sprint calendar (per group; 14 days from your sprint meeting)
 
 | Groups | Sprint 1 | Sprint 2 | Sprint 3 | Sprint 4 |
 |---|---|---|---|---|
-| 01–05 (Tue) | Sep 29 – Oct 12 | Oct 13 – Oct 26 | Oct 27 – Nov 9 | Nov 10 – Nov 23 |
-| 06–10 (Tue) | Oct 6 – Oct 19 | Oct 20 – Nov 2 | Nov 3 – Nov 16 | Nov 17 – Nov 30 |
-| 11–15 (Thu) | Oct 1 – Oct 14 | Oct 15 – Oct 28 | Oct 29 – Nov 11 | Nov 12 – Nov 25 |
-| 16–20 (Thu) | Oct 8 – Oct 21 | Oct 22 – Nov 4 | Nov 5 – Nov 18 | Nov 19 – Dec 2 |
+| 01–05 | Sep 29 – Oct 12 | Oct 13 – 26 | Oct 27 – Nov 9 | Nov 10 – 23 |
+| 06–10 | Oct 6 – 19 | Oct 20 – Nov 2 | Nov 3 – 16 | Nov 17 – 30 |
+| 11–15 | Oct 1 – 14 | Oct 15 – 28 | Oct 29 – Nov 11 | Nov 12 – 25 |
+| 16–20 | Oct 8 – 21 | Oct 22 – Nov 4 | Nov 5 – 18 | Nov 19 – Dec 2 |
 
-`scripts/sprint_report.py` now counts a sprint through the whole of its last day (commit `fb85807`). Before, it ended a day early because GitHub stores a due date as midnight UTC. **Every open instructor PR already carries this version.** Groups 04, 14 and 15 merged the earlier copy, so their report ends each sprint one day early until they re-copy the script. The course guide, First Steps and `bootstrap.sh` follow the same calendar (commit `1015cc1`).
+Homework dates follow the class schedule: **HW#5 and the Goals & Objectives lock are Sun 11 Oct for every group.**
 
-### Since the last sweep (1 Oct, 19:41 UTC)
+### Fix first
 
-**A fourth scaffold bug, and it was the instructor's.** Groups 03, 05, 08 and 18 have had a **red `Repository harness` on `develop` since their first push**. The course guide, which the copy step brings in as your `README.md`, linked `docs/sponsored-projects.md` with a relative path. That page is left out of the team copy, so gate G4 failed on a link you never wrote. **No team is blamed.** It is fixed upstream (commit `27186ef`), and the course repository now runs the harness on exactly what a team copies, so it cannot happen again. The one-line fix is in each team's open instructor PR: **G03 #7, G05 #2, G08 #2, G18 #4, all green. Merge it.**
-
-**New course rule: writing tasks carry story points.** A proposal-writing task with no parent story gets its own `sp:` label ([First Steps guide, Step 3.2](https://kyoungshin.github.io/CPSC490/first-steps.html)). Tasks filed under an objective stay unpointed. `scripts/sprint_report.py` now names unpointed writing tasks. **Every group except 19 got an instructor PR that brings in the updated script. Merge it:** G01 #17 · G02 #27 · G03 #7 · G05 #2 · G06 #2 · G07 #3 · G08 #2 · G09 #2 · G10 #2 · G11 #16 · G12 #14 · G13 #29 · G16 #8 · G17 #4 · G18 #4 · G20 #7. Groups 04 (#8), 14 (#11) and 15 (#2) have already merged theirs.
-
-**Three groups went ready → partial:**
-- **Groups 12 and 13: the branch ruleset blocks every branch.** Both rulesets are named for `main` and `develop`, but their *Target branches* is set to **All branches**, so no one can push any branch, feature branches included. The setup guide never said how to fill in that field; it does now (commit `d08d532`). Because of this, their instructor PRs (#14, #29) had to come from a fork and show no CI. **Fix (team leader):** Settings → Rules → Rulesets → open the ruleset → *Target branches* → remove *All branches* → *Add target* → *Include by pattern* → `main`, then again → `develop` → Save.
-- **Group 19: GitHub Issues are turned off** in the repository's settings, so the team cannot file the epics and stories due by 11 Oct. Earlier editions read this as "no team-filed issues yet", which was a misread. **Fix (repository owner `sopper75`):** Settings → General → Features → tick **Issues**.
-- **Group 15** had no `proposal/` folder on `develop` (harness gate G1 red) — **fixed by the team the same afternoon**: it added `proposal/` and merged its instructor PR #2, and its harness is green.
-
-**Group 13 (BYKX) filed the class's largest backlog:**
-- three project epics, #16–#18 (*Goal 1–3*: assignment management, deadlines, progress tracking and reminders);
-- twelve user stories (#19–#27, #31–#33);
-- a process epic, #30 *Goal 0*, with its stories and tasks in Sprint 1.
-
-The project stories carry no `sp:` points yet.
-
-**Group 12 (ACJMM) filed twelve unlabeled issues: six titles, each filed twice.** #8–#13 and #15–#20 are both *Peak Picking*, *GUI Development*, *Command Line interface/ICD Dev*, *Waveform Identification Algorithm*, *Explainable AI Layer* and *Modulation Type Classifier Re-Training*. Close one copy of each, then label the rest: `epic` for goals, `user-story` for objectives.
-
-**Group 04 (Epic Engineers)** filed proposal-writing tasks with story points (#10 `sp: 1`, #11 `sp: 3`) and two sub-tasks (#12, #13), all in Sprint 1. **Group 11** added two more writing tasks (#13, #17).
-
-**Groups 06–10 (4 PM check):**
-- no commits on `main` or `develop` since Sprint 1 began (28 Sep);
-- no pull requests;
-- every `proposal/proposal.md` is still the untouched template;
-- only Group 07 has an issue (#1, `epic`).
-
-**HW#4 (§0 Abstract and §1 Introduction, written in `proposal.md`) is due Sun 4 Oct.**
-
-**Class totals:**
-- Team-filed issues: **88** (was 53), from eleven groups.
-- Groups using the **Sprint 1** milestone: **9** — 02, 03, 04, 11, 12, 13, 14, 16, 18.
-- Groups with story points on their issues: **5** — 02, 03, 04, 14, 16.
-- Graded artifact (labels): project epics from **Groups 02, 07, 11, 13 and 14**; user stories from **Groups 02 (six), 13 (twelve) and 16 (one)**.
-- **Nine groups have filed nothing yet**: 05, 06, 08, 09, 10, 15, 17, 19, 20. Group 19 cannot until Issues are turned on.
-
-**Goals & Objectives lock Sun 11 Oct** (end of Sprint 1): every group's epics and user stories should be filed by then.
-
-*Earlier (1 Oct, 19:41 UTC edition):*
-
-**Group 02 (Linux Larpers) built the class's first full sprint backlog.** It filed 17 issues:
-- an epic, #20 *Goal 0: Submit a complete, reviewed CPSC 490 proposal*;
-- five user stories for the proposal sections (#21–#25, *Objective 0.1–0.5*), each with story points;
-- a prototype user story, #16 *Objective 1.1 (Prototype): Demonstrate Wi-Fi access point discovery and metadata collection through a runnable backend*, with its tasks #17 and #18;
-- writing and setup tasks.
-
-The proposal-section stories and their tasks sit in the **Sprint 1** milestone, and the prototype story in Sprint 2.
-
-**Group 11 (5 Guys) filed its first epic**, #4 *Live runner tracking*, plus proposal-writing tasks (#3, #7, #8, #9) and two meeting issues — all in Sprint 1.
-
-**Group 12 (ACJMM) filed three issues labeled `epic`**: #4 *Assign Project Tasks to Team Members*, #5 *Create Basic System Design Diagrams (UML Diagram)*, #6 *Collect Requirements for Respective Tasks*. These read as process tasks rather than project goals.
-
-**Group 13 (BYKX) filed its first six issues**: proposal tasks (#10 README, #11 proposal draft, #15 §1.1) and design tasks (#8 backend framework, #12 frontend framework, #13 data model diagram).
-
-**Group 01 (BGAF) renamed to the convention** — `LeDuy23/CPSC490-01-BGAF` → `LeDuy23/CPSC490-G01-BGAF` (same repository; the old address redirects) — and filed six issues: five proposal and research tasks (#9, #10, #12, #13, #14) and a mentor meeting (#11).
-
-**Group 18 (Team ProStrats)** filed its first team issue, #2 *Set up Team ProStrats project README*.
-
-**Class totals:**
-- Team-filed issues: **53** (was 13), from eleven groups.
-- Groups using the **Sprint 1** milestone: **8** — 02, 03, 11, 12, 13, 14, 16, 18.
-- Groups with story points on their issues: **4** — 02, 03, 14, 16.
-- Graded artifact (labels): project epics from **Groups 02, 07, 11 and 14**; process tasks labeled `epic` from Groups 04 and 12; user stories from **Groups 02 (six) and 16 (one)**.
-- **Nine groups have filed nothing yet**: 05, 06, 08, 09, 10, 15, 17, 19, 20.
-
-**Goals & Objectives lock Sun 11 Oct** (end of Sprint 1): every group's epics and user stories should be filed by then.
-
-*Earlier (29 Sep, 19:43 UTC edition):*
-
-### Since the 27 Sep, 16:42 UTC edition
-
-**Group 20 (Solos) went *partial* → ready — every team is now ready.** Renamed `muntay89/CPSC490-G20-California` → `muntay89/CPSC490-G20-Solos` (same repository; the old address redirects), merged instructor PRs #1 and #4 (`.github/` now present), and ran bootstrap (4 milestones, `develop`) — all three items this page asked for.
-
-**Group 16 (Neuroprosthetic) filed the class's first user story** — issue #5, *Prototype v0: BridgeWatch bridge-drain detection on live Ethereum data*, labeled `user-story`, `priority: high`, 8 story points.
-
-**Group 03 (California) filed three proposal-writing tasks** — #2 *Update README*, #4 *First draft of Abstract*, #5 *Introduction (up to related work)* — labeled `documentation` with story points. Team-filed issues across the class: **13** (was 9), from seven groups.
-
-**Sprint 1 is under way** (28 Sep – 11 Oct; reviews Tue 29 Sep §01 and Thu 1 Oct §05). Graded artifact so far: **two project epics (Groups 07 and 14) and one user story (Group 16)** — the other 17 groups have none yet.
-
-*Earlier (27 Sep, 16:42 UTC edition):*
-
-**Group 03 (California) filed its first team issue** — #1, *Meeting #1 - 9/26/26* (no labels yet). Team-filed issues across the class: **9** (was 8), from six groups.
-
-No other group changed status. Group 20 is still the only *partial* repository.
-
-**Sprint 1 starts tomorrow (Sun 28 Sep).** Sprint reviews Tue 29 Sep (§01) and Thu 1 Oct (§05) look at epics and user stories — two project epics exist class-wide (Groups 07 and 14) and **no team has filed a user story yet**.
-
-*Earlier (25 Sep, 03:54 UTC edition):*
-
-**Group 17 (Sonic Scape) went *partial* → ready.** Bootstrap ran this evening (4 milestones, `develop`) — the one step it had left.
-
-**Group 18 (Team ProStrats) went *partial* → ready.** Renamed `490ProjectRogue` → `austin2578/CPSC490-G18-ProStrats` (same repository; the old address redirects), copied the full scaffold (`.github/` intact) and ran bootstrap (4 milestones, `develop`) — all three items this page asked for, within hours of being found.
-
-**Group 16 (Neuroprosthetic) renamed** `garybs16/CPSC490` → `garybs16/CPSC490-G16-Neuroprosthetic` (same repository). It was already ready; now its name identifies the group.
-
-**Group 14 filed the class's second project epic** — issue #8, *Create web scanner*, labeled `epic`. Team-filed issues across the class: **8** (was 7).
-
-*Evening, 24 Sep (23:08 UTC):*
-
-Group 18's repository was found (then named `490ProjectRogue`, README only), so for the first time **all 20 teams had a findable repository**.
-
-Group 17 merged instructor PR #1 (restores `proposal/proposal.md`).
-
-Group 14 filed two team issues (#4 *CODEOWNERS*, #6 *sync develop with main*).
-
-**Sponsored projects (24–25 Sep, all 9 filled):** Raytheon selected four teams — **G02 → RTX-4** *Distributed Signal Capture for Multi-Node Analysis*, **G03 → RTX-3** *Three AIs and Literate Programming*, **G12 → RTX-1** *Explainable 6G Waveform Classification*, **G19 → RTX-2** *Radar Over WiFi (ROW)*. **G07** already has Edwards **EL-1** *Online Materials Database*. SonarX selected four — **G01 → SNX-4** *Hyperliquid Order Book Reconstruction and Algorithmic Strategy Backtesting*, **G04 → SNX-1** *Polygon Prediction Market PNL and Trader Profitability Analytics*, **G10 → SNX-2** *On-Chain Stablecoin Flow and Wash Trading Detection*, **G16 → SNX-3** *Cross-Chain Bridge Activity and Exploit Detection*. Every other group runs its own project.
-
-*Midday, 24 Sep:* **Group 14 (Cyber Squad) went *partial* → ready.** The repository moved from the `The-Cyber-Squad` organization to `jvillacorte/CPSC490-G14-Cyber-Squad` (same repo; the old address redirects), and at 16:37 UTC the team granted `kyoungshin` **write** access, copied the full scaffold (`.github/` intact) and ran bootstrap (4 milestones, `develop`) — all three items this page asked for.
-
-*Morning, 24 Sep:* no group moved overnight.
-
-**Correction (24 Sep morning):** the last edition said no team had filed an epic yet. That was wrong — **Group 07's issue #1 (*project objectives*) is labeled `epic`** and is real project content, the class's first. Group 04's two issues also carry the `epic` label, but they are README setup tasks. No team has filed a user story yet.
-
-*Evening, 23 Sep:* Group 15 shared its repository with the instructor and went *partial* → ready.
-
-*Earlier (23 Sep morning):* seven groups moved overnight — G09 *empty* → ready, G13 surfaced ready, G19 bootstrapped, G15's repo appeared, G01/G02 merged their instructor PRs, G03/G07 fixed their repo names.
-
-**Notice (19 Sep):** proposal formatting rules are explicit in the scaffold (`proposal/proposal.md` + README) — template cover page unchanged, Times New Roman 11-pt, 1.5 spacing, 1.0-inch margins, template numbering/indentation exactly, Final Paper > 50 pages. Pre-19-Sep scaffold copies: read the course repo's copy.
-
-**Notice (23 Sep):** the sprint schedule's **Homework #4 due date is Sun 4 Oct**, not 27 Sep — corrected in the course repo's `docs/sprint-schedule.md` (commit `6a12d4c`). Canvas has the authoritative dates; if your copy of the schedule says 27 Sep, it is the old one.
-
-**Still waiting:** no instructor PRs are open anywhere. Issues filed by teams across all 20 groups: **53**, from eleven groups (01, 02, 03, 04, 07, 11, 12, 13, 14, 16, 18). Nine groups have filed none: 05, 06, 08, 09, 10, 15, 17, 19, 20.
-
-### Summary
-
-| Count | Status |
-|---:|---|
-| **17** *(was 20)* | ✅ **Ready** — scaffold, bootstrap, CI green (or green once the instructor PR is merged) |
-| **3** *(was 0)* | ⚠️ **Partial** — repo exists, setup incomplete, or a setting blocks the work (12, 13, 19) |
-| **0** *(was 0)* | ❌ **Empty or never shared** — nothing gradeable |
-| **0** *(was 0)* | ⬜ **No repository** found anywhere |
-
-> **Sprints are per group (14 days from your sprint meeting; table above). Goals & Objectives lock Sun 11 Oct for everyone, with HW#5.** Issues filed *by teams* across all 20 groups so far: **88**. Epics and user stories are the graded artifact:
-> - project epics from **Groups 02, 07, 11, 13 and 14**;
-> - user stories from **Groups 02, 13 and 16** only;
-> - **nine groups have filed nothing**.
+- **Group 12 (ACJMM):** the branch ruleset still targets **All branches**, so no branch can be pushed. Set *Target branches* to `main` and `develop` only. (Group 13 fixed theirs.)
+- **Group 19 (Titan Security):** GitHub Issues is **disabled** on the repository (Settings → General → Features → Issues).
+- **Group 14 (Cyber Squad):** the README and existing epic describe a different project than the proposal. Make the board match the proposal, or tell the instructor the project changed.
+- **Merge the instructor's sprint-report PR** (it fixes how the sprint report counts writing tasks and the last sprint day). Still open in 10 repositories: G05 #2; G06 #2; G08 #2; G09 #2; G10 #2; G13 #29; G14 #16; G15 #8; G16 #8; G20 #7.
 
 ## Every group, by number
 
-Everything in the *What to do* column is the team's own next step. For most groups the work now is the sprint backlog:
-- **Project epics:** Groups 02, 07, 11, 13 and 14.
-- **User stories:** Groups 02, 13 and 16 only.
-- **Any issue at all:** eleven groups.
-- **Open instructor PR to merge:** every group except 04, 14 and 15 (merged) and 19.
+| Group | Project | Board | README | Status | Not tracked yet | Next step |
+|---|---|---|---|---|---|---|
+| 01 BGAF | Hyperliquid Order Book Reconstruction and Algorithmic Strategy Backtesting | 7 issues (1 new); points, Sprint 1 | matches | **Process only** | Data cleaning/normalization pipeline; Order book replay engine; Validation and accuracy report; Validation gate; Backtesting engine with execution modeling; Strategy design and performance reporting | File one epic per stage (clean, reconstruct, validate, backtest, report) with user stories under each, carrying sp: labels and milestones, and point the orphan tasks' 'Parent #1' at a real story before Goals & Objectives lock on Oct 11. |
+| 02 Linux Larpers | Distributed Signal Capture for Multi-Node Analysis | 17 issues; epics, stories, points, Sprint 1 | matches | **Partial** | Bluetooth capture; Multi-node aggregation; Device fingerprinting; Location estimation; Dashboard / frontend; Active-recording detection research | Create project epics (capture, fingerprinting, localization, dashboard, recording-detection research), re-parent #16 to the capture epic (its 'Epic #17' points to a task), and add sp: labels to #16-#18. |
+| 03 California | Three AIs and Literate Programming | 5 issues (1 new); points, Sprint 1 | matches | **Process only** | Handwriting recognition stage; Code generation stage; Verification / computation stage; End-to-end pipeline integration; Literate notebook output | File one epic per AI stage plus an integration epic, each with user stories and sp: labels, and settle in an issue what the third AI does (computes, or generates test data) before Goals & Objectives lock on Oct 11. |
+| 04 Epic Engineers | Polygon Prediction Market PNL and Trader Profitability Analytics | 6 issues (1 new); points, Sprint 1 | matches | **Process only** | Data ingestion/parsing; Position-to-resolution matching; PNL computation; Trader ranking; Edge/driver analysis; Dashboard | Merge develop into main so main stops describing Sentinel, then file epics for ingestion, PNL engine, ranking/edge analysis and dashboard, each with sp:-labeled user stories. |
+| 05 Fighting Mongooses | WILS | 0 issues; no epics or stories | not yet | **No issues** | Audio capture / dataset; Direction finding; Range estimation; Species classifier; Individual identification; Tracking over time | Run the bootstrap (labels), replace the README with the team one-pager for WILS, and file epics plus sp:-labeled user stories in Sprint 1 for capture, localization and classification before Oct 11. |
+| 06 Forecast Market Analytics | GapWise: An LLM Study Assistant with Adaptive Weak-Spot Tracking | 0 issues; no epics or stories | not yet | **No issues** | Material upload/ingestion; Question generation; Answer grading + concept recording; Weak-spot mastery tracker; Summaries/flashcards; Adaptive vs non-adaptive evaluation | Resolve the project identity first (GapWise vs the SNX-1 prediction-market README), update the README to the chosen project, then file one epic per core capability (ingestion, question generation, grading, mastery tracker, evaluation) with user stories, sp: labels, and the Sprint 1 milestone. |
+| 07 Mighty Morphin | Online Material Database | 5 issues (4 new); epics, points, Sprint 1 | not yet | **Process only** | PDF ingestion/extraction workflow; Format identification for heterogeneous documents; Extraction verification; AWS relational schema + storage; Web UI with auth, search and filter; Comparison/analysis views | Fill epic #1 (or replace it) with one epic per problem P1–P5 (extraction, verification, database, search UI, analysis), each with user stories carrying sp: labels and a Sprint milestone, and replace the template README with the project one-pager. |
+| 08 Crime Busters | Interactive Crime Map and Database | 0 issues; no epics or stories | not yet | **No issues** | Data collection + normalization pipeline; Interactive map; Search/filter; Custom-radius search; Statistics/trend analysis | File three epics matching your three goals (data collection/database, pattern statistics, interactive map with radius search), break each into user stories with sp: labels on the Sprint 1 milestone, and replace the template README with your project one-pager. |
+| 09 Sigma Squad | Vehicle Maintenance Logger | 0 issues; no epics or stories | matches | **No issues** | Vehicle profile; Record processing/logging; Recommendations + reminders; Mileage tracking; Parts finder; Climate-based recommendations | Create epics for the core features (vehicle profile, service-record log, recommendations/reminders, then mileage/parts/climate as stretch), split into sp:-labeled user stories on Sprint 1, and fill in the README project summary (main) and sync develop. |
+| 10 Team Jiddak | Stablecoin Wash-Trading and Suspicious Transaction Detection | 7 issues (7 new); points, Sprint 1 | not yet | **Process only** | Data ingestion + transaction graph; Heuristic detection engine; ML anomaly scoring + explanations; Investigation dashboard | Turn Goals 1–3 into three epics (graph pipeline, detection engine, dashboard) with objectives as sp:-labeled user stories on Sprint 1, and replace the template README with your project one-pager. |
+| 11 5 Guys | Marathon Tracker | 11 issues (1 new); epics, points, Sprint 1 | not yet | **Partial** | Map display and distance/time/pace calculation (Goal 1 objectives in the proposal); Public marathon dataset ingestion as a baseline; ML-based performance/route analysis (the stated differentiator); Connecting users / runner hub | Write the Goals & Objectives (tracking, performance analysis with ML, and any social/spectator goal you keep), file one epic per goal and one user story per objective (map display, distance/pace calculation, dataset import, ML analysis), link them under #4 and the new epics, and replace the README with the team one-pager describing Marathon Tracker. |
+| 12 ACJMM | Explainable 6G Waveform Classification | 15 issues (15 new); points, Sprint 1 | not yet | **Partial** | GUI / CLI / interface control document; Peak detection and parallel processing; Explanation layer and low-confidence abstention; Modular algorithm-plug-in architecture; No epics or user stories for any feature; domain work exists only as research tasks | Turn the abstract's pipeline into 2-3 goals (e.g. signal pipeline: snapshot load, peak detection, parameter estimation; classification with baselines and evaluation; explanation + GUI/CLI), file each as an epic with one user story per objective, link the existing research tasks under them, and fill in the README title and summary. |
+| 13 BYKX | Assignment Motivation Initiative Year-Round Assistant | 24 issues; epics, stories, Sprint 1 | matches | **Aligned** | none | Pick one platform (Windows desktop vs. browser web app) and make the proposal, README and #27 agree; then fill the user-story bodies (still template text), add sp: labels and assignees, and give Goal 3 stories (#25-#27) a sprint milestone. |
+| 14 Cyber Squad | Rogue-Lite Cyber Sandbox | 4 issues (1 new); epics, points, Sprint 1 | not yet | **Mismatch** | All proposal elements: simulated desktop, malware incident lifecycle, LLM scenario generator, Pydantic validation, after-action report, rogue-lite progression | Confirm the project is the Rogue-Lite Cyber Sandbox, then close or relabel #8, update the README (#13), and file one epic per goal (simulated desktop, LLM scenario generation + validation, AI feedback/after-action report) with user stories per objective. |
+| 15 HIBBI-01 | Low End Hardware/ECS architecture Game Engine with Game | 6 issues (6 new); epics, stories, points, Sprint 1 | not yet | **Partial** | ECS core; Memory/asset management; Demo game; Benchmarking and ECS-vs-baseline performance evaluation; User-facing game-creation capability | Resolve general engine vs. single-game scope, then file epics for ECS core, demo game, and benchmarking (with an explicit baseline and target hardware) alongside #6, add user stories per objective, and update the README title and summary to the ECS engine project. |
+| 16 Neuroprosthetic | BridgeWatch: Real-Time Detection of Cross-Chain Bridge Exploits | 1 issues; stories, points, Sprint 1 | not yet | **Partial** | Goals 1-3 as epics (the proposal says each goal is tracked as an epic, but no epic issues exist); Replay of past hacks (Obj 2.2); Operator dashboard and Slack alerting (Obj 3.1); User test (Obj 3.2); Cross-chain accounting check stretch goal (Obj 2.4) | File Goals 1-3 as epic issues and Objectives 1.1-3.2 as user stories (with sp: labels and Sprint milestones) linked to their epic, re-parent #5 under the Goal 2 epic, and replace the README's template placeholders (it still says 'Project title: Phenoscope') with the BridgeWatch summary. |
+| 17 Sonic Scape | SonicScape | 0 issues; no epics or stories | not yet | **No issues** | Space-themed navigation UI; NASA API ingestion/parser; Music playback and source of music data; Swipe rating; Preference profile / recommendation engine | File a first set of epics (space navigation UI, music data + playback, swipe-based preference profile) with user stories under each in the Sprint 1/2 milestones with sp: labels, and replace the placeholder README ('#Just a placeholder file for now') with a SonicScape project summary under one agreed project name. |
+| 18 Team ProStrats | Project Rogue | 7 issues (6 new); Sprint 1 | matches | **Process only** | Class system; Weapon replacement / Mastery / affixes; Attributes, boons, respec; Branching route map + handcrafted rooms; Core combat/platforming; Playtesting plan | File epics for the core systems (classes, weapons/Mastery, attributes/boons/respec, branching route + rooms, combat/platforming core) with user stories under each that carry sp: labels and Sprint milestones; close #13 and #5; merge develop to main so the main README stops showing the course setup guide. |
+| 19 Titan Security | Radar over WiFi | Issues disabled | matches | **No issues** | CSI data collection setup; Drone-vs-background detection; Position/movement estimation; Evaluation (accuracy, range, false detections); Cost/portability comparison | Enable GitHub Issues on the repo (currently disabled), then file epics (CSI capture rig, drone detection, evaluation) with user stories in the Sprint 1/2 milestones carrying sp: labels. Also finish the README (team table, project summary; the title and RTX-2 sponsor already match) and merge it to develop. |
+| 20 Solos | Untitled first-person horror maze game | 0 issues; no epics or stories | not yet | **No issues** | Maze level design; Monster AI behaviors; Lighting/sound atmosphere; Encounter unpredictability; Core player loop | File epics (maze level, monster AI, atmosphere/audio, player controller and win/lose loop) with user stories in the Sprint 1/2 milestones carrying sp: labels, and replace the README (it still reads 'CPSC490-G20-California') with the project title and a summary of the horror maze game. |
 
-| Grp | Team | Repository | Status | What's wrong | What to do |
-|---|---|---|---|---|---|
-| 01 | BGAF | `LeDuy23/CPSC490-G01-BGAF` | ✅ ready | Instructor PR #2 **merged** 23 Sep. **Renamed to the `G01` form** 30 Sep–1 Oct. Filed six issues: five proposal and research tasks (#9, #10, #12, #13, #14) and a mentor meeting (#11). | **Merge instructor PR #17.** Turn the proposal's goals into an epic and user stories; put Sprint 1 work in the Sprint 1 milestone. |
-| 02 | Linux Larpers | `eliThomass/CPSC490-G02-Linux-Larpers` | ✅ ready | **The class's first full sprint backlog** (17 issues). It has a proposal epic (#20), five proposal-section user stories with story points (#21–#25) and a prototype user story (#16) with tasks (#17, #18). It uses the Sprint 1 and Sprint 2 milestones. | **Merge instructor PR #27.** Add the project's other goals as epics, each broken into stories. |
-| 03 | California | `eccortes4/CPSC490-G03-California` | ✅ ready | Harness red on `develop` since the first push — **the instructor's bug**, not yours (relative link to a course-only page). Created, shared, scaffolded and bootstrapped within hours on 20 Sep; **renamed to the `CPSC490` convention** overnight. Filed four team issues — meeting notes (#1) and proposal-writing tasks: #4 and #5 with story points, and #2 (closed, no points). | **Merge instructor PR #7** (fixes the harness and updates the sprint report). Then file the project's epics and user stories alongside the proposal tasks. |
-| 04 | Epic Engineers | `Bryancostco/CPSC490-G04-EpicEngineers` | ✅ ready | Created 22 Sep and done right the first time: correctly named, write access granted, scaffold intact, bootstrap complete. Two setup issues filed (#1, #3, both now closed); on 1 Oct added proposal-writing tasks with story points (#10 `sp: 1`, #11 `sp: 3`) and two sub-tasks (#12, #13), all in Sprint 1. | **Merged instructor PR #8** (1 Oct). Next: turn the proposal's goals into epics and user stories. |
-| 05 | Fighting Mongooses | `M-Kwatcher/CPSC490-G05-Fighting-Mongooses` | ✅ ready | Harness red on `develop` since the first push — **the instructor's bug**, not yours. New, correctly-named repo created 22 Sep with write access, scaffold and bootstrap complete — supersedes the old unshared `a-t-tran/CPSC490-Project`. No team-filed issues yet. | **Merge instructor PR #2** (fixes the harness). File epics and stories. |
-| 06 | Forecast Market Analytics | `Joshbolus/CPSC490-G06-Forecast-Market-Analytics` | ✅ ready | Renamed, shared and scaffolded since the email; last commit 19 Sep. **4 PM check, 1 Oct:** no commits since Sprint 1 began, no PRs, `proposal.md` is the untouched template, no team-filed issues. | **Merge instructor PR #2.** Start HW#4 in `proposal.md` (due Sun 4 Oct); file epics and stories. |
-| 07 | Mighty Morphines | `CPSC490-Team-Proj/CPSC490-G07-MightyMorphin` | ✅ ready | **Renamed to `G07`** (leading zero fixed). Issue #1 (*project objectives*) is labeled `epic` — **the class's first project epic**. Bootstrap complete. **4 PM check, 1 Oct:** no commits since Sprint 1 began, no PRs, `proposal.md` is the untouched template. | **Merge instructor PR #3.** Start HW#4 in `proposal.md` (due Sun 4 Oct); break the epic into user stories. |
-| 08 | Crime Busters | `miketruong91/CPSC490-G08-Crime-Busters` | ✅ ready | Harness red on `develop` since the first push — **the instructor's bug**, not yours. **4 PM check, 1 Oct:** no commits since Sprint 1 began, `proposal.md` untouched. Created, named to convention, shared with write access, scaffolded and bootstrapped. No team-filed issues yet. | **Merge instructor PR #2** (fixes the harness). Start HW#4 in `proposal.md` (due Sun 4 Oct); file epics and stories. |
-| 09 | Sigma Squad | `TylerWard741/CPSC490-G09-SigmaSquad` | ✅ ready | Was **empty** for nine days; on 23 Sep: renamed to `G09`, full scaffold pushed (`.github/` intact), bootstrap complete (4 milestones, `develop`). **4 PM check, 1 Oct:** no commits since Sprint 1 began, `proposal.md` untouched, no team-filed issues. | **Merge instructor PR #2.** Start HW#4 in `proposal.md` (due Sun 4 Oct); file epics and stories. |
-| 10 | Team Jiddak | `Alexander-Sanchez2/CPSC490-G10-Team_Jiddak` | ✅ ready | Bootstrap complete 22 Sep. The re-copy's scaffold internals are still duplicated loose at the repo root — cosmetic. **4 PM check, 1 Oct:** no commits since Sprint 1 began, `proposal.md` untouched, no team-filed issues — the only sponsored team (SNX-2) with nothing filed. | **Merge instructor PR #2.** Start HW#4 in `proposal.md` (due Sun 4 Oct); file epics and stories. Optionally delete the stray root-level duplicates. |
-| 11 | 5 Guys | `markachavez2003-lab/CPSC490-G11-5Guys` | ✅ ready | Its hand-made Sprint 1 milestone was due 1 Oct, which made `sprint_report.py` treat Sprint 1 as over. **The instructor reset it on 1 Oct evening, with every other team's milestones, to its group's sprint: Sprint 1 Oct 1 – Oct 14.** Twelve commits on `develop` since 28 Sep, five team PRs (four merged), and the proposal is being written. Re-copied the scaffold and re-ran bootstrap to completion on 20 Sep. Filed the class's first team issue; on 30 Sep–1 Oct added **epic #4 *Live runner tracking***, proposal-writing tasks (#3, #7–#9, #13) and meeting issues in Sprint 1 (#17 has no milestone yet). | **Merge instructor PR #16.** Break the epic into user stories with story points. |
-| 12 | ACJMM | `CharlesSinde/CPSC490-G12-ACJMM` | ⚠️ partial | **Ruleset targets *All branches***, so no branch can be pushed (instructor PR #14 came from a fork). On 1 Oct filed twelve unlabeled issues — six titles, each twice (#8–#13 = #15–#20). Scaffold pushed 19 Sep, bootstrap complete. Filed a team issue on 22 Sep (#3, *Find Case Study Topic*), then three issues labeled `epic` (#4–#6). Those three are team process tasks rather than project goals. | **Team leader:** set the ruleset's *Target branches* to `main` and `develop` only. Close the duplicate issues; label goals `epic` and objectives `user-story`. Merge PR #14. |
-| 13 | BYKX | `ktnwin/CPSC490-G13-BYKX` | ⚠️ partial | **Ruleset targets *All branches***, so no branch can be pushed (instructor PR #29 came from a fork). On 1 Oct filed **the class's largest backlog**: project epics #16–#18, twelve user stories, and a Sprint 1 process epic #30. **Found** 23 Sep. A private repo created 13 Sep, invisible until `kyoungshin` was added (with write access) — arrives fully scaffolded and bootstrapped (4 milestones, `develop`). Filed its first six issues on 30 Sep–1 Oct: proposal tasks (#10, #11, #15) and design tasks (#8, #12, #13). | **Team leader:** set the ruleset's *Target branches* to `main` and `develop` only. Add `sp:` points to the user stories. Merge PR #29. |
-| 14 | Cyber Squad | `jvillacorte/CPSC490-G14-Cyber-Squad` | ✅ ready | **Fixed everything on 24 Sep:** moved from the `The-Cyber-Squad` organization (old address redirects), granted `kyoungshin` **write** access, copied the full scaffold (`.github/` intact) and ran bootstrap (4 milestones, `develop`). Filed two repo-maintenance issues on 24 Sep (#4, #6), then **issue #8, *Create web scanner*, labeled `epic` — the class's second project epic.** On 1 Oct **merged instructor PR #11**; its only story points are on the two setup tasks (#4, #6). | Break the epic into user stories. |
-| 15 | HIBBI-01 | `Isaiah714/CPSC490-G15-HIBBI-01` | ✅ ready | No `proposal/` folder on `develop` turned harness gate G1 red; **the team fixed it the same afternoon (1 Oct)** — added `proposal/`, merged instructor PR #2 (22:44 UTC), harness green. **Shared with the instructor** (write access) on 23 Sep — the one step it was missing. Scaffolded and bootstrapped (4 milestones, `develop`, `.github/` present). No team-filed issues yet. | File epics and stories. |
-| 16 | Neuroprosthetic | `garybs16/CPSC490-G16-Neuroprosthetic` | ✅ ready | Fully set up — 4 milestones, all labels, `develop`, harness present. **Renamed to the convention 24 Sep** (was just `CPSC490`). **Filed the class's first user story** 29 Sep (#5, *Prototype v0: BridgeWatch…*, 8 points). | **Merge instructor PR #8.** Group the story under a project epic, and keep splitting v0 into stories. |
-| 17 | Sonic Scape | `vibhorbh/CPSC490-G17-SonicScape` | ✅ ready | Merged instructor PR #1 on 24 Sep, then **ran bootstrap** the same evening (4 milestones, `develop`). No team-filed issues yet. | **Merge instructor PR #4.** File epics and stories. |
-| 18 | Team ProStrats | `austin2578/CPSC490-G18-ProStrats` | ✅ ready | Harness red on `develop` since the first push — **the instructor's bug**, not yours. Found 24 Sep as a README-only repo; the same evening **renamed to the convention, copied the full scaffold (`.github/` intact) and ran bootstrap** (4 milestones, `develop`). Filed its first team issue on 1 Oct (#2, *Set up Team ProStrats project README*). | **Merge instructor PR #4** (fixes the harness). File epics and stories. |
-| 19 | Titan Security | `sopper75/CPSC490-G19-TitanSecurity` | ⚠️ partial | **Bootstrap run** 23 Sep (4 milestones, `develop`) — the one item this row asked for. **GitHub Issues are turned off** in the repository's settings, so no issue can be filed. Earlier editions misread this as "no team-filed issues yet". No CI run has ever been recorded on this repository (its last `develop` commit is 20 Sep), so its harness has never reported green. | **Owner `sopper75`:** Settings → General → Features → tick **Issues**, and check Settings → Actions that workflows are allowed. Then file epics and stories before 11 Oct. |
-| 20 | Solos | `muntay89/CPSC490-G20-Solos` | ✅ ready | **Fixed everything 27–29 Sep:** renamed from `…-California` to its own team name, merged instructor PRs #1 and #4 (`.github/` present), and ran bootstrap (4 milestones, `develop`). No team-filed issues yet. | **Merge instructor PR #7.** File epics and stories. |
+## How to get to *Aligned* by Sun 11 Oct
 
-## The fixes
+1. Take each core element your Abstract and Introduction promise (the problem, the system, its key features) and file it as an **epic** (label `epic`).
+2. Under each epic, file **user stories** (`As a <user>, I want <capability> so that <benefit>`, label `user-story`), each with an `sp:` story-point label.
+3. Put the stories you'll do first in the **Sprint 1/Sprint 2** milestones. Writing and meeting tasks are fine, but they don't count as project features.
+4. Make the README on `main` say what the proposal says: title, sponsor code, and a one-paragraph summary.
 
-Every group has now completed setup. These recipes are kept for reference (a new teammate's clone, or a re-run), and all are run by the team from inside their own repository.
-
-### Scaffold missing
-
-From inside your repository, copy the scaffold (repos are named `CPSC490-G<NN>-<TeamName>` — two digits, so sorting works):
-
-```bash
-# from inside your repo
-git clone --depth 1 https://github.com/kyoungshin/CPSC490.git ../scaffold
-(cd ../scaffold && git archive HEAD) | tar -x -C .
-rm -rf ../scaffold
-
-# VERIFY — all four must print, .github especially
-ls -d .github .gitignore docs scripts
-
-git add -A && git commit -m "chore: course scaffolding" && git push
-```
-
-Make sure every teammate *and* `kyoungshin` are collaborators (Settings → Collaborators).
-
-### Complete the setup (all 20 groups have done this)
-
-Run the same copy command as above — it overwrites cleanly and, unlike dragging files from an unzipped download, it cannot lose the hidden `.github/` folder. Then complete the setup:
-
-```bash
-gh auth login                     # once
-gh auth refresh -s project,repo   # needed for the board
-bash scripts/bootstrap.sh
-
-python .github/scripts/check_repo.py   # expect HARNESS GREEN
-```
-
-`bootstrap.sh` is safe to re-run and skips whatever already exists.
-
-### Repository needs renaming
-
-Only the repo **owner** can rename — the instructor cannot do this for you. Settings → General → Repository name.
-
-Afterwards every teammate must re-point their local clone, or pushes will fail:
-
-```bash
-git remote set-url origin \
-  https://github.com/<owner>/CPSC490-G<NN>-<TeamName>.git
-git remote -v   # confirm
-```
-
-Every group now follows the naming convention; Group 01 was the last to rename (1 Oct).
-
----
-
-*Re-swept 1 Oct 2026 (19:41 UTC) against every repository the instructor can see, plus a public GitHub search for `CPSC490` and `CPSC-490` repos created since August (repos from earlier semesters are excluded); the first sweep was 18 Sep, 20:00 UTC. A private repository that has not added `kyoungshin` is invisible to both, so "no repository" means none was findable — not proof none exists (Group 13's repo existed for ten days, and Group 18's for eleven, before becoming visible). Group attributions for unshared repos are inferred from usernames, profile names and commit identities. Repos whose owner matches no enrolled student are excluded.*
+*Sponsor codes only; no mentor names. Earlier setup-readiness editions are in this file's git history.*
