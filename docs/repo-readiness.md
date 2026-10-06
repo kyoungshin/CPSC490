@@ -1,6 +1,6 @@
 # Group repository status: proposal vs. issue board
 
-**CPSC 490 · Fall 2026 · swept 2026-10-06 17:43 UTC.** Second edition of the proposal-vs-board page. The first (5 Oct) is kept in git history.
+**CPSC 490 · Fall 2026 · swept 2026-10-06 19:44 UTC.** Second edition of the proposal-vs-board page. The first (5 Oct) is kept in git history.
 
 This edition compares each team's **issue board** with what its **own proposal** (the HW#4 Abstract and Introduction) says it will build. **Goals & Objectives lock Sun 11 Oct.** By then every goal in your proposal §2 should be an epic, and every objective a user story titled with the objective's own words.
 
@@ -11,13 +11,13 @@ This edition compares each team's **issue board** with what its **own proposal**
 - ⚠️ **Process only** (writing, meeting and setup tasks; no project features): 5 (G03, G04, G07, G10, G18)
 - ❌ **Mismatch** (board or README about a different project): 1 (G14)
 - ❌ **No issues yet:** 5 (G05, G09, G17, G19, G20)
-- Team-filed issues: **158** across 15 groups (43 new since 5 Oct).
+- Team-filed issues: **168** across 15 groups (53 new since 5 Oct).
 - Using epics: G01, G02, G06, G07, G08, G11, G13, G14, G15, G18. User stories: G01, G02, G06, G08, G13, G15, G16, G18. Story points: G01, G02, G03, G04, G07, G10, G11, G12, G14, G15, G16.
 - README doesn't describe the proposal's project yet: G05, G07, G08, G10, G11, G12, G14, G15, G16, G17, G20.
 
 ### What changed since 5 Oct
 
-- **G08** went from no issues to **Aligned**: three epics for the three goals, seven objective stories and ten tasks.
+- **G08** went from no issues to **Aligned**: 32 issues, with epics for the goals, objective stories and tasks under them. On 6 Oct it added #28 *Objective 1.3* (storing and retrieving records in the database), so nothing in its proposal is untracked any more.
 - **G01** is now **Aligned**: one epic per goal, and objective stories carrying `sp:` labels and acceptance criteria.
 - **G06** renamed its repository to **GapWise**. The README and the new epics now describe the proposal's project, so this is **Partial**, not a mismatch.
 - **G03** and **G18** filed new issues. They are still writing and setup tasks, so both stay **Process only**.
@@ -40,6 +40,7 @@ Homework dates follow the class schedule: **HW#5 and the Goals & Objectives lock
 - **G19 (Titan Security):** GitHub Issues is **disabled** on the repository (Settings → General → Features → Issues).
 - **G14 (Cyber Squad):** the README and existing epic describe a different project than the proposal. Make the board match the proposal, or tell the instructor the project changed.
 - **Merge the instructor's sprint-report PR** (it fixes how the sprint report counts writing tasks and the last sprint day). Still open in 10 repositories: G05 #2; G06 #2; G08 #2; G09 #2; G10 #2; G13 #29; G14 #16; G15 #8; G16 #8; G20 #7.
+- **Merge the instructor's harness-fix PR** (opened 6 Oct: *G10 hierarchy* stops failing writing tasks that have no parent). Open in 18 repositories: G01 #31; G02 #34; G03 #19; G05 #4; G06 #8; G07 #10; G08 #26; G09 #4; G10 #12; G11 #22; G12 #43; G13 #39; G14 #18; G15 #20; G16 #10; G17 #9; G18 #23; G20 #9. G05 and G08: merge your sprint-report PR #2 first; it fixes the README link that keeps your harness red.
 - **Pull requests: fill in the template and link the issue.** A PR body that still has template text or no `Closes #N` fails the *PR links an issue* check. That happened in G01, G10, G13 and G17 this week. Open feature PRs into `develop`, not `main` (G17).
 
 ## Every group, by number
@@ -53,7 +54,7 @@ Homework dates follow the class schedule: **HW#5 and the Goals & Objectives lock
 | G05 Fighting Mongooses | WILS | 0 issues; no epics or stories | not yet | ❌ **No issues** | Audio capture / dataset; Direction finding; Range estimation; Species classifier; Individual identification; Tracking over time | Run the bootstrap (labels), replace the README with the team one-pager for WILS, and file epics plus sp:-labeled user stories in Sprint 1 for capture, localization and classification before Oct 11. |
 | G06 Forecast Market Analytics | GapWise: An LLM Study Assistant with Adaptive Weak-Spot Tracking | 4 issues (4 new); epics, stories, Sprint 1 | matches | ⚠️ **Partial** | Answer grading + recording missed concepts; Adaptive vs non-adaptive evaluation; Every core LLM capability (upload, question generation, mastery tracker, summaries/flashcards) is only a checklist line inside epic #3 or #4, with no user-story issue of its own | Before Sun Oct 11, write proposal §2 around the core loop: upload notes → generate questions → grade answers and record missed concepts → weak-spot tracker → adaptive vs non-adaptive comparison. Then re-file epic #4's checklist lines as user-story issues titled with those §2 objectives word for word, with sp: labels, and drop 'Train an LLM' unless the proposal adds it. |
 | G07 Mighty Morphin | Online Material Database | 5 issues; epics, points, Sprint 1 | not yet | ⚠️ **Process only** | PDF ingestion/extraction workflow; Format identification for heterogeneous documents; Extraction verification; AWS relational schema + storage; Web UI with auth, search and filter; Comparison/analysis views | Fill epic #1 (or replace it) with one epic per problem P1–P5 (extraction, verification, database, search UI, analysis), each with user stories carrying sp: labels and a Sprint milestone, and replace the template README with the project one-pager. |
-| G08 Crime Busters | Interactive Crime Map and Database | 22 issues (22 new); epics, stories, Sprint 1 | not yet | ✅ **Aligned** | Database storage and retrieval: Goal 1 and its success measure say records are stored in and retrieved from one database, but no objective or task covers the schema or the load step. Stories #4/#5 stop at collected and formatted files. | Before Sun Oct 11, rewrite proposal §2 so each goal lists its objectives exactly as titled in #4, #5, #13, #15, #16, #21 and #22, adding one objective for storing and querying records in the database. Then put an sp: label on every story and close the stray epics #6 and #7. |
+| G08 Crime Busters | Interactive Crime Map and Database | 32 issues (32 new); epics, stories, Sprint 1 | not yet | ✅ **Aligned** | none | Before Sun Oct 11, rewrite proposal §2 so each goal lists its objectives exactly as titled in #4, #5, #28, #13, #15, #16, #21 and #22. Then put an sp: label and one assignee on every story (#28 has neither yet) and close the stray epics #6 and #7. |
 | G09 Sigma Squad | Vehicle Maintenance Logger | 0 issues; no epics or stories | matches | ❌ **No issues** | Vehicle profile; Record processing/logging; Recommendations + reminders; Mileage tracking; Parts finder; Climate-based recommendations | Create epics for the core features (vehicle profile, service-record log, recommendations/reminders, then mileage/parts/climate as stretch), split into sp:-labeled user stories on Sprint 1, and fill in the README project summary (main) and sync develop. |
 | G10 Team Jiddak | Stablecoin Wash-Trading and Suspicious Transaction Detection | 7 issues; points, Sprint 1 | not yet | ⚠️ **Process only** | Data ingestion + transaction graph; Heuristic detection engine; ML anomaly scoring + explanations; Investigation dashboard | Turn Goals 1–3 into three epics (graph pipeline, detection engine, dashboard) with objectives as sp:-labeled user stories on Sprint 1, and replace the template README with your project one-pager. |
 | G11 5 Guys | Marathon Tracker | 11 issues; epics, points, Sprint 1 | not yet | ⚠️ **Partial** | Map display and distance/time/pace calculation (Goal 1 objectives in the proposal); Public marathon dataset ingestion as a baseline; ML-based performance/route analysis (the stated differentiator); Connecting users / runner hub | Write the Goals & Objectives (tracking, performance analysis with ML, and any social/spectator goal you keep), file one epic per goal and one user story per objective (map display, distance/pace calculation, dataset import, ML analysis), link them under #4 and the new epics, and replace the README with the team one-pager describing Marathon Tracker. |
