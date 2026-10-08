@@ -11,7 +11,7 @@ Original proposal date: October 4, 2026
 Draft revision date: October 8, 2026  
 Repository: https://github.com/sopper75/CPSC490-G19-TitanSecurity
 
-**Draft status:** This document combines the team's supplied project description with proposed wording for unfinished sections. The team must review the proposed methods and estimates, resolve all **TO CONFIRM** fields, add actual issue/document links, and verify references before submission. Proposed work is not a claim of completed implementation.
+**Draft status:** Sections 0–2 combine the team's supplied project description with revised wording and proposed objectives. Sections 3–7 retain the original repository template. The team must review the draft, resolve **TO CONFIRM** fields, add actual issue links, and verify references before submission.
 
 ## 0. Abstract
 
@@ -102,91 +102,135 @@ The proposed radar comparison is literature-based rather than a commitment to ob
 
 ## 3. Proposed Approaches
 
-The proposed approach begins with reliable measurement collection. The team will establish a repeatable transmitter–receiver arrangement, record CSI, and check the integrity of saved data before developing a classifier. This separates collection problems from detection problems and creates recordings that can be reused for analysis.
+> Describe your proposed approach to solve the problem, specifying how you
+> will achieve the stated goals. List some possible strategies.
 
-The team will then collect labeled sessions representing drone activity and non-drone conditions. Labels will describe observed conditions rather than model predictions. Entire recording sessions will be assigned to training or evaluation sets to reduce the risk of closely related samples appearing in both. Data preparation choices and model selection will use training data, with a separate validation process where needed; final evaluation recordings will remain excluded from model selection.
+〈Your approach — **clear and concise**. State the strategy you chose, the
+alternatives you considered, and the reasoning that decided between them.
+Think of this as the argument, not the manual: a reader should finish this
+section understanding *what* you will do and *why that* rather than the
+alternatives.〉
 
-A simple change-detection baseline will provide a comparison for the proposed learned classifier. A threshold-based approach may be easier to inspect but may respond to non-drone movement. A trained classifier may better distinguish patterns, but requires representative labeled recordings. The team will choose a model based on available data and validation results rather than assume that a more complex model will perform better.
+**Keep the details out of this section.** Tooling, platforms, frameworks,
+DBMS choices, environment setup, diagrams, and the work breakdown all belong
+in §4 (Required Environment, Resources, and Planned Activities). If a
+sentence here names a version number, a library, or a configuration, it
+probably belongs in §4 — leave a pointer instead ("the implementation stack
+is detailed in §4").
 
-Position and movement estimation will be investigated using recordings with known reference positions and movements. The team will determine whether the selected sensing arrangement supports the intended spatial output. If additional sensing locations or a narrower estimation scope are needed, the change will be documented and agreed before revising the objective.
-
-Final experiments will measure detection errors and performance across tested distances and conditions. Practical comparisons will use measured prototype characteristics and documented radar information. Differences in test conditions and capabilities will be stated explicitly; a cost comparison alone will not establish equivalent performance.
+〈A few paragraphs, or a short list of candidate strategies with one line of
+trade-off each. If it runs past a page, you are writing §4.〉
 
 ## 4. Required Environment, Resources, and Planned Activities
 
-The project requires CSI-capable Wi-Fi equipment, a computer for capture and analysis, storage for labeled recordings, and access to a drone and controlled test area. Ordinary Wi-Fi connectivity alone does not confirm that a device exposes the measurements needed for the project. Equipment compatibility must therefore be established before committing to a collection platform.
+> Review the required and available resources and environment to complete
+> your project. For example, server, platform, software tools, operating
+> systems, DBMS, or any required skills.
+>
+> Describe the expected activities to achieve the stated goals, e.g.,
+> software development process.
 
-| Resource | Intended use | Selection or availability |
-|---|---|---|
-| Wi-Fi transmitter and CSI-capable receiver | Generate traffic and collect channel measurements | TO CONFIRM: models, antennas, firmware, and CSI support |
-| Capture and analysis computer | Record, prepare, and analyze data | TO CONFIRM: computer and operating system |
-| Capture and analysis software | Log data, train models, and generate results | TO CONFIRM after hardware selection |
-| Drone and test area | Collect labeled drone and background sessions | TO CONFIRM: access and test arrangement |
-| Position and distance reference | Check range and spatial estimates | TO CONFIRM: measurement method |
-| Data storage | Preserve raw data, labels, and experiment metadata | TO CONFIRM: location, capacity, and backup method |
+〈Your environment, resources, and planned activities.〉
 
-Planned activities include hardware validation, recording-tool development, data-quality checks, labeled collection, classifier development, position-estimation experiments, and final evaluation. Each recording will preserve its condition label, timestamp information, and relevant setup metadata. Raw recordings will remain distinguishable from processed data so that analysis can be repeated.
+**Diagrams belong in this section.** Include at minimum a high-level
+architecture diagram and a system (context) diagram; add the ER/EER model and
+a data-flow diagram where they help the reader understand what you are
+building and what it depends on. Draw them with any graphical tool
+(Lucidchart, draw.io, Miro, Mermaid, ERDPlus, Figma), keep the authoritative
+copies in `docs/design/` with both editable source and exported image, and
+reference them here.
 
-The proposed high-level architecture is a Wi-Fi transmitter and receiver feeding a capture/logger component, followed by timestamped storage, data preparation, detection and estimation, and evaluation outputs. In the proposed system context, a team operator configures and labels experiments; drone activity and background conditions affect the sensing environment; and the prototype produces measurements and analysis results. These descriptions are design proposals, not verified implementation diagrams.
-
-**TO CONFIRM:** Create and verify the required architecture and system-context diagrams against the selected setup. Save editable sources and exported images under `docs/design/`, then insert numbered figures, captions, and links here.
+〈Number every figure, caption it, and point at it from the prose — "Figure 1
+shows the three deployment tiers and the trust boundary between them." A
+figure the text never mentions is decoration. See `docs/design/DIAGRAMS.md`
+for tools, conventions, and the rule that every box and arrow must be
+verified against reality.〉
 
 ### Specification and design documents
 
-The following documents are proposed work products, not files confirmed to exist. Their actual links and issue references must be added when created.
+**Every specification and design document the team writes is listed here**
+with the objective it serves. This section is the index of the project's
+technical detail: §3 holds the argument, §4 holds the documents that make it
+buildable. CI gate G9 fails if a document exists in `docs/specs/` or
+`docs/design/` that this section does not link.
 
-| Planned document | Kind | Objectives served | File and issue links |
+| Document | Kind | Covers | Issues |
 |---|---|---|---|
-| CSI capture and recording specification | Specification | 1.1, 1.2 | TO CONFIRM |
-| Dataset and labeling protocol | Specification | 2.1, 2.2 | TO CONFIRM |
-| Architecture and system-context design | Design | 1.1–2.3 | TO CONFIRM |
-| Evaluation protocol | Specification | 2.3, 3.1–3.3 | TO CONFIRM |
+| 〈docs/specs/account-management.md〉 | specification | 〈account management requirements〉 | 〈#n, #n〉 |
+| 〈docs/design/architecture.md〉 | design | 〈system architecture + data model〉 | 〈#n〉 |
+
+〈The scaffold ships `docs/specs/example-spec.md` and
+`docs/design/example-design.md` as worked examples — read them, then delete
+them once you have your own, and list yours here.〉
+
+〈Replace these rows with your own. Each document names its epic and stories
+in its own first lines too (gate G2), so the trail runs both ways.〉
 
 ### Planned activities — the work items
 
-Goal epics and objective stories belong in §2. The table below identifies supporting activities for the team to reconcile with its actual issues. It does not assign existing issue numbers, owners, or sprint commitments.
+The goals and objectives live in §2 as epics and user stories. **This section
+links every *other* work item: features, enhancements, bugs, tasks, and
+sub-tasks** — the concrete activities that deliver those objectives. CI gate
+G8 fails if such an issue exists that this section does not link.
 
-| Issue link | Type | Activity | Parent or purpose | Owner | Sprint |
+| Issue | Type | Activity | Parent | Owner | Sprint |
 |---|---|---|---|---|---|
-| TO CONFIRM | Task | Update proposal and reconcile issue links | Standalone proposal work | TO CONFIRM | TO CONFIRM |
-| TO CONFIRM | Task | Check hardware and capture compatibility | Objective 1.1 | TO CONFIRM | TO CONFIRM |
-| TO CONFIRM | Task | Document recording format and quality checks | Objective 1.2 | TO CONFIRM | TO CONFIRM |
-| TO CONFIRM | Task | Prepare labeling and experiment protocol | Objective 2.1 | TO CONFIRM | TO CONFIRM |
-| TO CONFIRM | Task | Create and verify architecture/context diagrams | Goals 1 and 2 | TO CONFIRM | TO CONFIRM |
-| TO CONFIRM | Task | Define evaluation measures and range-test criteria | Objectives 3.1 and 3.2 | TO CONFIRM | TO CONFIRM |
-| TO CONFIRM | Task | Select and document radar comparison sources | Objective 3.3 | TO CONFIRM | TO CONFIRM |
+| 〈#n〉 | 〈task〉 | 〈stand up the prototype login endpoint〉 | 〈#story〉 | 〈owner〉 | 〈Sprint 1〉 |
+| 〈#n〉 | 〈feature/enhancement/bug/task/sub-task〉 | 〈…〉 | 〈#story〉 | 〈…〉 | 〈…〉 |
 
-Repository changes will use feature branches and pull requests into `develop`, with each pull request closing an issue linked from this document. Sprint stories will have one assignee, a sprint milestone, a priority label, and story points. Epics and tasks beneath a pointed story will not receive separate points; standalone work items will carry their own points and sprint milestone.
+〈Replace these rows with your own, and keep the table current as you file new
+issues — with §2 it gives a reader every planned activity in one place, each
+traceable to the objective it serves.〉
 
 ## 5. Project Outcomes
 
-The planned outcome is an experimental Wi-Fi CSI sensing prototype accompanied by source code, configuration instructions, a recording procedure, labeled datasets where distribution is appropriate, and reproducible analysis. The team will deliver detection results, position and movement estimation results, an effective-range assessment, and a comparison of equipment cost, portability, and setup effort. The final report will explain both successful results and limitations, including conditions in which the system fails to distinguish drone activity reliably.
+> Describe the outcomes or deliverables, e.g., final project report, user
+> manuals, source code, data or database files, etc.
+>
+> Note: the deliverables always include the team GitHub repository, which
+> must already contain prototype v0 (a thin end-to-end proof-of-concept,
+> however small, running when this proposal is submitted). Briefly describe
+> what your v0 demonstrates and how to run it.
 
-The team repository will contain the implementation and documentation needed to reproduce the work. The proposed minimum end-to-end prototype will capture CSI, save a recording, load that recording for analysis, and produce an inspectable output. This milestone will establish a working data path without claiming validated drone detection. **TO CONFIRM: actual prototype v0 status, what it currently demonstrates, its location, and exact run instructions.** The supplied repository template requires a runnable v0 when the proposal is submitted; this draft does not claim that requirement has already been met.
+〈**One or two paragraphs** explaining the project outcome overall — what will
+exist when the project is finished, and what it will let someone do. Keep it
+prose, not a checklist; name the deliverables inside the paragraphs, and say
+briefly what prototype v0 demonstrates today and how to run it.〉
 
 ## 6. Project Timeline
 
-This is a proposed CPSC 491 implementation plan for the following semester, not the Fall 2026 proposal sprint schedule. Weeks are relative to the start of implementation. Estimates represent total team person-hours and are planning suggestions requiring team review. They assume that compatible hardware, a drone, and a suitable test area are available. Hardware delays or inadequate spatial information may require revised milestones.
+> Identifies tasks (project objectives) to be performed, milestones to be
+> met, and the estimated number of hours for each task.
 
-| Task (objective) | Milestone | Owner | Proposed person-hours | Spring phase |
+〈**This is the plan for CPSC 491 next semester — the implementation timeline,
+not this semester's proposal work.** Identify the tasks (your objectives from
+§2), the milestones, and the estimated hours for each, in the order they will
+be built. State the assumptions it rests on (sponsor availability, data
+access, hardware).〉
+
+| Task (objective) | Milestone | Owner | Est. hours | Spring phase |
 |---|---|---|---|---|
-| 1.1 Establish CSI capture | Repeatable capture demonstration | TO CONFIRM | 30 | Weeks 1–2 |
-| 1.2 Record and verify data | Timestamped recordings and quality report | TO CONFIRM | 25 | Weeks 2–3 |
-| 2.1 Collect labeled datasets | Documented sessions and training/evaluation split | TO CONFIRM | 55 | Weeks 3–6 |
-| 2.2 Develop detector | Baseline and classifier with validation results | TO CONFIRM | 55 | Weeks 5–8 |
-| 2.3 Investigate spatial estimation | Position/movement estimates and error analysis | TO CONFIRM | 60 | Weeks 7–11 |
-| 3.1 Evaluate detection | Held-out accuracy, miss, and false-detection results | TO CONFIRM | 30 | Weeks 10–12 |
-| 3.2 Evaluate range | Repeated distance trials and range assessment | TO CONFIRM | 30 | Weeks 11–13 |
-| 3.3 Compare practicality | Cost, portability, and setup comparison | TO CONFIRM | 20 | Weeks 12–13 |
-| Integrate documentation and demonstration | Reproducible release and final report | TO CONFIRM | 45 | Weeks 14–15 |
+| 〈…〉 | 〈…〉 | 〈…〉 | 〈…〉 | 〈…〉 |
+| 〈…〉 | 〈…〉 | 〈…〉 | 〈…〉 | 〈…〉 |
 
-The proposed total is 350 team person-hours. The team will revise estimates and assign owners before adopting this plan. Progress will be assessed through recorded demonstrations and documented results rather than time spent alone.
+〈Do **not** put this fall's four proposal sprints here — those live on the
+project board and in `docs/sprint-reviews/`. This section answers "how does
+the system actually get built next semester?"〉
 
 ## 7. AI Usage
 
-OpenAI's Codex assistant was used to reorganize team-supplied proposal material, edit wording, refine goals and measurable objectives, and draft missing sections, including problem statements, the proposed approach, resource planning, deliverables, and a suggested implementation timeline. AI assistance affected wording throughout this draft and supplied substantial new planning text. The generated plans and estimates have not yet been confirmed by the team.
+> Per the course AI policy (see the syllabus, Use of AI Tools), disclose the
+> AI tools used in preparing this proposal and the prototype: which tools,
+> for what tasks (e.g., code generation, test writing, debugging,
+> diagramming), and approximately what fraction of each artifact was
+> AI-assisted.
+>
+> Reminder: the prose of this proposal must be your own writing. You remain
+> fully responsible for the correctness of all AI-assisted work, including
+> the prototype code.
 
-**TO CONFIRM before submission:** Estimate the proportion of the final proposal that remains AI-assisted after team revision. Record which team members verified the claims, references, objectives, and feasibility, and describe the checks actually completed. Disclose any additional AI assistance to code, tests, or diagrams separately; its extent is not established by the supplied material. The team must revise the final prose in accordance with the course's own-writing requirement and remains responsible for the submitted work.
+〈Your disclosure. Naming the tool is not disclosure — name what it drafted,
+what fraction of each artifact was AI-assisted, and how you verified it.〉
 
 ## 8. References
 
