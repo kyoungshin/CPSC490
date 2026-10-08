@@ -64,39 +64,39 @@ These approaches differ in their measurements, targets, and outputs. The propose
 
 ### Goal 1: Build a Wi-Fi CSI sensing platform
 
-**Epic link: TO CONFIRM.**
+**Epic: [#2](https://github.com/sopper75/CPSC490-G19-TitanSecurity/issues/2).**
 
 **Objective 1.1: Set up a Wi-Fi transmitter and receiver pair and demonstrate CSI frame capture.**  
-Document the equipment and configuration needed to reproduce the setup, and verify that the receiver captures CSI frames during a test recording. **Story link: TO CONFIRM.**
+Document the equipment and configuration needed to reproduce the setup, and verify that the receiver captures CSI frames during a test recording. **Story: [#8](https://github.com/sopper75/CPSC490-G19-TitanSecurity/issues/8).**
 
 **Objective 1.2: Save CSI measurements to timestamped files and verify their data quality.**  
-Implement a recording process and check the saved measurements for missing or malformed records and timestamp consistency. Document the checks and their results. **Story link: TO CONFIRM.**
+Implement a recording process and check the saved measurements for missing or malformed records and timestamp consistency. Document the checks and their results. **Story: [#13](https://github.com/sopper75/CPSC490-G19-TitanSecurity/issues/13).**
 
 ### Goal 2: Detect drones and estimate their position and movement using Wi-Fi CSI
 
-**Epic link: TO CONFIRM.**
+**Epic: [#3](https://github.com/sopper75/CPSC490-G19-TitanSecurity/issues/3).**
 
 **Objective 2.1: Collect labeled CSI datasets for drone activity, empty background, human movement, and interference conditions.**  
-Record the condition and equipment arrangement for each recording. Document the amount of data collected for each condition and separate training and evaluation recordings. **Story link: TO CONFIRM.**
+Record the condition and equipment arrangement for each recording. Document the amount of data collected for each condition and separate training and evaluation recordings. **Story: [#14](https://github.com/sopper75/CPSC490-G19-TitanSecurity/issues/14).**
 
 **Objective 2.2: Train and evaluate a classifier that distinguishes drone presence from non-drone conditions.**  
-Use the labeled datasets to develop the classifier and evaluate it on recordings excluded from training. Report its predictions for drone activity, empty background, human movement, and interference conditions. **Story link: TO CONFIRM.**
+Use the labeled datasets to develop the classifier and evaluate it on recordings excluded from training. Report its predictions for drone activity, empty background, human movement, and interference conditions. **Story: [#15](https://github.com/sopper75/CPSC490-G19-TitanSecurity/issues/15).**
 
 **Objective 2.3: Implement and evaluate estimates of drone position and movement in a controlled test area.**  
-Compare the estimates with recorded reference positions and movements. Report position error and how consistently the system identifies movement, including conditions where estimation fails. **Story link: TO CONFIRM.**
+Compare the estimates with recorded reference positions and movements. Report position error and how consistently the system identifies movement, including conditions where estimation fails. **Story: [#7](https://github.com/sopper75/CPSC490-G19-TitanSecurity/issues/7).**
 
 ### Goal 3: Evaluate detection performance and practical trade-offs against conventional radar
 
-**Epic link: TO CONFIRM.**
+**Epic: [#4](https://github.com/sopper75/CPSC490-G19-TitanSecurity/issues/4).**
 
 **Objective 3.1: Measure drone-detection accuracy, missed detections, and false detections on held-out test recordings.**  
-Report the evaluation results and define how each metric is calculated. Present results separately for the tested conditions so that the effects of human movement and interference are visible. **Story link: TO CONFIRM.**
+Report the evaluation results and define how each metric is calculated. Present results separately for the tested conditions so that the effects of human movement and interference are visible. **Story: [#6](https://github.com/sopper75/CPSC490-G19-TitanSecurity/issues/6).**
 
 **Objective 3.2: Measure drone-detection performance at multiple distances to determine the effective detection range.**  
-Define the distance reference, test arrangement, and criterion for successful detection before conducting the evaluation. Repeat trials at each tested distance and report the farthest tested distance that meets the criterion under those conditions. **Story link: TO CONFIRM.**
+Define the distance reference, test arrangement, and criterion for successful detection before conducting the evaluation. Repeat trials at each tested distance and report the farthest tested distance that meets the criterion under those conditions. **Story: [#16](https://github.com/sopper75/CPSC490-G19-TitanSecurity/issues/16).**
 
 **Objective 3.3: Compare prototype cost, portability, and setup effort with selected conventional radar systems using documented evidence.**  
-Record the prototype's equipment cost, physical size, weight, and setup time. Compare these measurements with available published information for the selected radar systems, identifying unavailable data and differences in capabilities or testing conditions. **Story link: TO CONFIRM.**
+Record the prototype's equipment cost, physical size, weight, and setup time. Compare these measurements with available published information for the selected radar systems, identifying unavailable data and differences in capabilities or testing conditions. **Story: [#17](https://github.com/sopper75/CPSC490-G19-TitanSecurity/issues/17).**
 
 The proposed radar comparison is literature-based rather than a commitment to obtain radar equipment. The team must confirm this scope. Performance thresholds, trial counts, and test distances will be specified before final evaluation. Surrogate targets, if used during development, will be identified separately and will not be presented as evidence of actual drone detection.
 
