@@ -38,6 +38,9 @@ cd "$(git rev-parse --show-toplevel)" || die "Could not find the repository root
 [ -z "$(git status --porcelain)" ] || die "You have uncommitted changes. Commit or stash them first."
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
 [ "$BRANCH" = develop ] || warn "you are on '$BRANCH', not develop; the update branch starts from here."
+NEW="course-update-$(date +%Y-%m-%d)"
+git show-ref --verify --quiet "refs/heads/$NEW" \
+  && die "Branch $NEW already exists. Push it and open its pull request (or delete it: git branch -D $NEW), then re-run."
 ok "on $BRANCH, working tree clean"
 
 # ---------------------------------------------------------------- download
@@ -99,8 +102,10 @@ fi
 
 # ---------------------------------------------------------------- commit
 step "Committing on a new branch"
-NEW="course-update-$(date +%Y-%m-%d)"
-git switch --quiet -c "$NEW" || die "Branch $NEW already exists. Delete it or finish it first."
+if ! git switch --quiet -c "$NEW"; then
+  git checkout --quiet -- .; rm -f -- "${added[@]}"
+  die "Could not create branch $NEW. Nothing was changed."
+fi
 undo() {
   git reset --quiet --hard; rm -f -- "${added[@]}"
   git switch --quiet - && git branch --quiet -D "$NEW"
