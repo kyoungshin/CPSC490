@@ -48,16 +48,16 @@ nothing records who changed what.
 Each goal is tracked as an epic and each objective as a user story; every one
 is cited by its issue reference.
 
-**Goal 1: Secure account management** [epic:#1](https://github.com/kyoungshin/CPSC490/issues/1 "Goal 1: Secure account management")
+**Goal 1: Secure account management** [[epic:#1]](https://github.com/kyoungshin/CPSC490/issues/1 "Goal 1: Secure account management")
 
 Objective 1.1: Implement member registration and login with hashed
-credentials and session expiry. [story:#2](https://github.com/kyoungshin/CPSC490/issues/2 "Objective 1.1: Implement member registration and login")
+credentials and session expiry. [[story:#2]](https://github.com/kyoungshin/CPSC490/issues/2 "Objective 1.1: Implement member registration and login")
 
 Objective 1.2: Demonstrate the login round-trip in a runnable prototype at the
-end-of-Sprint-2 demo. [story:#3](https://github.com/kyoungshin/CPSC490/issues/3 "Objective 1.2: Demonstrate the login round-trip")
+end-of-Sprint-2 demo. [[story:#3]](https://github.com/kyoungshin/CPSC490/issues/3 "Objective 1.2: Demonstrate the login round-trip")
 
 Objective 1.3: Document the authentication architecture and data model for
-CPSC 491. [story:#4](https://github.com/kyoungshin/CPSC490/issues/4 "Objective 1.3: Document the authentication architecture")
+CPSC 491. [[story:#4]](https://github.com/kyoungshin/CPSC490/issues/4 "Objective 1.3: Document the authentication architecture")
 
 ## 3. Proposed Approaches
 
@@ -73,17 +73,17 @@ stack is detailed in §4.
 
 The prototype runs on Node.js 22 with PostgreSQL 16 in Docker, so every team
 member runs the same stack locally. Standing up that stack, with a health
-check the demo can call, is the first piece of work. [task:#5](https://github.com/kyoungshin/CPSC490/issues/5 "Task 1.2.1: Stand up the prototype login endpoint")
+check the demo can call, is the first piece of work. [[task:#5]](https://github.com/kyoungshin/CPSC490/issues/5 "Task 1.2.1: Stand up the prototype login endpoint")
 
 ### Specification and design documents
 
 The account-management specification, `docs/specs/account-management.md`,
 defines what the login endpoint accepts and rejects, including the input
-rules that stop malformed requests before they reach the database. [feature:#6](https://github.com/kyoungshin/CPSC490/issues/6 "Feature 1.2.a: Login endpoint with session issuance")
+rules that stop malformed requests before they reach the database. [[feature:#6]](https://github.com/kyoungshin/CPSC490/issues/6 "Feature 1.2.a: Login endpoint with session issuance")
 
 The authentication design, `docs/design/architecture.md`, chooses a salted
 digest for stored passwords so that no plain-text credential is ever stored
-or logged. [sub-task:#7](https://github.com/kyoungshin/CPSC490/issues/7 "Sub-task 1.2.1.a: Hash and verify passwords")
+or logged. [[sub-task:#7]](https://github.com/kyoungshin/CPSC490/issues/7 "Sub-task 1.2.1.a: Hash and verify passwords")
 
 ### Diagrams
 
@@ -91,13 +91,13 @@ Figure 1 shows the login round-trip the prototype demonstrates: the browser
 sends credentials, the login API checks them against the salted hash in
 PostgreSQL, and a session cookie comes back.
 
-![Figure 1. Login round-trip architecture. [feature:#6](https://github.com/kyoungshin/CPSC490/issues/6)](example-architecture.png){width=6in}
+![Figure 1. Login round-trip architecture. [[feature:#6]](https://github.com/kyoungshin/CPSC490/issues/6)](example-architecture.png){width=6in}
 
 ### Planned activities
 
 The login endpoint is planned for Sprint 2: it issues a session on a
 successful login, and its hashing step lands first so the demo never handles
-a plain-text password. [feature:#6](https://github.com/kyoungshin/CPSC490/issues/6) [sub-task:#7](https://github.com/kyoungshin/CPSC490/issues/7)
+a plain-text password. [[feature:#6]](https://github.com/kyoungshin/CPSC490/issues/6) [[sub-task:#7]](https://github.com/kyoungshin/CPSC490/issues/7)
 
 ## 5. Project Outcomes
 

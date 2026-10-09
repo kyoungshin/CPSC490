@@ -133,8 +133,8 @@ the course template (*Keep Text Only*) still works. Either way, keep the
 Markdown copy current — it is what peer review and CI can read.
 
 **Issue references in `proposal.md`.** Cite every issue with a typed
-reference linked to it — `[epic:#12](https://github.com/OWNER/REPO/issues/12)`,
-and likewise `[story:#N]`, `[feature:#N]`, `[enhancement:#N]`, `[bug:#N]`,
+reference linked to it — `[[epic:#12]](https://github.com/OWNER/REPO/issues/12)`
+(double brackets, so GitHub shows `[epic:#12]`), and likewise `[story:#N]`, `[feature:#N]`, `[enhancement:#N]`, `[bug:#N]`,
 `[task:#N]`, `[sub-task:#N]` — at the end of the paragraph it belongs to.
 **Epics and stories are cited in §2 only; every other issue anywhere in §4**
 (environment, specification and design documents, a diagram's caption,

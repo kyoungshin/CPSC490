@@ -177,10 +177,11 @@ so later sections can refer back.〉
 > drifting apart.
 >
 > Cite each issue with a **typed reference** at the end of its line:
-> `[epic:#N](https://github.com/OWNER/REPO/issues/N)` for a goal,
-> `[story:#N](https://github.com/OWNER/REPO/issues/N)` for an objective.
-> On GitHub it is a link; in the Word export it stays `[epic:#N]` and links
-> to Appendix A, which lists the full URLs.
+> `[[epic:#N]](https://github.com/OWNER/REPO/issues/N)` for a goal,
+> `[[story:#N]](https://github.com/OWNER/REPO/issues/N)` for an objective.
+> The double brackets make GitHub show `[epic:#N]` as the link text; in the
+> Word export it stays `[epic:#N]` and links to Appendix A, which lists the
+> full URLs.
 >
 > Write each objective the way the guidance above asks — **an action word plus
 > the measure that says it is done**, not a role-play sentence. Worked
