@@ -84,6 +84,28 @@ from this guide). **Start from
 [`README_TEMPLATE.md`](README_TEMPLATE.md) in the example repository** —
 copy it to your repo as `README.md` and fill in the 〈brackets〉.
 
+### Getting the latest course files
+
+This repository keeps improving: examples, the Word export, issue
+templates, the harness, these guides. To bring the latest into your
+repository, run this from inside it, on an up-to-date `develop`:
+
+```bash
+git switch develop && git pull
+curl -fsSL https://raw.githubusercontent.com/kyoungshin/CPSC490/main/scripts/update-course-files.sh | bash
+```
+
+(After the first run the script is in your repository too:
+`bash scripts/update-course-files.sh`.)
+
+It updates every course file you have **not** edited and adds new ones. It
+never touches a file you edited (it lists those so you can compare), and it
+never touches your `README.md`: this guide arrives as `COURSE_README.md`.
+The result is committed on a new branch, `course-update-YYYY-MM-DD`. Push it
+and open a pull request into `develop` that closes an issue, like any other
+change. Run it again whenever the course repository changes; when there is
+nothing new, it says so.
+
 ---
 
 ## 3. The proposal (`proposal/proposal.md`)

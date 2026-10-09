@@ -78,6 +78,10 @@ examples to read and then delete once you have your own — the harness treats
 them as reference material, so they will not fail your CI while they sit
 there.
 
+Later, to bring in the latest course files without redoing this step, run
+`bash scripts/update-course-files.sh` from inside your repository (the setup
+guide's *Getting the latest course files*).
+
 ## 4. Leader: set up branches, labels, milestones, board (1 command)
 
 Everything in this step is automated. From inside your repository:
