@@ -111,21 +111,36 @@ quote block; delete those blocks as you write.
 CI gate G1 checks these headings and their numbering, because the numbering
 is what makes the file convert cleanly into the Word template.
 
-**Getting it into Word for Canvas.** The template numbers its headings
-automatically (a multilevel list: top-level sections at level 1, *Related
-Work* and *Problem Statements* at level 2), so do not end up with both its
-numbers and the ones typed in the Markdown. Most teams should simply **open
-the course template and paste their prose in section by section** — ten
-minutes, no surprises. If you prefer to convert, `pandoc` works
-(`winget install pandoc`):
+**Getting it into Word for Canvas: one command.** Install pandoc once
+(`winget install pandoc`; macOS `brew install pandoc`), then from the
+repository root:
 
 ```
-pandoc proposal/proposal.md -o proposal.docx --reference-doc="CPSC 490 Project Proposal Template Fall 2026.docx"
+pandoc proposal/proposal.md -o proposal/proposal.docx --reference-doc=proposal/reference.docx --lua-filter=proposal/to-word.lua --resource-path=proposal
 ```
 
-…then in Word delete the typed `0.`/`1.`/`1.1` prefixes and set *Related
-Work* and *Problem Statements* to the template's level-2 heading. Either way,
-keep the Markdown copy current — it is what peer review and CI can read.
+`proposal/reference.docx` is the course Word template and
+`proposal/to-word.lua` lays your text into it: the template's **cover page**
+filled from the header block of `proposal.md` (type the emails into Word
+afterwards), the **Abstract** on its own page, headings numbered by Word's own
+list (the typed `1.`/`1.1` are dropped), Times New Roman 11 pt with 1.5 line
+spacing and 1.0-inch margins, and every issue reference kept short in the
+text and linked to an **Appendix A. Issue References** that lists the full
+URLs. Quote blocks — the template's guidance — are left out. See
+[`proposal/example-proposal.md`](proposal/example-proposal.md) and the
+[`.docx` it produces](proposal/example-proposal.docx). Pasting by hand into
+the course template (*Keep Text Only*) still works. Either way, keep the
+Markdown copy current — it is what peer review and CI can read.
+
+**Issue references in `proposal.md`.** Cite every issue with a typed
+reference linked to it — `[epic:#12](https://github.com/OWNER/REPO/issues/12)`,
+and likewise `[story:#N]`, `[feature:#N]`, `[enhancement:#N]`, `[bug:#N]`,
+`[task:#N]`, `[sub-task:#N]` — at the end of the paragraph it belongs to.
+**Epics and stories are cited in §2 only; every other issue anywhere in §4**
+(environment, specification and design documents, a diagram's caption,
+planned activities). A full issue URL in a sentence breaks the Word layout,
+which is why the export keeps the short tag and moves the URL to the
+appendix.
 
 **Formatting requirements for the submitted Word document** (graded
 explicitly): **Times New Roman, 11-point · 1.5 line spacing · 1.0-inch
@@ -153,8 +168,9 @@ Six sections need particular care:
 
 - **2 Goals and Objectives** — each *goal* is an **Epic** issue, each
   *objective* under it a **User Story** issue (§4). **Every epic and user
-  story is linked from this section**, so the goals in the document and the
-  work on the board cannot drift apart.
+  story is cited in this section, and only here** (`[epic:#N]`,
+  `[story:#N]`), so the goals in the document and the work on the board
+  cannot drift apart.
 - **3 Proposed Approaches** — **clear and concise**: the strategy you chose,
   the alternatives, and the reasoning. This is the argument, not the manual —
   all the detail (tooling, platforms, frameworks, DBMS, environment,
@@ -170,12 +186,15 @@ Six sections need particular care:
   their place. Keep the authoritative copies in `docs/design/` (editable
   source *and* exported image) and reference them here — tools and
   conventions in [`docs/design/DIAGRAMS.md`](docs/design/DIAGRAMS.md).
-  And the **planned-activities inventory**: this section links every
-  *other* work item — **feature, enhancement, bug, task, sub-task** — each
-  traceable to the objective it serves (epics and stories themselves are
-  linked from §2). Together the two sections give a reader every planned
-  activity in one place. Gate G8 fails if an issue of either kind exists that
-  its section does not link.
+  And the **work items**: this section cites every *other* issue —
+  **feature, enhancement, bug, task, sub-task** — wherever it belongs in §4
+  (environment, a specification or design document, a diagram's caption,
+  planned activities), as a typed reference at the end of the paragraph that
+  describes it, each traceable to the objective it serves (epics and stories
+  themselves are cited in §2 only). Write prose, not a table of issues.
+  Together the two sections give a reader every planned activity in one
+  place. Gate G8 fails if an issue of either kind exists that its section
+  does not link.
 - **5 Project Outcomes** — one or two paragraphs of prose explaining the
   outcome overall (not a checklist): what will exist when the project is
   done, the deliverables named inside those paragraphs, and — once the
@@ -309,7 +328,7 @@ daily vocabulary in CPSC 491.
 | `epic` (a goal) | no | spans sprints; its size is the sum of its objectives |
 | `user-story` (an objective) | **yes** | this is the thing committed to a sprint |
 | everything below an objective | no | already inside that objective's estimate |
-| a **writing task** with no objective above it (e.g. *Task: Draft §1 background*) | **yes** | proposal writing is real sprint work, and nothing else carries its estimate — Sprint 1 is mostly this |
+| any issue with **no user story above it** — a feature, enhancement, bug, task or sub-task, e.g. a writing task such as *Task: Draft §1 background* | **yes**, plus a `Sprint N` milestone | nothing else carries its estimate; proposal writing is real sprint work — Sprint 1 is mostly this |
 
 Point an objective *and* its tasks and you have counted the same work twice
 — a sprint that reads as 15 points of capacity when the team committed to 8,
@@ -317,10 +336,11 @@ which makes every velocity figure after it wrong.
 `scripts/sprint_report.py` catches that, reading both the `- [ ] #12`
 checklists and GitHub's native sub-issues, counting the work once at the
 objective and naming the labels to fix. The habit is simply: **estimate the
-objective, break it down, do not re-estimate the pieces.** The one
-exception is a writing task that stands on its own — a proposal section
-with no objective above it. Point that task directly, or Sprint 1, which is
-mostly writing, measures as zero.
+objective, break it down, do not re-estimate the pieces.** In one line:
+**an issue under a user story has no `sp:`; every issue not under one
+carries its own `sp:` and a Sprint milestone.** That covers the work that
+stands on its own — a proposal section with no objective above it, say.
+Point it directly, or Sprint 1, which is mostly writing, measures as zero.
 
 **Board:** create one Project (*Projects → New project → Board*) with
 columns **Backlog → Sprint To-Do → In Progress → In Review → Done**. Add

@@ -5,6 +5,7 @@
 
 **Group 〈N〉 — 〈Group Name〉** · Sponsor: 〈RTX-3 / EL-1 / SNX-n / independent〉
 Authors: 〈Last, First (GitHub username)〉, 〈…〉
+Repository: 〈https://github.com/OWNER/REPO〉
 Date: 〈YYYY-MM-DD〉
 
 > **This file is the proposal document, not a README.** Its section numbers,
@@ -15,25 +16,34 @@ Date: 〈YYYY-MM-DD〉
 > Each section below opens with the template's own guidance in a quote block.
 > **Delete the quote blocks and every 〈bracket〉 before submitting.**
 >
-> **Getting this into the Word template for Canvas.** The template numbers
-> its headings **automatically** (a multilevel list: top-level sections at
-> level 1, *Related Work* and *Problem Statements* at level 2). The numbers
-> typed below exist so the repo copy is readable and checkable — so when you
-> move the text into Word, do not end up with both sets.
+> **Getting this into the Word template for Canvas: one command.** Install
+> pandoc once (`winget install pandoc`; macOS `brew install pandoc`), then from
+> the repository root:
 >
-> The reliable route, and the one most teams should use: **open the course
-> template and paste your prose section by section**, leaving Word's own
-> numbering to do the numbering. Ten minutes, no surprises.
+>     pandoc proposal/proposal.md -o proposal/proposal.docx --reference-doc=proposal/reference.docx --lua-filter=proposal/to-word.lua --resource-path=proposal
 >
-> If you prefer to convert, `pandoc` can do it (install with
-> `winget install pandoc`):
+> `proposal/reference.docx` is the course Word template and
+> `proposal/to-word.lua` lays your text into it:
 >
->     pandoc proposal/proposal.md -o proposal.docx --reference-doc="CPSC 490 Project Proposal Template Fall 2026.docx"
+> - **Cover page:** the template's own cover, filled from the header block
+>   above (title, group, authors, repository, date). Type the emails into
+>   Word afterwards; keep them out of this public file.
+> - **Abstract** on its own page; **1. Introduction** starts the next page.
+> - **Headings** numbered by Word's own list (the typed `1.` / `1.1` are
+>   dropped), 14 pt / 12 pt bold; **body** Times New Roman 11 pt, 1.5 line
+>   spacing, 1.0-inch margins; one blank line before each heading.
+> - **Issue references** such as `[epic:#N]` stay short in the text, each a
+>   link to **Appendix A. Issue References** at the end, which lists the full
+>   issue URLs the way §8 lists sources.
+> - **Quote blocks** (this guidance) are left out, and pandoc warns about any
+>   〈placeholder〉 still in the text.
 >
-> Then in Word: delete the typed `0.` / `1.` / `1.1` prefixes (Word re-adds
-> them from the list), and set *Related Work* and *Problem Statements* to the
-> template's level-2 heading so they number as 1.1 and 1.2. Check figure
-> placement, then submit.
+> `proposal/example-proposal.md` is a worked example and
+> `proposal/example-proposal.docx` is what the command makes from it.
+>
+> Pasting by hand into the course template still works: paste section by
+> section with *Keep Text Only*, and let Word's own numbering do the
+> numbering.
 >
 > **Formatting requirements — the submitted Word document is graded against
 > these, explicitly:**
@@ -57,11 +67,10 @@ Date: 〈YYYY-MM-DD〉
 >   The Preview paper (due Sun Nov 29) is the same document part-way; it has
 >   no minimum, but it is graded on the same formatting.
 >
-> A paste into the template inherits all of this automatically **if you paste
-> as text and let Word's styles apply** (Home → Paste → *Keep Text Only*, or
-> apply the template's styles after pasting). A pandoc conversion with
-> `--reference-doc` inherits it too — but verify font, spacing and margins
-> afterward rather than assuming.
+> The command above produces all of this. A paste into the template inherits
+> it **if you paste as text and let Word's styles apply** (Home → Paste →
+> *Keep Text Only*, or apply the template's styles after pasting). Either way,
+> open the result and check it before you submit.
 >
 > Either way, keep this Markdown copy current — it is what peer review and CI
 > can actually read. If your team writes in Word instead, commit the `.docx`
@@ -107,11 +116,11 @@ Date: 〈YYYY-MM-DD〉
 〈Your survey. Cite with bracketed numbers matching §8 — every reference must
 be a source your team has actually read.〉
 
-**Do a comparative analysis, not a list of summaries.** Find the existing
-ideas, products, papers, or tools that attack the same problem and compare
-them against each other on the dimensions that matter for your project, with
-honest pros and cons. Then say plainly what your project does differently and
-why that difference is worth the effort.
+> **Do a comparative analysis, not a list of summaries.** Find the existing
+> ideas, products, papers, or tools that attack the same problem and compare
+> them against each other on the dimensions that matter for your project, with
+> honest pros and cons. Then say plainly what your project does differently and
+> why that difference is worth the effort.
 
 | Existing approach | What it does | Pros | Cons | Why ours differs |
 |---|---|---|---|---|
@@ -132,16 +141,17 @@ still building this.〉
 background (that was §1) and no solution (that is §3). Number them P1, P2, …
 so later sections can refer back.〉
 
-**Every problem here must connect to the goals and objectives in §2, and
-every goal in §2 must trace back to a problem here.** A goal with no problem
-behind it is scope you invented; a problem with no goal is a problem you are
-not actually solving. Check both directions before you submit — this mapping
-is what the final project report is graded against.
+> **Every problem here must connect to the goals and objectives in §2, and
+> every goal in §2 must trace back to a problem here.** A goal with no problem
+> behind it is scope you invented; a problem with no goal is a problem you are
+> not actually solving. Check both directions before you submit — this mapping
+> is what the final project report is graded against. Name the goal here, not
+> its issue: epics and stories are cited in §2 only.
 
 | Problem | Addressed by |
 |---|---|
-| P1 〈one line〉 | 〈Goal 1 (#n)〉 |
-| P2 〈one line〉 | 〈Goal 2 (#n)〉 |
+| P1 〈one line〉 | 〈Goal 1〉 |
+| P2 〈one line〉 | 〈Goal 2〉 |
 
 ## 2. Goals and Objectives
 
@@ -158,30 +168,36 @@ is what the final project report is graded against.
 > metric to evaluate whether or not you successfully finished your project
 > when you turn in your final project report.
 
-Each **goal** is tracked as an **Epic** issue and each **objective** as a
-**User Story** issue in the team repository (see the setup guide's *Epics and user stories* section).
-**Every epic and user story in the repository is linked from this section** —
-CI gate G8 fails if one exists that this section does not link. That is what
-keeps the goals in this document and the work on the board from drifting
-apart.
+> Each **goal** is tracked as an **Epic** issue and each **objective** as a
+> **User Story** issue in the team repository (see the setup guide's *Epics
+> and user stories* section). **Every epic and user story is cited here, and
+> only here** — CI gate G8 fails if one exists that this section does not
+> link, and a citation of an epic or story anywhere else is flagged. That is
+> what keeps the goals in this document and the work on the board from
+> drifting apart.
+>
+> Cite each issue with a **typed reference** at the end of its line:
+> `[epic:#N](https://github.com/OWNER/REPO/issues/N)` for a goal,
+> `[story:#N](https://github.com/OWNER/REPO/issues/N)` for an objective.
+> On GitHub it is a link; in the Word export it stays `[epic:#N]` and links
+> to Appendix A, which lists the full URLs.
+>
+> Write each objective the way the guidance above asks — **an action word plus
+> the measure that says it is done**, not a role-play sentence. Worked
+> example: `proposal/example-proposal.md`.
 
-Write each objective the way the guidance above asks — **an action word plus
-the measure that says it is done**, not a role-play sentence:
+**Goal 1: 〈e.g. Secure account management〉** [epic:#〈n〉](https://github.com/OWNER/REPO/issues/〈n〉)
 
-- **Goal 1: 〈e.g. Secure account management〉** (Epic #〈n〉)
-  - Objective 1.1: 〈Implement member registration and login with hashed
-    credentials, session expiry, and rejection of malformed input.〉 (#〈n〉)
-  - Objective 1.2: 〈Demonstrate the login round-trip in a runnable prototype
-    at the end-of-Sprint-2 demo.〉 (#〈n〉)
-- **Goal 2: 〈your second goal〉** (Epic #〈n〉)
-  - Objective 2.1: 〈Action word + what you will complete + how it will be
-    measured〉 (#〈n〉)
+Objective 1.1: 〈Implement member registration and login with hashed
+credentials, session expiry, and rejection of malformed input.〉 [story:#〈n〉](https://github.com/OWNER/REPO/issues/〈n〉)
 
-〈Replace the brackets with your own 2–3 goals and their objectives, and put
-the **real issue numbers** in as you file them — gate G8 checks that every
-epic and story in your repository is linked from this section. A fully worked
-version of this, with live issues and a populated board, is in the course
-example repository.〉
+Objective 1.2: 〈Demonstrate the login round-trip in a runnable prototype at
+the end-of-Sprint-2 demo.〉 [story:#〈n〉](https://github.com/OWNER/REPO/issues/〈n〉)
+
+**Goal 2: 〈your second goal〉** [epic:#〈n〉](https://github.com/OWNER/REPO/issues/〈n〉)
+
+Objective 2.1: 〈Action word + what you will complete + how it will be
+measured〉 [story:#〈n〉](https://github.com/OWNER/REPO/issues/〈n〉)
 
 ## 3. Proposed Approaches
 
@@ -194,12 +210,13 @@ Think of this as the argument, not the manual: a reader should finish this
 section understanding *what* you will do and *why that* rather than the
 alternatives.〉
 
-**Keep the details out of this section.** Tooling, platforms, frameworks,
-DBMS choices, environment setup, diagrams, and the work breakdown all belong
-in §4 (Required Environment, Resources, and Planned Activities). If a
-sentence here names a version number, a library, or a configuration, it
-probably belongs in §4 — leave a pointer instead ("the implementation stack
-is detailed in §4").
+> **Keep the details out of this section.** Tooling, platforms, frameworks,
+> DBMS choices, environment setup, diagrams, and the work breakdown all belong
+> in §4 (Required Environment, Resources, and Planned Activities). If a
+> sentence here names a version number, a library, or a configuration, it
+> probably belongs in §4 — leave a pointer instead ("the implementation stack
+> is detailed in §4"). No issue references here: epics and stories are cited
+> in §2, every other issue in §4.
 
 〈A few paragraphs, or a short list of candidate strategies with one line of
 trade-off each. If it runs past a page, you are writing §4.〉
@@ -213,57 +230,62 @@ trade-off each. If it runs past a page, you are writing §4.〉
 > Describe the expected activities to achieve the stated goals, e.g.,
 > software development process.
 
-〈Your environment, resources, and planned activities.〉
+> **Every other issue is cited in this section** — feature, enhancement, bug,
+> task, sub-task: the concrete work that delivers the objectives in §2. Cite
+> it wherever it belongs in §4 — environment, a specification or design
+> document, a diagram's caption, or the planned activities — with a typed
+> reference at the **end of the paragraph** (or caption) that describes it:
+> `[feature:#n]`, `[enhancement:#n]`, `[bug:#n]`, `[task:#n]`,
+> `[sub-task:#n]`, each linked to its issue like
+> `[task:#n](https://github.com/OWNER/REPO/issues/n)`. Write prose, not a
+> table of issues. CI gate G8 fails if such an issue exists that this section
+> does not link; epics and stories are cited in §2, never here.
 
-**Diagrams belong in this section.** Include at minimum a high-level
-architecture diagram and a system (context) diagram; add the ER/EER model and
-a data-flow diagram where they help the reader understand what you are
-building and what it depends on. Draw them with any graphical tool
-(Lucidchart, draw.io, Miro, Mermaid, ERDPlus, Figma), keep the authoritative
-copies in `docs/design/` with both editable source and exported image, and
-reference them here.
+### Environment and resources
 
-〈Number every figure, caption it, and point at it from the prose — "Figure 1
-shows the three deployment tiers and the trust boundary between them." A
-figure the text never mentions is decoration. See `docs/design/DIAGRAMS.md`
-for tools, conventions, and the rule that every box and arrow must be
-verified against reality.〉
+〈The servers, platforms, software tools, operating systems, DBMS and skills
+the project needs, and which of them you already have. End each paragraph
+with the issues it covers.〉 [task:#〈n〉](https://github.com/OWNER/REPO/issues/〈n〉)
 
 ### Specification and design documents
 
-**Every specification and design document the team writes is listed here**
-with the objective it serves. This section is the index of the project's
-technical detail: §3 holds the argument, §4 holds the documents that make it
-buildable. CI gate G9 fails if a document exists in `docs/specs/` or
-`docs/design/` that this section does not link.
+> **Every specification and design document the team writes is listed here**
+> with the objective it serves. This section is the index of the project's
+> technical detail: §3 holds the argument, §4 holds the documents that make it
+> buildable. CI gate G9 fails if a document exists in `docs/specs/` or
+> `docs/design/` that this section does not link. Each document names its
+> epic and stories in its own first lines too (gate G2), so the trail runs
+> both ways. The scaffold ships `docs/specs/example-spec.md` and
+> `docs/design/example-design.md` as worked examples — read them, then delete
+> them once you have your own.
 
-| Document | Kind | Covers | Issues |
-|---|---|---|---|
-| 〈docs/specs/account-management.md〉 | specification | 〈account management requirements〉 | 〈#n, #n〉 |
-| 〈docs/design/architecture.md〉 | design | 〈system architecture + data model〉 | 〈#n〉 |
+〈One paragraph per document: its path, what it specifies or designs, and the
+objective it serves — e.g. "The account-management specification,
+`docs/specs/account-management.md`, defines …".〉 [feature:#〈n〉](https://github.com/OWNER/REPO/issues/〈n〉)
 
-〈The scaffold ships `docs/specs/example-spec.md` and
-`docs/design/example-design.md` as worked examples — read them, then delete
-them once you have your own, and list yours here.〉
+### Diagrams
 
-〈Replace these rows with your own. Each document names its epic and stories
-in its own first lines too (gate G2), so the trail runs both ways.〉
+> **Diagrams belong in this section.** Include at minimum a high-level
+> architecture diagram and a system (context) diagram; add the ER/EER model
+> and a data-flow diagram where they help the reader understand what you are
+> building and what it depends on. Draw them with any graphical tool
+> (Lucidchart, draw.io, Miro, Mermaid, ERDPlus, Figma), keep the authoritative
+> copies in `docs/design/` with both editable source and exported image, and
+> reference them here. Number every figure, caption it, and point at it from
+> the prose — "Figure 1 shows the three deployment tiers and the trust
+> boundary between them." A figure the text never mentions is decoration. An
+> issue the figure covers can be cited in its caption. See
+> `docs/design/DIAGRAMS.md` for tools, conventions, and the rule that every
+> box and arrow must be verified against reality.
 
-### Planned activities — the work items
+〈Figure 1 shows …〉
 
-The goals and objectives live in §2 as epics and user stories. **This section
-links every *other* work item: features, enhancements, bugs, tasks, and
-sub-tasks** — the concrete activities that deliver those objectives. CI gate
-G8 fails if such an issue exists that this section does not link.
+〈`![Figure 1. Caption. [feature:#n](https://github.com/OWNER/REPO/issues/n)](../docs/design/architecture.png){width=6in}`〉
 
-| Issue | Type | Activity | Parent | Owner | Sprint |
-|---|---|---|---|---|---|
-| 〈#n〉 | 〈task〉 | 〈stand up the prototype login endpoint〉 | 〈#story〉 | 〈owner〉 | 〈Sprint 1〉 |
-| 〈#n〉 | 〈feature/enhancement/bug/task/sub-task〉 | 〈…〉 | 〈#story〉 | 〈…〉 | 〈…〉 |
+### Planned activities
 
-〈Replace these rows with your own, and keep the table current as you file new
-issues — with §2 it gives a reader every planned activity in one place, each
-traceable to the objective it serves.〉
+〈The remaining work, one paragraph per activity: what gets built, in which
+sprint, and what it delivers — ending with its issues.〉 [task:#〈n〉](https://github.com/OWNER/REPO/issues/〈n〉) [sub-task:#〈n〉](https://github.com/OWNER/REPO/issues/〈n〉)
 
 ## 5. Project Outcomes
 

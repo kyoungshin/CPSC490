@@ -396,10 +396,10 @@ gh pr create --base develop --web     <span class="c"># body must include:  Clos
 
   <h3>3.5 Turn it in on Canvas as Word</h3>
   <p>Canvas takes one Word file per team, formatted in the course template: Times New Roman 11-pt, 1.5 line spacing, 1.0-inch margins, the template's cover page unchanged.</p>
-  <p><strong>Easiest route:</strong> open <em>CPSC 490 Project Proposal Template Fall 2026.docx</em>, and paste each section's text in with <em>Home → Paste → Keep Text Only</em>, so the template's styles and numbering apply. Do not type the <code>0.</code> / <code>1.</code> numbers; Word numbers the headings itself.</p>
-  <p><strong>Or convert</strong> with pandoc, then delete the typed numbers in Word and check the formatting:</p>
+  <p><strong>One command</strong> lays <code>proposal/proposal.md</code> into the course template: the cover page filled from your header block, the Abstract on its own page, Word-numbered headings, Times New Roman 11 pt, 1.5 spacing, 1.0-inch margins, and every issue reference such as <code>[epic:#12]</code> linked to an <em>Appendix A. Issue References</em> at the end. Quote blocks (the template's guidance) are left out.</p>
   <div class="term"><div class="term-bar"><span>Git Bash / PowerShell</span><button type="button">Copy</button></div><pre>winget install pandoc                  <span class="c"># once (macOS: brew install pandoc)</span>
-pandoc proposal/proposal.md -o proposal.docx --reference-doc="CPSC 490 Project Proposal Template Fall 2026.docx"</pre></div>
+pandoc proposal/proposal.md -o proposal/proposal.docx --reference-doc=proposal/reference.docx --lua-filter=proposal/to-word.lua --resource-path=proposal</pre></div>
+  <p>Open <code>proposal/proposal.docx</code> (git ignores it; the Markdown stays the source), type the team's emails into the cover table, check it, and submit. <code>proposal/example-proposal.md</code> and <code>proposal/example-proposal.docx</code> show the result. Pasting by hand into <em>CPSC 490 Project Proposal Template Fall 2026.docx</em> with <em>Keep Text Only</em> still works.</p>
   <div class="warn"><p><b>The Markdown stays the source</b></p><p>Keep <code>proposal/proposal.md</code> current after you submit. The Preview (Nov 29) and Final (Dec 20) papers grow out of it, and CI can only read the Markdown.</p></div>
 </section>
 
@@ -522,7 +522,7 @@ A user can register, log in, and see only their own data in the prototype."</pre
   <p>Tasks, features and bugs name their parent in their body under <code>## Parent</code> (the issue templates already have that heading). Merging into <code>main</code> is blocked while any non-epic issue has no parent.</p>
 
   <h3>5.4 Put the real numbers into the proposal</h3>
-  <p>Open a branch and replace every <code>#〈n〉</code> in §2 with the epic and story numbers. List every other item (feature, enhancement, bug, task, sub-task) in the <em>Planned activities</em> table in §4.</p>
+  <p>Open a branch and cite every issue as a typed reference linked to it, at the end of the paragraph it belongs to: <code>[epic:#12](https://github.com/OWNER/REPO/issues/12)</code>, and likewise <code>[story:#N]</code>, <code>[feature:#N]</code>, <code>[enhancement:#N]</code>, <code>[bug:#N]</code>, <code>[task:#N]</code>, <code>[sub-task:#N]</code>. <strong>Epics and stories go in §2 only.</strong> Every other issue goes anywhere in §4: environment, a specification or design document, a diagram's caption, or planned activities.</p>
   <div class="term"><div class="term-bar"><span>Git Bash / Terminal</span><button type="button">Copy</button></div><pre>gh issue list --state all --limit 100      <span class="c"># every issue with its number</span>
 git switch develop && git pull
 git switch -c feature/23-link-issues
