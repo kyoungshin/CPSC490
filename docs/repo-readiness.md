@@ -1,5 +1,18 @@
 # Group repository status: proposal vs. issue board
 
+> [!IMPORTANT]
+> **New (Oct 9): get the latest course files yourself, with one command.**
+> The course repository keeps improving: worked examples, the Word export for your proposal, issue templates, the CI harness. You no longer need to wait for an instructor pull request. **First merge the instructor's open word-export PR, if you still have one**, then, from inside your repository in Git Bash or a terminal:
+>
+> ```bash
+> git switch develop && git pull
+> curl -fsSL https://raw.githubusercontent.com/kyoungshin/CPSC490/main/scripts/update-course-files.sh | bash
+> ```
+>
+> It updates only the course files you have **not** edited, never touches a file you did edit (your `README.md` and `proposal.md` included), and commits the result on a new branch, `course-update-YYYY-MM-DD`. Then open an issue, push the branch, and open a pull request into `develop` that closes the issue, like any other change. Run it again whenever this page says the course files changed. Details: [Getting the latest course files](https://github.com/kyoungshin/CPSC490#getting-the-latest-course-files).
+>
+> **Also new: double brackets on issue references.** Write `[[epic:#12]](https://github.com/OWNER/REPO/issues/12)` so GitHub shows **[epic:#12]**; the single-bracket form still counts. See the [worked example](https://github.com/kyoungshin/CPSC490/blob/main/proposal/example-proposal.md).
+
 **CPSC 490 · Fall 2026 · swept 2026-10-09 06:36 UTC.** The previous edition (2026-10-08) is kept in git history.
 
 This page compares each team's **issue board** with what its **own proposal** says it will build. Every goal in your proposal §2 should be an epic, and every objective a user story titled with the objective's own words.
@@ -10,7 +23,7 @@ This page compares each team's **issue board** with what its **own proposal** sa
 
 1. **Document first, then workflow, then code.** Every issue is cited in `proposal/proposal.md`, and every change lands through a pull request that closes one of those issues. No pushing straight to `main` or `develop`.
 2. **Merge your work into `develop` or `main`.** This page reads only those two branches; work left on a feature branch doesn't count yet. Both branches are scanned below.
-3. **Typed issue references**, each linked to its issue, at the end of the paragraph it belongs to: `[epic:#12](https://github.com/OWNER/REPO/issues/12)`, and likewise `[story:#N]`, `[feature:#N]`, `[enhancement:#N]`, `[bug:#N]`, `[task:#N]`, `[sub-task:#N]`, with the type matching the issue's own.
+3. **Typed issue references**, each linked to its issue, at the end of the paragraph it belongs to: `[[epic:#12]](https://github.com/OWNER/REPO/issues/12)` (double brackets, so GitHub shows `[epic:#12]`), and likewise `[story:#N]`, `[feature:#N]`, `[enhancement:#N]`, `[bug:#N]`, `[task:#N]`, `[sub-task:#N]`, with the type matching the issue's own.
 4. **Epics and stories are cited in §2 *Goals and Objectives* only.** Every other issue is cited anywhere in §4: environment, a specification or design document, a diagram's caption, or planned activities.
 5. **Story points:** an issue **under a user story has no `sp:`** (the story carries the points). Every issue **not under a story** (the story itself, or a parentless feature, task, bug …) carries its **own `sp:` in a `Sprint N` milestone**. Epics carry no points. In Sprint 1, until epics and stories exist, every issue is a task with `sp:` in Sprint 1.
 6. **One Sprint Board** (GitHub Projects, board layout), linked to the repository, with every open issue on it.
@@ -178,7 +191,7 @@ Follow the course README, [§4 Epics and user stories on the issue board](https:
 1. Each **goal** in your proposal §2 *Goals and Objectives* is one **epic** issue (label `epic`). Its body lists its user stories as a task list (`- [ ] #12`).
 2. Each **objective** under a goal is one **user story** issue (label `user-story`), **titled with the objective itself, in the exact words of proposal §2**: an action word plus what gets completed, with a number wherever possible. Not a feature name, and not a paraphrase. A user-story sentence goes in the issue body only when the objective has a real user, and it is optional.
 3. Every story in a sprint has exactly one assignee, a `Sprint N` milestone, a `priority:` label and an `sp: N` label (1, 2, 3, 5, 8; `sp: 8` means split it). Points go on the objective only, never on the epic or the tasks under it. A writing task with no objective above it carries its own points.
-4. Link every epic and story from proposal §2, and every other work item (feature, enhancement, bug, task, sub-task) from §4, each as a typed reference linked to its issue, such as `[epic:#1](https://github.com/OWNER/REPO/issues/1)`, and likewise `[story:#N]`, `[feature:#N]`, `[task:#N]`. Make the README on `main` say what the proposal says: title, sponsor code, and a one-paragraph summary.
+4. Link every epic and story from proposal §2, and every other work item (feature, enhancement, bug, task, sub-task) from §4, each as a typed reference linked to its issue, such as `[[epic:#1]](https://github.com/OWNER/REPO/issues/1)`, and likewise `[story:#N]`, `[feature:#N]`, `[task:#N]`. Make the README on `main` say what the proposal says: title, sponsor code, and a one-paragraph summary.
 5. A work item that isn't under a user story carries its own `sp:` points in a Sprint milestone. In Sprint 1, until your epics and stories exist, every issue is a task with `sp:` in Sprint 1.
 6. Change the repository only through pull requests from a feature branch into `develop`, each closing an issue that proposal.md links. Document first, then workflow, then code.
 
