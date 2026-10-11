@@ -10,6 +10,12 @@
 
 This page compares each team's **issue board** with what its **own proposal** says it will build. **Find your group below: your card lists everything still open for your team, in the order to fix it.** The rules and the full tables are at the end.
 
+**Jump to your group:**
+
+| [**G01** ✅](#g01) | [**G02** ⚠️](#g02) | [**G03** ⚠️](#g03) | [**G04** ⚠️](#g04) | [**G05** ❌](#g05) | [**G06** ⚠️](#g06) | [**G07** ✅](#g07) | [**G08** ✅](#g08) | [**G09** ✅](#g09) | [**G10** ⚠️](#g10) |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| [**G11** ⚠️](#g11) | [**G12** ⚠️](#g12) | [**G13** ✅](#g13) | [**G14** ❌](#g14) | [**G15** ⚠️](#g15) | [**G16** ✅](#g16) | [**G17** ❌](#g17) | [**G18** ⚠️](#g18) | [**G19** ✅](#g19) | [**G20** ✅](#g20) |
+
 **New to git or the board? Start with [First Steps](https://kyoungshin.github.io/CPSC490/first-steps.html)**: HW#4/HW#5 to the Sprint Board, every command listed.
 
 ## Sprint review: what to bring
@@ -65,9 +71,19 @@ Across the 20 repositories, the same few things hold most teams back. They're li
 - **G03, G06, G10, G12** made small process changes (merged PRs, meeting and advisor-notes tasks, one new epic), and their verdicts are unchanged. Eleven groups had no changes since the last edition.
 - **Instructor housekeeping:** the instructor's own Word-export and sprint-report issues closed in G01, G02, G03 and G10, now that their fixes are merged on main.
 
+<a name="groups" id="groups"></a>
+
 ## Your group
 
+**Jump to your group:**
+
+| [**G01** ✅](#g01) | [**G02** ⚠️](#g02) | [**G03** ⚠️](#g03) | [**G04** ⚠️](#g04) | [**G05** ❌](#g05) | [**G06** ⚠️](#g06) | [**G07** ✅](#g07) | [**G08** ✅](#g08) | [**G09** ✅](#g09) | [**G10** ⚠️](#g10) |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| [**G11** ⚠️](#g11) | [**G12** ⚠️](#g12) | [**G13** ✅](#g13) | [**G14** ❌](#g14) | [**G15** ⚠️](#g15) | [**G16** ✅](#g16) | [**G17** ❌](#g17) | [**G18** ⚠️](#g18) | [**G19** ✅](#g19) | [**G20** ✅](#g20) |
+
 *Status* is how well the board matches the proposal. *Chain* is the document-first path: `proposal.md` → issue → pull request. *Start here* is the reviewer's one most useful next action; the numbered list is everything else, in order.
+
+<a name="g01" id="g01"></a>
 
 ### G01 · BGAF: Hyperliquid Order Book Reconstruction and Algorithmic Strategy Backtesting
 
@@ -92,6 +108,10 @@ Everything still open, in the order to fix it:
 
 *Since 2026-10-09:* Issue set unchanged (21) and proposal main still links 18 bare/0 typed; main README now has real title and sponsor and 'Develop' PR #46 merged into main, but #34/#35/#36 are still unmerged and the Sprint board is still empty.
 
+[↑ Back to all groups](#groups)
+
+<a name="g02" id="g02"></a>
+
 ### G02 · Linux Larpers: Distributed Signal Capture for Multi-Node Analysis
 
 ⚠️ **Partial** · chain ❌ Broken · 23 issues (13 open) · Sprint 1 milestone: 6 open, 8 closed · **Sprint 1 review Tue Oct 13**, Sprint 2 review Tue Oct 27
@@ -111,6 +131,10 @@ Everything still open, in the order to fix it:
 9. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N` (4 of 13 PRs closed no issue).
 
 *Since 2026-10-09:* Tasks #36 (Related Work) and #40 (§2 draft) closed and PRs #44/#35 merged into main, and the Sprint board now holds all open issues with a board view; but proposal.md still links no issues and only Wi-Fi among the project features is planned.
+
+[↑ Back to all groups](#groups)
+
+<a name="g03" id="g03"></a>
 
 ### G03 · California: Three AIs and Literate Programming
 
@@ -135,6 +159,10 @@ Everything still open, in the order to fix it:
 
 *Since 2026-10-09:* Related Work/problem-statement PRs merged (#25) and #16 closed and a Meeting #2 issue added, but still no epics/stories or feature issues, proposal.md links nothing, and the board link is still unreadable.
 
+[↑ Back to all groups](#groups)
+
+<a name="g04" id="g04"></a>
+
 ### G04 · Epic Engineers: Polygon Prediction Market PNL and Trader Profitability Analytics
 
 ⚠️ **Process only** · chain ❌ Broken · 7 issues (0 open) · Sprint 1 milestone: 0 open, 7 closed · **Sprint 1 review Tue Oct 13**, Sprint 2 review Tue Oct 27
@@ -153,6 +181,10 @@ Everything still open, in the order to fix it:
 8. *Plan.* Give #1, #3, #12, #13, #20 their own `sp:` label and a `Sprint N` milestone.
 9. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N` (1 of 8 PRs closed no issue).
 
+[↑ Back to all groups](#groups)
+
+<a name="g05" id="g05"></a>
+
 ### G05 · Fighting Mongooses: WILS
 
 ❌ **No issues** · chain ❌ Broken · 0 issues (0 open) · Sprint 1 milestone: 0 open, 0 closed · **Sprint 1 review Tue Oct 13**, Sprint 2 review Tue Oct 27
@@ -166,6 +198,10 @@ Everything still open, in the order to fix it:
 3. *Document.* Write **§2 Goals and Objectives** into `proposal/proposal.md` and merge it into `develop`.
 4. *Board.* Create one **epic** per §2 goal and one **user story** per objective, titled with the objective's exact words.
 5. *Plan.* Create the **Sprint Board** (*Projects → New project → Board*) and link it from the repository's Projects tab and the README.
+
+[↑ Back to all groups](#groups)
+
+<a name="g06" id="g06"></a>
 
 ### G06 · Forecast Market Analytics: GapWise: An LLM Study Assistant with Adaptive Weak-Spot Tracking
 
@@ -186,6 +222,10 @@ Everything still open, in the order to fix it:
 9. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N`.
 
 *Since 2026-10-09:* PR #9 merged into develop and the board gained an item; issue set and proposal.md links unchanged (5 issues, 0 linked), stories still lack sp:.
+
+[↑ Back to all groups](#groups)
+
+<a name="g07" id="g07"></a>
 
 ### G07 · Mighty Morphin: Online Material Database
 
@@ -209,6 +249,10 @@ Everything still open, in the order to fix it:
 
 *Since 2026-10-09:* PR #30 is now open to sync develop with main (#29) and a Sprint board exists (no board-layout view, #29 not on it); issue structure, 16 bare links and 17 direct commits to main unchanged.
 
+[↑ Back to all groups](#groups)
+
+<a name="g08" id="g08"></a>
+
 ### G08 · Crime Busters: Interactive Crime Map and Database
 
 ✅ **Aligned** · chain ⚠️ Gaps · 33 issues (32 open) · Sprint 1 milestone: 12 open, 1 closed · **Sprint 1 review Tue Oct 20**, Sprint 2 review Tue Nov 3
@@ -229,6 +273,10 @@ Everything still open, in the order to fix it:
 10. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N` (1 of 5 PRs closed no issue).
 
 *Since 2026-10-09:* README task #42 closed via merged PR #41 (main README now the real Crime Busters one) and stray abstract PR #39 closed; issues, 7 bare proposal links and clean PR flow otherwise unchanged.
+
+[↑ Back to all groups](#groups)
+
+<a name="g09" id="g09"></a>
 
 ### G09 · Sigma Squad: Vehicle Maintenance Logger
 
@@ -251,6 +299,10 @@ Everything still open, in the order to fix it:
 
 *Since 2026-10-09:* Epics #27/#28 and ten user stories (#29-#38) filed since last edition, so the project is now tracked as features; PRs #21/#22 still open with two more (#25/#26) added, and proposal.md still links 0 of 25 issues.
 
+[↑ Back to all groups](#groups)
+
+<a name="g10" id="g10"></a>
+
 ### G10 · Team Jiddak: On-Chain Stablecoin Flow and Wash Trading Detection
 
 ⚠️ **Partial** · chain ❌ Broken · 10 issues (2 open) · Sprint 1 milestone: 1 open, 7 closed · **Sprint 1 review Tue Oct 20**, Sprint 2 review Tue Nov 3
@@ -270,6 +322,10 @@ Everything still open, in the order to fix it:
 9. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N` (1 of 3 PRs closed no issue).
 
 *Since 2026-10-09:* New process task #18 (advisor notes, closed) and PR #19 merged into main; still one epic with no stories, proposal.md still links 0 issues, direct pushes to main continue (14).
+
+[↑ Back to all groups](#groups)
+
+<a name="g11" id="g11"></a>
 
 ### G11 · 5 Guys: Marathon Tracker
 
@@ -294,6 +350,10 @@ Everything still open, in the order to fix it:
 13. *Workflow.* Stop pushing straight to `main`/`develop` (2 direct commits so far): branch → pull request → review → merge. Turn on branch protection.
 14. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N`.
 
+[↑ Back to all groups](#groups)
+
+<a name="g12" id="g12"></a>
+
 ### G12 · ACJMM: Explainable 6G Waveform Classification
 
 ⚠️ **Partial** · chain ⚠️ Gaps · 18 issues (6 open) · Sprint 1 milestone: 5 open, 20 closed · **Sprint 1 review Thu Oct 15**, Sprint 2 review Thu Oct 29
@@ -312,6 +372,10 @@ Everything still open, in the order to fix it:
 8. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N` (3 of 13 PRs closed no issue).
 
 *Since 2026-10-09:* One new epic (#57, peak picking) but it is still template text and has no stories or section 2 link; otherwise unchanged (10 of 18 issues linked, all bare, README still TBD template).
+
+[↑ Back to all groups](#groups)
+
+<a name="g13" id="g13"></a>
 
 ### G13 · BYKX: Assignment Motivation Initiative Year-Round Assistant
 
@@ -332,6 +396,10 @@ Everything still open, in the order to fix it:
 9. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N` (2 of 11 PRs closed no issue).
 
 *Since 2026-10-09:* Process epic #30 now has tasks #34, #35 and #43 (Sprint 1), PR #37 sprint-1-report merged and #40 timeline opened; proposal.md still links 0 of 25 issues and 12 stories still lack sp:.
+
+[↑ Back to all groups](#groups)
+
+<a name="g14" id="g14"></a>
 
 ### G14 · Cyber Squad: Rogue-Lite Cyber Sandbox
 
@@ -356,6 +424,10 @@ Everything still open, in the order to fix it:
 13. *Workflow.* Stop pushing straight to `main`/`develop` (2 direct commits so far): branch → pull request → review → merge. Turn on branch protection.
 14. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N` (2 of 7 PRs closed no issue).
 
+[↑ Back to all groups](#groups)
+
+<a name="g15" id="g15"></a>
+
 ### G15 · HIBBI-01: Low End Hardware ECS Game Engine with Game
 
 ⚠️ **Partial** · chain ❌ Broken · 6 issues (4 open) · Sprint 1 milestone: 2 open, 0 closed · **Sprint 1 review Thu Oct 15**, Sprint 2 review Thu Oct 29
@@ -375,6 +447,10 @@ Everything still open, in the order to fix it:
 9. *Workflow.* Stop pushing straight to `main`/`develop` (8 direct commits so far): branch → pull request → review → merge. Turn on branch protection.
 10. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N` (3 of 8 PRs closed no issue).
 
+[↑ Back to all groups](#groups)
+
+<a name="g16" id="g16"></a>
+
 ### G16 · Neuroprosthetic: BridgeWatch: Real-Time Detection of Cross-Chain Bridge Exploits
 
 ✅ **Aligned** · chain ⚠️ Gaps · 21 issues (17 open) · Sprint 1 milestone: 6 open, 3 closed · **Sprint 1 review Thu Oct 22**, Sprint 2 review Thu Nov 5
@@ -393,6 +469,10 @@ Everything still open, in the order to fix it:
 
 *Since 2026-10-09:* Big jump: proposal.md is now the real proposal on develop with all 21 issues linked (was 0 of 19), README describes BridgeWatch, prototype v0 (#36) merged via PR, tasks #34/#39 filed; remaining gaps are untyped links and an unreadable board.
 
+[↑ Back to all groups](#groups)
+
+<a name="g17" id="g17"></a>
+
 ### G17 · Sonic Scape: SonicScape
 
 ❌ **No issues** · chain ❌ Broken · 0 issues (0 open) · Sprint 1 milestone: 0 open, 0 closed · **Sprint 1 review Thu Oct 22**, Sprint 2 review Thu Nov 5
@@ -406,6 +486,10 @@ Everything still open, in the order to fix it:
 3. *Board.* Create one **epic** per §2 goal and one **user story** per objective, titled with the objective's exact words.
 4. *Workflow.* Stop pushing straight to `main`/`develop` (9 direct commits so far): branch → pull request → review → merge. Turn on branch protection.
 5. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N` (4 of 4 PRs closed no issue).
+
+[↑ Back to all groups](#groups)
+
+<a name="g18" id="g18"></a>
 
 ### G18 · Team ProStrats: Project Rogue
 
@@ -428,6 +512,10 @@ Everything still open, in the order to fix it:
 
 *Since 2026-10-09:* Board now exists (Sprint Board/Current Sprint/Sprint Plan views) and all 7 PRs close issues, but still 0 of 12 issues linked from the skeleton proposal.md and stories/tasks have no sp:.
 
+[↑ Back to all groups](#groups)
+
+<a name="g19" id="g19"></a>
+
 ### G19 · Titan Security: Radar over WiFi
 
 ✅ **Aligned** · chain ⚠️ Gaps · 14 issues (14 open) · Sprint 1 milestone: 12 open, 1 closed · **Sprint 1 review Thu Oct 22**, Sprint 2 review Thu Nov 5
@@ -449,6 +537,10 @@ Everything still open, in the order to fix it:
 
 *Since 2026-10-09:* Proposal section 2 now links 11 typed refs (13 of 14 issues linked, was 12 bare); new tasks #20 and #23; PR #21 merged; direct commits to main and the skeleton on main remain.
 
+[↑ Back to all groups](#groups)
+
+<a name="g20" id="g20"></a>
+
 ### G20 · Solos: Insomnia
 
 ✅ **Aligned** · chain ⚠️ Gaps · 16 issues (16 open) · Sprint 1 milestone: 5 open, 0 closed · **Sprint 1 review Thu Oct 22**, Sprint 2 review Thu Nov 5
@@ -468,6 +560,8 @@ Everything still open, in the order to fix it:
 9. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N` (1 of 3 PRs closed no issue).
 
 *Since 2026-10-09:* From zero issues to 16: three epics, eight stories, five Sprint 1 tasks, a Sprint board with every open issue, README rewritten as Insomnia on develop, and two PRs merged that close issues; only 3 epics are linked from proposal.md and stories lack sp:.
+
+[↑ Back to all groups](#groups)
 
 ## The rules this page checks
 
