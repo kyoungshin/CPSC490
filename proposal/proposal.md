@@ -8,43 +8,42 @@ Authors: Do, Jonathan (23jdo5), Cao, Delvin (@sopper75), Headley, Zachary (Zwach
 Repository: https://github.com/sopper75/CPSC490-G19-TitanSecurity  
 Semester: Fall 2026  
 Original proposal date: October 4, 2026  
-Draft revision date: October 8, 2026  
-
+Draft revision date: October 8, 2026
 
 **Draft status:** Sections 0–2 combine the team's supplied project description with revised wording and proposed objectives. Sections 3–7 retain the original repository template. The team must review the draft, resolve **TO CONFIRM** fields, add actual issue links, and verify references before submission.
 
 ## 0. Abstract
 
-In the present day, cheap and inexpensive drones are widely accessible to the average consumer, increasingly being used to disrupt critical infrastructure, or even pose a potential threat to the public. Early detection of these drones is a critical need as the time between detection and impact can determine how well protected people are from potential drone attacks.  
+In the present day, cheap and inexpensive drones are widely accessible to the average consumer, increasingly being used to disrupt critical infrastructure, or even pose a potential threat to the public. Early detection of these drones is a critical need as the time between detection and impact can determine how well protected people are from potential drone attacks.
 
-The problem lies within Radar being the obvious solution, but it has a high cost to implement, especially in the case of detecting relatively small objects such as drones which have small radar signatures.  
+The problem lies within Radar being the obvious solution, but it has a high cost to implement, especially in the case of detecting relatively small objects such as drones which have small radar signatures.
 
-Our proposal for a solution involves Wi-Fi. Wi-Fi infrastructure is already widespread within homes, campuses, and venues. Using Wi-Fi signals, one can potentially passively detect drones which create a disturbance in the radio waves being emitted. This disturbance can be picked up by analyzing the Channel State Information [1], allowing detection and even estimation of position and movement without the need to implement or install expensive Radar equipment [2].  
+Our proposal for a solution involves Wi-Fi. Wi-Fi infrastructure is already widespread within homes, campuses, and venues. Using Wi-Fi signals, one can potentially passively detect drones which create a disturbance in the radio waves being emitted. This disturbance can be picked up by analyzing the Channel State Information [1], allowing detection and even estimation of position and movement without the need to implement or install expensive Radar equipment [2].
 
-This solution is significant, because it potentially resolves a problem using inexpensive yet effective infrastructure. Wi-Fi signals are low energy, short range, yet highly sensitive to reflectance, interference, and background noise, which allows for detection in the first place.  
+This solution is significant, because it potentially resolves a problem using inexpensive yet effective infrastructure. Wi-Fi signals are low energy, short range, yet highly sensitive to reflectance, interference, and background noise, which allows for detection in the first place.
 
-The goal of this project is to build a prototype which is effective at detecting small drones or signatures representing drones through Wi-Fi signal waves, with evaluations to it’s accuracy, effective range, and rate of false detections. The expected outcome is an assessment of how useful Wi-Fi sensing at an effective cost could provide useful information far ahead of time to those who need it. The reset of the proposal details our methodology, system design, and evaluation plan. 
+The goal of this project is to build a prototype which is effective at detecting small drones or signatures representing drones through Wi-Fi signal waves, with evaluations to it’s accuracy, effective range, and rate of false detections. The expected outcome is an assessment of how useful Wi-Fi sensing at an effective cost could provide useful information far ahead of time to those who need it. The reset of the proposal details our methodology, system design, and evaluation plan.
 
 ## 1. Introduction
 
-Radar detects objects by transmitting radio waves and analyzing reflected signals. Wi-Fi also uses radio waves, primarily to exchange data between devices. Signals can reach a receiver along multiple paths after reflecting from surrounding objects. Movement can change these paths and the measured wireless channel. CSI provides measurements that researchers can use to investigate these changes [1].  
+Radar detects objects by transmitting radio waves and analyzing reflected signals. Wi-Fi also uses radio waves, primarily to exchange data between devices. Signals can reach a receiver along multiple paths after reflecting from surrounding objects. Movement can change these paths and the measured wireless channel. CSI provides measurements that researchers can use to investigate these changes [1].
 
-Radar over WiFi will examine whether accessible Wi-Fi equipment can provide useful information about nearby drone activity. A central challenge is distinguishing drone-related changes from changes caused by people, interference, or ordinary background variation. Detecting motion alone would not satisfy the project's drone-detection objective.  
+Radar over WiFi will examine whether accessible Wi-Fi equipment can provide useful information about nearby drone activity. A central challenge is distinguishing drone-related changes from changes caused by people, interference, or ordinary background variation. Detecting motion alone would not satisfy the project's drone-detection objective.
 
-The project is motivated by affordability, portability, and setup effort. These benefits will be evaluated rather than assumed. The initial scope is a controlled experimental prototype; results will describe the equipment, environments, and conditions actually tested. They will not establish suitability for operational security or field deployment.  
+The project is motivated by affordability, portability, and setup effort. These benefits will be evaluated rather than assumed. The initial scope is a controlled experimental prototype; results will describe the equipment, environments, and conditions actually tested. They will not establish suitability for operational security or field deployment.
 
 ### 1.1 Related Work
 
-Halperin et al. describe a tool for collecting CSI, providing a foundation for experimental wireless-channel measurements [1]. Geng's thesis and the related DensePose From WiFi paper investigate estimating human pose from Wi-Fi measurements [2], [3]. These works motivate the use of wireless measurements for sensing, but their human-sensing results do not establish drone-detection performance.  
+Halperin et al. describe a tool for collecting CSI, providing a foundation for experimental wireless-channel measurements [1]. Geng's thesis and the related DensePose From WiFi paper investigate estimating human pose from Wi-Fi measurements [2], [3]. These works motivate the use of wireless measurements for sensing, but their human-sensing results do not establish drone-detection performance.
 
-The team's supplied literature review also identifies BFId, which investigates identity inference using Wi-Fi beamforming feedback [4]. Its relevance is that wireless measurements may reveal information beyond their original communication purpose. It addresses a different measurement source and task from the proposed drone classifier. The ESP-CSI project provides a practical example of human-presence sensing with ESP32 equipment [5]. As a project account, it offers implementation context rather than direct evidence of performance for this project's target.  
+The team's supplied literature review also identifies BFId, which investigates identity inference using Wi-Fi beamforming feedback [4]. Its relevance is that wireless measurements may reveal information beyond their original communication purpose. It addresses a different measurement source and task from the proposed drone classifier. The ESP-CSI project provides a practical example of human-presence sensing with ESP32 equipment [5]. As a project account, it offers implementation context rather than direct evidence of performance for this project's target.
 
-| Existing approach | Contribution relevant to this project | Strength | Limitation for our project | How Radar over WiFi differs |
-|---|---|---|---|---|
-| CSI collection tool [1] | Collection of wireless-channel measurements | Provides a basis for reproducible measurement work | Collection alone does not identify drones; equipment compatibility must be checked | Adds labeled drone experiments and detection evaluation |
-| Human-pose estimation [2], [3] | Learning relationships between Wi-Fi measurements and physical activity | Investigates richer outputs than presence alone | Human-pose results do not demonstrate drone sensing or transfer to our equipment | Evaluates drone presence and investigates position and movement |
-| BFId [4] | Identity inference from beamforming feedback | Highlights information exposed by wireless measurements | Uses a different task and measurement approach | Focuses on drone-versus-non-drone conditions |
-| ESP-CSI presence project [5] | Practical sensing with accessible hardware | Offers prototype and deployment context | Human-presence results are not drone-detection results | Measures drone detection, confounding conditions, and range |
+| Existing approach              | Contribution relevant to this project                                   | Strength                                                | Limitation for our project                                                         | How Radar over WiFi differs                                     |
+| ------------------------------ | ----------------------------------------------------------------------- | ------------------------------------------------------- | ---------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| CSI collection tool [1]        | Collection of wireless-channel measurements                             | Provides a basis for reproducible measurement work      | Collection alone does not identify drones; equipment compatibility must be checked | Adds labeled drone experiments and detection evaluation         |
+| Human-pose estimation [2], [3] | Learning relationships between Wi-Fi measurements and physical activity | Investigates richer outputs than presence alone         | Human-pose results do not demonstrate drone sensing or transfer to our equipment   | Evaluates drone presence and investigates position and movement |
+| BFId [4]                       | Identity inference from beamforming feedback                            | Highlights information exposed by wireless measurements | Uses a different task and measurement approach                                     | Focuses on drone-versus-non-drone conditions                    |
+| ESP-CSI presence project [5]   | Practical sensing with accessible hardware                              | Offers prototype and deployment context                 | Human-presence results are not drone-detection results                             | Measures drone detection, confounding conditions, and range     |
 
 These approaches differ in their measurements, targets, and outputs. The proposed contribution is not that Wi-Fi sensing is new, but that the team will evaluate a specific accessible setup for drone sensing and document its practical limitations. Hardware selection and testing must establish which lessons transfer to this project.
 
@@ -58,80 +57,67 @@ These approaches differ in their measurements, targets, and outputs. The propose
 
 **P3. Performance and practicality:** The detection range, error rates, cost, portability, and setup effort of the proposed system have not been established. Without these measurements, its usefulness and trade-offs relative to conventional radar cannot be assessed.
 
-| Problem | Addressed by |
-|---|---|
-| P1 | Goal 1; Objectives 1.1–1.2 |
-| P2 | Goal 2; Objectives 2.1–2.3 |
-| P3 | Goal 3; Objectives 3.1–3.3 |
+| Problem | Addressed by               |
+| ------- | -------------------------- |
+| P1      | Goal 1; Objectives 1.1–1.2 |
+| P2      | Goal 2; Objectives 2.1–2.3 |
+| P3      | Goal 3; Objectives 3.1–3.3 |
 
-2. Goals and Objectives
-Goal 1: Build a Wi-Fi CSI sensing platform
-Epic issue #2.
-Objective 1.1: Set up a Wi-Fi transmitter and receiver pair and demonstrate CSI frame capture.
-Document the equipment and configuration needed to reproduce the setup, and verify that the receiver captures CSI frames during a test recording. User-story issue #8.
-Objective 1.2: Save CSI measurements to timestamped files and verify their data quality.
-Implement a recording process and check the saved measurements for missing or malformed records and timestamp consistency. Document the checks and their results. User-story issue #13.
 ## 2. Goals and Objectives
 
-### Goal 1: Build a Wi-Fi CSI sensing platform
-
-**Epic:** [#2](https://github.com/sopper75/CPSC490-G19-TitanSecurity/issues/2)
+### Goal 1: Build a Wi-Fi CSI sensing platform [[epic: #2]](https://github.com/sopper75/CPSC490-G19-TitanSecurity/issues/2)
 
 **Objective 1.1: Set up a Wi-Fi transmitter and receiver pair and demonstrate CSI frame capture.**
 
 Document the equipment and configuration needed to reproduce the setup, and verify that the receiver captures CSI frames during a test recording.
 
-**User story:** [#8](https://github.com/sopper75/CPSC490-G19-TitanSecurity/issues/8)
+[[issue: #8]](https://github.com/sopper75/CPSC490-G19-TitanSecurity/issues/8)
 
 **Objective 1.2: Save CSI measurements to timestamped files and verify their data quality.**
 
 Implement a recording process and check the saved measurements for missing or malformed records and timestamp consistency. Document the checks and their results.
 
-**User story:** [#13](https://github.com/sopper75/CPSC490-G19-TitanSecurity/issues/13)
+[[issue: #13]](https://github.com/sopper75/CPSC490-G19-TitanSecurity/issues/13)
 
-### Goal 2: Detect drones and estimate their position and movement using Wi-Fi CSI
-
-**Epic:** [#3](https://github.com/sopper75/CPSC490-G19-TitanSecurity/issues/3)
+### Goal 2: Detect drones and estimate their position and movement using Wi-Fi CSI [[epic: #3]](https://github.com/sopper75/CPSC490-G19-TitanSecurity/issues/3)
 
 **Objective 2.1: Collect labeled CSI datasets for drone activity, empty background, human movement, and interference conditions.**
 
 Record the condition and equipment arrangement for each recording. Document the amount of data collected for each condition and separate training and evaluation recordings.
 
-**User story:** [#14](https://github.com/sopper75/CPSC490-G19-TitanSecurity/issues/14)
+[[issue: #14]](https://github.com/sopper75/CPSC490-G19-TitanSecurity/issues/14)
 
 **Objective 2.2: Train and evaluate a classifier that distinguishes drone presence from non-drone conditions.**
 
 Use the labeled datasets to develop the classifier and evaluate it on recordings excluded from training. Report its predictions for drone activity, empty background, human movement, and interference conditions.
 
-**User story:** [#15](https://github.com/sopper75/CPSC490-G19-TitanSecurity/issues/15)
+[[issue: #15]](https://github.com/sopper75/CPSC490-G19-TitanSecurity/issues/15)
 
 **Objective 2.3: Implement and evaluate estimates of drone position and movement in a controlled test area.**
 
 Compare the estimates with recorded reference positions and movements. Report position error and how consistently the system identifies movement, including conditions where estimation fails.
 
-**User story:** [#7](https://github.com/sopper75/CPSC490-G19-TitanSecurity/issues/7)
+[[issue: #7]](https://github.com/sopper75/CPSC490-G19-TitanSecurity/issues/7)
 
-### Goal 3: Evaluate detection performance and practical trade-offs against conventional radar
-
-**Epic:** [#4](https://github.com/sopper75/CPSC490-G19-TitanSecurity/issues/4)
+### Goal 3: Evaluate detection performance and practical trade-offs against conventional radar [[epic: #4]](https://github.com/sopper75/CPSC490-G19-TitanSecurity/issues/4)
 
 **Objective 3.1: Measure drone-detection accuracy, missed detections, and false detections on held-out test recordings.**
 
 Report the evaluation results and define how each metric is calculated. Present results separately for the tested conditions so that the effects of human movement and interference are visible.
 
-**User story:** [#6](https://github.com/sopper75/CPSC490-G19-TitanSecurity/issues/6)
+[[issue: #6]](https://github.com/sopper75/CPSC490-G19-TitanSecurity/issues/6)
 
 **Objective 3.2: Measure drone-detection performance at multiple distances to determine the effective detection range.**
 
 Define the distance reference, test arrangement, and criterion for successful detection before conducting the evaluation. Repeat trials at each tested distance and report the farthest tested distance that meets the criterion under those conditions.
 
-**User story:** [#16](https://github.com/sopper75/CPSC490-G19-TitanSecurity/issues/16)
+[[issue: #16]](https://github.com/sopper75/CPSC490-G19-TitanSecurity/issues/16)
 
 **Objective 3.3: Compare prototype cost, portability, and setup effort with selected conventional radar systems using documented evidence.**
 
 Record the prototype's equipment cost, physical size, weight, and setup time. Compare these measurements with available published information for the selected radar systems, identifying unavailable data and differences in capabilities or testing conditions.
 
-**User story:** [#17](https://github.com/sopper75/CPSC490-G19-TitanSecurity/issues/17)
+[[issue: #17]](https://github.com/sopper75/CPSC490-G19-TitanSecurity/issues/17)
 
 The proposed radar comparison is literature-based rather than a commitment to obtain radar equipment. Performance thresholds, trial counts, and test distances will be specified before final evaluation. Surrogate targets, if used during development, will be identified separately and will not be presented as evidence of actual drone detection.
 
@@ -143,7 +129,7 @@ The proposed radar comparison is literature-based rather than a commitment to ob
 〈Your approach — **clear and concise**. State the strategy you chose, the
 alternatives you considered, and the reasoning that decided between them.
 Think of this as the argument, not the manual: a reader should finish this
-section understanding *what* you will do and *why that* rather than the
+section understanding _what_ you will do and _why that_ rather than the
 alternatives.〉
 
 **Keep the details out of this section.** Tooling, platforms, frameworks,
@@ -189,10 +175,10 @@ technical detail: §3 holds the argument, §4 holds the documents that make it
 buildable. CI gate G9 fails if a document exists in `docs/specs/` or
 `docs/design/` that this section does not link.
 
-| Document | Kind | Covers | Issues |
-|---|---|---|---|
-| 〈docs/specs/account-management.md〉 | specification | 〈account management requirements〉 | 〈#n, #n〉 |
-| 〈docs/design/architecture.md〉 | design | 〈system architecture + data model〉 | 〈#n〉 |
+| Document                             | Kind          | Covers                               | Issues     |
+| ------------------------------------ | ------------- | ------------------------------------ | ---------- |
+| 〈docs/specs/account-management.md〉 | specification | 〈account management requirements〉  | 〈#n, #n〉 |
+| 〈docs/design/architecture.md〉      | design        | 〈system architecture + data model〉 | 〈#n〉     |
 
 〈The scaffold ships `docs/specs/example-spec.md` and
 `docs/design/example-design.md` as worked examples — read them, then delete
@@ -205,9 +191,9 @@ in its own first lines too (gate G2), so the trail runs both ways.〉
 
 The goals and objectives are listed in §2 as epics and user stories. The following table links supporting work items.
 
-| Issue | Type | Activity | Parent | Owner | Sprint |
-|---|---|---|---|---|---|
-| [#11](https://github.com/sopper75/CPSC490-G19-TitanSecurity/issues/11) | task | Update proposal sections 0–2 | Standalone | 23jdo5 | Sprint 1 |
+| Issue                                                                  | Type | Activity                                    | Parent     | Owner    | Sprint   |
+| ---------------------------------------------------------------------- | ---- | ------------------------------------------- | ---------- | -------- | -------- |
+| [#11](https://github.com/sopper75/CPSC490-G19-TitanSecurity/issues/11) | task | Update proposal sections 0–2                | Standalone | 23jdo5   | Sprint 1 |
 | [#20](https://github.com/sopper75/CPSC490-G19-TitanSecurity/issues/20) | task | Clean up proposal header and §2 issue links | Standalone | sopper75 | Sprint 1 |
 
 ## 5. Project Outcomes
@@ -237,9 +223,9 @@ be built. State the assumptions it rests on (sponsor availability, data
 access, hardware).〉
 
 | Task (objective) | Milestone | Owner | Est. hours | Spring phase |
-|---|---|---|---|---|
-| 〈…〉 | 〈…〉 | 〈…〉 | 〈…〉 | 〈…〉 |
-| 〈…〉 | 〈…〉 | 〈…〉 | 〈…〉 | 〈…〉 |
+| ---------------- | --------- | ----- | ---------- | ------------ |
+| 〈…〉            | 〈…〉     | 〈…〉 | 〈…〉      | 〈…〉        |
+| 〈…〉            | 〈…〉     | 〈…〉 | 〈…〉      | 〈…〉        |
 
 〈Do **not** put this fall's four proposal sprints here — those live on the
 project board and in `docs/sprint-reviews/`. This section answers "how does
@@ -264,12 +250,12 @@ what fraction of each artifact was AI-assisted, and how you verified it.〉
 
 The following references are retained from the team's supplied draft. Their bibliographic details and support for the statements above require team verification; inclusion here does not certify that they have been independently checked.
 
-[1] Halperin, D., Hu, W., Sheth, A., and Wetherall, D. “Tool Release: Gathering 802.11n Traces with Channel State Information.” *ACM SIGCOMM Computer Communication Review*, 41(1), p. 53, 2011. https://doi.org/10.1145/1925861.1925870
+[1] Halperin, D., Hu, W., Sheth, A., and Wetherall, D. “Tool Release: Gathering 802.11n Traces with Channel State Information.” _ACM SIGCOMM Computer Communication Review_, 41(1), p. 53, 2011. https://doi.org/10.1145/1925861.1925870
 
-[2] Geng, J. *Dense Human Pose Estimation From WiFi*. Master's thesis, Carnegie Mellon University, Technical Report CMU-RI-TR-22-59, 2022. https://publications.ri.cmu.edu/dense-human-pose-estimation-from-wifi
+[2] Geng, J. _Dense Human Pose Estimation From WiFi_. Master's thesis, Carnegie Mellon University, Technical Report CMU-RI-TR-22-59, 2022. https://publications.ri.cmu.edu/dense-human-pose-estimation-from-wifi
 
-[3] Geng, J., Huang, D., and De la Torre, F. *DensePose From WiFi*. arXiv:2301.00250. https://arxiv.org/abs/2301.00250. **TO CONFIRM: publication year; the supplied draft lists 2022.**
+[3] Geng, J., Huang, D., and De la Torre, F. _DensePose From WiFi_. arXiv:2301.00250. https://arxiv.org/abs/2301.00250. **TO CONFIRM: publication year; the supplied draft lists 2022.**
 
-[4] Todt, J., Morsbach, F., and Strufe, T. “BFId: Identity Inference Attacks Utilizing Beamforming Feedback Information.” *Proceedings of the 2025 ACM SIGSAC Conference on Computer and Communications Security*, pp. 2399–2413, 2025. https://doi.org/10.1145/3719027.3765062
+[4] Todt, J., Morsbach, F., and Strufe, T. “BFId: Identity Inference Attacks Utilizing Beamforming Feedback Information.” _Proceedings of the 2025 ACM SIGSAC Conference on Computer and Communications Security_, pp. 2399–2413, 2025. https://doi.org/10.1145/3719027.3765062
 
-[5] Mengdu. “ESP-CSI: DIY WiFi Human Presence Detection.” *Hackster.io*, January 15, 2026. https://www.hackster.io/limengdu0117/esp-csi-diy-wifi-human-presence-detection-f80508. Accessed October 4, 2026, as recorded in the team's draft.
+[5] Mengdu. “ESP-CSI: DIY WiFi Human Presence Detection.” _Hackster.io_, January 15, 2026. https://www.hackster.io/limengdu0117/esp-csi-diy-wifi-human-presence-detection-f80508. Accessed October 4, 2026, as recorded in the team's draft.
