@@ -51,17 +51,14 @@ These approaches differ in their measurements, targets, and outputs. The propose
 
 ### 1.2 Problem Statements
 
-**P1. Reproducible measurements:** The project needs a repeatable way to obtain and preserve usable wireless-channel measurements so experiments can be compared and checked.
+**P1. Reproducible measurements:** 
+The project needs a repeatable way to capture and save usable CSI measurements. Equipment placement, configuration, and environmental changes can affect the collected data, making recordings difficult to compare. Without consistent recording procedures and data-quality checks, apparent differences between experiments could result from the setup rather than drone activity. Addressing this problem will allow the team to reproduce experiments, identify recording problems, and build a reliable dataset for later analysis. This problem is addressed by Goal 1 and Objectives 1.1–1.2.
 
-**P2. Target discrimination and estimation:** Changes in wireless measurements are not unique to drones. It remains uncertain whether the selected equipment can distinguish drone activity from human movement and interference and support useful estimates of position and movement.
+**P2. Target discrimination and estimation:** 
+Changes in wireless measurements do not uniquely indicate a drone. Human movement, other moving objects, and interference may also affect the signal. The project must therefore investigate whether drone-related patterns can be separated from non-drone conditions rather than treating every change as a detection. Estimating position and movement presents an additional challenge because detecting activity does not directly reveal where the target is. Addressing these problems could make the prototype’s output more informative while reducing misleading alerts and missed detections. This problem is addressed by Goal 2 and Objectives 2.1–2.3.
 
-**P3. Performance and practicality:** The detection range, error rates, cost, portability, and setup effort of the proposed system have not been established. Without these measurements, its usefulness and trade-offs relative to conventional radar cannot be assessed.
-
-| Problem | Addressed by               |
-| ------- | -------------------------- |
-| P1      | Goal 1; Objectives 1.1–1.2 |
-| P2      | Goal 2; Objectives 2.1–2.3 |
-| P3      | Goal 3; Objectives 3.1–3.3 |
+**P3. Performance and practicality:** 
+The prototype’s detection accuracy, false-detection rate, effective range, and position-estimation performance are not yet known. A successful demonstration under one condition would not establish reliable performance across different distances and background conditions. The team must conduct controlled evaluations and report both successful and unsuccessful results. Equipment cost, portability, and setup effort must also be documented before claiming practical advantages. Since the team does not have access to a conventional radar system, comparisons will use published information and acknowledge differences in capabilities and test conditions. Addressing this problem will provide evidence of what the prototype can accomplish and where further development is needed. This problem is addressed by Goal 3 and Objectives 3.1–3.3.
 
 ## 2. Goals and Objectives
 
