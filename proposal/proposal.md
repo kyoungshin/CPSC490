@@ -15,11 +15,15 @@ Draft revision date: October 8, 2026
 
 ## 0. Abstract
 
-Accessible Wi-Fi equipment may offer a way to investigate short-range drone sensing without deploying a dedicated radar system. Wi-Fi signals change as objects move through the surrounding environment. Channel State Information (CSI) records properties of the wireless channel that can support analysis of these changes [1]. However, observing a change does not establish that a drone caused it: human movement, environmental variation, and interference can also affect measurements.  
+In the present day, cheap and inexpensive drones are widely accessible to the average consumer, increasingly being used to disrupt critical infrastructure, or even pose a potential threat to the public. Early detection of these drones is a critical need as the time between detection and impact can determine how well protected people are from potential drone attacks.  
 
-Radar over WiFi will investigate whether a prototype using CSI can distinguish drone activity from non-drone conditions in controlled experiments. The project will establish a CSI capture and recording platform, collect labeled measurements, develop a detection classifier, and investigate estimates of drone position and movement. Evaluation will address detection accuracy, missed detections, false detections, and performance at different distances. The team will also document equipment cost, portability, and setup effort and compare these with available published information about selected conventional radar systems.  
+The problem lies within Radar being the obvious solution, but it has a high cost to implement, especially in the case of detecting relatively small objects such as drones which have small radar signatures.  
 
-The expected contribution is a reproducible prototype and an evidence-based assessment of its capabilities and limitations. Human-sensing research motivates the investigation but does not establish that the proposed hardware will detect or locate drones successfully. The project therefore treats performance as an experimental question. This proposal describes the relevant background, research problems, goals, proposed approach, required resources, deliverables, and implementation timeline.  
+Our proposal for a solution involves Wi-Fi. Wi-Fi infrastructure is already widespread within homes, campuses, and venues. Using Wi-Fi signals, one can potentially passively detect drones which create a disturbance in the radio waves being emitted. This disturbance can be picked up by analyzing the Channel State Information [1], allowing detection and even estimation of position and movement without the need to implement or install expensive Radar equipment [2].  
+
+This solution is significant, because it potentially resolves a problem using inexpensive yet effective infrastructure. Wi-Fi signals are low energy, short range, yet highly sensitive to reflectance, interference, and background noise, which allows for detection in the first place.  
+
+The goal of this project is to build a prototype which is effective at detecting small drones or signatures representing drones through Wi-Fi signal waves, with evaluations to it’s accuracy, effective range, and rate of false detections. The expected outcome is an assessment of how useful Wi-Fi sensing at an effective cost could provide useful information far ahead of time to those who need it. The reset of the proposal details our methodology, system design, and evaluation plan. 
 
 ## 1. Introduction
 
