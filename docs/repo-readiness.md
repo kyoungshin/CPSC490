@@ -49,7 +49,7 @@ Across the 20 repositories, the same few things hold most teams back. They're li
 
 **2. Finished work is sitting in branches and open pull requests** (11 groups: G01, G02, G03, G04, G07, G08, G09, G13, G14, G16, G19). This page, the harness and the sprint report read only `develop` and `main`, so a section drafted on a branch doesn't count yet. **Do this:** give every pull request a reviewer the day it opens, and merge (or close) it within two days. Delete branches you've abandoned.
 
-**3. Instructor pull requests are still open** (16 groups: G01, G03, G04, G05, G06, G07, G08, G09, G11, G13, G14, G15, G16, G17, G18, G20). They're small and already checked against the harness, and leaving them open lets your copy of the course files drift. **Do this:** merge them first, then run the course-update command (top of this page) whenever this page says the course files changed.
+**3. Course files are now self-service.** The instructor's course-file pull requests were closed on Oct 11 in every repository, so there is nothing to merge. **Do this:** run the course-update command (see **Course-update command** under *The rules this page checks*) whenever this page says the course files changed. It updates only the course files you haven't edited, and commits them on a `course-update-YYYY-MM-DD` branch for you to open a pull request from.
 
 **4. The board is a list, not a plan yet.** In 11 groups (G02, G03, G06, G07, G08, G09, G10, G13, G14, G19, G20) at least half the open issues have no assignee, and 15 groups (G01, G02, G03, G04, G06, G08, G09, G10, G11, G13, G14, G15, G18, G19, G20) have work items without their own `sp:` and `Sprint N` milestone. The sprint report can only count what's labeled. **Do this at your Sprint 1 review:** every card you commit to Sprint 2 gets one assignee, `sp:`, a `priority:` and the `Sprint 2` milestone before the meeting ends.
 
@@ -100,7 +100,7 @@ Across the 20 repositories, the same few things hold most teams back. They're li
 
 Everything still open, in the order to fix it:
 
-1. *Unblock.* Merge the instructor's open pull request #31, then run the course-update command.
+1. *Unblock.* Run the course-update command (see **Course-update command** under *The rules this page checks*) to pull the latest course files. The instructor's course-file pull requests were closed on Oct 11; you no longer merge them.
 2. *Unblock.* Review and merge (or close) your open pull requests #36, #35, #34. Work in an open PR doesn't count yet.
 3. *Document.* Fill in **§4**: list your other work items (tasks, features, documents) there.
 4. *Link.* Cite 3 of 21 issues in `proposal.md` (epics and stories in §2, the rest in §4): #41–#43.
@@ -151,7 +151,7 @@ Everything still open, in the order to fix it:
 
 Everything still open, in the order to fix it:
 
-1. *Unblock.* Merge the instructor's open pull request #22, then run the course-update command.
+1. *Unblock.* Run the course-update command (see **Course-update command** under *The rules this page checks*) to pull the latest course files. The instructor's course-file pull requests were closed on Oct 11; you no longer merge them.
 2. *Unblock.* Review and merge (or close) your open pull requests #26, #23. Work in an open PR doesn't count yet.
 3. *Document.* Write **§2 Goals and Objectives** into `proposal/proposal.md` and merge it into `develop` (a draft may already be in one of the branches above).
 4. *Document.* Fill in **§4**: list your other work items (tasks, features, documents) there.
@@ -178,7 +178,7 @@ Everything still open, in the order to fix it:
 
 Everything still open, in the order to fix it:
 
-1. *Unblock.* Merge the instructor's open pull request #23, then run the course-update command.
+1. *Unblock.* Run the course-update command (see **Course-update command** under *The rules this page checks*) to pull the latest course files. The instructor's course-file pull requests were closed on Oct 11; you no longer merge them.
 2. *Unblock.* Review and merge (or close) your open pull request #21. Work in an open PR doesn't count yet.
 3. *Document.* Write **§2 Goals and Objectives** into `proposal/proposal.md` and merge it into `develop` (a draft may already be in one of the branches above).
 4. *Document.* Fill in **§4**: list your other work items (tasks, features, documents) there.
@@ -204,7 +204,7 @@ Everything still open, in the order to fix it:
 
 Everything still open, in the order to fix it:
 
-1. *Unblock.* Merge the instructor's open pull requests #6, #4, #2, then run the course-update command.
+1. *Unblock.* Run the course-update command (see **Course-update command** under *The rules this page checks*) to pull the latest course files. The instructor's course-file pull requests were closed on Oct 11; you no longer merge them.
 2. *Document.* Make `README.md` on `main` describe your project: title, sponsor code (if any), one-paragraph summary, Sprint Board link.
 3. *Document.* Write **§2 Goals and Objectives** into `proposal/proposal.md` and merge it into `develop`.
 4. *Board.* Create one **epic** per §2 goal and one **user story** per objective, titled with the objective's exact words.
@@ -226,7 +226,7 @@ Everything still open, in the order to fix it:
 
 Everything still open, in the order to fix it:
 
-1. *Unblock.* Merge the instructor's open pull requests #12, #8, #2, then run the course-update command.
+1. *Unblock.* Run the course-update command (see **Course-update command** under *The rules this page checks*) to pull the latest course files. The instructor's course-file pull requests were closed on Oct 11; you no longer merge them.
 2. *Document.* Write **§2 Goals and Objectives** into `proposal/proposal.md` and merge it into `develop`.
 3. *Document.* Fill in **§4**: list your other work items (tasks, features, documents) there.
 4. *Scope.* Reviewer's notes on proposal elements with no issue yet, or that don't agree: Answer checking and per-concept mastery tracker has no story issue; assignment notifications; baseline evaluation; flashcards/summaries.
@@ -254,7 +254,7 @@ Everything still open, in the order to fix it:
 
 Everything still open, in the order to fix it:
 
-1. *Unblock.* Merge the instructor's open pull requests #32, #10, then run the course-update command.
+1. *Unblock.* Run the course-update command (see **Course-update command** under *The rules this page checks*) to pull the latest course files. The instructor's course-file pull requests were closed on Oct 11; you no longer merge them.
 2. *Unblock.* Review and merge (or close) your open pull request #30. Work in an open PR doesn't count yet.
 3. *Document.* Make `README.md` on `main` describe your project: title, sponsor code (if any), one-paragraph summary, Sprint Board link.
 4. *Document.* Fill in **§4**: list your other work items (tasks, features, documents) there.
@@ -284,7 +284,7 @@ Everything still open, in the order to fix it:
 
 Everything still open, in the order to fix it:
 
-1. *Unblock.* Merge the instructor's open pull request #26, then run the course-update command.
+1. *Unblock.* Run the course-update command (see **Course-update command** under *The rules this page checks*) to pull the latest course files. The instructor's course-file pull requests were closed on Oct 11; you no longer merge them.
 2. *Unblock.* 2 branches hold work that isn't in `develop`: `proposal-abstract`, `proposal-goal-3`. Open a pull request for each, or delete the branch.
 3. *Document.* Write **§2 Goals and Objectives** into `proposal/proposal.md` and merge it into `develop` (a draft may already be in one of the branches above).
 4. *Document.* Fill in **§4**: list your other work items (tasks, features, documents) there.
@@ -309,7 +309,7 @@ Everything still open, in the order to fix it:
 
 Everything still open, in the order to fix it:
 
-1. *Unblock.* Merge the instructor's open pull request #24, then run the course-update command.
+1. *Unblock.* Run the course-update command (see **Course-update command** under *The rules this page checks*) to pull the latest course files. The instructor's course-file pull requests were closed on Oct 11; you no longer merge them.
 2. *Unblock.* Review and merge (or close) your open pull requests #26, #25, #22, #21. Work in an open PR doesn't count yet.
 3. *Document.* Write **§2 Goals and Objectives** into `proposal/proposal.md` and merge it into `develop` (a draft may already be in one of the branches above).
 4. *Document.* Fill in **§4**: list your other work items (tasks, features, documents) there.
@@ -358,7 +358,7 @@ Everything still open, in the order to fix it:
 
 Everything still open, in the order to fix it:
 
-1. *Unblock.* Merge the instructor's open pull requests #24, #22, then run the course-update command.
+1. *Unblock.* Run the course-update command (see **Course-update command** under *The rules this page checks*) to pull the latest course files. The instructor's course-file pull requests were closed on Oct 11; you no longer merge them.
 2. *Document.* Make `README.md` on `main` describe your project: title, sponsor code (if any), one-paragraph summary, Sprint Board link.
 3. *Document.* Write **§2 Goals and Objectives** into `proposal/proposal.md` and merge it into `develop`.
 4. *Document.* Fill in **§4**: list your other work items (tasks, features, documents) there.
@@ -416,7 +416,7 @@ Everything still open, in the order to fix it:
 
 Everything still open, in the order to fix it:
 
-1. *Unblock.* Merge the instructor's open pull requests #42, #39, #29, then run the course-update command.
+1. *Unblock.* Run the course-update command (see **Course-update command** under *The rules this page checks*) to pull the latest course files. The instructor's course-file pull requests were closed on Oct 11; you no longer merge them.
 2. *Unblock.* Review and merge (or close) your open pull requests #40, #36, #4. Work in an open PR doesn't count yet.
 3. *Scope.* Reviewer's notes on proposal elements with no issue yet, or that don't agree: Platform inconsistent: abstract/section 3 say Windows desktop with Windows notifications, section 4/5 say Python+JS web app, README says mobile app; #12/#13 assume web.
 4. *Link.* Cite all 25 issues in `proposal.md` (epics and stories in §2, the rest in §4): #8, #10–#13, #15–#27, #30–#35, #43.
@@ -444,7 +444,7 @@ Everything still open, in the order to fix it:
 
 Everything still open, in the order to fix it:
 
-1. *Unblock.* Merge the instructor's open pull requests #20, #18, #16, then run the course-update command.
+1. *Unblock.* Run the course-update command (see **Course-update command** under *The rules this page checks*) to pull the latest course files. The instructor's course-file pull requests were closed on Oct 11; you no longer merge them.
 2. *Unblock.* Review and merge (or close) your open pull requests #12, #9. Work in an open PR doesn't count yet.
 3. *Document.* Your board or README describes a **different project** than your proposal. Make them match, or tell the instructor the project changed.
 4. *Document.* Make `README.md` on `main` describe your project: title, sponsor code (if any), one-paragraph summary, Sprint Board link.
@@ -475,7 +475,7 @@ Everything still open, in the order to fix it:
 
 Everything still open, in the order to fix it:
 
-1. *Unblock.* Merge the instructor's open pull requests #22, #8, then run the course-update command.
+1. *Unblock.* Run the course-update command (see **Course-update command** under *The rules this page checks*) to pull the latest course files. The instructor's course-file pull requests were closed on Oct 11; you no longer merge them.
 2. *Document.* Make `README.md` on `main` describe your project: title, sponsor code (if any), one-paragraph summary, Sprint Board link.
 3. *Document.* Write **§2 Goals and Objectives** into `proposal/proposal.md` and merge it into `develop`.
 4. *Document.* Fill in **§4**: list your other work items (tasks, features, documents) there.
@@ -498,7 +498,7 @@ Everything still open, in the order to fix it:
 
 Everything still open, in the order to fix it:
 
-1. *Unblock.* Merge the instructor's open pull request #43, then run the course-update command.
+1. *Unblock.* Run the course-update command (see **Course-update command** under *The rules this page checks*) to pull the latest course files. The instructor's course-file pull requests were closed on Oct 11; you no longer merge them.
 2. *Unblock.* 1 branch holds work that isn't in `develop`: `feature/5-bridgewatch-prototype`. Open a pull request for each, or delete the branch.
 3. *Link.* Rewrite 21 bare `#N` references as typed links, e.g. `[[story:#39]](https://github.com/garybs16/CPSC490-G16-Neuroprosthetic/issues/39)`.
 4. *Plan.* Create the **Sprint Board** (*Projects → New project → Board*) and link it from the repository's Projects tab and the README.
@@ -524,7 +524,7 @@ Everything still open, in the order to fix it:
 
 Everything still open, in the order to fix it:
 
-1. *Unblock.* Merge the instructor's open pull request #12, then run the course-update command.
+1. *Unblock.* Run the course-update command (see **Course-update command** under *The rules this page checks*) to pull the latest course files. The instructor's course-file pull requests were closed on Oct 11; you no longer merge them.
 2. *Document.* Write **§2 Goals and Objectives** into `proposal/proposal.md` and merge it into `develop`.
 3. *Board.* Create one **epic** per §2 goal and one **user story** per objective, titled with the objective's exact words.
 4. *Workflow.* Stop pushing straight to `main`/`develop` (9 direct commits so far): branch → pull request → review → merge. Turn on branch protection.
@@ -546,7 +546,7 @@ Everything still open, in the order to fix it:
 
 Everything still open, in the order to fix it:
 
-1. *Unblock.* Merge the instructor's open pull request #25, then run the course-update command.
+1. *Unblock.* Run the course-update command (see **Course-update command** under *The rules this page checks*) to pull the latest course files. The instructor's course-file pull requests were closed on Oct 11; you no longer merge them.
 2. *Document.* Write **§2 Goals and Objectives** into `proposal/proposal.md` and merge it into `develop`.
 3. *Document.* Fill in **§4**: list your other work items (tasks, features, documents) there.
 4. *Scope.* Reviewer's notes on proposal elements with no issue yet, or that don't agree: Class system; Weapon replacement / Mastery / affixes; Attributes, boons, respec; Branching route map and handcrafted rooms; Core combat and platforming; Playtest plan for build variety / meaningful decisions.
@@ -600,7 +600,7 @@ Everything still open, in the order to fix it:
 
 Everything still open, in the order to fix it:
 
-1. *Unblock.* Merge the instructor's open pull request #30, then run the course-update command.
+1. *Unblock.* Run the course-update command (see **Course-update command** under *The rules this page checks*) to pull the latest course files. The instructor's course-file pull requests were closed on Oct 11; you no longer merge them.
 2. *Document.* Fill in **§4**: list your other work items (tasks, features, documents) there.
 3. *Scope.* Reviewer's notes on proposal elements with no issue yet, or that don't agree: Unpredictable monster placement/encounters (only distinct behaviors are tracked, not varied placement).
 4. *Link.* Cite 13 of 16 issues in `proposal.md` (epics and stories in §2, the rest in §4): #11, #13–#15, #18–#20, #22–#24, #26–#28.
