@@ -6,6 +6,13 @@
 >
 > The section **Why teams are stuck** explains the patterns behind most cards. Most teams are one merged pull request away from a much better card: §2 of your proposal, merged into `develop`.
 
+> [!CAUTION]
+> **HW#5 check (Oct 12): 11 groups' epics and user stories do not match the Goals and Objectives they submitted in HW#5 (§2).**
+> 🔴 **Not reflected / wrong numbers:** [**G05**](https://github.com/M-Kwatcher/CPSC490-G05-Fighting-Mongooses/issues/7) · [**G06**](https://github.com/Joshbolus/CPSC490-G06-GapWise/issues/15) · [**G12**](https://github.com/CharlesSinde/CPSC490-G12-ACJMM/issues/82) · [**G14**](https://github.com/jvillacorte/CPSC490-G14-Cyber-Squad/issues/21) · [**G15**](https://github.com/Isaiah714/CPSC490-G15-HIBBI-01/issues/23) · [**G17**](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/13)
+> 🟠 **Extra, duplicate or misnumbered items:** [**G07**](https://github.com/CPSC490-Team-Proj/CPSC490-G07-MightyMorphin/issues/33) · [**G08**](https://github.com/miketruong91/CPSC490-G08-Crime-Busters/issues/48) · [**G13**](https://github.com/ktnwin/CPSC490-G13-BYKX/issues/50) · [**G18**](https://github.com/austin2578/CPSC490-G18-ProStrats/issues/43) · [**G20**](https://github.com/muntay89/CPSC490-G20-Solos/issues/31)
+>
+> Each of these groups has an instructor issue in its repository listing its HW#5 goals and objectives, our evaluation, and a fix checklist. **Sprint 2 is planned from exactly the §2 set**, and mismatches are reviewed in the Sprint 1 evaluation. Fix them before your Sprint 1 review.
+
 **CPSC 490 · Fall 2026 · swept 2026-10-11 04:00 UTC.** The previous edition (2026-10-09) is kept in git history.
 
 This page compares each team's **issue board** with what its **own proposal** says it will build. **Find your group below: your card lists everything still open for your team, in the order to fix it.** The rules and the full tables are at the end.
@@ -189,6 +196,10 @@ Everything still open, in the order to fix it:
 
 ❌ **No issues** · chain ❌ Broken · 0 issues (0 open) · Sprint 1 milestone: 0 open, 0 closed · **Sprint 1 review Tue Oct 13**, Sprint 2 review Tue Oct 27
 
+> [!CAUTION]
+> **HW#5 check (Oct 12): your epics and user stories do not match your HW#5 §2 Goals and Objectives.** Your repository has **no epics or user stories**. HW#5 §2 lists 2 goals and 10 objectives, citing Epic #1 and Epic #2, but #1 is an instructor issue and #2 does not exist.
+> See [the instructor issue](https://github.com/M-Kwatcher/CPSC490-G05-Fighting-Mongooses/issues/7) for your goals and objectives as submitted, our evaluation and the fix checklist.
+
 **Start here:** Run the bootstrap to create the missing epic/user-story/sp:/task labels, commit the real proposal into proposal/proposal.md and the team README, and file Sprint 1 tasks with sp: for each proposal section.
 
 Everything still open, in the order to fix it:
@@ -206,6 +217,10 @@ Everything still open, in the order to fix it:
 ### G06 · Forecast Market Analytics: GapWise: An LLM Study Assistant with Adaptive Weak-Spot Tracking
 
 ⚠️ **Partial** · chain ❌ Broken · 5 issues (5 open) · Sprint 1 milestone: 3 open, 0 closed · **Sprint 1 review Tue Oct 20**, Sprint 2 review Tue Nov 3
+
+> [!CAUTION]
+> **HW#5 check (Oct 12): your epics and user stories do not match your HW#5 §2 Goals and Objectives.** HW#5 §2 has **3 goals and 14 objectives**, but the repository has only Goal 1 (epic #13) with one story (#14, Objective 1.1). Epics #3 *Home Page* and #4 *Create LLM prototype* and stories #5 and #6 are not in HW#5.
+> See [the instructor issue](https://github.com/Joshbolus/CPSC490-G06-GapWise/issues/15) for your goals and objectives as submitted, our evaluation and the fix checklist.
 
 **Start here:** File the missing story issues (1.3, 1.4, 2.1-2.3 plus a weak-spot tracker story), finish epic #4's unfinished goal sentence, and give every story an sp: label in Sprint 1.
 
@@ -230,6 +245,10 @@ Everything still open, in the order to fix it:
 ### G07 · Mighty Morphin: Online Material Database
 
 ✅ **Aligned** · chain ⚠️ Gaps · 24 issues (21 open) · Sprint 1 milestone: 7 open, 3 closed · **Sprint 1 review Tue Oct 20**, Sprint 2 review Tue Nov 3
+
+> [!WARNING]
+> **HW#5 check (Oct 12): your epics and user stories do not match your HW#5 §2 Goals and Objectives.** Goals 1–3 match, but the **issue numbers in HW#5 §2 are off by one from Goal 3 on**, and the repository has items HW#5 does not.
+> See [the instructor issue](https://github.com/CPSC490-Team-Proj/CPSC490-G07-MightyMorphin/issues/33) for your goals and objectives as submitted, our evaluation and the fix checklist.
 
 **Start here:** Merge #30 so develop has the goals, convert the 16 links in proposal.md to typed references, add #28/#4/#1 or close them, and replace the course-template README with the project README.
 
@@ -256,6 +275,10 @@ Everything still open, in the order to fix it:
 ### G08 · Crime Busters: Interactive Crime Map and Database
 
 ✅ **Aligned** · chain ⚠️ Gaps · 33 issues (32 open) · Sprint 1 milestone: 12 open, 1 closed · **Sprint 1 review Tue Oct 20**, Sprint 2 review Tue Nov 3
+
+> [!WARNING]
+> **HW#5 check (Oct 12): your epics and user stories do not match your HW#5 §2 Goals and Objectives.** Goals and objectives match HW#5 §2, but the repository has **extra and duplicate items**.
+> See [the instructor issue](https://github.com/miketruong91/CPSC490-G08-Crime-Busters/issues/48) for your goals and objectives as submitted, our evaluation and the fix checklist.
 
 **Start here:** Add sp: labels to every story and unparented task in a Sprint milestone, close junk epics #6/#7, and fill the template placeholders in task bodies.
 
@@ -358,6 +381,10 @@ Everything still open, in the order to fix it:
 
 ⚠️ **Partial** · chain ⚠️ Gaps · 18 issues (6 open) · Sprint 1 milestone: 5 open, 20 closed · **Sprint 1 review Thu Oct 15**, Sprint 2 review Thu Oct 29
 
+> [!CAUTION]
+> **HW#5 check (Oct 12): your epics and user stories do not match your HW#5 §2 Goals and Objectives.** The stories match, but **HW#5 §2 cites placeholder numbers** ([Epic:#1]–[Epic:#5], [Story#1]/[Story#2]) instead of the real issues, and two epic titles differ from §2.
+> See [the instructor issue](https://github.com/CharlesSinde/CPSC490-G12-ACJMM/issues/82) for your goals and objectives as submitted, our evaluation and the fix checklist.
+
 **Start here:** Write section 2 Goals and Objectives, finish epic #57 (real goal text) and add epics/stories for parameter estimation, classifier baselines, GUI/CLI and explanation; fill the README (title still TBD, summary template).
 
 Everything still open, in the order to fix it:
@@ -380,6 +407,10 @@ Everything still open, in the order to fix it:
 ### G13 · BYKX: Assignment Motivation Initiative Year-Round Assistant
 
 ✅ **Aligned** · chain ❌ Broken · 25 issues (24 open) · Sprint 1 milestone: 9 open, 1 closed · **Sprint 1 review Thu Oct 15**, Sprint 2 review Thu Oct 29
+
+> [!WARNING]
+> **HW#5 check (Oct 12): your epics and user stories do not match your HW#5 §2 Goals and Objectives.** Goals 1–3 and their objectives match, but the repository has a **Goal 0 epic (#30) with stories #31–#33** that HW#5 §2 does not have, and §2 cites no issue numbers.
+> See [the instructor issue](https://github.com/ktnwin/CPSC490-G13-BYKX/issues/50) for your goals and objectives as submitted, our evaluation and the fix checklist.
 
 **Start here:** Make each story title the section 2 objective verbatim (drop the 'Objective n.n:' prefix), fill the placeholder bodies, give each story its own sp: and a Sprint milestone, and reconcile the platform (desktop vs web vs mobile).
 
@@ -404,6 +435,10 @@ Everything still open, in the order to fix it:
 ### G14 · Cyber Squad: Rogue-Lite Cyber Sandbox
 
 ❌ **Mismatch** · chain ❌ Broken · 4 issues (4 open) · Sprint 1 milestone: 2 open, 2 closed · **Sprint 1 review Thu Oct 15**, Sprint 2 review Thu Oct 29
+
+> [!CAUTION]
+> **HW#5 check (Oct 12): your epics and user stories do not match your HW#5 §2 Goals and Objectives.** The repository **does not reflect HW#5 §2 at all**: it has one epic, #8 *Create web scanner*, and no stories. HW#5 §2 has 2 goals and 10 objectives for a cybersecurity training sandbox.
+> See [the instructor issue](https://github.com/jvillacorte/CPSC490-G14-Cyber-Squad/issues/21) for your goals and objectives as submitted, our evaluation and the fix checklist.
 
 **Start here:** Agree on one project (the proposal is the Cyber Sandbox), commit the proposal text into proposal.md, write §2 goals, and replace the web scanner epic with epics and stories for the sandbox.
 
@@ -431,6 +466,10 @@ Everything still open, in the order to fix it:
 ### G15 · HIBBI-01: Low End Hardware ECS Game Engine with Game
 
 ⚠️ **Partial** · chain ❌ Broken · 6 issues (4 open) · Sprint 1 milestone: 2 open, 0 closed · **Sprint 1 review Thu Oct 15**, Sprint 2 review Thu Oct 29
+
+> [!CAUTION]
+> **HW#5 check (Oct 12): your epics and user stories do not match your HW#5 §2 Goals and Objectives.** The repository **does not reflect HW#5 §2**: it has one epic, #6 *Setting up*, with one story, #9 *Window and Renderer*. HW#5 §2 has 2 goals (*Game Demo*, *Game Engine*) and 8 objectives.
+> See [the instructor issue](https://github.com/Isaiah714/CPSC490-G15-HIBBI-01/issues/23) for your goals and objectives as submitted, our evaluation and the fix checklist.
 
 **Start here:** Write §2 goals and objectives (rendering, ECS, game creation, benchmarking), then retitle #6 and #9 to match, file stories for the missing objectives, and stop committing directly to main (4 direct commits).
 
@@ -477,6 +516,10 @@ Everything still open, in the order to fix it:
 
 ❌ **No issues** · chain ❌ Broken · 0 issues (0 open) · Sprint 1 milestone: 0 open, 0 closed · **Sprint 1 review Thu Oct 22**, Sprint 2 review Thu Nov 5
 
+> [!CAUTION]
+> **HW#5 check (Oct 12): your epics and user stories do not match your HW#5 §2 Goals and Objectives.** Your repository has **no epics or user stories**. HW#5 §2 lists 2 goals and 5 objectives with placeholder numbers (#〈1〉, #〈2〉).
+> See [the instructor issue](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/13) for your goals and objectives as submitted, our evaluation and the fix checklist.
+
 **Start here:** Copy the abstract and introduction into proposal/proposal.md, write section 2, file Sprint 1 tasks with sp: for the five core systems (and open a Sprint board), link each from proposal.md as typed references, and open PRs into develop that close them.
 
 Everything still open, in the order to fix it:
@@ -494,6 +537,10 @@ Everything still open, in the order to fix it:
 ### G18 · Team ProStrats: Project Rogue
 
 ⚠️ **Process only** · chain ❌ Broken · 12 issues (4 open) · Sprint 1 milestone: 1 open, 7 closed · **Sprint 1 review Thu Oct 22**, Sprint 2 review Thu Nov 5
+
+> [!WARNING]
+> **HW#5 check (Oct 12): your epics and user stories do not match your HW#5 §2 Goals and Objectives.** Goals 1–3 match (epics #29–#31, stories #32–#41), but the repository has **two extra epics not in HW#5 §2**: #17 (*playable and extensible prototype*, story #18) and #19 (*capstone proposal*, story #20).
+> See [the instructor issue](https://github.com/austin2578/CPSC490-G18-ProStrats/issues/43) for your goals and objectives as submitted, our evaluation and the fix checklist.
 
 **Start here:** Write proposal §2 with one objective per core system (classes, weapon Mastery, attributes/boons, branching rooms, combat, playtest measures), file each as a story under an epic titled verbatim from §2 with its own sp: and Sprint milestone, and link every issue from proposal.md as typed references.
 
@@ -544,6 +591,10 @@ Everything still open, in the order to fix it:
 ### G20 · Solos: Insomnia
 
 ✅ **Aligned** · chain ⚠️ Gaps · 16 issues (16 open) · Sprint 1 milestone: 5 open, 0 closed · **Sprint 1 review Thu Oct 22**, Sprint 2 review Thu Nov 5
+
+> [!WARNING]
+> **HW#5 check (Oct 12): your epics and user stories do not match your HW#5 §2 Goals and Objectives.** Goals and objectives match HW#5 §2, but the **story numbering differs**: the repository uses *Objective 12.1, 17.1, 21.1* (issue numbers) where §2 uses 1.1, 2.1, 3.1.
+> See [the instructor issue](https://github.com/muntay89/CPSC490-G20-Solos/issues/31) for your goals and objectives as submitted, our evaluation and the fix checklist.
 
 **Start here:** Write §2 in proposal.md with each goal and objective verbatim, cite all 8 stories there as typed references and the 5 tasks in §4, give the 8 stories sp: plus a Sprint 1 milestone, and add the project title to the proposal.
 
