@@ -186,8 +186,6 @@ The goals and objectives are listed in §2 as epics and user stories. The follow
 | [[task:#34]](https://github.com/sopper75/CPSC490-G19-TitanSecurity/issues/34) | task | Add #23 and #26-#29 to §4 | Standalone | dappurs | Sprint 1 |
 
 
-
-
 ## 5. Project Outcomes
 
 > Describe the outcomes or deliverables, e.g., final project report, user
