@@ -6,22 +6,15 @@
 >
 > The section **Why teams are stuck** explains the patterns behind most cards. Most teams are one merged pull request away from a much better card: §2 of your proposal, merged into `develop`.
 
-> [!NOTE]
-> **HW#5 check (Oct 12, updated Oct 17): Goals and Objectives may change.** Some sponsors and teams have revised §2 since HW#5, and that is allowed as long as the new epics and user stories still make sense. The boards of these 8 groups still differ from what they submitted in HW#5, so check that each difference is intentional and written down:
-> **Board differs from HW#5 §2:** [**G06**](https://github.com/Joshbolus/CPSC490-G06-GapWise/issues/15) · [**G12**](https://github.com/CharlesSinde/CPSC490-G12-ACJMM/issues/82) · [**G14**](https://github.com/jvillacorte/CPSC490-G14-Cyber-Squad/issues/21) · [**G17**](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/13)
-> **Extra, duplicate or misnumbered items:** [**G07**](https://github.com/CPSC490-Team-Proj/CPSC490-G07-MightyMorphin/issues/33) · [**G08**](https://github.com/miketruong91/CPSC490-G08-Crime-Busters/issues/48) · [**G18**](https://github.com/austin2578/CPSC490-G18-ProStrats/issues/43) · [**G20**](https://github.com/muntay89/CPSC490-G20-Solos/issues/31)
->
-> **To change a goal or objective:** (1) update proposal.md §2 first, in a PR whose description says why (a sponsor request or a team decision); (2) keep one epic per goal and one user story per measurable objective, titled with the objective; (3) close the epics and stories you no longer need as "not planned" with a one-line reason, or move them under the new ones. Then close the instructor issue in your repository with a comment pointing to that PR. **Sprint 2 is planned from your current §2**, not from HW#5.
-
-**CPSC 490 · Fall 2026 · swept 2026-10-18 04:39 UTC.** The previous edition (2026-10-15) is kept in git history.
+**CPSC 490 · Fall 2026 · swept 2026-10-19 16:50 UTC.** The previous edition (2026-10-18) is kept in git history.
 
 This page compares each team's **issue board** with what its **own proposal** says it will build. **Find your group below: your card lists everything still open for your team, in the order to fix it.** The rules and the full tables are at the end.
 
 **Jump to your group:**
 
-| [**G01** ✅](#g01) | [**G02** ✅](#g02) | [**G03** ⚠️](#g03) | [**G04** ✅](#g04) | [**G05** ✅](#g05) | [**G06** ✅](#g06) | [**G07** ✅](#g07) | [**G08** ✅](#g08) | [**G09** ✅](#g09) | [**G10** ✅](#g10) |
+| [**G01** ✅](#g01) | [**G02** ✅](#g02) | [**G03** ✅](#g03) | [**G04** ✅](#g04) | [**G05** ✅](#g05) | [**G06** ✅](#g06) | [**G07** ✅](#g07) | [**G08** ✅](#g08) | [**G09** ✅](#g09) | [**G10** ✅](#g10) |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| [**G11** ⚠️](#g11) | [**G12** ✅](#g12) | [**G13** ✅](#g13) | [**G14** ✅](#g14) | [**G15** ✅](#g15) | [**G16** ✅](#g16) | [**G17** ⚠️](#g17) | [**G18** ✅](#g18) | [**G19** ✅](#g19) | [**G20** ✅](#g20) |
+| [**G11** ✅](#g11) | [**G12** ✅](#g12) | [**G13** ✅](#g13) | [**G14** ✅](#g14) | [**G15** ✅](#g15) | [**G16** ✅](#g16) | [**G17** ⚠️](#g17) | [**G18** ✅](#g18) | [**G19** ✅](#g19) | [**G20** ✅](#g20) |
 
 **New to git or the board? Start with [First Steps](https://kyoungshin.github.io/CPSC490/first-steps.html)**: HW#4/HW#5 to the Sprint Board, every command listed.
 
@@ -47,9 +40,9 @@ Across the 20 repositories, the same few things hold most teams back. They're li
 
 **1. The proposal hasn't reached `proposal/proposal.md` yet** (4 groups: G06, G08, G09, G15). §2 *Goals and Objectives* is still the template on both `main` and `develop`. Every other check on this page starts from that file, so until §2 is merged the page shows *0 issues linked*, even for groups that already have user stories on their board (G06, G08, G09, G15). **Do this first:** copy §2 from your HW#4/HW#5 draft into `proposal/proposal.md`, open one pull request into `develop`, and merge it this week.
 
-**2. Finished work is sitting in branches and open pull requests** (10 groups: G01, G03, G05, G06, G09, G11, G12, G13, G16, G19). This page, the harness and the sprint report read only `develop` and `main`, so a section drafted on a branch doesn't count yet. **Do this:** give every pull request a reviewer the day it opens, and merge (or close) it within two days. Delete branches you've abandoned.
+**2. Finished work is sitting in branches and open pull requests** (12 groups: G01, G02, G03, G05, G06, G09, G11, G12, G13, G16, G18, G19). This page, the harness and the sprint report read only `develop` and `main`, so a section drafted on a branch doesn't count yet. **Do this:** give every pull request a reviewer the day it opens, and merge (or close) it within two days. Delete branches you've abandoned.
 
-**4. The board is a list, not a plan yet.** In 15 groups (G02, G03, G04, G05, G06, G07, G09, G10, G12, G13, G14, G15, G17, G19, G20) at least half the open issues have no assignee, and 18 groups (G01, G02, G03, G04, G05, G06, G07, G08, G09, G10, G11, G12, G13, G14, G15, G18, G19, G20) have work items without their own `sp:` and `Sprint N` milestone. The sprint report can only count what's labeled. **Do this at your Sprint 1 review:** every card you commit to Sprint 2 gets one assignee, `sp:`, a `priority:` and the `Sprint 2` milestone before the meeting ends.
+**4. The board is a list, not a plan yet.** In 13 groups (G02, G03, G04, G06, G07, G09, G10, G12, G14, G15, G17, G19, G20) at least half the open issues have no assignee, and 18 groups (G01, G02, G03, G04, G05, G06, G07, G08, G09, G10, G11, G12, G13, G14, G15, G18, G19, G20) have work items without their own `sp:` and `Sprint N` milestone. The sprint report can only count what's labeled. **Do this at your Sprint 1 review:** every card you commit to Sprint 2 gets one assignee, `sp:`, a `priority:` and the `Sprint 2` milestone before the meeting ends.
 
 **5. Changes skip the pull-request step** (3 or more direct pushes in 8 groups: G01, G06, G07, G10, G15, G16, G17, G19). A direct push closes no issue and leaves nothing to review. **Do this:** turn on branch protection (*Settings → Branches → Add rule* for `main` and `develop`: *Require a pull request before merging*), so the repository enforces it for you.
 
@@ -59,21 +52,22 @@ Across the 20 repositories, the same few things hold most teams back. They're li
 
 ## Class at a glance
 
-- ✅ **Aligned:** 17 (G01, G02, G04, G05, G06, G07, G08, G09, G10, G12, G13, G14, G15, G16, G18, G19, G20)
-- ⚠️ **Partial:** 3 (G03, G11, G17)
+- ✅ **Aligned:** 19 (G01, G02, G03, G04, G05, G06, G07, G08, G09, G10, G11, G12, G13, G14, G15, G16, G18, G19, G20)
+- ⚠️ **Partial:** 1 (G17)
 - ⚠️ **Process only** (writing, meeting and setup tasks; no project features): 0 (none)
 - ❌ **Mismatch** (board or README about a different project): 0 (none)
 - ❌ **No issues yet:** 0 (none)
-- Team-filed issues: **565** across 20 groups (131 new since 2026-10-15).
+- Team-filed issues: **580** across 20 groups (6 new since 2026-10-18).
 
-### What changed since 2026-10-15
+### What changed since 2026-10-18
 
-- **This edition re-checks Segment 2 only (G11–G15).** Every other group is carried over unchanged from the 10-15 edition.
-- **G14 went from ❌ Mismatch to ✅ Aligned.** It filed 2 goal epics and 18 measurable objective stories, §2 links all 20, and the README now names the same project as the proposal. Next: give each story a `Sprint N` milestone (stories carry no `sp:` of their own only when they sit under an objective; check the story-points table) and fill §4.
-- **G15 went from ⚠️ Partial to ✅ Aligned.** Stories #26–#33 are filled in under epics #24/#25 and the develop README describes the project. Benchmarking, the proposal's central goal, still has no issue, and `main` has no links yet.
-- **G11's chain went from broken to gaps.** proposal.md on develop now links 10 of 22 issues with typed references, and the objectives are measurable. Several proposal goals still have no issues, and the links reach `main` only when the open develop→main PR merges.
-- **G12 and G13 grew their backlogs** (G12 34→38 issues, G13 40→82). The new issues are linked from proposal.md, but every link is still bare: switch them to typed references (story:#N, task:#N and so on, each linked to its issue URL).
-- **G13's open develop→main PR comes from a fork.** Required checks never run on a pull request from a fork here, so it can't merge. Push the branch to the team repository and open the PR from there.
+- **This edition re-checks the 10 groups whose boards or READMEs changed since 10-18:** G01, G02, G03, G05, G06, G08, G10, G11, G13 and G18. The other 10 groups are carried over unchanged.
+- **G03 went from ⚠️ Partial to ✅ Aligned.** The revised four-goal §2 is now filed as stories, so the board matches proposal.md. Next: give stories #30–#48 a `Sprint N` milestone, merge duplicate stories #31/#32, add a story for Objective 3.1, and fill §4.
+- **G11 went from ⚠️ Partial to ✅ Aligned.** §2 on develop now states the three goals (live tracking, posts, prediction), and the board matches them. The README is still the course setup guide, and the links reach `main` only when the open develop→main PR merges.
+- **G05 typed all 11 §2 links and synced develop with main.** §4 is still a skeleton, so 9 of 20 issues remain unlinked.
+- **G13 links 66 issues from develop's proposal.md (up from 52), but all of them are bare.** Switch them to typed references (story:#N, task:#N and so on, each linked to its issue URL).
+- **G06 and G10 still have a broken chain:** proposal.md links none of their issues, and changes still land as direct commits on `main`/`develop` without a PR. G10 did close all of Sprint 1.
+- **G02's board grew from 40 to 45 issues after its sponsor meeting**, but §4 links only 18 of them and most PRs still go straight to `main`.
 
 <a name="groups" id="groups"></a>
 
@@ -81,9 +75,9 @@ Across the 20 repositories, the same few things hold most teams back. They're li
 
 **Jump to your group:**
 
-| [**G01** ✅](#g01) | [**G02** ✅](#g02) | [**G03** ⚠️](#g03) | [**G04** ✅](#g04) | [**G05** ✅](#g05) | [**G06** ✅](#g06) | [**G07** ✅](#g07) | [**G08** ✅](#g08) | [**G09** ✅](#g09) | [**G10** ✅](#g10) |
+| [**G01** ✅](#g01) | [**G02** ✅](#g02) | [**G03** ✅](#g03) | [**G04** ✅](#g04) | [**G05** ✅](#g05) | [**G06** ✅](#g06) | [**G07** ✅](#g07) | [**G08** ✅](#g08) | [**G09** ✅](#g09) | [**G10** ✅](#g10) |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| [**G11** ⚠️](#g11) | [**G12** ✅](#g12) | [**G13** ✅](#g13) | [**G14** ✅](#g14) | [**G15** ✅](#g15) | [**G16** ✅](#g16) | [**G17** ⚠️](#g17) | [**G18** ✅](#g18) | [**G19** ✅](#g19) | [**G20** ✅](#g20) |
+| [**G11** ✅](#g11) | [**G12** ✅](#g12) | [**G13** ✅](#g13) | [**G14** ✅](#g14) | [**G15** ✅](#g15) | [**G16** ✅](#g16) | [**G17** ⚠️](#g17) | [**G18** ✅](#g18) | [**G19** ✅](#g19) | [**G20** ✅](#g20) |
 
 *Status* is how well the board matches the proposal. *Chain* is the document-first path: `proposal.md` → issue → pull request. *Start here* is the reviewer's one most useful next action; the numbered list is everything else, in order.
 
@@ -93,20 +87,19 @@ Across the 20 repositories, the same few things hold most teams back. They're li
 
 ✅ **Aligned** · chain ⚠️ Gaps · 56 issues (41 open) · Sprint 1 milestone: 0 open, 14 closed · **Sprint 1 review Tue Oct 13**, Sprint 2 review Tue Oct 27
 
-**Start here:** Merge #70 and #61 into develop (and release to main), fill the README project summary and contact, then put sp: and a Sprint 2 milestone on the Sprint 2 tasks (#76-#88, #91-#94) and on stories #23-#28.
+**Start here:** Merge #70/#61 into develop so the 30 Sprint 2 issues (#64-#94) are cited in proposal section 4, then give those tasks sp: and drop sp: from epics #71-#74, #89, #90.
 
 Everything still open, in the order to fix it:
 
-1. *Unblock.* Review and merge (or close) your open pull requests #75, #70, #62, #61. Work in an open PR doesn't count yet.
-2. *Document.* Make `README.md` on `main` describe your project: title, sponsor code (if any), one-paragraph summary, Sprint Board link.
-3. *Link.* Cite 30 of 56 issues in `proposal.md` (epics and stories in §2, the rest in §4): #58, #64–#69, #71–#74, #76–#94.
-4. *Plan.* Give #9–#14, #18, #23–#28, #32, #33, #43, #47, #49, #51, #53, #55, #58, #64–#67, #76–#88, #91–#94 their own `sp:` label and a `Sprint N` milestone.
-5. *Plan.* Remove `sp:` from epics #71–#74, #89, #90.
-6. *Plan.* Assign 18 of 41 open issues to one person each.
-7. *Workflow.* Stop pushing straight to `main`/`develop` (6 direct commits so far): branch → pull request → review → merge. Turn on branch protection.
-8. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N` (14 of 29 PRs closed no issue).
+1. *Unblock.* Review and merge (or close) your open pull requests #96, #95, #70, #61. Work in an open PR doesn't count yet.
+2. *Link.* Cite 30 of 56 issues in `proposal.md` (epics and stories in §2, the rest in §4): #58, #64–#69, #71–#74, #76–#94.
+3. *Plan.* Give #9–#14, #18, #23–#28, #32, #33, #43, #47, #49, #51, #53, #55, #58, #64–#67, #76–#88, #91–#94 their own `sp:` label and a `Sprint N` milestone.
+4. *Plan.* Remove `sp:` from epics #71–#74, #89, #90.
+5. *Plan.* Assign 15 of 41 open issues to one person each.
+6. *Workflow.* Stop pushing straight to `main`/`develop` (6 direct commits so far): branch → pull request → review → merge. Turn on branch protection.
+7. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N` (14 of 31 PRs closed no issue).
 
-*Since 2026-10-15:* Filed 31 Sprint 2 issues (#64-#94: four design epics, a backtesting research epic, prototype v0 features, spec and research tasks), but only 26 of 56 issues are linked from proposal.md; the linking PRs (#70, #61) are still open and most new tasks lack sp:, while epics now carry sp: wrongly.
+*Since 2026-10-18:* Same issue board (56 issues, 26 linked); the two open PRs that would link the 30 Sprint 2 issues are still unmerged and two duplicate PRs into main were opened.
 
 [↑ Back to all groups](#groups)
 
@@ -114,20 +107,22 @@ Everything still open, in the order to fix it:
 
 ### G02 · Linux Larpers: Distributed Signal Capture for Multi-Node Analysis
 
-✅ **Aligned** · chain ⚠️ Gaps · 40 issues (23 open) · Sprint 1 milestone: 0 open, 14 closed · **Sprint 1 review Tue Oct 13**, Sprint 2 review Tue Oct 27
+✅ **Aligned** · chain ⚠️ Gaps · 45 issues (26 open) · Sprint 1 milestone: 0 open, 14 closed · **Sprint 1 review Tue Oct 13**, Sprint 2 review Tue Oct 27
 
-**Start here:** Sync develop with main, then fill proposal §4 with typed links to every non-story issue (#17, #18, #23-#25, #36-#41 and the Sprint 1 tasks) and give the leftover Sprint 1 tasks an sp:.
+**Start here:** Merge main into develop, fill proposal section 4 with typed [task:#N]/[feature:#N] links for the 27 unlinked issues, and give the Sprint 1 writing tasks sp: values.
 
 Everything still open, in the order to fix it:
 
-1. *Document.* Fill in **§4**: list your other work items (tasks, features, documents) there.
-2. *Link.* Cite 22 of 40 issues in `proposal.md` (epics and stories in §2, the rest in §4): #6, #8–#13, #15, #17, #18, #20–#25, #36–#41.
-3. *Plan.* Give #6, #8–#13, #15, #36–#41 their own `sp:` label and a `Sprint N` milestone.
-4. *Plan.* Assign all 23 open issues to one person each.
-5. *Workflow.* Stop pushing straight to `main`/`develop` (2 direct commits so far): branch → pull request → review → merge. Turn on branch protection.
-6. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N` (4 of 18 PRs closed no issue).
+1. *Unblock.* Review and merge (or close) your open pull request #71. Work in an open PR doesn't count yet.
+2. *Document.* Fill in **§4**: list your other work items (tasks, features, documents) there.
+3. *Scope.* Reviewer's notes on proposal elements with no issue yet, or that don't agree: Multi-node distribution (several nodes feeding one backend) has no explicit story; Goal 1 covers a single laptop scanner.
+4. *Link.* Cite 27 of 45 issues in `proposal.md` (epics and stories in §2, the rest in §4): #6, #8–#13, #15, #17, #18, #20–#25, #36–#41, #67–#70, #72.
+5. *Plan.* Give #6, #8–#13, #15, #36–#41, #70, #72 their own `sp:` label and a `Sprint N` milestone.
+6. *Plan.* Assign 23 of 26 open issues to one person each.
+7. *Workflow.* Stop pushing straight to `main`/`develop` (2 direct commits so far): branch → pull request → review → merge. Turn on branch protection.
+8. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N` (4 of 19 PRs closed no issue).
 
-*Since 2026-10-15:* Prototype/data/frontend stories (#45-#61) are unchanged but all five Sprint 1 proposal tasks closed and 14 PRs (#62-#66) merged, goal 0 was removed from §2, so 18 of 40 issues are linked (down from 24); §4 is still a skeleton and develop is stale.
+*Since 2026-10-18:* Board grew from 40 to 45 issues after the sponsor meeting (Flock removal #68, roles #69, meeting #70/#72); the section 2 revision removed Goal 0, but section 4 is still a skeleton and 18 of 45 issues are linked.
 
 [↑ Back to all groups](#groups)
 
@@ -135,24 +130,24 @@ Everything still open, in the order to fix it:
 
 ### G03 · California: Three AIs and Literate Programming
 
-⚠️ **Partial** · chain ⚠️ Gaps · 21 issues (13 open) · Sprint 1 milestone: 0 open, 6 closed · **Sprint 1 review Tue Oct 13**, Sprint 2 review Tue Oct 27
+✅ **Aligned** (was Partial) · chain ⚠️ Gaps · 29 issues (20 open) · Sprint 1 milestone: 0 open, 6 closed · **Sprint 1 review Tue Oct 13**, Sprint 2 review Tue Oct 27
 
-**Start here:** Add stories under epic #28 for equation-to-code generation and the literate-notebook output (and handwriting recognition), give every story an sp: and a Sprint 2 milestone, then link them as typed references in §2.
+**Start here:** Merge develop into main, fix the 5 bare links and the mis-numbered #31 link in section 2, close duplicate story #31/#32, and put the stories into a Sprint milestone.
 
 Everything still open, in the order to fix it:
 
 1. *Unblock.* 3 branches hold work that isn't in `develop`: `Elizabeth-7-7-patch-1`, `Sehaj36-patch-1`, `eccortes4-proposal-epic-issues`. Open a pull request for each, or delete the branch.
 2. *Document.* Fill in **§4**: list your other work items (tasks, features, documents) there.
-3. *Scope.* Reviewer's notes on proposal elements with no issue yet, or that don't agree: AI 2: equation-to-code generation; Literate-programming/notebook documentation output; End-to-end pipeline integration and computation of results; Handwriting recognition itself (stories only collect and sort inputs).
-4. *Link.* Cite 11 of 21 issues in `proposal.md` (epics and stories in §2, the rest in §4): #1, #2, #4, #5, #13, #15–#17, #20, #24, #39.
-5. *Link.* Rewrite 10 bare `#N` references as typed links, e.g. `[[story:#37]](https://github.com/eccortes4/CPSC490-G03-California/issues/37)`.
-6. *Plan.* Add 5 open issues to the board: #1, #20, #24, #27, #28.
-7. *Plan.* Give #1, #2, #20, #24, #30–#37, #39 their own `sp:` label and a `Sprint N` milestone.
-8. *Plan.* Assign all 13 open issues to one person each.
+3. *Scope.* Reviewer's notes on proposal elements with no issue yet, or that don't agree: Objective 3.1 (the model-training story itself); Goal 3 has only the loss-curve story.
+4. *Link.* Cite 13 of 29 issues in `proposal.md` (epics and stories in §2, the rest in §4): #1, #2, #4, #5, #13, #15–#17, #20, #24, #39, #41, #42.
+5. *Link.* Rewrite 5 bare `#N` references as typed links, e.g. `[[story:#44]](https://github.com/eccortes4/CPSC490-G03-California/issues/44)`.
+6. *Plan.* Add 5 open issues to the board: #1, #20, #24, #27, #42.
+7. *Plan.* Give #1, #2, #20, #24, #30–#32, #34–#37, #39, #41, #42, #45–#48 their own `sp:` label and a `Sprint N` milestone.
+8. *Plan.* Assign 18 of 20 open issues to one person each.
 9. *Workflow.* Stop pushing straight to `main`/`develop` (2 direct commits so far): branch → pull request → review → merge. Turn on branch protection.
-10. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N` (4 of 13 PRs closed no issue).
+10. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N` (4 of 14 PRs closed no issue).
 
-*Since 2026-10-15:* One new Sprint 2 task (#39, closed by merged PR #40 straight into main); still 10 of 21 issues linked and all as bare, untyped references, stories still lack sp:/Sprint, and §4 remains a skeleton.
+*Since 2026-10-18:* Revised section 2 on develop (four goals, stories #30-#48 filed, PR #49), so the board now matches proposal.md; moved from PARTIAL to ALIGNED, but main still has the old section 2 and links remain partly bare.
 
 [↑ Back to all groups](#groups)
 
@@ -176,22 +171,20 @@ Everything still open, in the order to fix it:
 
 ### G05 · Fighting Mongooses: WILS: Whale Identification/Location System
 
-✅ **Aligned** · chain ⚠️ Gaps · 19 issues (14 open) · Sprint 1 milestone: 0 open, 0 closed · **Sprint 1 review Tue Oct 13**, Sprint 2 review Tue Oct 27
+✅ **Aligned** · chain ⚠️ Gaps · 20 issues (11 open) · Sprint 1 milestone: 0 open, 7 closed · **Sprint 1 review Tue Oct 13**, Sprint 2 review Tue Oct 27
 
-**Start here:** Merge PR #34 so develop gets the typed §2 links, then add the remaining issues (#20, #23, #26, #29, #31, #33) to proposal §4 and give #20, #24, #25 a Sprint milestone.
+**Start here:** Fill proposal section 4 with typed [task:#N] links for the 9 unlinked issues, assign the stories to Sprint milestones, and merge the feature/15-direction-estimate branch via a PR into develop.
 
 Everything still open, in the order to fix it:
 
-1. *Unblock.* Review and merge (or close) your open pull requests #34, #32. Work in an open PR doesn't count yet.
+1. *Unblock.* 1 branch holds work that isn't in `develop`: `feature/15-direction-estimate`. Open a pull request for each, or delete the branch.
 2. *Document.* Fill in **§4**: list your other work items (tasks, features, documents) there.
-3. *Scope.* Reviewer's notes on proposal elements with no issue yet, or that don't agree: Identifying individual whales (only species-level identification is tracked); Microphone/hydrophone array setup or simulated array data (no issue for the hardware/data-collection side).
-4. *Link.* Cite 8 of 19 issues in `proposal.md` (epics and stories in §2, the rest in §4): #20, #23–#26, #29, #31, #33.
-5. *Link.* Rewrite 11 bare `#N` references as typed links, e.g. `[[story:#18]](https://github.com/M-Kwatcher/CPSC490-G05-Fighting-Mongooses/issues/18)`.
-6. *Plan.* Give #20, #23–#25 their own `sp:` label and a `Sprint N` milestone.
-7. *Plan.* Assign 7 of 14 open issues to one person each.
-8. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N`.
+3. *Link.* Cite 9 of 20 issues in `proposal.md` (epics and stories in §2, the rest in §4): #20, #23–#26, #29, #31, #33, #35.
+4. *Plan.* Give #23 its own `sp:` label and a `Sprint N` milestone.
+5. *Plan.* Assign 2 of 11 open issues to one person each.
+6. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N`.
 
-*Since 2026-10-15:* Large change: last edition found zero issues and an unmodified template; now 19 issues (2 epics, 9 stories with sp: in Sprint 2, writing tasks), proposal §1-2 filled with 11 linked items on main, 8 PRs (6 merged) and a Sprint board with a view.
+*Since 2026-10-18:* All 11 section 2 links are now typed and develop is synced with main; the board is otherwise unchanged and section 4 is still a skeleton.
 
 [↑ Back to all groups](#groups)
 
@@ -201,11 +194,7 @@ Everything still open, in the order to fix it:
 
 ✅ **Aligned** · chain ❌ Broken · 23 issues (22 open) · Sprint 1 milestone: 7 open, 1 closed · **Sprint 1 review Tue Oct 20**, Sprint 2 review Tue Nov 3
 
-> [!NOTE]
-> **HW#5 check (Oct 12): your board differs from your HW#5 §2 Goals and Objectives.** Changing them is allowed (Oct 17) when proposal.md §2 states the change and the epics and stories still make sense; otherwise bring the board back in line. HW#5 §2 has **3 goals and 14 objectives**, but the repository has only Goal 1 (epic #13) with one story (#14, Objective 1.1). Epics #3 *Home Page* and #4 *Create LLM prototype* and stories #5 and #6 are not in HW#5.
-> See [the instructor issue](https://github.com/Joshbolus/CPSC490-G06-GapWise/issues/15) for your goals and objectives as submitted, our evaluation and the fix checklist. Close it with a link to the PR once §2 and the board agree.
-
-**Start here:** Close or re-scope the old epics #3/#4 and stories #5/#6, link every epic and story from proposal §2 as typed references, and retarget PR #32 to develop.
+**Start here:** Write the 3 epics and 12 stories into proposal.md section 2 and every other issue into section 4 as typed links, open PRs into develop instead of pushing to main, and close or re-parent #3-#6.
 
 Everything still open, in the order to fix it:
 
@@ -215,13 +204,11 @@ Everything still open, in the order to fix it:
 4. *Link.* Cite all 23 issues in `proposal.md` (epics and stories in §2, the rest in §4): #3–#6, #10, #13, #14, #16–#31.
 5. *Plan.* Add 4 open issues to the board: #3–#6.
 6. *Plan.* Give #5, #6 their own `sp:` label and a `Sprint N` milestone.
-7. *Plan.* Remove `sp:` from #25: they're under a user story, which carries the points.
-8. *Plan.* Remove `sp:` from epics #13, #20, #27.
-9. *Plan.* Assign 17 of 22 open issues to one person each.
-10. *Workflow.* Stop pushing straight to `main`/`develop` (18 direct commits so far): branch → pull request → review → merge. Turn on branch protection.
-11. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N`.
+7. *Plan.* Assign 17 of 22 open issues to one person each.
+8. *Workflow.* Stop pushing straight to `main`/`develop` (18 direct commits so far): branch → pull request → review → merge. Turn on branch protection.
+9. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N`.
 
-*Since 2026-10-15:* Filed the new Goal 1-3 epics and 14 stories (#13-#31) with sp: and Sprints 1-3 in the last two days; still 0 issues linked from proposal.md, 18 direct commits on main and 1 of 2 PRs still open into main.
+*Since 2026-10-18:* Board unchanged (23 issues, still 0 linked); one more PR (#33) merged into main and the 18 direct commits to main remain.
 
 [↑ Back to all groups](#groups)
 
@@ -230,10 +217,6 @@ Everything still open, in the order to fix it:
 ### G07 · Mighty Morphin: Online Material Database
 
 ✅ **Aligned** · chain ⚠️ Gaps · 25 issues (22 open) · Sprint 1 milestone: 7 open, 3 closed · **Sprint 1 review Tue Oct 20**, Sprint 2 review Tue Nov 3
-
-> [!NOTE]
-> **HW#5 check (Oct 12): your board differs from your HW#5 §2 Goals and Objectives.** Changing them is allowed (Oct 17) when proposal.md §2 states the change and the epics and stories still make sense; otherwise bring the board back in line. Goals 1–3 match, but the **issue numbers in HW#5 §2 are off by one from Goal 3 on**, and the repository has items HW#5 does not.
-> See [the instructor issue](https://github.com/CPSC490-Team-Proj/CPSC490-G07-MightyMorphin/issues/33) for your goals and objectives as submitted, our evaluation and the fix checklist. Close it with a link to the PR once §2 and the board agree.
 
 **Start here:** Make the README describe the Online Material Database (it is still the course setup guide), then start Sprint 1 stories #12-#16 through PRs into develop that say Closes #N.
 
@@ -255,13 +238,9 @@ Everything still open, in the order to fix it:
 
 ### G08 · Crime Busters: Interactive Crime Map and Database
 
-✅ **Aligned** · chain ⚠️ Gaps · 36 issues (34 open) · Sprint 1 milestone: 12 open, 1 closed · **Sprint 1 review Tue Oct 20**, Sprint 2 review Tue Nov 3
+✅ **Aligned** · chain ⚠️ Gaps · 36 issues (31 open) · Sprint 1 milestone: 12 open, 1 closed · **Sprint 1 review Tue Oct 20**, Sprint 2 review Tue Nov 3
 
-> [!NOTE]
-> **HW#5 check (Oct 12): your board differs from your HW#5 §2 Goals and Objectives.** Changing them is allowed (Oct 17) when proposal.md §2 states the change and the epics and stories still make sense; otherwise bring the board back in line. Goals and objectives match HW#5 §2, but the repository has **extra and duplicate items**.
-> See [the instructor issue](https://github.com/miketruong91/CPSC490-G08-Crime-Busters/issues/48) for your goals and objectives as submitted, our evaluation and the fix checklist. Close it with a link to the PR once §2 and the board agree.
-
-**Start here:** Close duplicate stories #45/#46/#47 and stray epics #6/#7, remove sp: from task #36 (it sits under story #28), then add typed links for all remaining issues to proposal.md §2/§4.
+**Start here:** Close empty duplicate #47, remove sp: from task #36 (it sits under story #28), then fill proposal.md §2 and §4 (still the template skeleton) with typed [epic:]/[story:]/[task:] links for all open issues.
 
 Everything still open, in the order to fix it:
 
@@ -269,13 +248,13 @@ Everything still open, in the order to fix it:
 2. *Document.* Fill in **§4**: list your other work items (tasks, features, documents) there.
 3. *Link.* Cite 29 of 36 issues in `proposal.md` (epics and stories in §2, the rest in §4): #6–#13, #17–#24, #27, #29–#36, #42, #45–#47.
 4. *Link.* Rewrite 7 bare `#N` references as typed links, e.g. `[[story:#28]](https://github.com/miketruong91/CPSC490-G08-Crime-Busters/issues/28)`.
-5. *Plan.* Add 4 open issues to the board: #6, #7, #45, #47.
+5. *Plan.* Add 1 open issue to the board: #47.
 6. *Plan.* Give #42, #45–#47 their own `sp:` label and a `Sprint N` milestone.
 7. *Plan.* Remove `sp:` from #36: they're under a user story, which carries the points.
-8. *Plan.* Assign 14 of 34 open issues to one person each.
+8. *Plan.* Assign 12 of 31 open issues to one person each.
 9. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N` (1 of 5 PRs closed no issue).
 
-*Since 2026-10-15:* Three duplicate objective issues (#45-#47) were created 10-12 (#46 already closed); proposal.md still links only 7 of 36 issues, all bare, and PR flow is otherwise unchanged.
+*Since 2026-10-18:* Stray epics #6/#7 and duplicate stories #45/#46 were closed since 10-18, but empty duplicate #47 remains open and proposal.md is still the skeleton linking only 7 of 36 issues, all bare.
 
 [↑ Back to all groups](#groups)
 
@@ -299,7 +278,7 @@ Everything still open, in the order to fix it:
 8. *Plan.* Assign 16 of 23 open issues to one person each.
 9. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N` (1 of 8 PRs closed no issue).
 
-*Since 2026-10-15:* Chain improved from BROKEN: 12 of 27 issues now linked from proposal.md on main (bare, not typed), 4 issues closed and 8 tied to PRs (3 merged); stories #29-#38 still lack sp: and Sprint milestones.
+*Since 2026-10-18:* Chain improved from BROKEN: 12 of 27 issues now linked from proposal.md on main (bare, not typed), 4 issues closed and 8 tied to PRs (3 merged); stories #29-#38 still lack sp: and Sprint milestones.
 
 [↑ Back to all groups](#groups)
 
@@ -307,20 +286,20 @@ Everything still open, in the order to fix it:
 
 ### G10 · Team Jiddak: On-Chain Stablecoin Flow and Wash Trading Detection
 
-✅ **Aligned** · chain ❌ Broken · 22 issues (12 open) · Sprint 1 milestone: 3 open, 9 closed · **Sprint 1 review Tue Oct 20**, Sprint 2 review Tue Nov 3
+✅ **Aligned** · chain ❌ Broken · 22 issues (12 open) · Sprint 1 milestone: 0 open, 9 closed · **Sprint 1 review Tue Oct 20**, Sprint 2 review Tue Nov 3
 
-**Start here:** Link epics #15/#23/#24 and stories #25-#33 from proposal.md §2 and the tasks from §4 as typed references, fix epics #23/#24 whose bodies hold unrelated text ('Members' data is private...'), and stop committing straight to main.
+**Start here:** Add typed links to proposal.md (epics #15/#23/#24 and stories #25-#33 in §2, task issues in §4), fix epic #23/#24 bodies (still contain unrelated 'Members' data is private' text), and give the 9 stories Sprint-appropriate tasks.
 
 Everything still open, in the order to fix it:
 
-1. *Scope.* Reviewer's notes on proposal elements with no issue yet, or that don't agree: Validation strategy (synthetic ring injection, known case studies, manual precision review) described in Proposed Approaches has no objective or issue; Address-label enrichment (exchanges, bridges, routers) used to control false positives.
+1. *Scope.* Reviewer's notes on proposal elements with no issue yet, or that don't agree: Validation strategy (synthetic ring injection, known case studies, manual precision review) from Proposed Approaches has no objective or issue; Address-label enrichment (exchanges, bridges, routers) used to control false positives.
 2. *Link.* Cite all 22 issues in `proposal.md` (epics and stories in §2, the rest in §4): #3–#9, #13, #15, #18, #20, #23–#33.
 3. *Plan.* Give #3, #6, #13 their own `sp:` label and a `Sprint N` milestone.
 4. *Plan.* Assign all 12 open issues to one person each.
 5. *Workflow.* Stop pushing straight to `main`/`develop` (28 direct commits so far): branch → pull request → review → merge. Turn on branch protection.
 6. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N` (3 of 6 PRs closed no issue).
 
-*Since 2026-10-15:* Epics #23/#24 and stories #25-#33 now exist (verdict moves from PARTIAL to ALIGNED), board has 5 views, but proposal.md still links 0 of 22 issues and 14 direct commits to main remain.
+*Since 2026-10-18:* Sprint 1 is now fully closed (0 open, 9 closed) and the board is linked, but proposal.md still links 0 of 22 issues and the 14 direct commits remain.
 
 [↑ Back to all groups](#groups)
 
@@ -328,16 +307,16 @@ Everything still open, in the order to fix it:
 
 ### G11 · 5 Guys: Marathon Tracker
 
-⚠️ **Partial** · chain ⚠️ Gaps · 22 issues (12 open) · Sprint 1 milestone: 2 open, 8 closed · **Sprint 1 review Thu Oct 15**, Sprint 2 review Thu Oct 29
+✅ **Aligned** (was Partial) · chain ⚠️ Gaps · 22 issues (12 open) · Sprint 1 milestone: 2 open, 8 closed · **Sprint 1 review Thu Oct 15**, Sprint 2 review Thu Oct 29
 
-**Start here:** Merge PR #39 so main carries section 2, link the 12 unlinked issues (#37, #38, #34, #20, #17, #9, #8, #7, #3 and #13 as typed) in section 4, and settle whether the product is ML run analysis (proposal) or live event tracking plus posts (board); make the README describe it.
+**Start here:** Merge PR #39 so main carries §2, replace the README (still the course setup guide on both branches) with the Marathon Tracker README, and add typed task links in §4.
 
 Everything still open, in the order to fix it:
 
 1. *Unblock.* Review and merge (or close) your open pull request #39. Work in an open PR doesn't count yet.
 2. *Document.* Make `README.md` on `main` describe your project: title, sponsor code (if any), one-paragraph summary, Sprint Board link.
 3. *Document.* Fill in **§4**: list your other work items (tasks, features, documents) there.
-4. *Scope.* Reviewer's notes on proposal elements with no issue yet, or that don't agree: Use of publicly available marathon datasets as the baseline; Recommending more efficient running patterns or routes (only finish-time prediction is tracked); Storing run history per runner (no explicit objective); Accessibility / low-cost goal (no objective or acceptance criterion).
+4. *Scope.* Reviewer's notes on proposal elements with no issue yet, or that don't agree: Public marathon datasets as the ML baseline and recommending more efficient routes (Abstract/HW#4) have no objective; Low-cost/accessibility aim has no acceptance criterion.
 5. *Link.* Cite 12 of 22 issues in `proposal.md` (epics and stories in §2, the rest in §4): #1–#3, #6–#9, #17, #20, #34, #37, #38.
 6. *Link.* Rewrite 1 bare `#N` reference as typed links, e.g. `[[story:#13]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/13)`.
 7. *Plan.* Give #1, #2, #6, #13, #34 their own `sp:` label and a `Sprint N` milestone.
@@ -345,7 +324,7 @@ Everything still open, in the order to fix it:
 9. *Workflow.* Stop pushing straight to `main`/`develop` (2 direct commits so far): branch → pull request → review → merge. Turn on branch protection.
 10. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N`.
 
-*Since 2026-10-15:* The section 2 goals and 1.2 PRs merged: proposal.md on develop now links 10 of 22 issues (9 typed, was 2 bare), objectives were reworded into measurable targets, and a develop-to-main PR (#39) is open, but the README is still the setup guide and main lacks the links.
+*Since 2026-10-18:* Little since 10-18: PR #39 (develop to main) is still open, README is still the setup guide, #34 and #13 are now closed, and develop still links 10 of 22 issues.
 
 [↑ Back to all groups](#groups)
 
@@ -354,10 +333,6 @@ Everything still open, in the order to fix it:
 ### G12 · ACJMM: Explainable 6G Waveform Classification
 
 ✅ **Aligned** · chain ⚠️ Gaps · 38 issues (18 open) · Sprint 1 milestone: 0 open, 41 closed · **Sprint 1 review Thu Oct 15**, Sprint 2 review Thu Oct 29
-
-> [!NOTE]
-> **HW#5 check (Oct 12): your board differs from your HW#5 §2 Goals and Objectives.** Changing them is allowed (Oct 17) when proposal.md §2 states the change and the epics and stories still make sense; otherwise bring the board back in line. The stories match, but **HW#5 §2 cites placeholder numbers** ([Epic:#1]–[Epic:#5], [Story#1]/[Story#2]) instead of the real issues, and two epic titles differ from §2.
-> See [the instructor issue](https://github.com/CharlesSinde/CPSC490-G12-ACJMM/issues/82) for your goals and objectives as submitted, our evaluation and the fix checklist. Close it with a link to the PR once §2 and the board agree.
 
 **Start here:** Give stories #63, #66, #67, #68, #70, #71 a Sprint milestone, add issues for baud/carrier estimation and robustness evaluation, and replace the README (still says Project title TBD).
 
@@ -374,7 +349,7 @@ Everything still open, in the order to fix it:
 9. *Workflow.* Stop pushing straight to `main`/`develop` (2 direct commits so far): branch → pull request → review → merge. Turn on branch protection.
 10. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N` (3 of 29 PRs closed no issue).
 
-*Since 2026-10-15:* Backlog grew from 34 to 38 issues (stories #83/#84, feature #88, task #85) and proposal.md now links 31 of 38 (all still bare, none typed); Sprint 1 is fully closed, but six stories still lack a Sprint milestone and the README is still template text.
+*Since 2026-10-18:* Backlog grew from 34 to 38 issues (stories #83/#84, feature #88, task #85) and proposal.md now links 31 of 38 (all still bare, none typed); Sprint 1 is fully closed, but six stories still lack a Sprint milestone and the README is still template text.
 
 [↑ Back to all groups](#groups)
 
@@ -382,20 +357,20 @@ Everything still open, in the order to fix it:
 
 ### G13 · BYKX: Assignment Motivation Initiative Year-Round Assistant
 
-✅ **Aligned** · chain ⚠️ Gaps · 82 issues (67 open) · Sprint 1 milestone: 0 open, 11 closed · **Sprint 1 review Thu Oct 15**, Sprint 2 review Thu Oct 29
+✅ **Aligned** · chain ⚠️ Gaps · 83 issues (68 open) · Sprint 1 milestone: 0 open, 11 closed · **Sprint 1 review Thu Oct 15**, Sprint 2 review Thu Oct 29
 
-**Start here:** Settle the platform (abstract and section 3 say Windows desktop, sections 4/5 say Python+JS web app) in proposal.md, then give stories #25-#27 a Sprint milestone and stand up Sprint 2 as a realistic scope (44 open issues, only 2 closed).
+**Start here:** Convert the 66 bare links in proposal.md to typed refs, merge develop into main (main links only 52), and give stories #25-#27 a Sprint milestone; Sprint 2 holds 44 open issues, so trim to a realistic scope.
 
 Everything still open, in the order to fix it:
 
-1. *Unblock.* Review and merge (or close) your open pull request #109. Work in an open PR doesn't count yet.
-2. *Link.* Cite 30 of 82 issues in `proposal.md` (epics and stories in §2, the rest in §4): #8, #10–#13, #15, #43, #44, #47, #87–#107.
-3. *Link.* Rewrite 52 bare `#N` references as typed links, e.g. `[[story:#86]](https://github.com/ktnwin/CPSC490-G13-BYKX/issues/86)`.
-4. *Plan.* Give #8, #10–#13, #15, #25–#27, #31–#34 their own `sp:` label and a `Sprint N` milestone.
-5. *Plan.* Assign 66 of 67 open issues to one person each.
-6. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N` (5 of 19 PRs closed no issue).
+1. *Unblock.* 3 branches hold work that isn't in `develop`: `feature/34-project-proposal`, `sprint1-patch-1`, `updated-proposal`. Open a pull request for each, or delete the branch.
+2. *Link.* Cite 17 of 83 issues in `proposal.md` (epics and stories in §2, the rest in §4): #8, #10–#13, #15, #30–#35, #43, #44, #47, #107, #111.
+3. *Link.* Rewrite 66 bare `#N` references as typed links, e.g. `[[story:#106]](https://github.com/ktnwin/CPSC490-G13-BYKX/issues/106)`.
+4. *Plan.* Give #8, #10–#13, #15, #25–#27, #31–#34, #44, #47, #111 their own `sp:` label and a `Sprint N` milestone.
+5. *Plan.* Assign 31 of 68 open issues to one person each.
+6. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N` (5 of 20 PRs closed no issue).
 
-*Since 2026-10-15:* Backlog grew from 40 to 82 issues (features and tasks #65-#106 under every objective) and proposal.md on main now links 52 (up from 12), all bare; PR #109 opens develop to main and objectives #25-#27 still lack a Sprint.
+*Since 2026-10-18:* Develop's proposal.md now links 66 of 83 issues (was 52 of 82) via PR #110, but all links are still bare, main still links only 52, and PR #109 was closed.
 
 [↑ Back to all groups](#groups)
 
@@ -403,11 +378,7 @@ Everything still open, in the order to fix it:
 
 ### G14 · Cyber Squad: Rogue-Lite Cyber Sandbox
 
-✅ **Aligned** (was Mismatch) · chain ⚠️ Gaps · 23 issues (21 open) · Sprint 1 milestone: 0 open, 4 closed · **Sprint 1 review Thu Oct 15**, Sprint 2 review Thu Oct 29
-
-> [!NOTE]
-> **HW#5 check (Oct 12): your board differs from your HW#5 §2 Goals and Objectives.** Changing them is allowed (Oct 17) when proposal.md §2 states the change and the epics and stories still make sense; otherwise bring the board back in line. The repository **does not reflect HW#5 §2 at all**: it has one epic, #8 *Create web scanner*, and no stories. HW#5 §2 has 2 goals and 10 objectives for a cybersecurity training sandbox.
-> See [the instructor issue](https://github.com/jvillacorte/CPSC490-G14-Cyber-Squad/issues/21) for your goals and objectives as submitted, our evaluation and the fix checklist. Close it with a link to the PR once §2 and the board agree.
+✅ **Aligned** · chain ⚠️ Gaps · 23 issues (21 open) · Sprint 1 milestone: 0 open, 4 closed · **Sprint 1 review Thu Oct 15**, Sprint 2 review Thu Oct 29
 
 **Start here:** Add sp: and a Sprint 2 milestone to all 18 stories (#24-#41; Sprint 2 is empty and ends 10-28), make #13 a parented task with sp:, and link all issues from proposal.md as typed refs.
 
@@ -423,7 +394,7 @@ Everything still open, in the order to fix it:
 8. *Workflow.* Stop pushing straight to `main`/`develop` (2 direct commits so far): branch → pull request → review → merge. Turn on branch protection.
 9. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N` (2 of 9 PRs closed no issue).
 
-*Since 2026-10-15:* From 3 process issues to 23 (epics #22/#23 and 18 measurable objective stories #24-#41); proposal.md section 2 now links all 20 epics/stories and the README names the same project, but no story has sp: or a Sprint milestone and links are untyped.
+*Since 2026-10-18:* From 3 process issues to 23 (epics #22/#23 and 18 measurable objective stories #24-#41); proposal.md section 2 now links all 20 epics/stories and the README names the same project, but no story has sp: or a Sprint milestone and links are untyped.
 
 [↑ Back to all groups](#groups)
 
@@ -431,7 +402,7 @@ Everything still open, in the order to fix it:
 
 ### G15 · HIBBI-01: Low End Hardware/ECS Architecture Game Engine with Game
 
-✅ **Aligned** (was Partial) · chain ⚠️ Gaps · 22 issues (11 open) · Sprint 1 milestone: 0 open, 7 closed · **Sprint 1 review Thu Oct 15**, Sprint 2 review Thu Oct 29
+✅ **Aligned** · chain ⚠️ Gaps · 22 issues (11 open) · Sprint 1 milestone: 0 open, 7 closed · **Sprint 1 review Thu Oct 15**, Sprint 2 review Thu Oct 29
 
 **Start here:** Add a benchmarking objective (ECS vs a baseline under entity count) and a memory-management objective, put stories #26-#33 into Sprint 2 (they have sp: but no milestone), and fill the epic/story bodies still holding template text.
 
@@ -447,7 +418,7 @@ Everything still open, in the order to fix it:
 8. *Workflow.* Stop pushing straight to `main`/`develop` (8 direct commits so far): branch → pull request → review → merge. Turn on branch protection.
 9. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N` (4 of 14 PRs closed no issue).
 
-*Since 2026-10-15:* Stories #26-#33 filled in under epics #24/#25 (ECS, renderer, editor, game loop), the develop README now describes the project, and 11 of 22 issues are linked from proposal.md on develop, but links are bare, section 2 is still skeleton, main has none, and benchmarking remains untracked.
+*Since 2026-10-18:* Stories #26-#33 filled in under epics #24/#25 (ECS, renderer, editor, game loop), the develop README now describes the project, and 11 of 22 issues are linked from proposal.md on develop, but links are bare, section 2 is still skeleton, main has none, and benchmarking remains untracked.
 
 [↑ Back to all groups](#groups)
 
@@ -468,7 +439,7 @@ Everything still open, in the order to fix it:
 5. *Workflow.* Stop pushing straight to `main`/`develop` (6 direct commits so far): branch → pull request → review → merge. Turn on branch protection.
 6. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N` (5 of 20 PRs closed no issue).
 
-*Since 2026-10-15:* Task #45 filed and PR #46 opened to convert the 21 bare links to typed references (not merged yet), README now links the Sprint board (still unreadable), more open PRs (#44, #46-#48) pending; 21 of 22 issues linked, 0 typed, still no direct-push growth.
+*Since 2026-10-18:* Task #45 filed and PR #46 opened to convert the 21 bare links to typed references (not merged yet), README now links the Sprint board (still unreadable), more open PRs (#44, #46-#48) pending; 21 of 22 issues linked, 0 typed, still no direct-push growth.
 
 [↑ Back to all groups](#groups)
 
@@ -478,10 +449,6 @@ Everything still open, in the order to fix it:
 
 ⚠️ **Partial** · chain ❌ Broken · 1 issues (1 open) · Sprint 1 milestone: 0 open, 0 closed · **Sprint 1 review Thu Oct 22**, Sprint 2 review Thu Nov 5
 
-> [!NOTE]
-> **HW#5 check (Oct 12): your board differs from your HW#5 §2 Goals and Objectives.** Changing them is allowed (Oct 17) when proposal.md §2 states the change and the epics and stories still make sense; otherwise bring the board back in line. Your repository has **no epics or user stories**. HW#5 §2 lists 2 goals and 5 objectives with placeholder numbers (#〈1〉, #〈2〉).
-> See [the instructor issue](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/13) for your goals and objectives as submitted, our evaluation and the fix checklist. Close it with a link to the PR once §2 and the board agree.
-
 **Start here:** Create the real issues now: epic Goal 2, stories for Objectives 1.1, 1.2, 2.1 and 2.2 (objective text verbatim, sp: points, Sprint 1 or 2 milestone), plus tasks for the proposal sections, put them on the Sprint board, then replace the made-up #1-#4 numbers in proposal.md with typed references to the real issue numbers.
 
 Everything still open, in the order to fix it:
@@ -489,12 +456,11 @@ Everything still open, in the order to fix it:
 1. *Board.* Create one **user story** per objective, titled with the objective's exact words.
 2. *Scope.* Reviewer's notes on proposal elements with no issue yet, or that don't agree: Goal 2 (find new artists and music) and its objectives 2.1 (Music class / Last.fm API) and 2.2 (LLM taste learning): no epic or stories; Objectives 1.1 (exoplanet API parser) and 1.2 (solar-system UI): no stories; Swipe feedback, playback/playlists/search; Any tasks, e.g. writing tasks for §1 to §4.
 3. *Link.* Cite all 1 issues in `proposal.md` (epics and stories in §2, the rest in §4): #15.
-4. *Plan.* Add 1 open issue to the board: #15.
-5. *Plan.* Assign all 1 open issues to one person each.
-6. *Workflow.* Stop pushing straight to `main`/`develop` (4 direct commits so far): branch → pull request → review → merge. Turn on branch protection.
-7. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N` (5 of 5 PRs closed no issue).
+4. *Plan.* Assign all 1 open issues to one person each.
+5. *Workflow.* Stop pushing straight to `main`/`develop` (4 direct commits so far): branch → pull request → review → merge. Turn on branch protection.
+6. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N` (5 of 5 PRs closed no issue).
 
-*Since 2026-10-15:* First team issue filed (#15 epic 'Goal 1', created 10-15, blank story list, no milestone, not on the board), §2 goals and objectives now written in proposal.md with placeholder issue numbers, and a develop PR (#14) merged; still 1 issue total, 0 linked, §4 skeleton, no sp:, no Sprint 1 milestone usage.
+*Since 2026-10-18:* First team issue filed (#15 epic 'Goal 1', created 10-15, blank story list, no milestone, not on the board), §2 goals and objectives now written in proposal.md with placeholder issue numbers, and a develop PR (#14) merged; still 1 issue total, 0 linked, §4 skeleton, no sp:, no Sprint 1 milestone usage.
 
 [↑ Back to all groups](#groups)
 
@@ -504,24 +470,21 @@ Everything still open, in the order to fix it:
 
 ✅ **Aligned** · chain ⚠️ Gaps · 27 issues (19 open) · Sprint 1 milestone: 15 open, 7 closed · **Sprint 1 review Thu Oct 22**, Sprint 2 review Thu Nov 5
 
-> [!NOTE]
-> **HW#5 check (Oct 12): your board differs from your HW#5 §2 Goals and Objectives.** Changing them is allowed (Oct 17) when proposal.md §2 states the change and the epics and stories still make sense; otherwise bring the board back in line. Goals 1–3 match (epics #29–#31, stories #32–#41), but the repository has **two extra epics not in HW#5 §2**: #17 (*playable and extensible prototype*, story #18) and #19 (*capstone proposal*, story #20).
-> See [the instructor issue](https://github.com/austin2578/CPSC490-G18-ProStrats/issues/43) for your goals and objectives as submitted, our evaluation and the fix checklist. Close it with a link to the PR once §2 and the board agree.
-
-**Start here:** Merge develop into main so the filled §2 appears there, add §4 typed links for tasks, and close or retype the untyped HW#4 issues (#5-#9, #13, #26).
+**Start here:** Merge develop into main so §2 appears there, add §4 typed task links (§4 is still skeleton), move the [epic:#29-31] cites out of §1 into §2, and close stub #13 and retire old epics #17/#19.
 
 Everything still open, in the order to fix it:
 
-1. *Document.* Fill in **§4**: list your other work items (tasks, features, documents) there.
-2. *Link.* Cite 14 of 27 issues in `proposal.md` (epics and stories in §2, the rest in §4): #2, #5–#9, #13, #15, #17–#20, #26, #28.
-3. *Link.* Move  to the right section (epics and stories in §2 only, everything else in §4).
-4. *Plan.* Add 2 open issues to the board: #13, #26.
-5. *Plan.* Give #2, #6–#9, #13, #18, #20, #26, #41 their own `sp:` label and a `Sprint N` milestone.
-6. *Plan.* Assign 9 of 19 open issues to one person each.
-7. *Workflow.* Stop pushing straight to `main`/`develop` (2 direct commits so far): branch → pull request → review → merge. Turn on branch protection.
-8. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N`.
+1. *Unblock.* Review and merge (or close) your open pull request #44. Work in an open PR doesn't count yet.
+2. *Document.* Fill in **§4**: list your other work items (tasks, features, documents) there.
+3. *Link.* Cite 14 of 27 issues in `proposal.md` (epics and stories in §2, the rest in §4): #2, #5–#9, #13, #15, #17–#20, #26, #28.
+4. *Link.* Move  to the right section (epics and stories in §2 only, everything else in §4).
+5. *Plan.* Add 2 open issues to the board: #13, #26.
+6. *Plan.* Give #2, #6–#9, #13, #18, #20, #26, #41 their own `sp:` label and a `Sprint N` milestone.
+7. *Plan.* Assign 7 of 19 open issues to one person each.
+8. *Workflow.* Stop pushing straight to `main`/`develop` (2 direct commits so far): branch → pull request → review → merge. Turn on branch protection.
+9. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N`.
 
-*Since 2026-10-15:* Epics #29-#31 and 10 stories (#32-#41) added, §2 links 13 typed refs on develop (was 0 of 12 linked), but §4 is still a skeleton, 14 issues are unlinked, and main still has the skeleton.
+*Since 2026-10-18:* Only change since 10-18 is PR #44 (shared movement) opened into develop; §4 is still skeleton, main still has the skeleton, and 13 of 27 issues remain linked.
 
 [↑ Back to all groups](#groups)
 
@@ -545,7 +508,7 @@ Everything still open, in the order to fix it:
 8. *Workflow.* Stop pushing straight to `main`/`develop` (64 direct commits so far): branch → pull request → review → merge. Turn on branch protection.
 9. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N` (2 of 10 PRs closed no issue).
 
-*Since 2026-10-15:* Task #34 and PR #35 (adds §4 links) opened, but the PR is unmerged into main, not develop; linked issues still 13 of 19 (68%, was 13 of 18) with 3 typed refs, §4 still a skeleton, Sprint 1 now 17 open and 4 closed, board holds 23 items but misses #34 and #23.
+*Since 2026-10-18:* Task #34 and PR #35 (adds §4 links) opened, but the PR is unmerged into main, not develop; linked issues still 13 of 19 (68%, was 13 of 18) with 3 typed refs, §4 still a skeleton, Sprint 1 now 17 open and 4 closed, board holds 23 items but misses #34 and #23.
 
 [↑ Back to all groups](#groups)
 
@@ -554,10 +517,6 @@ Everything still open, in the order to fix it:
 ### G20 · Solos: Insomnia
 
 ✅ **Aligned** · chain ⚠️ Gaps · 16 issues (16 open) · Sprint 1 milestone: 5 open, 0 closed · **Sprint 1 review Thu Oct 22**, Sprint 2 review Thu Nov 5
-
-> [!NOTE]
-> **HW#5 check (Oct 12): your board differs from your HW#5 §2 Goals and Objectives.** Changing them is allowed (Oct 17) when proposal.md §2 states the change and the epics and stories still make sense; otherwise bring the board back in line. Goals and objectives match HW#5 §2, but the **story numbering differs**: the repository uses *Objective 12.1, 17.1, 21.1* (issue numbers) where §2 uses 1.1, 2.1, 3.1.
-> See [the instructor issue](https://github.com/muntay89/CPSC490-G20-Solos/issues/31) for your goals and objectives as submitted, our evaluation and the fix checklist. Close it with a link to the PR once §2 and the board agree.
 
 **Start here:** Write §2 in proposal.md with each goal and objective verbatim, cite all 8 stories there as typed references and the 5 tasks in §4, give the 8 stories sp: plus a Sprint 1 milestone, and add the project title to the proposal.
 
@@ -572,7 +531,7 @@ Everything still open, in the order to fix it:
 7. *Workflow.* Stop pushing straight to `main`/`develop` (2 direct commits so far): branch → pull request → review → merge. Turn on branch protection.
 8. *Workflow.* In every pull request, replace the template text with what changed, and add `Closes #N` (1 of 3 PRs closed no issue).
 
-*Since 2026-10-15:* From zero issues to 16: three epics, eight stories, five Sprint 1 tasks, a Sprint board with every open issue, README rewritten as Insomnia on develop, and two PRs merged that close issues; only 3 epics are linked from proposal.md and stories lack sp:.
+*Since 2026-10-18:* From zero issues to 16: three epics, eight stories, five Sprint 1 tasks, a Sprint board with every open issue, README rewritten as Insomnia on develop, and two PRs merged that close issues; only 3 epics are linked from proposal.md and stories lack sp:.
 
 [↑ Back to all groups](#groups)
 
@@ -615,24 +574,24 @@ What `proposal/proposal.md` says on each branch (rule 2), and feature branches h
 
 | Group | `main` | `develop` | Not merged yet |
 |---|---|---|---|
-| G01 | §2 9 links · §4 17 links · 26 issues cited · 38 typed · 17 〈placeholders〉 | §2 9 links · §4 17 links · 26 issues cited · 36 typed · 17 〈placeholders〉 | 18-abstract-intro (2 commits not in develop); 43-update-goals-and-objectives (2 commits not in develop); 55-hw5-proposal (1 commit not in develop); 67-link-sprint2-items (5 commits not in develop); Damon (1 commit not in develop) |
-| G02 | §2 18 links · §4 skeleton · 18 issues cited · 18 typed · 40 〈placeholders〉 | §2 skeleton · §4 skeleton · 0 issues cited · 0 typed · 75 〈placeholders〉 | none |
-| G03 | §2 10 links · §4 skeleton · 10 issues cited · 0 typed · 42 〈placeholders〉 | §2 10 links · §4 skeleton · 10 issues cited · 0 typed · 45 〈placeholders〉 | Elizabeth-7-7-patch-1 (1 commit not in develop); Sehaj36-patch-1 (1 commit not in develop); eccortes4-proposal-epic-issues (1 commit not in develop) |
+| G01 | §2 9 links · §4 17 links · 26 issues cited · 38 typed · 17 〈placeholders〉 | §2 9 links · §4 17 links · 26 issues cited · 36 typed · 17 〈placeholders〉 | 18-abstract-intro (2 commits not in develop); 43-update-goals-and-objectives (2 commits not in develop); 55-hw5-proposal (4 commits not in develop); 67-link-sprint2-items (8 commits not in develop); Damon (1 commit not in develop); Sp2_Doc_Damon (18 commits not in develop) |
+| G02 | §2 18 links · §4 skeleton · 18 issues cited · 18 typed · 40 〈placeholders〉 | §2 skeleton · §4 skeleton · 0 issues cited · 0 typed · 75 〈placeholders〉 | proposal/remove_flock (25 commits not in develop) |
+| G03 | §2 10 links · §4 skeleton · 10 issues cited · 0 typed · 42 〈placeholders〉 | §2 16 links · §4 skeleton · 16 issues cited · 12 typed · 41 〈placeholders〉 | Elizabeth-7-7-patch-1 (1 commit not in develop); Sehaj36-patch-1 (1 commit not in develop); eccortes4-proposal-epic-issues (1 commit not in develop) |
 | G04 | §2 15 links · §4 9 links · 24 issues cited · 24 typed · 17 〈placeholders〉 | §2 15 links · §4 9 links · 24 issues cited · 24 typed · 17 〈placeholders〉 | none |
-| G05 | §2 11 links · §4 skeleton · 11 issues cited · 11 typed · 43 〈placeholders〉 | §2 11 links · §4 skeleton · 11 issues cited · 0 typed · 43 〈placeholders〉 | feature/31-sprint1-meetings (1 commit not in develop) |
-| G06 | §2 0 links · §4 skeleton · 0 issues cited · 0 typed · 47 〈placeholders〉 | §2 skeleton · §4 skeleton · 0 issues cited · 0 typed · 82 〈placeholders〉 | feature/14-document-upload (18 commits not in develop) |
+| G05 | §2 11 links · §4 skeleton · 11 issues cited · 11 typed · 43 〈placeholders〉 | §2 11 links · §4 skeleton · 11 issues cited · 11 typed · 43 〈placeholders〉 | feature/15-direction-estimate (4 commits not in develop) |
+| G06 | §2 0 links · §4 skeleton · 0 issues cited · 0 typed · 47 〈placeholders〉 | §2 skeleton · §4 skeleton · 0 issues cited · 0 typed · 82 〈placeholders〉 | Josh-branch (23 commits not in develop); feature/14-document-upload (20 commits not in develop) |
 | G07 | §2 16 links · §4 skeleton · 16 issues cited · 0 typed · 40 〈placeholders〉 | §2 16 links · §4 skeleton · 16 issues cited · 0 typed · 40 〈placeholders〉 | none |
 | G08 | §2 skeleton · §4 skeleton · 7 issues cited · 0 typed · 73 〈placeholders〉 | §2 skeleton · §4 skeleton · 7 issues cited · 0 typed · 73 〈placeholders〉 | none |
 | G09 | §2 skeleton · §4 skeleton · 12 issues cited · 0 typed · 62 〈placeholders〉 | §2 12 links · §4 skeleton · 12 issues cited · 0 typed · 53 〈placeholders〉 | feature/6-Related-Work-Table-and-9-AI-Usage-+-References (6 commits not in develop); feature/7-problem-statements (2 commits not in develop); feature/8-proposal-cleanup (10 commits not in develop); feature/11-update-readme (5 commits not in develop); feature/19-archive-hw4-draft (1 commit not in develop); proposal-draft (3 commits not in develop) |
 | G10 | §2 0 links · §4 0 links · 0 issues cited · 0 typed · 6 〈placeholders〉 | §2 0 links · §4 0 links · 0 issues cited · 0 typed · 6 〈placeholders〉 | none |
-| G11 | §2 skeleton · §4 skeleton · 0 issues cited · 0 typed · 67 〈placeholders〉 | §2 9 links · §4 skeleton · 10 issues cited · 9 typed · 58 〈placeholders〉 | feature/38-merge-develop-into-main (4 commits not in develop) |
+| G11 | §2 skeleton · §4 skeleton · 0 issues cited · 0 typed · 67 〈placeholders〉 | §2 9 links · §4 skeleton · 10 issues cited · 9 typed · 58 〈placeholders〉 | feature/38-merge-develop-into-main (5 commits not in develop) |
 | G12 | §2 17 links · §4 14 links · 31 issues cited · 0 typed | §2 17 links · §4 14 links · 31 issues cited · 0 typed | docs/team-documentation (3 commits not in develop) |
-| G13 | §2 12 links · §4 48 links · 52 issues cited · 0 typed | §2 12 links · §4 12 links · 12 issues cited · 0 typed | feature/32-project-proposal (6 commits not in develop); sprint1-patch-1 (1 commit not in develop); updated-proposal (6 commits not in develop) |
+| G13 | §2 12 links · §4 48 links · 52 issues cited · 0 typed | §2 12 links · §4 54 links · 66 issues cited · 0 typed | feature/34-project-proposal (28 commits not in develop); sprint1-patch-1 (1 commit not in develop); updated-proposal (6 commits not in develop) |
 | G14 | §2 20 links · §4 skeleton · 20 issues cited · 0 typed · 39 〈placeholders〉 | §2 20 links · §4 skeleton · 20 issues cited · 0 typed · 39 〈placeholders〉 | none |
 | G15 | §2 skeleton · §4 skeleton · 0 issues cited · 0 typed · 83 〈placeholders〉 | §2 skeleton · §4 skeleton · 11 issues cited · 0 typed · 35 〈placeholders〉 | none |
 | G16 | §2 12 links · §4 9 links · 20 issues cited · 0 typed | §2 12 links · §4 10 links · 21 issues cited · 0 typed | 30-sprint-1-review (1 commit not in develop); 42-course-update (1 commit not in develop); 45-proposal-typed-refs (1 commit not in develop) |
 | G17 | §2 4 links · §4 skeleton · 0 issues cited · 0 typed · 66 〈placeholders〉 | §2 4 links · §4 skeleton · 0 issues cited · 0 typed · 66 〈placeholders〉 | none |
-| G18 | §2 skeleton · §4 skeleton · 0 issues cited · 0 typed · 55 〈placeholders〉 | §2 13 links · §4 skeleton · 13 issues cited · 18 typed (5 misplaced) · 40 〈placeholders〉 | none |
+| G18 | §2 skeleton · §4 skeleton · 0 issues cited · 0 typed · 55 〈placeholders〉 | §2 13 links · §4 skeleton · 13 issues cited · 18 typed (5 misplaced) · 40 〈placeholders〉 | feature/36-shared-movement (1 commit not in develop) |
 | G19 | §2 skeleton · §4 skeleton · 0 issues cited · 0 typed · 80 〈placeholders〉 | §2 11 links · §4 skeleton · 13 issues cited · 3 typed · 26 〈placeholders〉 | feature/34-section4-links (2 commits not in develop) |
 | G20 | §2 skeleton · §4 skeleton · 0 issues cited · 0 typed · 83 〈placeholders〉 | §2 3 links · §4 skeleton · 3 issues cited · 0 typed · 63 〈placeholders〉 | none |
 
@@ -640,24 +599,24 @@ What `proposal/proposal.md` says on each branch (rule 2), and feature branches h
 
 | Group | proposal.md §2 / §4 | Issues linked from proposal.md | Typed references | Linked issues closed / with a PR | PRs with no issue | Direct pushes (main / develop) | Chain |
 |---|---|---|---|---|---|---|---|
-| G01 | 9 links / 17 links | 26 of 56 | 26 of 26 | 14 / 11 of 26 | 14 of 29 | 3 / 3 | ⚠️ Gaps |
-| G02 | 18 links / skeleton | 18 of 40 | 18 of 18 | 0 / 0 of 18 | 4 of 18 | 1 / 1 | ⚠️ Gaps |
-| G03 | 10 links / skeleton | 10 of 21 | 0 of 10 | 0 / 0 of 10 | 4 of 13 | 1 / 1 | ⚠️ Gaps |
+| G01 | 9 links / 17 links | 26 of 56 | 26 of 26 | 14 / 11 of 26 | 14 of 31 | 3 / 3 | ⚠️ Gaps |
+| G02 | 18 links / skeleton | 18 of 45 | 18 of 18 | 0 / 0 of 18 | 4 of 19 | 1 / 1 | ⚠️ Gaps |
+| G03 | 16 links / skeleton | 16 of 29 | 11 of 16; 1 bad link | 0 / 0 of 16 | 4 of 14 | 1 / 1 | ⚠️ Gaps |
 | G04 | 15 links / 9 links | 24 of 24 | 24 of 24 | 9 / 6 of 24 | 1 of 16 | 0 / 0 | ⚠️ Gaps |
-| G05 | 11 links / skeleton | 11 of 19 | 0 of 11 | 0 / 0 of 11 | 0 of 8 | 0 / 0 | ⚠️ Gaps |
-| G06 | skeleton / skeleton | 0 of 23 | 0 of 0 | 0 / 0 of 0 | 0 of 2 | 18 / 0 | ❌ Broken |
+| G05 | 11 links / skeleton | 11 of 20 | 11 of 11 | 0 / 0 of 11 | 0 of 9 | 0 / 0 | ⚠️ Gaps |
+| G06 | skeleton / skeleton | 0 of 23 | 0 of 0 | 0 / 0 of 0 | 0 of 3 | 18 / 0 | ❌ Broken |
 | G07 | 16 links / skeleton | 16 of 25 | 0 of 16 | 0 / 0 of 16 | 1 of 2 | 2 / 2 | ⚠️ Gaps |
 | G08 | skeleton / skeleton | 7 of 36 | 0 of 7 | 0 / 5 of 7 | 1 of 5 | 0 / 0 | ⚠️ Gaps |
 | G09 | skeleton / skeleton | 12 of 27 | 0 of 12 | 4 / 8 of 12 | 1 of 8 | 0 / 0 | ⚠️ Gaps |
 | G10 | 0 links / 0 links | 0 of 22 | 0 of 0 | 0 / 0 of 0 | 3 of 6 | 14 / 14 | ❌ Broken |
 | G11 | 9 links / skeleton | 10 of 22 | 9 of 10 | 1 / 1 of 10 | 0 of 11 | 1 / 1 | ⚠️ Gaps |
 | G12 | 17 links / 14 links | 31 of 38 | 0 of 31 | 13 / 10 of 31 | 3 of 29 | 1 / 1 | ⚠️ Gaps |
-| G13 | 12 links / 48 links | 52 of 82 | 0 of 52 | 6 / 1 of 52 | 5 of 19 | 0 / 0 | ⚠️ Gaps |
+| G13 | 12 links / 54 links | 66 of 83 | 0 of 66 | 0 / 0 of 66 | 5 of 20 | 0 / 0 | ⚠️ Gaps |
 | G14 | 20 links / skeleton | 20 of 23 | 0 of 20 | 0 / 0 of 20 | 2 of 9 | 1 / 1 | ⚠️ Gaps |
 | G15 | skeleton / skeleton | 11 of 22 | 0 of 11 | 0 / 0 of 11 | 4 of 14 | 4 / 4 | ⚠️ Gaps |
 | G16 | 12 links / 10 links | 21 of 22 | 0 of 21 | 4 / 7 of 21 | 5 of 20 | 3 / 3 | ⚠️ Gaps |
 | G17 | 4 links / skeleton | 0 of 1 | 0 of 0 | 0 / 0 of 0 | 5 of 5 | 2 / 2 | ❌ Broken |
-| G18 | 13 links / skeleton | 13 of 27 | 13 of 13; 5 in the wrong section | 0 / 0 of 13 | 0 of 9 | 1 / 1 | ⚠️ Gaps |
+| G18 | 13 links / skeleton | 13 of 27 | 13 of 13; 5 in the wrong section | 0 / 1 of 13 | 0 of 10 | 1 / 1 | ⚠️ Gaps |
 | G19 | 11 links / skeleton | 13 of 19 | 3 of 13 | 0 / 2 of 13 | 2 of 10 | 36 / 28 | ⚠️ Gaps |
 | G20 | 3 links / skeleton | 3 of 16 | 0 of 3 | 0 / 0 of 3 | 1 of 3 | 1 / 1 | ⚠️ Gaps |
 
@@ -666,22 +625,22 @@ What `proposal/proposal.md` says on each branch (rule 2), and feature branches h
 | Group | Sprint board | Open issues on the board | Board view | Missing own sp:/Sprint | sp: under a story (remove) | sp: on an epic (remove) |
 |---|---|---|---|---|---|---|
 | G01 | ✅ [BGAF Sprint Board](https://github.com/users/LeDuy23/projects/3) | 41 of 41 | ✅ | 43 | none | 6 |
-| G02 | ✅ [CPSC490-LinuxLarpers](https://github.com/users/eliThomass/projects/4) | 23 of 23 | ✅ | 14 | none | none |
-| G03 | ✅ [CPSC-490-G03-California](https://github.com/users/eccortes4/projects/1) | 8 of 13 | ✅ | 13 | none | none |
+| G02 | ✅ [CPSC490-LinuxLarpers](https://github.com/users/eliThomass/projects/4) | 26 of 26 | ✅ | 16 | none | none |
+| G03 | ✅ [CPSC-490-G03-California](https://github.com/users/eccortes4/projects/1) | 15 of 20 | ✅ | 18 | none | none |
 | G04 | ✅ [CPSC490-G04-EpicEngineers](https://github.com/users/Bryancostco/projects/1) | 15 of 15 | ✅ | 14 | none | none |
-| G05 | ✅ [WILS](https://github.com/users/M-Kwatcher/projects/2) | 14 of 14 | ✅ | 4 | none | none |
-| G06 | ✅ [@Joshbolus's Sprints for CPSC 490 project G6](https://github.com/users/Joshbolus/projects/1) | 18 of 22 | ✅ | 2 | 1 | 3 |
+| G05 | ✅ [WILS](https://github.com/users/M-Kwatcher/projects/2) | 11 of 11 | ✅ | 1 | none | none |
+| G06 | ✅ [@Joshbolus's Sprints for CPSC 490 project G6](https://github.com/users/Joshbolus/projects/1) | 18 of 22 | ✅ | 2 | none | none |
 | G07 | ✅ [CPSC490-G7-MightyMorphin](https://github.com/orgs/CPSC490-Team-Proj/projects/1) | 21 of 22 | ✅ | 1 | none | none |
-| G08 | ✅ [CPSC490-G08-Crime-Busters](https://github.com/users/miketruong91/projects/1) | 30 of 34 | ✅ | 4 | 1 | none |
+| G08 | ✅ [CPSC490-G08-Crime-Busters](https://github.com/users/miketruong91/projects/1) | 30 of 31 | ✅ | 4 | 1 | none |
 | G09 | ✅ [CPSC490-G09-SigmaSquad](https://github.com/users/TylerWard741/projects/1) | 23 of 23 | ✅ | 10 | none | none |
 | G10 | ✅ [Sprint board](https://github.com/users/Alexander-Sanchez2/projects/2) | 12 of 12 | ✅ | 3 | none | none |
 | G11 | ✅ [CPSC490-G11-5Guys](https://github.com/users/markachavez2003-lab/projects/1) | 12 of 12 | ✅ | 5 | none | none |
 | G12 | ✅ [CPSC490-G12-ACJMM](https://github.com/users/CharlesSinde/projects/1) | 18 of 18 | ✅ | 7 | 1 | none |
-| G13 | ✅ [CPSC 490-05](https://github.com/users/ktnwin/projects/3) | 67 of 67 | ✅ | 13 | none | none |
+| G13 | ✅ [CPSC 490-05](https://github.com/users/ktnwin/projects/3) | 68 of 68 | ✅ | 16 | none | none |
 | G14 | ✅ [CPSC490-G14-Cyber-Squad](https://github.com/users/jvillacorte/projects/1) | 20 of 21 | ✅ | 19 | none | none |
 | G15 | ✅ [@Isaiah714's Sprint Board-1](https://github.com/users/Isaiah714/projects/4) | 11 of 11 | ✅ | 11 | none | none |
 | G16 | ❌ none (README links github.com/users/garybs16/projects/2 but it isn't readable (private, or wrong URL)) | – | – | none | none | none |
-| G17 | ✅ [G17-SonicScape-Sprint-Board](https://github.com/users/vibhorbh/projects/2) | 0 of 1 | ✅ | none | none | none |
+| G17 | ✅ [G17-SonicScape-Sprint-Board](https://github.com/users/vibhorbh/projects/2) | 1 of 1 | ✅ | none | none | none |
 | G18 | ✅ [CPSC490-G18-ProStrats](https://github.com/users/austin2578/projects/1) | 17 of 19 | ✅ | 10 | none | none |
 | G19 | ✅ [CPSC490-G19-TitanSecurity](https://github.com/users/sopper75/projects/1) | 17 of 19 | ✅ | 1 | none | none |
 | G20 | ✅ [CPSC490-G20-Solos](https://github.com/users/muntay89/projects/2) | 16 of 16 | ✅ | 8 | none | none |
@@ -690,25 +649,25 @@ What `proposal/proposal.md` says on each branch (rule 2), and feature branches h
 
 | Group | Project | Board | README | Status |
 |---|---|---|---|---|
-| G01 BGAF | Hyperliquid Order Book Reconstruction and Algorithmic Strategy Backtesting | 56 issues (29 new); epics, stories, points, Sprint 1 | not yet | ✅ **Aligned** |
-| G02 Linux Larpers | Distributed Signal Capture for Multi-Node Analysis | 40 issues; epics, stories, points, Sprint 1 | matches | ✅ **Aligned** |
-| G03 California | Three AIs and Literate Programming | 21 issues; epics, stories, Sprint 1 | matches | ⚠️ **Partial** |
+| G01 BGAF | Hyperliquid Order Book Reconstruction and Algorithmic Strategy Backtesting | 56 issues; epics, stories, points, Sprint 1 | matches | ✅ **Aligned** |
+| G02 Linux Larpers | Distributed Signal Capture for Multi-Node Analysis | 45 issues (5 new); epics, stories, points, Sprint 1 | matches | ✅ **Aligned** |
+| G03 California | Three AIs and Literate Programming | 29 issues; epics, stories, points, Sprint 1 | matches | ✅ **Aligned** |
 | G04 Epic Engineers | Polygon Prediction Market PNL and Trader Profitability Analytics | 24 issues; epics, stories, Sprint 1 | matches | ✅ **Aligned** |
-| G05 Fighting Mongooses | WILS: Whale Identification/Location System | 19 issues (19 new); epics, stories, points, Sprint 1 | matches | ✅ **Aligned** |
-| G06 Forecast Market Analytics | GapWise: An LLM Study Assistant with Adaptive Weak-Spot Tracking | 23 issues; epics, stories, points, Sprint 1 | matches | ✅ **Aligned** |
+| G05 Fighting Mongooses | WILS: Whale Identification/Location System | 20 issues; epics, stories, points, Sprint 1 | matches | ✅ **Aligned** |
+| G06 Forecast Market Analytics | GapWise: An LLM Study Assistant with Adaptive Weak-Spot Tracking | 23 issues; epics, stories, points, Sprint 1 | n/a | ✅ **Aligned** |
 | G07 Mighty Morphin | Online Material Database | 25 issues; epics, stories, points, Sprint 1 | not yet | ✅ **Aligned** |
 | G08 Crime Busters | Interactive Crime Map and Database | 36 issues; epics, stories, points, Sprint 1 | matches | ✅ **Aligned** |
 | G09 Sigma Squad | Vehicle Maintenance Logger | 27 issues; epics, stories, points, Sprint 1 | matches | ✅ **Aligned** |
 | G10 Team Jiddak | On-Chain Stablecoin Flow and Wash Trading Detection | 22 issues; epics, stories, points, Sprint 1 | matches | ✅ **Aligned** |
-| G11 5 Guys | Marathon Tracker | 22 issues (1 new); epics, stories, points, Sprint 1 | not yet | ⚠️ **Partial** |
-| G12 ACJMM | Explainable 6G Waveform Classification | 38 issues (4 new); epics, stories, points, Sprint 1 | not yet | ✅ **Aligned** |
-| G13 BYKX | Assignment Motivation Initiative Year-Round Assistant | 82 issues (41 new); epics, stories, points, Sprint 1 | matches | ✅ **Aligned** |
-| G14 Cyber Squad | Rogue-Lite Cyber Sandbox | 23 issues (20 new); epics, stories, Sprint 1 | matches | ✅ **Aligned** |
-| G15 HIBBI-01 | Low End Hardware/ECS Architecture Game Engine with Game | 22 issues (14 new); epics, stories, points, Sprint 1 | matches | ✅ **Aligned** |
-| G16 Neuroprosthetic | BridgeWatch: Real-Time Detection of Cross-Chain Bridge Exploits | 22 issues (1 new); epics, stories, points, Sprint 1 | matches | ✅ **Aligned** |
-| G17 Sonic Scape | SonicScape / EchoSphere | 1 issues (1 new); epics | matches | ⚠️ **Partial** |
+| G11 5 Guys | Marathon Tracker | 22 issues; epics, stories, points, Sprint 1 | not yet | ✅ **Aligned** |
+| G12 ACJMM | Explainable 6G Waveform Classification | 38 issues; epics, stories, points, Sprint 1 | not yet | ✅ **Aligned** |
+| G13 BYKX | Assignment Motivation Initiative Year-Round Assistant | 83 issues (1 new); epics, stories, points, Sprint 1 | matches | ✅ **Aligned** |
+| G14 Cyber Squad | Rogue-Lite Cyber Sandbox | 23 issues; epics, stories, Sprint 1 | matches | ✅ **Aligned** |
+| G15 HIBBI-01 | Low End Hardware/ECS Architecture Game Engine with Game | 22 issues; epics, stories, points, Sprint 1 | matches | ✅ **Aligned** |
+| G16 Neuroprosthetic | BridgeWatch: Real-Time Detection of Cross-Chain Bridge Exploits | 22 issues; epics, stories, points, Sprint 1 | matches | ✅ **Aligned** |
+| G17 Sonic Scape | SonicScape / EchoSphere | 1 issues; epics | matches | ⚠️ **Partial** |
 | G18 Team ProStrats | Project Rogue | 27 issues; epics, stories, points, Sprint 1 | matches | ✅ **Aligned** |
-| G19 Titan Security | Radar over Wi-Fi (ROW) drone detection | 19 issues (1 new); epics, stories, points, Sprint 1 | matches | ✅ **Aligned** |
+| G19 Titan Security | Radar over Wi-Fi (ROW) drone detection | 19 issues; epics, stories, points, Sprint 1 | matches | ✅ **Aligned** |
 | G20 Solos | Insomnia | 16 issues; epics, stories | matches | ✅ **Aligned** |
 
 *Group numbers are written GNN (G01–G20). Sponsor codes only; no mentor names. Earlier editions are in this file's git history.*
