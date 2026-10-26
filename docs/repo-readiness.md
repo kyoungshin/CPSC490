@@ -3,7 +3,7 @@
 > [!IMPORTANT]
 > **New (Oct 26): this page now checks Sprint 2.** Sprint 2 is about *documents and environment, not features*: a specification per epic, a high-level design with diagrams, your environment and resource choices written down, and those choices wired into `prototype/` as a project skeleton that installs and starts. **You do not need to start coding features yet.** Find your group's card below: it lists what's done and what to do, in order, before your Sprint 2 review.
 
-**CPSC 490 · Fall 2026 · swept 2026-10-26 14:51 UTC.** Earlier editions (proposal vs. issue board) are kept in git history.
+**CPSC 490 · Fall 2026 · swept 2026-10-26 15:04 UTC.** Earlier editions (proposal vs. issue board) are kept in git history.
 
 **Jump to your group:**
 
@@ -15,7 +15,7 @@
 
 Each item lands the usual way: an issue on your board, cited in `proposal/proposal.md`, done in a pull request that says `Closes #N`, and **merged into `develop` or `main` before your review**. Work left in a branch or an open pull request doesn't count yet.
 
-**Where it goes: `proposal/proposal.md` must carry all of it.** Your specifications, design and diagrams count as long as they're incorporated into `proposal.md` (§3 and §4). **We recommend** that `proposal.md` holds the summary and the diagrams, and that the full detail lives in its own document in the repository: one `docs/specs/<epic>.md` per epic and one `docs/design/<topic>.md` per design topic, each linked from §4. The proposal stays readable, the detail stays reviewable, and CPSC 491 starts from documents you can extend.
+**Where it goes: `proposal/proposal.md` must carry all of it.** Your specifications, design and diagrams count as long as they're incorporated into `proposal.md` (§3 and §4). **I recommend** that `proposal.md` holds the summary and the diagrams, and that the full detail lives in its own document in the repository: one `docs/specs/<epic>.md` per epic and one `docs/design/<topic>.md` per design topic, each linked from §4. The proposal stays readable, the detail stays reviewable, and CPSC 491 starts from documents you can extend.
 
 1. **Epics and stories, kept current.** Every goal in §2 is an epic and every objective a story titled with the objective's own words ([README §4](https://github.com/kyoungshin/CPSC490#4-epics-and-user-stories-on-the-issue-board)). Every Sprint 2 card on the board has one assignee, `sp:` and the `Sprint 2` milestone, and every issue is cited in `proposal.md` (epics and stories in §2, everything else in §4).
 2. **A specification per epic**, summarized in proposal §4 (recommended: full detail in `docs/specs/<epic>.md`): scope (in and out), functional and non-functional requirements traced to your stories, acceptance criteria someone else can check, and open questions. The first lines name the epic and its stories. Model: [example-spec.md](https://github.com/kyoungshin/CPSC490/blob/main/docs/specs/example-spec.md).
@@ -25,7 +25,7 @@ Each item lands the usual way: an issue on your board, cited in `proposal/propos
 6. **Demo at your Sprint 2 review:** walk through the diagrams, then run the skeleton from a clean clone by following your README. Bring the story points committed and done (*Sprint report* workflow in your Actions tab).
 
 > [!NOTE]
-> **New from Sprint 2: we look at *when* work moved, for each member's sprint score.** Move your own cards as the work happens: **In Progress** when you start (open a branch or a draft pull request), **In Review** when your pull request is ready and a teammate is reviewing it, and **Done** when it merges. The board records the time of every status change, and pull requests record first commit, review and merge. Work that spends real time in progress and in review counts. Cards that jump straight to Done, or a batch of cards moved and closed in one burst at the end of the sprint, don't show that work happened during the sprint.
+> **New from Sprint 2: I look at *when* work moved, for each member's sprint score.** Move your own cards as the work happens: **In Progress** when you start (open a branch or a draft pull request), **In Review** when your pull request is ready and a teammate is reviewing it, and **Done** when it merges. The board records the time of every status change, and pull requests record first commit, review and merge. Work that spends real time in progress and in review counts. Cards that jump straight to Done, or a batch of cards moved and closed in one burst at the end of the sprint, don't show that work happened during the sprint.
 
 **Not required in Sprint 2:** feature code, a working end-to-end slice, or a polished UI. Those start in Sprint 3, when the prototype proves your riskiest design choice.
 
@@ -73,7 +73,7 @@ Each item lands the usual way: an issue on your board, cited in `proposal/propos
 
 ## Your group
 
-Each card shows the five Sprint 2 items, what we found in your repository (both `main` and `develop`), and a numbered to-do list in the order to do it.
+Each card shows the five Sprint 2 items, what I found in your repository (both `main` and `develop`), and a numbered to-do list in the order to do it.
 
 <a name="g01" id="g01"></a>
 
@@ -83,7 +83,7 @@ Each card shows the five Sprint 2 items, what we found in your repository (both 
 
 **Start here:** Write the three epic specs (requirements and acceptance criteria for Goals #20, #21, #22); #64 and #65 are closed but no spec text exists anywhere.
 
-| Item | Status | What we found |
+| Item | Status | What I found |
 |---|---|---|
 | 1. Epics & stories | ⚠️ gaps | Goals #20-#22 with stories #23-#28 plus Sprint 2 epics #71-#74 and stories #113-#119 filed; 68 of 70 issues linked in proposal on main. Stories #24, #26, #27 lack assignee; many tasks lack sp:. |
 | 2. Specs | ⚠️ started | proposal/proposal.md §3 (main) — five design decisions, validation and replay approach; reasoning, not requirements; docs/design/backtesting-research.md (main, linked §4) — feeds backtest spec; research not requirements Missing: Epic #20 Goal 1: requirements and acceptance criteria; Epic #21 Goal 2: requirements and acceptance criteria; Epic #22 Goal 3: requirements and acceptance criteria. |
@@ -112,7 +112,7 @@ Each card shows the five Sprint 2 items, what we found in your repository (both 
 
 **Start here:** Merge PRs #87, #88, #89 into develop, then rewrite proposal §4 with the environment choices from #79 and the architecture and ER figures.
 
-| Item | Status | What we found |
+| Item | Status | What I found |
 |---|---|---|
 | 1. Epics & stories | ⚠️ gaps | Goals 1-3 filed as epics (#47, #50, #56) with 15 objective stories, titles prefixed 'Objective N.M (Role):'. Sprint 2 stories #16, #45, #46, #48, #49 have sp but no assignee. |
 | 2. Specs | ❌ not started | No specification in proposal.md or `docs/specs/` yet. Missing: Epic #47 Goal 1: Collect wireless signal metadata; Epic #50 Goal 2: Identify selected recording devices; Epic #56 Goal 3: Present observations through a dashboard. |
@@ -142,7 +142,7 @@ Each card shows the five Sprint 2 items, what we found in your repository (both 
 
 **Start here:** Write proposal §4 Environment and resources: pick the recognizer and ML library, state Python/Jupyter versions, and give a reason for each.
 
-| Item | Status | What we found |
+| Item | Status | What I found |
 |---|---|---|
 | 1. Epics & stories | ⚠️ gaps | Four epics (#28, #27, #43, #44) and 15 objective-titled stories filed and linked in §2. Only #30 and #33 carry the Sprint 2 milestone; most stories lack milestone; #31/#32 duplicate objective 2.4. |
 | 2. Specs | ⚠️ started | docs/specs/transcription.md (develop; linked in §4 table) — Epic #28; only #33 filled, solid FR/NFR Missing: Epic #27 Goal 2: Generate a training data set; Epic #43 Goal 3: Train a model; Epic #44 Goal 4: Output steps, code and plots in the proposal. |
@@ -172,7 +172,7 @@ Each card shows the five Sprint 2 items, what we found in your repository (both 
 
 **Start here:** Decide the stack this week and record it in proposal §4 (#52); the skeleton in #62 and the architecture doc in #56 both wait on it.
 
-| Item | Status | What we found |
+| Item | Status | What I found |
 |---|---|---|
 | 1. Epics & stories | ✅ done | Three epics (#24, #29, #33), 15 stories titled 'Objective N.M: ...' linked in §2. Sprint 2 tasks #49-#65 filed, assigned, on the Sprint 2 milestone; #62, #54, #55 lack sp:. |
 | 2. Specs | ⚠️ started | docs/specs/pnl-calculation.md (open PR #67 only, not on develop) — Epic #24 Goal 1 Missing: Epic #24 Goal 1 (spec unmerged); Epic #29 Goal 2: top traders and drivers (#54 open); Epic #33 Goal 3: client dashboard. |
@@ -202,7 +202,7 @@ Each card shows the five Sprint 2 items, what we found in your repository (both 
 
 **Start here:** File Sprint 2 tasks for specs, diagrams and environment, then write proposal §4 stating language, ML framework, database and hardware with reasons.
 
-| Item | Status | What we found |
+| Item | Status | What I found |
 |---|---|---|
 | 1. Epics & stories | ⚠️ gaps | Two epics (#8, #14), 9 stories titled 'Objective N.M:' linked in §2, all on Sprint 2 with assignee and sp:. Goal 3 or any data/UI epic absent; no tasks for specs, design, environment. |
 | 2. Specs | ❌ not started | No specification in proposal.md or `docs/specs/` yet. Missing: Epic #8 Goal 1: Build an AI recognizing whale calls; Epic #14 Goal 2: Create a locator for sound distance. |
@@ -232,7 +232,7 @@ Each card shows the five Sprint 2 items, what we found in your repository (both 
 
 **Start here:** Write docs/specs/goal2-weak-spot-tracker.md for epic #20 (Sprint 2 stories #21-#26): scope, FR/NFR traced to stories, acceptance criteria, open questions.
 
-| Item | Status | What we found |
+| Item | Status | What I found |
 |---|---|---|
 | 1. Epics & stories | ⚠️ gaps | 3 goal epics (#13,#20,#27), 15 objective-titled stories; Sprint 2 stories #21-#26 have sp and milestone but no assignee. Stale #3-#6 remain; #25, #36 unlinked. |
 | 2. Specs | ❌ not started | No specification in proposal.md or `docs/specs/` yet. Missing: Epic #13 Goal 1 Generate, grade, summarize; Epic #20 Goal 2 Track weak spots; Epic #27 Goal 3 Usable web app and reminders. |
@@ -262,7 +262,7 @@ Each card shows the five Sprint 2 items, what we found in your repository (both 
 
 **Start here:** Finish #47 (tech stack and AWS services) first: the DB and framework choice drives the ER diagram, specs and prototype skeleton.
 
-| Item | Status | What we found |
+| Item | Status | What I found |
 |---|---|---|
 | 1. Epics & stories | ⚠️ gaps | 3 product epics (#11,#17,#22), 16 objective stories, none with Sprint milestone or assignee. Goal 0 (#42) holds spec/design tasks. Process epics #1,#4,#28,#45 clutter. |
 | 2. Specs | ❌ not started | No specification in proposal.md or `docs/specs/` yet. Missing: Epic #11 Goal 1 Extraction and verification; Epic #17 Goal 2 Storage and management; Epic #22 Goal 3 Access and analysis. |
@@ -291,7 +291,7 @@ Each card shows the five Sprint 2 items, what we found in your repository (both 
 
 **Start here:** Hold one stack decision (DBMS, map library, framework, hosting) and record it in §3 and §4; diagrams, ER and skeleton all depend on it.
 
-| Item | Status | What we found |
+| Item | Status | What I found |
 |---|---|---|
 | 1. Epics & stories | ⚠️ gaps | 3 goal epics (#3,#12,#14) with objective-titled stories; Sprint 2 stories #4,#5,#13,#28 have sp and assignee; tasks lack sp. Stray #6,#7,#45-#47 unlinked; stories cited in §4. |
 | 2. Specs | ⚠️ started | docs/crime-pattern-analysis.md (develop) — Goal 2 filtering/frequency; linked from §4; docs/crime-data-format.md (develop) — Goal 1 format; not linked from proposal; docs/crime-data-sources.md (develop) — Goal 1 sources; notes, not linked Missing: Epic #3 Goal 1 spec in docs/specs/; Epic #14 Goal 2 spec in docs/specs/; Epic #12 Goal 3 spec in docs/specs/. |
@@ -321,7 +321,7 @@ Each card shows the five Sprint 2 items, what we found in your repository (both 
 
 **Start here:** Do #16 and #17 first: agree the stack in one meeting and write it, with reasons, into §3 and §4; every other Sprint 2 item depends on it.
 
-| Item | Status | What we found |
+| Item | Status | What I found |
 |---|---|---|
 | 1. Epics & stories | ⚠️ gaps | 2 goal epics (#27,#28), 10 objective-titled stories with sp, assignee, sprints; Sprint 2 stories #29-#31. 28 of 29 issues linked, typed. No tasks for specs, design or wiring. |
 | 2. Specs | ❌ not started | No specification in proposal.md or `docs/specs/` yet. Missing: Epic #27 Goal 1 Vehicle data and maintenance tracking; Epic #28 Goal 2 Scheduled recommendations and alerts. |
@@ -349,7 +349,7 @@ Each card shows the five Sprint 2 items, what we found in your repository (both 
 
 **Start here:** Write docs/specs/goal1-network-model.md for epic #15 (Sprint 2 stories #31-#33, #38), grounded in a confirmed sample SonarX extract.
 
-| Item | Status | What we found |
+| Item | Status | What I found |
 |---|---|---|
 | 1. Epics & stories | ⚠️ gaps | 3 goal epics (#15,#23,#24), 11 objective-titled stories with sp and sprint, 0 assignees. 24 of 26 issues linked; #3 untyped. No Sprint 2 doc or wiring tasks. |
 | 2. Specs | ❌ not started | No specification in proposal.md or `docs/specs/` yet. Missing: Epic #15 Goal 1 Model and analyze transaction networks; Epic #23 Goal 2 Detect wash trading; Epic #24 Goal 3 Investigation dashboard. |
@@ -377,7 +377,7 @@ Each card shows the five Sprint 2 items, what we found in your repository (both 
 
 **Start here:** Pick and write down the stack in proposal §4 (mobile framework, backend, database, map service); every spec, diagram, and the prototype depends on it.
 
-| Item | Status | What we found |
+| Item | Status | What I found |
 |---|---|---|
 | 1. Epics & stories | ⚠️ gaps | 3 epics (#4, #26, #27), 6 stories (#28-#33) titled with objective wording; stories on Sprint 2 with assignee and sp:3. No typed refs; #13 bare; #42 missing from board. |
 | 2. Specs | ❌ not started | No specification in proposal.md or `docs/specs/` yet. Missing: epic #4 Goal 1: Live Runner Tracking; epic #26 Goal 2: Posts and Shareable Web Page; epic #27 Goal 3: Race Time Prediction. |
@@ -405,7 +405,7 @@ Each card shows the five Sprint 2 items, what we found in your repository (both 
 
 **Start here:** Open the PR for branch Application-Structure into develop and write prototype/README.md and requirements.txt so the existing classifier code has a documented, runnable setup.
 
-| Item | Status | What we found |
+| Item | Status | What I found |
 |---|---|---|
 | 1. Epics & stories | ⚠️ gaps | 5 epics (#57-#61), ~13 stories, several titled as tasks not objectives. Sprint 2 stories #63, #67, #68, #70, #71 lack milestone/assignee; 0 typed refs; #95-#98 unlinked. |
 | 2. Specs | ❌ not started | No specification in proposal.md or `docs/specs/` yet. Missing: epic #57 Signal Detection & Preprocessing; epic #58 Application interface and cross functional integration; epic #59 Waveform Identification & Receiver Processing; epic #60 Modulation, Decision & Explainable AI; epic #61 Modulation type re-classifier. |
@@ -435,7 +435,7 @@ Each card shows the five Sprint 2 items, what we found in your repository (both 
 
 **Start here:** Link specs-G1/G2/G3 in proposal §4 and merge develop into main, then pick the desktop shell so prototype wiring can start.
 
-| Item | Status | What we found |
+| Item | Status | What I found |
 |---|---|---|
 | 1. Epics & stories | ✅ done | 3 epics (#16-#18), 9 objective-titled stories (#19-#27), about 50 features/tasks with parents; Sprint 2 items assigned. Develop has typed refs, main has none. #25-#27 lack milestone. |
 | 2. Specs | ⚠️ started | docs/specs/specs-G1.md (develop) — epic #16, stories #22-#24; scope, FR/NFR, ACs, questions; docs/specs/specs-G2.md (develop) — epic #17, stories #19-#21; FR table, NFRs; docs/specs/specs-G3.md (develop) — epic #18, stories #25-#27; only 4 FRs, 1 NFR |
@@ -465,7 +465,7 @@ Each card shows the five Sprint 2 items, what we found in your repository (both 
 
 **Start here:** Fill proposal §4 environment (PySide6, Pydantic, NRP.ai) from your HW#4 text, then create the PySide6 prototype skeleton that opens a window.
 
-| Item | Status | What we found |
+| Item | Status | What I found |
 |---|---|---|
 | 1. Epics & stories | ⚠️ gaps | 2 epics (#22, #23), 18 stories (#24-#41) titled with objective wording, linked in §2. No story has sp:, Sprint milestone, or assignee; refs untyped; no Sprint 2 tasks. |
 | 2. Specs | ❌ not started | No specification in proposal.md or `docs/specs/` yet. Missing: epic #22 Goal 1: interactive and secure cybersecurity training environment; epic #23 Goal 2: Integrate AI-assisted mechanics. |
@@ -493,7 +493,7 @@ Each card shows the five Sprint 2 items, what we found in your repository (both 
 
 **Start here:** Do #46: add prototype/CMakeLists.txt with a window-and-cube build that compiles on a fresh machine, then record language and graphics API choices in §4.
 
-| Item | Status | What we found |
+| Item | Status | What I found |
 |---|---|---|
 | 1. Epics & stories | ⚠️ gaps | 2 epics (#24, #25), 8 stories (#26-#33) objective-titled but no sp:/milestone/assignee; stray epic #6; §2 skeleton; refs untyped; #46 parent points to itself. |
 | 2. Specs | ❌ not started | No specification in proposal.md or `docs/specs/` yet. Missing: epic #24 Game Engine; epic #25 Game Demo. |
@@ -521,7 +521,7 @@ Each card shows the five Sprint 2 items, what we found in your repository (both 
 
 **Start here:** Start task #62: create docs/design/architecture.md with editable Mermaid for the existing Figure 1 and 2, and add the SQLite ER diagram.
 
-| Item | Status | What we found |
+| Item | Status | What I found |
 |---|---|---|
 | 1. Epics & stories | ⚠️ gaps | 3 epics (#11-#13) and 11 objective-titled stories; Sprint 2 stories #14, #15 and tasks #61-#66 are assigned with sp and milestone. Task #69 is not linked in proposal §4; #67 is untyped. |
 | 2. Specs | ⚠️ started | docs/specs/goal-2-detection.md (develop) — Epic #12, stories #5,#16-#19; FR/NFR, EARS, rule tables, acceptance criteria; docs/specs/goal-3-dashboard.md (main, develop) — Epic #13, stories #20,#21; problem, scope, requirements, criteria Missing: Epic #11 Goal 1: Learn what normal bridge activity looks like (task #61 open). |
@@ -551,7 +551,7 @@ Each card shows the five Sprint 2 items, what we found in your repository (both 
 
 **Start here:** Hold a 30-minute stack decision, then write it into proposal §3 and §4 so specs, design and the prototype skeleton can follow.
 
-| Item | Status | What we found |
+| Item | Status | What I found |
 |---|---|---|
 | 1. Epics & stories | ⚠️ gaps | Open epics #21-#23 with stories #25-#30 titled with the objective wording. All six stories sit in Sprint 1 (past due); Sprint 2 milestone is empty; six duplicate closed epics remain; no tasks filed. |
 | 2. Specs | ❌ not started | No specification in proposal.md or `docs/specs/` yet. Missing: Epic #21 Goal 1: Galaxy Navigation with Discovery-Focused Recommendations; Epic #22 Goal 2: Swipe Feedback; Epic #23 Goal 3: Personalized Map with a Persistent User Profile. |
@@ -581,7 +581,7 @@ Each card shows the five Sprint 2 items, what we found in your repository (both 
 
 **Start here:** Rewrite prototype/README.md with Unity Hub setup and a Test_Combat smoke run; it is the smallest change that makes the existing project count as wiring.
 
-| Item | Status | What we found |
+| Item | Status | What I found |
 |---|---|---|
 | 1. Epics & stories | ⚠️ gaps | 3 epics (#29-#31) and 10 stories (#32-#41), all assigned and pointed; Sprint 2 stories #32-#38 on board. Story titles are short labels (bodies empty), and #13, #26 are untyped; §1 cites epics. |
 | 2. Specs | ❌ not started | No specification in proposal.md or `docs/specs/` yet. Missing: Epic #29 Goal 1: Flexible character progression; Epic #30 Goal 2: Action gameplay; Epic #31 Goal 3: Replayable run structure. |
@@ -610,7 +610,7 @@ Each card shows the five Sprint 2 items, what we found in your repository (both 
 
 **Start here:** Fix PR #44 so the equipment notes reach main, then write the three epic specs using the findings in prototype/csi-setup.md.
 
-| Item | Status | What we found |
+| Item | Status | What I found |
 |---|---|---|
 | 1. Epics & stories | ⚠️ gaps | 3 epics (#2-#4) and 9 objective-titled stories (#6-#8, #13-#17). Only #8 is in Sprint 2; Sprint 1 still holds 9 open issues; #3 and #4 unassigned; #37, #38, #43 untyped or unlinked. |
 | 2. Specs | ❌ not started | No specification in proposal.md or `docs/specs/` yet. Missing: Epic #2 Wi-Fi CSI sensing; Epic #3 Drone Detection; Epic #4 Evaluation. |
@@ -639,7 +639,7 @@ Each card shows the five Sprint 2 items, what we found in your repository (both 
 
 **Start here:** Create the Unreal First Person project in prototype/ with a .gitignore, commit it through an issue and PR, and write the README with the Play-in-Editor smoke run.
 
-| Item | Status | What we found |
+| Item | Status | What I found |
 |---|---|---|
 | 1. Epics & stories | ⚠️ gaps | 3 epics (#12, #17, #21) and 8 objective-titled stories; 14 tasks (#39-#52) filed but have no milestone or assignee. Sprint 2 milestone is empty; §2 cites epics as [story:]; task refs are bare. |
 | 2. Specs | ❌ not started | No specification in proposal.md or `docs/specs/` yet. Missing: Epic #12 Goal 1: engaging, replayable horror exploration; Epic #17 Goal 2: suspense through player-responsive threats; Epic #21 Goal 3: psychological immersion, audiovisual storytelling. |
