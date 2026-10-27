@@ -5,7 +5,7 @@
 >
 > **Features without code are fine.** If your stories break down into features, enhancements or tasks whose deliverable is a requirements, specification or design document, that is how I want them used: the issue type does not have to be `task`, and the issue does not need code. Link it from §4 and close it with a merged pull request that adds the document. If the Oct 24 edition of this page asked your group to open a code pull request (G13, G16, G17, G20), you can set that aside for Sprint 2.
 
-**CPSC 490 · Fall 2026 · swept 2026-10-26 15:04 UTC.** Earlier editions (proposal vs. issue board) are kept in git history.
+**CPSC 490 · Fall 2026 · swept 2026-10-27 19:47 UTC.** Earlier editions (proposal vs. issue board) are kept in git history.
 
 **Jump to your group:**
 
@@ -44,32 +44,32 @@ Each item lands the usual way: an issue on your board, cited in `proposal/propos
 
 | Group | Sprint 2 review | 1. Epics & stories | 2. Specs | 3. Design & diagrams | 4. Environment | 5. Prototype wiring |
 |---|---|---|---|---|---|---|
-| [G01](#g01) BGAF | Tue Oct 27 | ⚠️ | ⚠️ | ✅ | ⚠️ | ⚠️ |
+| [G01](#g01) BGAF | Tue Oct 27 | ⚠️ | ✅ | ✅ | ⚠️ | ✅ |
 | [G02](#g02) Linux Larpers | Tue Oct 27 | ⚠️ | ❌ | ⚠️ | ⚠️ | ❌ |
-| [G03](#g03) California | Tue Oct 27 | ⚠️ | ⚠️ | ❌ | ❌ | ⚠️ |
-| [G04](#g04) Epic Engineers | Tue Oct 27 | ✅ | ⚠️ | ⚠️ | ⚠️ | ❌ |
-| [G05](#g05) Fighting Mongooses | Tue Oct 27 | ⚠️ | ❌ | ⚠️ | ❌ | ⚠️ |
+| [G03](#g03) California | Tue Oct 27 | ⚠️ | ⚠️ | ✅ | ⚠️ | ⚠️ |
+| [G04](#g04) EpicEngineers | Tue Oct 27 | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ❌ |
+| [G05](#g05) Fighting Mongooses | Tue Oct 27 | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ✅ |
 | [G06](#g06) GapWise | Tue Nov 3 | ⚠️ | ❌ | ❌ | ⚠️ | ⚠️ |
-| [G07](#g07) MightyMorphin | Tue Nov 3 | ⚠️ | ❌ | ⚠️ | ⚠️ | ❌ |
+| [G07](#g07) Mighty Morphins | Tue Nov 3 | ⚠️ | ❌ | ⚠️ | ⚠️ | ❌ |
 | [G08](#g08) Crime Busters | Tue Nov 3 | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ⚠️ |
 | [G09](#g09) Sigma Squad | Tue Nov 3 | ⚠️ | ❌ | ❌ | ❌ | ❌ |
 | [G10](#g10) Team Jiddak | Tue Nov 3 | ⚠️ | ❌ | ⚠️ | ⚠️ | ❌ |
 | [G11](#g11) 5 Guys | Thu Oct 29 | ⚠️ | ❌ | ❌ | ❌ | ❌ |
-| [G12](#g12) ACJMM (RTX-1) | Thu Oct 29 | ⚠️ | ❌ | ❌ | ⚠️ | ⚠️ |
+| [G12](#g12) ACJMM | Thu Oct 29 | ⚠️ | ❌ | ❌ | ⚠️ | ⚠️ |
 | [G13](#g13) BYKX | Thu Oct 29 | ✅ | ⚠️ | ❌ | ⚠️ | ❌ |
 | [G14](#g14) Cyber Squad | Thu Oct 29 | ⚠️ | ❌ | ❌ | ⚠️ | ❌ |
 | [G15](#g15) HIBBI-01 | Thu Oct 29 | ⚠️ | ❌ | ❌ | ❌ | ❌ |
-| [G16](#g16) Neuroprosthetic | Thu Nov 5 | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ✅ |
+| [G16](#g16) G16 | Thu Nov 5 | ✅ | ⚠️ | ⚠️ | ⚠️ | ✅ |
 | [G17](#g17) SonicScape (EchoSphere) | Thu Nov 5 | ⚠️ | ❌ | ❌ | ❌ | ❌ |
 | [G18](#g18) ProStrats | Thu Nov 5 | ⚠️ | ❌ | ✅ | ✅ | ⚠️ |
 | [G19](#g19) Titan Security | Thu Nov 5 | ⚠️ | ❌ | ❌ | ⚠️ | ❌ |
 | [G20](#g20) Solos | Thu Nov 5 | ⚠️ | ❌ | ❌ | ❌ | ❌ |
 
-- **Specs:** 6 of 20 groups have written specifications, in proposal.md or a separate doc (G01, G03, G04, G08, G13, G16).
-- **Design and diagrams:** 9 of 20 have started their design, as diagrams or design write-ups (G01, G02, G04, G05, G07, G08, G10, G16, G18).
-- **Environment:** 13 of 20 have written their environment choices into the repository (G01, G02, G04, G06, G07, G08, G10, G12, G13, G14, G16, G18, G19).
+- **Specs:** 7 of 20 groups have written specifications, in proposal.md or a separate doc (G01, G03, G04, G05, G08, G13, G16).
+- **Design and diagrams:** 10 of 20 have started their design, as diagrams or design write-ups (G01, G02, G03, G04, G05, G07, G08, G10, G16, G18).
+- **Environment:** 15 of 20 have written their environment choices into the repository (G01, G02, G03, G04, G05, G06, G07, G08, G10, G12, G13, G14, G16, G18, G19).
 - **Prototype wiring:** 8 of 20 have their own skeleton in `prototype/` or a merged project folder (G01, G03, G05, G06, G08, G12, G16, G18).
-- **Waiting in a branch or open pull request:** G01, G03, G04, G05, G06, G12, G13, G16, G19, G20. Merge it, or it doesn't count.
+- **Waiting in a branch or open pull request:** G01, G02, G04, G06, G12, G13, G16, G19, G20. Merge it, or it doesn't count.
 
 <a name="groups" id="groups"></a>
 
@@ -81,148 +81,144 @@ Each card shows the five Sprint 2 items, what I found in your repository (both `
 
 ### G01 · BGAF: Hyperliquid order-book reconstruction and backtesting (SNX-4)
 
-*Pipeline that cleans SonarX Hyperliquid data, rebuilds and validates order books, and backtests strategies, with a React front end.* · Sprint 2: Oct 13 – 26 · **Sprint 2 review Tue Oct 27** · [repository](https://github.com/LeDuy23/CPSC490-G01-BGAF)
+*Rebuild Hyperliquid order books from SonarX data, validate them, and backtest strategies on validated days.* · Sprint 2: Oct 13 – 26 · **Sprint 2 review Tue Oct 27** · [repository](https://github.com/LeDuy23/CPSC490-G01-BGAF)
 
-**Start here:** Write the three epic specs (requirements and acceptance criteria for Goals #20, #21, #22); #64 and #65 are closed but no spec text exists anywhere.
+**Start here:** Rewrite proposal §4 Environment and resources so it matches what the prototype and `docs/design/database.md` already chose (DuckDB, React/Vite).
 
 | Item | Status | What I found |
 |---|---|---|
-| 1. Epics & stories | ⚠️ gaps | Goals #20-#22 with stories #23-#28 plus Sprint 2 epics #71-#74 and stories #113-#119 filed; 68 of 70 issues linked in proposal on main. Stories #24, #26, #27 lack assignee; many tasks lack sp:. |
-| 2. Specs | ⚠️ started | proposal/proposal.md §3 (main) — five design decisions, validation and replay approach; reasoning, not requirements; docs/design/backtesting-research.md (main, linked §4) — feeds backtest spec; research not requirements Missing: Epic #20 Goal 1: requirements and acceptance criteria; Epic #21 Goal 2: requirements and acceptance criteria; Epic #22 Goal 3: requirements and acceptance criteria. |
-| 3. Design & diagrams | ✅ done | ✅ architecture · ✅ context · ✅ data flow · ▫️ ER · ✅ UML · ✅ page flow. Needed for this project: er: events and snapshots need stored schema (#79 open); uml: sequence of replay then validate then backtest. |
-| 4. Environment | ⚠️ partial | Stated in: proposal §4 Environment and resources (main; develop copy is shorter). Language: Python 3.12+ (pipeline); TypeScript (front end); Framework: React + Vite front end; data libraries undecided; Platform: team laptops; GitHub Actions CI; Data: SonarX S3 (L2 snapshots, order-level); storage format undecided (#80/#81); Hosting/hardware: none stated; ~100 GB/day node logs scoped to one market, one week; Sponsor resources: SNX-4: SonarX requester-pays S3 buckets, AWS account and CLI; Tools: Mermaid, pytest, oxlint, GitHub Projects. |
-| 5. Prototype wiring | ⚠️ started | prototype/src/bgaf_pipeline/ six step modules (clean, replay, validate, gate, backtest, report): docstring stubs; prototype/pyproject.toml, requirements.txt (pytest only), tests/test_package.py; prototype/frontend/ Vite React TS skeleton with package.json; prototype/login.py and tests/test_login.py still present |
+| 1. Epics & stories | ⚠️ gaps | Goals 1-3 epics #20-22 plus Sprint 2 epics #71-74, #89, #90; stories use objective wording; 71 of 73 issues linked; Goal stories #23-28 still open. |
+| 2. Specs | ✅ done | `docs/specs/reconstruction.md` (main) — Goal 1 (#20, stories #23, #24); FR, acceptance, open questions; `docs/specs/validation.md` (main) — Goal 2 (#21, #25, #26); names dated market events; `docs/specs/backtest.md` (main) — Goal 3 (#22, #27, #28); fill model, costs, metrics |
+| 3. Design & diagrams | ✅ done | ✅ architecture · ✅ context · ✅ data flow · ✅ ER · ✅ UML · ✅ page flow. Needed for this project: dfd: multi-step data pipeline; er: stored events, snapshots, results; uml: market-day critical flow; ui_flow: research workspace front end. |
+| 4. Environment | ⚠️ partial | Stated in: proposal §4 (stale) + README + design docs. Language: Python 3.12 (pipeline), TypeScript (front end); Framework: React + Vite front end; pytest; Platform: team laptops; GitHub Actions CI; Node 20.19+/22.12+; Data: Parquet + DuckDB (`duckdb==2.0.0`), per `docs/design/database.md`; Hosting/hardware: none; local laptops, 1 market x 1 week; Sponsor resources: SonarX requester-pays S3 buckets, Hyperliquid archive, AWS account + CLI; Tools: GitHub Actions, npm, oxlint, pytest, Mermaid. |
+| 5. Prototype wiring | ✅ done | `prototype/src/bgaf_pipeline/` six step modules mirror the architecture; `prototype/requirements.txt` pins pytest and duckdb; `pyproject.toml` present; `prototype/frontend/` Vite React skeleton with package-lock.json; `prototype/README.md` setup, test, front-end run commands; PR #139 DuckDB load |
 
-**Merge first** (not counted until it's in `develop` or `main`): PR #133 — front-end tool comparisons and decision (frontend-architecture.md); open, base main; Branch 87-document-why-our-front-end-architecture-differs... — same content as #133; develop is 34 commits behind main: sync or retire; open stale branches 58-cite-dropped-objective-main, sync-main-into-develop.
+**Merge first** (not counted until it's in `develop` or `main`): Branch `Damon` — 1 commit not in develop; `develop` is 34 commits behind main — sync main into develop or retire develop.
 
 **To do before your Sprint 2 review:**
 
-1. Write the three epic specs (Goals #20, #21, #22): scope, FR/NFR traced to #23-#28, acceptance criteria, open questions. Put detail in docs/specs/ (recommended) with a summary and link in §4.
-2. Complete the ER diagram and data model in docs/design/database.md (#79); embed it in proposal §4 Diagrams with a caption and record the #80 storage decision.
-3. Add a sequence diagram of one market-day run (download, clean, replay, validate, gate, backtest) to §4 Diagrams.
-4. Implement #81/#82: add .env.example, S3 access notes, and a smoke run that parses one SonarX sample file.
-5. Remove prototype/login.py and tests/test_login.py; update prototype/README.md Status table and front-end run commands.
-6. Merge PR #133, assign stories #24, #26, #27, add sp: to open tasks, and link #58 and #112 in proposal §4.
+1. Update proposal §4 Environment on main: Python 3.12, DuckDB/Parquet, React/Vite, Node, AWS CLI and requester-pays S3, each with its reason from §3.
+2. Add the ER diagram (`docs/design/database.md`) and the wireframe as numbered figures with captions in proposal §4 Diagrams.
+3. Add `prototype/.env.example` and fill README status rows; remove the course `login.py` and `tests/test_login.py` in their own PR.
+4. Link #58 and #140 in proposal; give #94 and #82 sp: and a Sprint milestone; assign #24, #26, #27, #69.
+5. Resolve the README contradiction: front-end framework 'still open' (#114) yet the skeleton exists; record the decision in `docs/design/frontend-architecture.md`.
+6. Mark the three specs reviewed once open questions (gate threshold, SonarX gaps) get answers; keep SonarX questions #41, #42 moving.
 
 [↑ Back to all groups](#groups)
 
 <a name="g02" id="g02"></a>
 
-### G02 · Linux Larpers: Distributed Signal Capture for Multi-Node Analysis
+### G02 · Linux Larpers: distributed signal capture for nearby recording devices (RTX-4)
 
-*ESP32 nodes capture Wi-Fi/Bluetooth metadata; a backend fingerprints nearby recording devices and a dashboard shows them.* · Sprint 2: Oct 13 – 26 · **Sprint 2 review Tue Oct 27** · [repository](https://github.com/eliThomass/CPSC490-G02-Linux-Larpers)
+*ESP32 nodes capture Wi-Fi/Bluetooth metadata; a backend identifies recording devices and a dashboard shows them.* · Sprint 2: Oct 13 – 26 · **Sprint 2 review Tue Oct 27** · [repository](https://github.com/eliThomass/CPSC490-G02-Linux-Larpers)
 
-**Start here:** Merge PRs #87, #88, #89 into develop, then rewrite proposal §4 with the environment choices from #79 and the architecture and ER figures.
+**Start here:** Merge `feature/23-approach-environment` and PR #96 into develop, then release develop to main so the environment choices and diagrams are on the record.
 
 | Item | Status | What I found |
 |---|---|---|
-| 1. Epics & stories | ⚠️ gaps | Goals 1-3 filed as epics (#47, #50, #56) with 15 objective stories, titles prefixed 'Objective N.M (Role):'. Sprint 2 stories #16, #45, #46, #48, #49 have sp but no assignee. |
-| 2. Specs | ❌ not started | No specification in proposal.md or `docs/specs/` yet. Missing: Epic #47 Goal 1: Collect wireless signal metadata; Epic #50 Goal 2: Identify selected recording devices; Epic #56 Goal 3: Present observations through a dashboard. |
-| 3. Design & diagrams | ⚠️ started | ✅ architecture · ▫️ context · ▫️ data flow · ✅ ER · ▫️ UML · ▫️ page flow. Needed for this project: dfd: signals flow node to backend to dashboard; er: Postgres stores observations and devices; uml: sequence for capture-to-detection flow; ui_flow: Angular dashboard screens. |
-| 4. Environment | ⚠️ partial | Stated in: HW#4 only (decisions in meeting issue #79; Lightsail in open PR #87); proposal §4 is a skeleton. Language: C/C++ firmware (ESP32); Python for backend; Framework: FastAPI; Angular (undecided); Platform: ESP32 capture nodes; Data: PostgreSQL; Hosting/hardware: AWS Lightsail + SSH tunnels (proposed, pending sponsor approval, PR #87); 2 ESP32 + 1 kit on order list; Sponsor resources: RTX-4 (Flock camera data dropped per #70); Tools: draw.io, GitHub Projects. |
-| 5. Prototype wiring | ❌ example files only | prototype/login.py and tests/test_login.py: unchanged course example; prototype/requirements.txt: scaffold copy, no FastAPI/Postgres deps; No firmware, API, or DB files anywhere in repo |
+| 1. Epics & stories | ⚠️ gaps | Goal epics #47, #50, #56 with 15 'Objective n.m' stories; Sprint 2 work is tasks; only 18 of 60 issues linked from proposal; §4 is a skeleton. |
+| 2. Specs | ❌ not started | No specification in proposal.md or `docs/specs/` yet. Missing: Goal 1 #47 Collect wireless metadata; Goal 2 #50 Identify recording devices; Goal 3 #56 Dashboard. |
+| 3. Design & diagrams | ⚠️ started | ✅ architecture · ✅ context · ✅ data flow · ✅ ER · ▫️ UML · ▫️ page flow. Needed for this project: uml: ESP32-to-server upload sequence; ui_flow: Angular dashboard screens. |
+| 4. Environment | ⚠️ partial | Stated in: issue titles #91-#95, #86 and unmerged branch `feature/23-approach-environment`; proposal §4 is a skeleton. Language: C/C++ (ESP32 firmware), Python (backend), TypeScript (Angular); Framework: FastAPI backend, Angular dashboard; Platform: ESP32 capture nodes; SSH-tunnel development; Data: PostgreSQL (#93); Hosting/hardware: ESP32 boards; AWS Lightsail proposed (#86); Sponsor resources: RTX-4 guidance: passive capture only; no Flock camera data; Tools: draw.io, Mermaid, GitHub Actions. |
+| 5. Prototype wiring | ❌ example files only | develop `prototype/` holds only `login.py`, `tests/test_login.py`, scaffold README and requirements; Open PR #96 adds `prototype/backend/` FastAPI, pyproject, uv.lock, test_main.py; No ESP32 firmware, Angular app, or PostgreSQL setup in any merged branch |
 
-**Merge first** (not counted until it's in `develop` or `main`): PR #89 — ER diagram drawio + png and proposal edit; targets main, should go to develop; PR #87 — Lightsail/SSH-tunnel §4 text; base is a feature branch; PR #88 — §5/§6 outcomes and timeline into develop; PR #83 — ESP32 wording in §0/§1; targets main; PR #78 — remove README.old.md (develop).
+**Merge first** (not counted until it's in `develop` or `main`): PR #96 — FastAPI scaffold in prototype/backend (open into develop); Branch `feature/23-approach-environment` — §3/§4 and Lightsail hosting; 6 commits not in develop; Branch `feature/86-lightsail-hosting` — 2 commits not in develop; develop to main — diagrams #77, #84, #97 exist only on develop.
 
 **To do before your Sprint 2 review:**
 
-1. Incorporate docs/design/diagrams/architecture.drawio.png (develop) into proposal §4: add a Diagrams subsection with caption, summary and link; merged PR #85 never touched proposal.md.
-2. Rewrite proposal §4: environment choices with reasons, diagram figures with captions, and spec/design index; link #77, #82, #84, #86 as typed refs.
-3. Write docs/specs one spec per epic #47, #50, #56 with first line naming epic and stories.
-4. Add docs/design/architecture.md and system context diagram (#80); merge via develop.
-5. Redo DFD L0/L1 (#77 was closed with no file on any branch) and retarget PR #89 to develop.
-6. Create PlatformIO ESP32 project and FastAPI skeleton in prototype/; delete login.py and test_login.py.
-7. Add .env.example and a smoke run: ESP32 Wi-Fi scan printed over serial, FastAPI /health, Postgres connect.
+1. Merge PR #96 and the `feature/23-approach-environment` branch, then fill proposal §4 Environment with ESP32, FastAPI, PostgreSQL, Angular, Lightsail and reasons.
+2. Write three specs in `docs/specs/` (one per goal epic #47, #50, #56) and link them in proposal §4 'Specification and design documents'.
+3. Add captioned figures for architecture, context, DFD and ER to proposal §4 Diagrams and link `data-flow.md`, `system-context.md`; add an architecture doc.
+4. Scaffold the ESP32 (#92), Angular (#94) and PostgreSQL (#93) projects in `prototype/` with `.env.example` and a smoke run; assign owners.
+5. Add a sequence diagram (ESP32 upload to backend) and dashboard wireframes for Goal 3.
+6. Link every Sprint 2 task in proposal §4; add sp: to #75, #82, #97; replace untyped meeting issues #79, #80 with typed ones.
 
 [↑ Back to all groups](#groups)
 
 <a name="g03" id="g03"></a>
 
-### G03 · California: Three AIs and Literate Programming
+### G03 · California: equation transcription, data generation and model training notebook (RTX-3)
 
-*Pipeline turning a handwritten equation into verified LaTeX, generated training data, a trained model and a documented report.* · Sprint 2: Oct 13 – 26 · **Sprint 2 review Tue Oct 27** · [repository](https://github.com/eccortes4/CPSC490-G03-California)
+*Jupyter notebook that transcribes an equation, generates training data, trains a model and plots results.* · Sprint 2: Oct 13 – 26 · **Sprint 2 review Tue Oct 27** · [repository](https://github.com/eccortes4/CPSC490-G03-California)
 
-**Start here:** Write proposal §4 Environment and resources: pick the recognizer and ML library, state Python/Jupyter versions, and give a reason for each.
+**Start here:** Merge PR #66, then write proposal §4 Environment naming the exact AI services, PyTorch/Jupyter versions, and how API keys are supplied.
 
 | Item | Status | What I found |
 |---|---|---|
-| 1. Epics & stories | ⚠️ gaps | Four epics (#28, #27, #43, #44) and 15 objective-titled stories filed and linked in §2. Only #30 and #33 carry the Sprint 2 milestone; most stories lack milestone; #31/#32 duplicate objective 2.4. |
-| 2. Specs | ⚠️ started | docs/specs/transcription.md (develop; linked in §4 table) — Epic #28; only #33 filled, solid FR/NFR Missing: Epic #27 Goal 2: Generate a training data set; Epic #43 Goal 3: Train a model; Epic #44 Goal 4: Output steps, code and plots in the proposal. |
-| 3. Design & diagrams | ❌ not started | ▫️ architecture · ▫️ context · ▫️ data flow · ▫️ ER · ▫️ UML · ▫️ page flow. Needed for this project: architecture and context: required for every project; dfd: equation to LaTeX to code to dataset to model; uml: sequence of transcribe, verify, accept hand-off; er: only if datasets get a stored schema; ui_flow: notebook review step, only if widgets added. |
-| 4. Environment | ❌ not started | Stated in: nowhere (§4 is a skeleton; spec mentions Jupyter and a vision-LLM recognizer, undecided). Language: Python (inferred from prototype/*.py); Framework: Jupyter notebook; recognizer undecided (vision LLM suggested in spec); Data: CSV/other datasets (Goal 2 stories); Sponsor resources: RTX-3: sponsor tools/accounts not stated; Tools: pytest, GitHub Actions CI. |
-| 5. Prototype wiring | ⚠️ started | prototype/transcriber.py and verifier.py on develop: real Goal 1 modules; prototype/tests/test_verifier.py: tests for verifier FRs; prototype/requirements.txt and README.md still unchanged course scaffold; prototype/train.py only in open PR #58 |
+| 1. Epics & stories | ⚠️ gaps | Goals 1-4 epics #28, #27, #43, #44; stories use objective wording; several stories lack a Sprint milestone; 14 untyped issues; 18 of 36 not in proposal. |
+| 2. Specs | ⚠️ started | `docs/specs/transcription.md` (develop) — Goal 1 (#28); only #33 written, #30, #50 TBD; `docs/specs/data-generation.md` (develop) — Goal 2 (#27); #36, #35, #48 done; #34, #31 TBD Missing: epic #43 Goal 3 train a model; epic #44 Goal 4 notebook output. |
+| 3. Design & diagrams | ✅ done | ✅ architecture · ✅ context · ✅ data flow · ▫️ ER · ✅ UML · ▫️ page flow. Needed for this project: er: only if datasets get a stored schema; ui_flow: notebook cell flow where user input is needed. |
+| 4. Environment | ⚠️ partial | Stated in: proposal §3 only; §4 Environment is still a placeholder. Language: Python; Framework: Jupyter notebook (sponsor-required UI); PyTorch for training; Platform: user's local machine for training; Data: CSV / .npy datasets (spec); Hosting/hardware: none stated; Sponsor resources: external AI services for transcription and dataset generation; models not yet named; Tools: Mermaid, GitHub Actions. |
+| 5. Prototype wiring | ⚠️ started | develop `prototype/transcriber.py`, `verifier.py`, `generate_dataset.py`, `train.py` exist; `prototype/tests/test_verifier.py` is the only test file; `prototype/requirements.txt` and README are still unchanged course scaffold; No notebook `.ipynb` and no `.env.example` |
 
-**Merge first** (not counted until it's in `develop` or `main`): PR #58 — prototype/train.py for loss-curve plotting, into develop; Branch loss-curve-train — same commit as PR #58; main is behind develop: promote Sprint 2 work after merging.
+**Merge first** (not counted until it's in `develop` or `main`): PR #66 — Release 0.2: develop to main with specs, diagrams, prototype code.
 
 **To do before your Sprint 2 review:**
 
-1. Write §4 Environment and resources and §3 approach in proposal.md; every choice gets a reason; fill the Planned activities table.
-2. Finish docs/specs/transcription.md for #30 and #50, then write specs for epics #27, #43 and #44.
-3. Add diagrams directly to proposal §4 (Mermaid or PNG with captions): architecture, system context, DFD; detail may go in docs/design/ (recommended).
-4. Create docs/design/ architecture and system context diagrams (Mermaid or draw.io plus PNG); add DFD and a sequence diagram; delete example-design.md.
-5. Rewrite prototype/README.md and requirements.txt for the real stack; add .env.example and a smoke run that loads the sample images.
-6. Merge PR #58 after adding it to a tracked task; remove prototype/login.py leftovers and login mentions in README.
-7. Move Sprint 2 stories onto the Sprint 2 milestone with sp: and assignee; close duplicate #32; link new issues in §4.
+1. Merge PR #66 so specs, diagrams and prototype reach main.
+2. Write proposal §4 Environment: Python/PyTorch versions, Jupyter, the named AI services, API-key handling, local compute, each with its reason.
+3. Pin real dependencies in `prototype/requirements.txt`, add `.env.example`, replace the scaffold README with working setup and run commands.
+4. Create the starter notebook in `prototype/` that runs transcribe, verify, generate on one equation as a smoke run.
+5. Complete TBD sections in both specs and add specs for Goals 3 and 4 (#43, #44).
+6. Clean the board: type or delete untyped meeting issues, add Sprint milestone and assignees to stories, link #51, #60, #65 in §4.
 
 [↑ Back to all groups](#groups)
 
 <a name="g04" id="g04"></a>
 
-### G04 · Epic Engineers: Polymarket PNL and top-trader dashboard (SNX-1)
+### G04 · EpicEngineers: Polymarket wallet PNL and trader profitability dashboard (SNX-1)
 
-*Compute per-wallet Polymarket profit and loss from SonarX Snowflake data, rank traders, and serve a client dashboard.* · Sprint 2: Oct 13 – 26 · **Sprint 2 review Tue Oct 27** · [repository](https://github.com/Bryancostco/CPSC490-G04-EpicEngineers)
+*Compute PNL for Polymarket proxy wallets from SonarX Snowflake data, rank traders, and show a dashboard.* · Sprint 2: Oct 13 – 26 · **Sprint 2 review Tue Oct 27** · [repository](https://github.com/Bryancostco/CPSC490-G04-EpicEngineers)
 
-**Start here:** Decide the stack this week and record it in proposal §4 (#52); the skeleton in #62 and the architecture doc in #56 both wait on it.
+**Start here:** Settle the stack decision in #52 and write it into proposal §4; the prototype skeleton and Snowflake smoke run (#62) cannot start until then.
 
 | Item | Status | What I found |
 |---|---|---|
-| 1. Epics & stories | ✅ done | Three epics (#24, #29, #33), 15 stories titled 'Objective N.M: ...' linked in §2. Sprint 2 tasks #49-#65 filed, assigned, on the Sprint 2 milestone; #62, #54, #55 lack sp:. |
-| 2. Specs | ⚠️ started | docs/specs/pnl-calculation.md (open PR #67 only, not on develop) — Epic #24 Goal 1 Missing: Epic #24 Goal 1 (spec unmerged); Epic #29 Goal 2: top traders and drivers (#54 open); Epic #33 Goal 3: client dashboard. |
-| 3. Design & diagrams | ⚠️ started | ▫️ architecture · ▫️ context · ✅ data flow · ▫️ ER · ▫️ UML · ▫️ page flow. Needed for this project: er: PNL results and wallet data stored; uml: sequence of a PNL run (#59); ui_flow: leaderboard and wallet lookup pages (#60). |
-| 4. Environment | ⚠️ partial | Stated in: proposal §4 names Snowflake only; stack explicitly 'not chosen yet' (#52 open). Language: not chosen; Framework: not chosen; Platform: not chosen; Data: SonarX Snowflake (Polygon/Polymarket tables); own storage undecided; Hosting/hardware: not chosen; Sponsor resources: SNX-1: SonarX Snowflake access, credentials via Slack pending; Tools: GitHub Projects, Mermaid. |
-| 5. Prototype wiring | ❌ example files only | prototype/login.py, tests/test_login.py: course example unchanged; prototype/README.md and requirements.txt: unchanged scaffold; #62 (skeleton + Snowflake connection) open, no branch |
+| 1. Epics & stories | ⚠️ gaps | Goal epics #24, #29, #33 with 15 'Objective' stories; 40 of 41 issues linked; Sprint 2 has 17 open tasks; only #25 and #34 stories are in Sprint 2. |
+| 2. Specs | ⚠️ started | `docs/specs/pnl-calculation.md` (main, develop) — Goal 1 (#24); worked example, FIFO; `docs/specs/trader-ranking.md` (develop) — Goal 2 (#29); ranking and behavior metrics Missing: epic #33 Goal 3 dashboard (draft in open PR #73). |
+| 3. Design & diagrams | ⚠️ started | ✅ architecture · ✅ context · ✅ data flow · ▫️ ER · ▫️ UML · ✅ page flow. Needed for this project: dfd: query-to-dashboard data pipeline; er: derived PNL and ranking tables; uml: sequence for a PNL run (#59); ui_flow: dashboard leaderboard and wallet pages. |
+| 4. Environment | ⚠️ partial | Stated in: proposal §4 (Snowflake only); `docs/design/implementation.md` on main. Language: not chosen; Framework: not chosen (#52 open); Platform: not chosen; Data: Snowflake (SonarX Polygon warehouse); Hosting/hardware: not stated; Sponsor resources: SonarX Snowflake access; open-source tools allowed; Tools: Predicts.guru / Polymarket Analytics for validation. |
+| 5. Prototype wiring | ❌ example files only | `prototype/` holds only course `login.py`, `test_login.py`, scaffold README and requirements; `docs/design/implementation.md` proposes a layout with `.env.example` but nothing is created; Issue #62 (skeleton + Snowflake connection) is open |
 
-**Merge first** (not counted until it's in `develop` or `main`): PR #67 — PNL calculation spec for Goal 1; base develop; PR #68 — DFD L0/L1 mmd+png and design doc; base is spec branch, retarget develop; PR #66 — cite Sprint 2 work items in proposal §4; PR #69 — proposal references [1]-[7]; PR #70, #71, #72, #64 — context doc, dev plan, Sprint 2 review draft, sync main into develop.
+**Merge first** (not counted until it's in `develop` or `main`): PR #81 — revised architecture and context diagrams into main; PR #79 — dashboard flow doc and diagram into develop; PR #73 — dashboard questions spec (#34) into develop; PR #72 — Sprint 2 review draft into develop; Branches `55-pnl-calculation-spec`, `58-data-flow-diagrams` — DFD L0/L1 not in develop.
 
 **To do before your Sprint 2 review:**
 
-1. Hold the stack decision meeting, file notes as an issue, and close #52 by writing the choices and reasons into proposal §4 and CLAUDE.md.
-2. Merge PRs #64, #66, #67, #68 into develop (retarget #68), then link all merged docs in §4.
-3. Write docs/design/architecture.md (#56) with architecture and system-context diagrams as Mermaid plus PNG.
-4. Write the ER (#57), sequence (#59) and dashboard flow (#60) design docs; each first line names epic and stories.
-5. Write docs/specs/trader-ranking.md (#54) and a dashboard spec for epic #33.
-6. Implement #62: replace login example with the chosen skeleton, .env.example, and Snowflake smoke query; note row count in the PR.
-7. After PRs #67 and #68 merge, add their summary, diagrams and links to proposal §4 (currently says no spec or design documents exist).
+1. Decide and record the prototype stack (#52) in proposal §4 and `CLAUDE.md`; replace 'not chosen yet' with language, framework, hosting.
+2. Merge open PRs #73, #79, #81 and the DFD branch; sync main and develop, which have diverged.
+3. Link `docs/design/architecture.md` and all new diagrams in proposal §4 with numbered captions.
+4. Write the ER (`data-model.md`, #57) and PNL-run sequence (`pnl-pipeline.md`, #59).
+5. Create the prototype skeleton and Snowflake connection smoke run (#62) with `.env.example` and README.
+6. Replace the small architecture sketch with real components; give #80 sp: and an assignee.
 
 [↑ Back to all groups](#groups)
 
 <a name="g05" id="g05"></a>
 
-### G05 · Fighting Mongooses: WILS passive whale locator and identifier
+### G05 · Fighting Mongooses: Whale Identification/Location System (own project, no sponsor)
 
-*Hydrophone array locates whale calls by time difference of arrival; an AI classifies species and a database stores detections.* · Sprint 2: Oct 13 – 26 · **Sprint 2 review Tue Oct 27** · [repository](https://github.com/M-Kwatcher/CPSC490-G05-Fighting-Mongooses)
+*AI that detects and identifies whale calls in hydrophone audio, then locates the source by time difference.* · Sprint 2: Oct 13 – 26 · **Sprint 2 review Tue Oct 27** · [repository](https://github.com/M-Kwatcher/CPSC490-G05-Fighting-Mongooses)
 
-**Start here:** File Sprint 2 tasks for specs, diagrams and environment, then write proposal §4 stating language, ML framework, database and hardware with reasons.
+**Start here:** Merge PR #48, then draw the architecture and system context diagrams in `docs/design/` and embed them in proposal §4.
 
 | Item | Status | What I found |
 |---|---|---|
-| 1. Epics & stories | ⚠️ gaps | Two epics (#8, #14), 9 stories titled 'Objective N.M:' linked in §2, all on Sprint 2 with assignee and sp:. Goal 3 or any data/UI epic absent; no tasks for specs, design, environment. |
-| 2. Specs | ❌ not started | No specification in proposal.md or `docs/specs/` yet. Missing: Epic #8 Goal 1: Build an AI recognizing whale calls; Epic #14 Goal 2: Create a locator for sound distance. |
-| 3. Design & diagrams | ⚠️ started | ▫️ architecture · ▫️ context · ▫️ data flow · ✅ ER · ▫️ UML · ▫️ page flow. Needed for this project: dfd: hydrophone audio to detection to location to storage; uml: sequence of call detected, located, saved; er: whale-call database stores clips with timestamp and hydrophone ID. |
-| 4. Environment | ❌ not started | Stated in: nowhere (§4 skeleton; Python/numpy/scipy visible only in prototype). Language: Python (inferred from prototype/); Framework: numpy, scipy, matplotlib; AI framework undecided; Data: SQL database (db/init/schema.sql in open PR #39); Hosting/hardware: hydrophone array; hardware unstated; Tools: pytest, GitHub Actions CI. |
-| 5. Prototype wiring | ⚠️ started | prototype/locator/ (tdoa.py, simulate.py, config.py, demo_delay.py) on develop: working direction estimate #15; prototype/tests/test_tdoa.py; requirements.txt pins numpy/scipy/matplotlib; prototype/login.py and tests/test_login.py still present; README header still scaffold |
+| 1. Epics & stories | ⚠️ gaps | Goal epics #8, #14; 9 objective stories (1.1-1.5, 2.1-2.4) in Sprint 2 with assignees; 12 other issues not linked in proposal §4. |
+| 2. Specs | ⚠️ started | `docs/specs/goal-2-locator.md` (develop) — Goal 2 (#14, #15-#18); scope, FR/NFR, criteria, open questions Missing: epic #8 Goal 1 whale-call recognizer. |
+| 3. Design & diagrams | ⚠️ started | ▫️ architecture · ▫️ context · ▫️ data flow · ✅ ER · ▫️ UML · ▫️ page flow. Needed for this project: architecture and context: required for any project; dfd: audio to detector to locator pipeline; er: whale database schema exists (`db/init/schema.sql`); uml: sequence for detect then locate. |
+| 4. Environment | ⚠️ partial | Stated in: prototype README and requirements.txt only; proposal §4 is a skeleton. Language: Python; Framework: PyTorch, librosa, scipy, numpy; Platform: local machines, venv; Windows and Mac/Linux commands; Data: PostgreSQL via `docker_compose.yaml` and `db/init/schema.sql`; whale audio datasets; Hosting/hardware: none; simulated hydrophone recordings; Sponsor resources: none (own project); public whale call datasets; Tools: GitHub Actions, pytest, docker compose. |
+| 5. Prototype wiring | ✅ done | develop `prototype/locator/` and `ai-detector/` mirror Goals 2 and 1; `prototype/requirements.txt` pins numpy, scipy, torch, librosa; `prototype/.env.example` and README setup/run/test; `python -m locator.smoke`; Tests: `tests/test_tdoa.py`, `test_locate.py`, `test_save_call.py` |
 
-**Merge first** (not counted until it's in `develop` or `main`): PR #38 — distance estimate locate.py with tests, into develop (story #16); PR #39 — db/init/schema.sql and ER diagram png; targets main, retarget develop; Branch issue#9 — 4 commits not in develop (database for #9).
+**Merge first** (not counted until it's in `develop` or `main`): PR #48 — develop to main: locator, detector, spec, .env.example, README; develop holds all Sprint 2 work; main has only the ER image and DB init.
 
 **To do before your Sprint 2 review:**
 
-1. Write proposal §3 and §4: Python, ML framework, DBMS, hydrophone hardware or simulation, dataset source, each with a reason.
-2. Create docs/specs/ files for epics #8 and #14 with first-line epic/story headers; delete example-spec.md.
-3. Add architecture and system-context diagrams to docs/design/ plus a DFD and detection sequence diagram; export images and list in §4.
-4. Incorporate the ER diagram into proposal §4 with caption and link once PR #39 merges.
-5. Retarget and merge PR #39 into develop; add editable ER source; merge PR #38 after review.
-6. Clean prototype/: remove login files, rewrite README with fresh-machine setup, add .env.example and a smoke run.
-7. File tasks for each of these with parent, sp: and Sprint 2, and link them in §4.
+1. Merge PR #48 so the spec, prototype and README reach main.
+2. Draw high-level architecture and system context diagrams in `docs/design/` with source and PNG; add a DFD for audio to detector to locator.
+3. Embed the ER diagram and new figures in proposal §4 Diagrams with captions; export an editable ER source.
+4. Write proposal §4 Environment (Python, PyTorch, librosa, PostgreSQL via docker, datasets) with reasons tied to §3.
+5. Write `docs/specs/goal-1-recognizer.md` for epic #8 and stories #9-#13, then link it in the §4 table.
+6. Link all non-story issues (#20-#42) in proposal §4 and fix README commands that no longer exist.
 
 [↑ Back to all groups](#groups)
 
@@ -258,30 +254,30 @@ Each card shows the five Sprint 2 items, what I found in your repository (both `
 
 <a name="g07" id="g07"></a>
 
-### G07 · MightyMorphin: materials database for Edwards (EL-1)
+### G07 · Mighty Morphins: Online Materials Database
 
-*Internal web app extracting material data from CoC and test-report PDFs into a verified relational database.* · Sprint 2: Oct 20 – Nov 2 · **Sprint 2 review Tue Nov 3** · [repository](https://github.com/CPSC490-Team-Proj/CPSC490-G07-MightyMorphin)
+*Web app that extracts material data from CoC and test-report PDFs into a verified, searchable relational database.* · Sprint 2: Oct 20 – Nov 2 · **Sprint 2 review Tue Nov 3** · [repository](https://github.com/CPSC490-Team-Proj/CPSC490-G07-MightyMorphin)
 
-**Start here:** Finish #47 (tech stack and AWS services) first: the DB and framework choice drives the ER diagram, specs and prototype skeleton.
+**Start here:** Close #47 (tech stack and AWS services): the DBMS and framework choice drives the ER diagram, three specs and the prototype skeleton.
 
 | Item | Status | What I found |
 |---|---|---|
-| 1. Epics & stories | ⚠️ gaps | 3 product epics (#11,#17,#22), 16 objective stories, none with Sprint milestone or assignee. Goal 0 (#42) holds spec/design tasks. Process epics #1,#4,#28,#45 clutter. |
-| 2. Specs | ❌ not started | No specification in proposal.md or `docs/specs/` yet. Missing: Epic #11 Goal 1 Extraction and verification; Epic #17 Goal 2 Storage and management; Epic #22 Goal 3 Access and analysis. |
-| 3. Design & diagrams | ⚠️ started | ▫️ architecture · ▫️ context · ▫️ data flow · ▫️ ER · ▫️ UML · ▫️ page flow. Needed for this project: dfd: PDF ingest, OCR/extract, verify, store pipeline; er: materials, vendors, lots, documents tables; uml: sequence upload, extract, review, approve; ui_flow: upload, review queue, search, compare screens. |
-| 4. Environment | ⚠️ partial | Stated in: proposal §4 and §3 (main); develop §4 still skeleton; #47 open. Language: Python; Framework: TBD backend and frontend; Platform: internal web app; AWS (Objective 2.2); Data: relational DB, engine TBD; Snowflake option under evaluation; Hosting/hardware: AWS-hosted; team laptops; Sponsor resources: Edwards CoC and test-report PDFs; sponsor Snowflake platform (unconfirmed); Tools: VS Code, Git/GitHub; document-processing library TBD. |
-| 5. Prototype wiring | ❌ example files only | prototype/ holds only course login.py, test_login.py, README, requirements.txt (unchanged) |
+| 1. Epics & stories | ⚠️ gaps | Epics #11,#17,#22,#42,#45 and stories titled as objectives, all linked in proposal. Sprint 2 stories #48,#49 and design tasks #36-#41 are assigned, but spec tasks #46,#58,#59 have no assignee. |
+| 2. Specs | ❌ not started | No specification in proposal.md or `docs/specs/` yet. Missing: Goal 1 Automated Material Data Extraction and Verification (#11, task #46); Goal 2 Centralized Material Data Storage and Management (#17, task #58); Goal 3 Material Data Access and Analysis (#22, task #59). |
+| 3. Design & diagrams | ⚠️ started | ▫️ architecture · ▫️ context · ▫️ data flow · ▫️ ER · ▫️ UML · ▫️ page flow. Needed for this project: dfd: PDF ingest, OCR, extract, verify, store pipeline; er: relational records with source-document links; uml: sequence for upload to verified record; ui_flow: internal search/compare web pages; context: Edwards users, PDFs, AWS services. |
+| 4. Environment | ⚠️ partial | Stated in: proposal §4 (table, with TBD rows) and §3. Language: Python (backend, extraction, processing); Framework: TBD backend and frontend; Platform: web application; AWS-hosted per Objective 2.2; Data: relational database, product TBD (typo TDB); Hosting/hardware: AWS, services not yet named (#47 open); Sponsor resources: CoCs and internal test-report PDFs from EL-1; not listed in section 4; Tools: VS Code, Git/GitHub. |
+| 5. Prototype wiring | ❌ example files only | `prototype/login.py` and `tests/test_login.py` are the course example; `prototype/README.md` still has the template text and placeholders; No team manifest or `.env.example` |
 
-**Merge first** (not counted until it's in `develop` or `main`): develop out of sync: main holds proposal §3/§4/§2 content, develop still skeleton; issue #67: port typed-link fix between develop and main (no PR yet).
+**Merge first** (not counted until it's in `develop` or `main`): PR #68 (task/36-use-case-diagram) — use-case diagram `docs/design/use-case.md` and PNG; 28 commits not in develop, rebase first.
 
 **To do before your Sprint 2 review:**
 
-1. Assign #46, #58, #59 and write the three goal specs (scope, FR/NFR traced to stories, acceptance criteria, open questions) in proposal §4 or docs/specs/ files linked from §4.
-2. Draw architecture, system context, DFD, ER, extraction sequence and review-queue wireframes (#36-#41); embed as Mermaid or PNG in proposal §4 and fill the four empty figure links.
-3. Finish #47: choose DB, backend, frontend, OCR library, AWS services; replace TBD cells in §4 with reasons tied to §3.
-4. Create prototype skeleton with manifest, .env.example, README setup and run, smoke run on one sample PDF; replace login scaffold.
-5. Fix §4: document index links, #58 URL; add #28 and #67; sync develop and main by PR; give product stories a sprint and owner.
-6. Recommended: keep summaries and diagrams in proposal.md but put full spec and design detail in docs/specs/ and docs/design/, linked from §4.
+1. Close #47: pick DBMS, backend and frontend framework, OCR/extraction tool and AWS services; write them in the proposal section 4 table with reasons.
+2. Assign #46, #58, #59 and write the three specs in `docs/specs/`, each naming its epic and stories in the first lines.
+3. Finish #38, #39, #40 as Mermaid or exported images in `docs/design/`; add the missing context diagram and #41 wireframe.
+4. Fill the empty diagram and document links in proposal section 4 (`[...]` and `[...]`), and add captions.
+5. Rebase and merge PR #68 into main; bring main's proposal content back into develop (develop section 4 is still a skeleton).
+6. Replace `prototype/login.py` with a skeleton for the chosen stack, a manifest, `.env.example` and README commands.
 
 [↑ Back to all groups](#groups)
 
@@ -401,31 +397,30 @@ Each card shows the five Sprint 2 items, what I found in your repository (both `
 
 <a name="g12" id="g12"></a>
 
-### G12 · ACJMM (RTX-1): Explainable 6G Waveform Classification
+### G12 · ACJMM: Waveform identification and modulation classifier with explainable AI
 
-*App that finds signal peaks, classifies waveform/modulation, and explains results with confidence and Unknown labels.* · Sprint 2: Oct 15 – 28 · **Sprint 2 review Thu Oct 29** · [repository](https://github.com/CharlesSinde/CPSC490-G12-ACJMM)
+*Detects signal peaks, identifies 6G waveforms and modulation, with confidence, Unknown abstention and CLI/GUI.* · Sprint 2: Oct 15 – 28 · **Sprint 2 review Thu Oct 29** · [repository](https://github.com/CharlesSinde/CPSC490-G12-ACJMM)
 
-**Start here:** Open the PR for branch Application-Structure into develop and write prototype/README.md and requirements.txt so the existing classifier code has a documented, runnable setup.
+**Start here:** Merge PR #102 with a real `prototype/README.md` and `requirements.txt`, so the peak picker and XAI code have documented, runnable setup.
 
 | Item | Status | What I found |
 |---|---|---|
-| 1. Epics & stories | ⚠️ gaps | 5 epics (#57-#61), ~13 stories, several titled as tasks not objectives. Sprint 2 stories #63, #67, #68, #70, #71 lack milestone/assignee; 0 typed refs; #95-#98 unlinked. |
-| 2. Specs | ❌ not started | No specification in proposal.md or `docs/specs/` yet. Missing: epic #57 Signal Detection & Preprocessing; epic #58 Application interface and cross functional integration; epic #59 Waveform Identification & Receiver Processing; epic #60 Modulation, Decision & Explainable AI; epic #61 Modulation type re-classifier. |
-| 3. Design & diagrams | ❌ not started | ▫️ architecture · ▫️ context · ▫️ data flow · ▫️ ER · ▫️ UML · ▫️ page flow. Needed for this project: dfd: .iq input through peaks, classifier, XAI report; er: only if runs/results are stored; uml: sequence for classify-one-snapshot flow; ui_flow: CLI first, then GUI screens. |
-| 4. Environment | ⚠️ partial | Stated in: proposal §4 (prose only, on main and develop). Language: MATLAB, possibly Python; Framework: MATLAB 6G Simulink library; ML/CV methods; Captum (#64); Platform: desktop CLI and GUI over one core engine; Data: signal data from sponsor mentors (.iq files, #97); Hosting/hardware: local machines; not stated; Sponsor resources: RTX-1 mentor-provided simulated 6G waveforms; Tools: GitHub board; Python test tooling in develop. |
-| 5. Prototype wiring | ⚠️ started | develop: prototype/modulation_classifier.py + tests/test_modulation_classifier.py; develop: prototype/xai/calibration.py, decision_fusion.py + tests/test_calibration.py; develop: prototype/data/raw/.gitkeep; main still has only login.py scaffold; prototype/README.md and requirements.txt still scaffold copies; login.py still present |
+| 1. Epics & stories | ⚠️ gaps | Five epics #57-#61, stories titled as objectives, Sprint 2 stories assigned. Develop links 17 typed refs; main has none. #95-#98 not in proposal; #95-#97 have no milestone. |
+| 2. Specs | ❌ not started | No specification in proposal.md or `docs/specs/` yet. Missing: Epic #57 Signal Detection & Preprocessing; Epic #58 Application interface and cross functional integration; Epic #59 Waveform Identification & Receiver Processing; Epic #60 Modulation, Decision & Explainable AI; Epic #61 Modulation type re-classifier. |
+| 3. Design & diagrams | ❌ not started | ▫️ architecture · ▫️ context · ▫️ data flow · ▫️ ER · ▫️ UML · ▫️ page flow. Needed for this project: dfd: IQ samples to peaks to classifier to explanation; uml: sequence for classify with Unknown abstention; ui_flow: GUI screens mirroring CLI inputs and outputs; er: only if results or retraining cases are stored. |
+| 4. Environment | ⚠️ partial | Stated in: proposal §4 (prose only). Language: MATLAB, possibly Python (develop code is Python); Framework: MATLAB 6G Simulink library; Captum planned in issues; Platform: not stated (desktop CLI and GUI); Data: IQ data from mentors; no store named; Hosting/hardware: not stated; Sponsor resources: mentor-provided signal data (RTX-1); Tools: not listed beyond MATLAB/Python. |
+| 5. Prototype wiring | ⚠️ started | develop `prototype/xai/calibration.py`, `decision_fusion.py` with tests (PR #99 merged); develop `prototype/modulation_classifier.py` stand-in classifier; `prototype/README.md` and `requirements.txt` still course scaffold on develop; Open PR #102: `waveform_identification/` package, scripts, README, requirements |
 
-**Merge first** (not counted until it's in `develop` or `main`): PR #99 (develop, merged): XAI calibration/Unknown abstention in prototype/xai; not yet on main; Branch Application-Structure: 5 commits not in develop; open a PR; Branch docs/team-documentation: 3 commits not in develop; open a PR; Merge develop into main so Sprint 2 work reaches main.
+**Merge first** (not counted until it's in `develop` or `main`): PR #102 (feature/98-baseline-peak-picking) — baseline peak picker, scripts, README, requirements; open; Branch Application-Structure — 5 commits not in develop; open a PR or drop; Branch docs/team-documentation — 1 commit not in develop; develop to main — typed refs, goals format (#101), prototype code not on main.
 
 **To do before your Sprint 2 review:**
 
-1. Write five specs in proposal §4 (or docs/specs/, linked from §4) (one per epic #57-#61) naming epic and stories first, requirements traced to stories, acceptance criteria.
-2. Create architecture and system-context diagrams in proposal §4 as Mermaid or images; add DFD L1 and a classify-flow sequence diagram; list all in proposal §4 Diagrams.
-3. Fill proposal §4 Environment: MATLAB vs Python split, ML libraries, GUI toolkit, data source, with reasons; link specs under Specification and design documents.
-4. Recommended once §4 has the summaries: move full spec/design detail into docs/specs/<epic>.md and docs/design/, linking each from §4.
-5. Fix prototype/README.md, requirements.txt, .env.example, add a smoke run on a sample .iq file; delete login.py and test_login.py.
-6. Open PRs for Application-Structure and docs/team-documentation into develop, then merge develop into main.
-7. Retitle stories to objective wording, add Sprint 2 milestone/assignee to #63, #67, #68, #70, #71, use typed refs, link #95-#98.
+1. Merge PR #102 after replacing the scaffold `prototype/README.md` and `requirements.txt` with real setup and run commands.
+2. Write specs in `docs/specs/` for epics #57-#61, each opening with epic and stories; link in section 4.
+3. Draw architecture, system context, DFD and GUI wireframe; put them with captions in proposal section 4.
+4. Expand section 4 environment into a table with a reason per choice; resolve MATLAB versus Python.
+5. Link #95-#98 in section 4; assign Sprint and parent to #95-#97; merge duplicate stories #70/#71.
+6. Open a PR for Application-Structure; merge develop into main.
 
 [↑ Back to all groups](#groups)
 
@@ -489,59 +484,59 @@ Each card shows the five Sprint 2 items, what I found in your repository (both `
 
 <a name="g15" id="g15"></a>
 
-### G15 · HIBBI-01: Constrained-hardware ECS game engine with demo game
+### G15 · HIBBI-01: ECS game engine for constrained hardware with demo game
 
-*Small ECS game engine for low-end hardware with cross-platform builds, renderer, editor, and a demo game.* · Sprint 2: Oct 15 – 28 · **Sprint 2 review Thu Oct 29** · [repository](https://github.com/Isaiah714/CPSC490-G15-HIBBI-01)
+*Lightweight ECS-based game engine for older hardware, with a top-down 3D bullet-heaven demo game.* · Sprint 2: Oct 15 – 28 · **Sprint 2 review Thu Oct 29** · [repository](https://github.com/Isaiah714/CPSC490-G15-HIBBI-01)
 
-**Start here:** Do #46: add prototype/CMakeLists.txt with a window-and-cube build that compiles on a fresh machine, then record language and graphics API choices in §4.
+**Start here:** Do #46: add `prototype/CMakeLists.txt` with a window build that compiles on a fresh machine, then record language and OpenGL choices in §4.
 
 | Item | Status | What I found |
 |---|---|---|
-| 1. Epics & stories | ⚠️ gaps | 2 epics (#24, #25), 8 stories (#26-#33) objective-titled but no sp:/milestone/assignee; stray epic #6; §2 skeleton; refs untyped; #46 parent points to itself. |
-| 2. Specs | ❌ not started | No specification in proposal.md or `docs/specs/` yet. Missing: epic #24 Game Engine; epic #25 Game Demo. |
-| 3. Design & diagrams | ❌ not started | ▫️ architecture · ▫️ context · ▫️ data flow · ▫️ ER · ▫️ UML · ▫️ page flow. Needed for this project: dfd: input to ECS systems to renderer; uml: sequence for frame loop; class for ECS; er: only if levels/assets serialized; ui_flow: editor (#33) and game screens. |
-| 4. Environment | ❌ not started | Stated in: nowhere (§4 skeleton; HW#4 names no language or graphics API; only #46 mentions CMake). Language: not stated (CMake implies C/C++); Framework: custom ECS engine; graphics API not stated; Platform: Windows, Mac, Linux (story #31); constrained older hardware; Data: not stated; Hosting/hardware: low-end target hardware not specified; Sponsor resources: none stated; Tools: CMake (#46). |
-| 5. Prototype wiring | ❌ example files only | prototype/login.py, tests/test_login.py: course example unchanged; No manifest and no CMakeLists.txt in prototype/ (requirements.txt absent); prototype/README.md: template text |
+| 1. Epics & stories | ⚠️ gaps | Epics #24 Game Engine, #25 Game Demo with eight objective-titled stories (#26-#33), none in Sprint 2. Sprint 2 tasks #46-#50, #9 assigned but untyped or without sp:; §2 and §4 links are bare, none typed. |
+| 2. Specs | ❌ not started | No specification in proposal.md or `docs/specs/` yet. Missing: Epic #24 Game Engine; Epic #25 Game Demo. |
+| 3. Design & diagrams | ❌ not started | ▫️ architecture · ▫️ context · ▫️ data flow · ▫️ ER · ▫️ UML · ▫️ page flow. Needed for this project: dfd: input to ECS systems to renderer per frame; uml: class diagram of entity, component, system; ui_flow: editor screens for objective 2.4; er: only if scenes or assets are stored. |
+| 4. Environment | ❌ not started | Stated in: HW#4 only (plus README platforms and issue #46). Language: not stated (CMake in #46 implies C/C++); Framework: custom ECS engine; legacy OpenGL per HW#4; Platform: Windows, Linux, maybe Mac (README); Data: not stated; Hosting/hardware: older or constrained hardware; target spec not stated; Sponsor resources: none (own project); Tools: CMake (#46). |
+| 5. Prototype wiring | ❌ example files only | `prototype/login.py` and `tests/test_login.py` are course example; `prototype/README.md` still template text; No CMakeLists.txt or manifest |
+
+**Merge first** (not counted until it's in `develop` or `main`): PR #51 (documentation/47-System-Context-Diagram) — §4 system context diagram draft; open; develop to main — develop has README and §2 work; main proposal is still a skeleton.
 
 **To do before your Sprint 2 review:**
 
-1. Fix #46 parent self-reference, set Sprint 2/sp:/assignee on #24-#33, and use typed refs in §2 and §4.
-2. Write §3 approach and §4 environment (language, graphics API, window library, CMake, target OSes, test hardware) with reasons.
-3. Write specs for epics #24 and #25 (#49) in proposal §4 with requirements traced to stories and acceptance criteria.
-4. Recommended once §4 has the summaries: move full spec/design detail into docs/specs/<epic>.md and docs/design/, linking each from §4.
-5. Draw architecture (#48) and system-context (#47) diagrams in proposal §4 as Mermaid or images with images; add ECS class and frame-loop sequence diagrams.
-6. Add prototype/CMakeLists.txt skeleton and window-plus-cube smoke run (#46, #9); replace README; delete login.py and test_login.py.
-7. Open PRs into develop for each Sprint 2 issue, link all in §4, and merge develop into main.
+1. Do #46: add `prototype/CMakeLists.txt` and a window-and-triangle build that compiles on a fresh machine; replace `login.py`.
+2. Write the environment table in proposal §4 with language, OpenGL version, libraries, compilers, platforms, tools and reasons.
+3. Merge PR #51 and finish #48 architecture diagram; add ECS class diagram and DFD with captions in §4.
+4. Write `docs/specs/` for both epics (#49) and list them in §4 with issue numbers.
+5. Add typed refs for every issue in §2 and §4; label #47-#50 as task; add sp: and Sprint 2 milestone to stories being worked.
+6. Merge develop into main so main's proposal has the real §0-§2.
 
 [↑ Back to all groups](#groups)
 
 <a name="g16" id="g16"></a>
 
-### G16 · Neuroprosthetic: BridgeWatch, real-time cross-chain bridge exploit detection (SNX-3)
+### G16 · G16: BridgeWatch cross-chain bridge exploit detection
 
-*Alarm system that learns normal bridge-vault outflow and alerts operators on exploits, with a dashboard.* · Sprint 2: Oct 22 – Nov 4 · **Sprint 2 review Thu Nov 5** · [repository](https://github.com/garybs16/CPSC490-G16-Neuroprosthetic)
+*Learns normal bridge outflow, raises alerts on hacks with few false alarms, and shows them on a dashboard.* · Sprint 2: Oct 22 – Nov 4 · **Sprint 2 review Thu Nov 5** · [repository](https://github.com/garybs16/CPSC490-G16-Neuroprosthetic)
 
-**Start here:** Start task #62: create docs/design/architecture.md with editable Mermaid for the existing Figure 1 and 2, and add the SQLite ER diagram.
+**Start here:** Do #62: create `docs/design/architecture.md` with editable Mermaid for Figures 1 and 2, and add the SQLite ER diagram.
 
 | Item | Status | What I found |
 |---|---|---|
-| 1. Epics & stories | ⚠️ gaps | 3 epics (#11-#13) and 11 objective-titled stories; Sprint 2 stories #14, #15 and tasks #61-#66 are assigned with sp and milestone. Task #69 is not linked in proposal §4; #67 is untyped. |
-| 2. Specs | ⚠️ started | docs/specs/goal-2-detection.md (develop) — Epic #12, stories #5,#16-#19; FR/NFR, EARS, rule tables, acceptance criteria; docs/specs/goal-3-dashboard.md (main, develop) — Epic #13, stories #20,#21; problem, scope, requirements, criteria Missing: Epic #11 Goal 1: Learn what normal bridge activity looks like (task #61 open). |
-| 3. Design & diagrams | ⚠️ started | ✅ architecture · ✅ context · ▫️ data flow · ▫️ ER · ▫️ UML · ▫️ page flow. Needed for this project: dfd: ingest, store, baseline, detector, alerts pipeline; er: SQLite store holds transfers, alerts, cursor; uml: sequence for live loop to alert to webhook; ui_flow: operator dashboard, mark-as-seen flow. |
-| 4. Environment | ⚠️ partial | Stated in: proposal §4 (Table 6), README in prototype/. Language: Python 3.12; Framework: FastAPI + uvicorn; single-page web dashboard (prototype/web/bridgewatch.html); Platform: Docker image (prototype/Dockerfile.bridgewatch); OS not stated; public Ethereum JSON-RPC nodes; Data: SQLite store; saved hack datasets as JSON under prototype/bridgewatch/data; Hosting/hardware: Docker packaging; host not chosen (Table 6 says 'Not decided'); Sponsor resources: SonarX stream, prices and balances still 'To request'; SNX-3 mentor questions in #28; Tools: pytest, GitHub Actions CI, Slack webhook alerts. |
-| 5. Prototype wiring | ✅ done | prototype/requirements.txt pins fastapi, uvicorn, httpx; requirements-dev.txt pins pytest; prototype/bridgewatch/ modules mirror architecture: source, detector, store, live, notify, app; prototype/README.md: install, run, test commands; 48 offline tests; prototype/Dockerfile.bridgewatch and run_bridgewatch.py (demo and live smoke run); prototype/bridgewatch/config.py reads BRIDGEWATCH_* variables; web/bridgewatch.html dashboard |
+| 1. Epics & stories | ✅ done | Epics #11-#13 and stories titled with objectives; Sprint 2 stories #14,#15 and tasks assigned with sp:, milestone. Proposal links 30 of 33 issues as typed refs. |
+| 2. Specs | ⚠️ started | `docs/specs/goal-3-dashboard.md` (main, develop) — Goal 3 draft, epic #13, stories #20,#21; `docs/specs/goal-2-detection.md` (develop only) — Goal 2 draft, epic #12; merge to main Missing: Epic #11 Goal 1 Learn what normal bridge activity looks like (task #61). |
+| 3. Design & diagrams | ⚠️ started | ✅ architecture · ✅ context · ▫️ data flow · ▫️ ER · ▫️ UML · ▫️ page flow. Needed for this project: er: SQLite transfers, alerts and cursor tables; uml: sequence for live loop and alert notify; ui_flow: dashboard screens and alert states; dfd: only if architecture figure lacks flows. |
+| 4. Environment | ⚠️ partial | Stated in: proposal §4 (Table 6) and prototype README. Language: Python 3.12; Framework: FastAPI, uvicorn, httpx; Platform: web dashboard, Docker packaging; OS not stated; Data: SQLite; SonarX stream and public Ethereum nodes, Chainlink feed; Hosting/hardware: Docker; host not chosen; Sponsor resources: SonarX data (SNX-3), still to request from mentor; Tools: pytest, GitHub CI, Slack webhook alerts. |
+| 5. Prototype wiring | ✅ done | `prototype/requirements.txt` pinned fastapi, uvicorn, httpx; `requirements-dev.txt` pytest; `prototype/bridgewatch/` modules mirror source, detector, store, live, notify, app; `prototype/README.md` run and test commands; `run_bridgewatch.py`, `Dockerfile.bridgewatch`; `prototype/tests/` 48 offline tests; saved hack datasets and results |
 
-**Merge first** (not counted until it's in `develop` or `main`): PR #70 (open, develop) — ingest lag in minutes and degrade past five minutes; closes #69; branch 15-baseline-check — 1 commit not in develop, no PR; open one for #15 or drop; develop to main release PR due by Nov 3 (task #64); develop has goal-2 spec and sprint-2-start.
+**Merge first** (not counted until it's in `develop` or `main`): PR #73 (72-environment) — environment write-up, `.env.example`, SonarX source stub; open; PR #74 (65-table-9-docs) — Table 9 lists every spec and design document; open; PR #70 (69-ingest-lag-minutes) — ingest lag in minutes, degrade past five minutes (Objective 1.1); open; Branch 15-baseline-check — 1 commit not in develop, no PR; develop to main — goal-2 spec and Sprint 2 work not on main.
 
 **To do before your Sprint 2 review:**
 
-1. Write docs/specs/goal-1-baseline.md for #11 stories #14 and #15 (task #61), with a first line naming the epic and stories.
-2. Add editable sources for Figures 1 and 2 and the store ER, live-loop sequence and dashboard wireframe (task #62); show them in proposal §4.
-3. Update proposal §4 Table 9 to list goal-1, goal-2, goal-3 specs and any design doc with issue refs; add #69 and the Sprint 2 tasks.
-4. Recommended: put the full design detail in docs/design/architecture.md and keep the summary and Figures 1 and 2 in proposal §4.
-5. Add prototype/.env.example and a SonarX source stub, and state in README which commands prove the toolchain on a fresh machine.
-6. Review and merge PR #70, then decide on branch 15-baseline-check; keep every PR tied to an issue.
-7. Open the develop to main release PR by Nov 3 and write docs/sprint-reviews/sprint-2.md (#64).
+1. Merge PRs #73, #74 and #70 into develop after review; release develop to main.
+2. Do #61: write `docs/specs/goal-1-baseline.md` with epic #11, stories #14,#15 in the first lines.
+3. Do #62: create `docs/design/architecture.md` with Mermaid for Figures 1 and 2, plus SQLite ER and live-loop sequence diagrams.
+4. Add a dashboard wireframe or screen-flow for Objective 3.1 to the design doc and proposal section 4.
+5. Link #67, #69, #72 in proposal section 4 and update Table 6 statuses and hosting choice.
+6. Open a PR for 15-baseline-check or drop the branch (#15).
 
 [↑ Back to all groups](#groups)
 
