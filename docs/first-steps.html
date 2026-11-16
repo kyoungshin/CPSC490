@@ -569,7 +569,7 @@ done</pre></div>
   <ul>
     <li>Drag the stories you commit to from <code>Backlog</code> into <code>Sprint To-Do</code>. Each one must already have assignee, milestone <code>Sprint 1</code>, priority and <code>sp:</code>.</li>
     <li>Move your card to <code>In Progress</code> when you create its branch, and to <code>In Review</code> when you open the PR.</li>
-    <li><strong>Nothing goes to <code>Done</code> by dragging.</strong> A card is done when its PR is merged (the <code>Closes #n</code> line closes the issue).</li>
+    <li><strong>Nothing goes to <code>Done</code> by dragging.</strong> A card is done when its PR is merged and its issue is closed. GitHub acts on <code>Closes #n</code> only when a PR merges into the default branch (<code>main</code>). Your PRs go into <code>develop</code>, so after the merge open the linked issue and click <strong>Close issue</strong>. The board then moves the card to <code>Done</code>; if it does not, set Status to <code>Done</code> on the card. Keep <code>Closes #n</code> in every PR: it links the PR to its issue, and CI requires it.</li>
     <li>Paste the board's URL into your team <code>README.md</code> (it is a README requirement).</li>
   </ul>
 </section>
