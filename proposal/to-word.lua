@@ -21,6 +21,8 @@ What it does:
      Titles come from proposal/issues.json when present:
        gh issue list --state all --limit 1000 --json number,title > proposal/issues.json
      The Appendix does not count toward the paper's page minimum.
+  4. Pictures: every image is scaled down (never up, aspect ratio kept) to fit
+     the page: at most 6.5 in wide and 8.5 in tall.
 Font, size, spacing and indentation come from proposal/reference.docx (the
 template with its formatting turned into styles).
 ]]
@@ -274,8 +276,57 @@ end
 -- (no space before/after on the headings themselves).
 local function blank_line() return raw('<w:p><w:pPr><w:pStyle w:val="BodyText"/></w:pPr></w:p>') end
 
+-- ── 4. Pictures fit the page ────────────────────────────────────────────────
+-- pandoc shrinks a picture to the page WIDTH but never to its HEIGHT, so a tall
+-- diagram runs off the bottom of the page. Every picture is scaled (aspect
+-- ratio kept) to at most 6.5 in wide (the text width) and 8.5 in tall (the
+-- 9 in text height less room for its caption). Never enlarged.
+local PAGE_W, PAGE_H = 6.5, 8.5
+
+local function inches(v)
+  if not v then return nil end
+  local n, u = tostring(v):match("^%s*([%d%.]+)%s*(%a*%%?)%s*$")
+  n = tonumber(n)
+  if not n then return nil end
+  if u == "in" then return n
+  elseif u == "cm" then return n / 2.54
+  elseif u == "mm" then return n / 25.4
+  elseif u == "pt" then return n / 72
+  elseif u == "%" then return PAGE_W * n / 100
+  elseif u == "px" or u == "" then return n / 96 end
+  return nil
+end
+
+local function fit_image(img)
+  local w, h = inches(img.attributes.width), inches(img.attributes.height)
+  local ratio = (w and h) and h / w or nil -- height / width
+  if not ratio and pandoc.image then -- pandoc 3.1.13+: read the picture's own size
+    local ok, _, data = pcall(pandoc.mediabag.fetch, img.src)
+    if ok and data then
+      local ok2, sz = pcall(pandoc.image.size, data)
+      if ok2 and sz and sz.width > 0 and sz.height > 0 then
+        ratio = sz.height / sz.width
+        if not w and not h then
+          local dpi = (sz.dpi_horz and sz.dpi_horz > 0) and sz.dpi_horz or 96
+          w = sz.width / dpi
+        end
+      end
+    end
+  end
+  if not ratio then
+    if w and w > PAGE_W then img.attributes.width = PAGE_W .. "in"; return img end
+    return nil
+  end
+  w = w or h / ratio
+  w = math.min(w, PAGE_W)
+  if w * ratio > PAGE_H then w = PAGE_H / ratio end
+  img.attributes.width = string.format("%.3fin", w)
+  img.attributes.height = string.format("%.3fin", w * ratio)
+  return img
+end
+
 function Pandoc(doc)
-  doc = doc:walk({ Link = ref_link })
+  doc = doc:walk({ Link = ref_link, Image = fit_image })
 
   local out, started, first_section, in_refs = pandoc.List(), false, true, false
   local function ref_entry(b)

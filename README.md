@@ -146,7 +146,8 @@ pandoc proposal/proposal.md -o proposal/proposal.docx --reference-doc=proposal/r
 filled from the header block of `proposal.md` (type the emails into Word
 afterwards), the **Abstract** on its own page, headings numbered by Word's own
 list (the typed `1.`/`1.1` are dropped), Times New Roman 11 pt with 1.5 line
-spacing and 1.0-inch margins, and every GitHub issue link turned into a small
+spacing and 1.0-inch margins, every picture scaled down to fit the page (at
+most 6.5 in wide and 8.5 in tall), and every GitHub issue link turned into a small
 in-text citation (`[task:#23]`, 7 pt) that jumps to its row in **Appendix A.
 Issue References**: one table per issue type (epics, stories, features, tasks,
 sub-tasks) with the full URLs. For the tables' Title column, export your issue

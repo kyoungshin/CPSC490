@@ -1,5 +1,36 @@
 # Group repository status: Sprint 3 readiness (proposal §0–§4 and a working prototype)
 
+## Word export check (Nov 18): fix these in `proposal.md`
+
+I converted every group's `proposal/proposal.md` (both `main` and `develop`) with pandoc and the course converter, using the command in [README §3](https://github.com/kyoungshin/CPSC490#3-the-proposal-proposalproposalmd). All 20 convert without errors. The table below lists what still comes out wrong in Word, on the branch with your fuller proposal.
+
+**Everyone: copy the updated converter first.** Since Nov 18, [`proposal/to-word.lua`](https://github.com/kyoungshin/CPSC490/blob/main/proposal/to-word.lua) scales every picture to fit the page: at most 6.5 in wide and 8.5 in tall, aspect ratio kept. Before this, a tall diagram ran off the bottom of the page. Copy it, and [`proposal/reference.docx`](https://github.com/kyoungshin/CPSC490/blob/main/proposal/reference.docx), into your `proposal/` folder, replacing your old copies. Then run the README command again.
+
+**〈placeholders〉:** the converter warns about any 〈…〉 left outside the guidance quotes, and Word prints it as typed. Template text still in §5–§8 is expected until you write those sections, but none may remain in the final paper (due Sun Dec 20).
+
+| Group | Branch | What comes out wrong in Word |
+|---|---|---|
+| G01 | `main` | Your `proposal/to-word.lua` is an edited copy; replace it with the course one. Otherwise clean. |
+| G02 | `develop` | 〈…〉 in §5 and §7. |
+| G03 | `develop` | No `proposal/to-word.lua` or `reference.docx`: add both. 〈…〉 in §1, §4, §5, §6, §7 and §8. One picture is taller than the page (fixed by the new converter). |
+| G04 | `main` | 〈…〉 in §5–§7. Three pictures are taller than the page (fixed by the new converter). |
+| G05 | `develop` | The header block still has 〈…〉 in the sponsor and the date, so the cover page leaves them blank. 〈…〉 in §0, §3, §4 and §5–§7. |
+| G06 | `develop` | No `proposal/to-word.lua` or `reference.docx`: add both. 〈…〉 in §5–§7. |
+| G07 | `main` | The header block's date is still in 〈…〉, so the cover page leaves it blank. 〈…〉 in §5–§7. One picture is 20 in tall (fixed by the new converter). |
+| G08 | `develop` | Clean. |
+| G09 | `develop` | No `proposal/to-word.lua` or `reference.docx`: add both. 〈…〉 in §5 and §6. |
+| G10 | `develop` | The header block wraps your real values in 〈…〉 (title, group, team, sponsor, authors, date). The converter treats them as unfilled, so **the cover page comes out blank**: remove the brackets and keep the values. One reference is written `[[task:#79]] (https://…)` with a space before `(`, so it is not a link and the full URL stays in the text: delete the space. One picture is taller than the page (fixed by the new converter). |
+| G11 | `main` | No `proposal/to-word.lua` or `reference.docx`: add both. 〈…〉 in §1 and §4–§8. |
+| G12 | `develop` | 〈…〉 in §4, including a reference written `task:#〈n〉`: put the real issue number in. |
+| G13 | `develop` | Clean. |
+| G14 | `develop` | 〈…〉 in §5–§7. One picture is 16 in tall (fixed by the new converter). |
+| G15 | `develop` | **25 references are plain text, `[story:https://…/issues/26]`, not links,** so the full URLs stay in your paragraphs and Appendix A is nearly empty. Write each one as a typed link: `[[story:#26]](https://github.com/…/issues/26)`. The table in §1 uses untyped `[#25](https://…/issues/25)` links; type them too (`[[feature:#25]](https://…/issues/25)`). 〈…〉 in §5–§7. |
+| G16 | `develop` | Clean. |
+| G17 | `main` | 〈…〉 in §5–§8. One picture is taller than the page (fixed by the new converter). |
+| G18 | `develop` | Two diagrams are `.svg`. pandoc needs `rsvg-convert` to embed them for older Word versions and warns without it; export them as `.png` instead. 〈…〉 in §6–§8. |
+| G19 | `develop` | 〈…〉 in §4–§7. One picture is taller than the page (fixed by the new converter). |
+| G20 | `develop` | No `proposal/to-word.lua` or `reference.docx`: add both. 〈…〉 in §3, §5–§8 and in the References block above §8. One picture is taller than the page (fixed by the new converter). |
+
 > [!IMPORTANT]
 > **New (Nov 8): this page now checks Sprint 3 readiness.** At your Sprint 3 review, which is the meeting that starts Sprint 4, I expect two things: **your proposal complete from the beginning through §4**, and **a working prototype you can demo**. This page checks your repository against the three rules of thumb from my Oct 31 email. It is a readiness check, not your sprint grade; the five rubric lenses are graded separately. Find your group's card below: it says what's missing and what to do, in order.
 >
