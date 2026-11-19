@@ -495,10 +495,13 @@ milestones carry your group's dates.
 
 | Groups | Sprint 1 | Sprint 2 | Sprint 3 | Sprint 4 |
 |---|---|---|---|---|
-| 01–05 (Tue) | Sep 29 – Oct 12 | Oct 13 – Oct 26 | Oct 27 – Nov 9 | Nov 10 – Nov 23 |
-| 06–10 (Tue) | Oct 6 – Oct 19 | Oct 20 – Nov 2 | Nov 3 – Nov 16 | Nov 17 – Nov 30 |
-| 11–15 (Thu) | Oct 1 – Oct 14 | Oct 15 – Oct 28 | Oct 29 – Nov 11 | Nov 12 – Nov 25 |
-| 16–20 (Thu) | Oct 8 – Oct 21 | Oct 22 – Nov 4 | Nov 5 – Nov 18 | Nov 19 – Dec 2 |
+| 01–05 (Tue) | Sep 29 – Oct 12 | Oct 13 – Oct 26 | Oct 27 – Nov 9 | Nov 10 – Nov 30 |
+| 06–10 (Tue) | Oct 6 – Oct 19 | Oct 20 – Nov 2 | Nov 3 – Nov 16 | Nov 17 – Dec 7 |
+| 11–15 (Thu) | Oct 1 – Oct 14 | Oct 15 – Oct 28 | Oct 29 – Nov 11 | Nov 12 – Dec 2 |
+| 16–20 (Thu) | Oct 8 – Oct 21 | Oct 22 – Nov 4 | Nov 5 – Nov 18 | Nov 19 – Dec 9 |
+
+**Sprint 4 is one week longer (updated Nov 19)** because of Thanksgiving
+week: it runs 21 days and ends the day before your group's presentation.
 
 **Homework and paper due dates are the class schedule, not the sprint
 schedule** — they are the same for every group (Canvas). In particular,

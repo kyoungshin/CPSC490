@@ -151,6 +151,16 @@ Two things before the calendar:
 ## Sprint 4: Finalize Project Proposal with Pseudo Code or Prototype
 *(All Sprint 4 meetings are in person.)*
 
+**Updated Nov 19: Sprint 4 is one week longer for every group, because of
+Thanksgiving week.** It now ends the day before your group's presentation.
+
+| Groups | Sprint 4 | Sprint 4 ends (was) | Presentation |
+|---|---|---|---|
+| 01–05 (Tue) | Nov 10 – Nov 30 | **Mon Nov 30** (was Nov 23) | Tue Dec 1 |
+| 11–15 (Thu) | Nov 12 – Dec 2 | **Wed Dec 2** (was Nov 25) | Thu Dec 3 |
+| 06–10 (Tue) | Nov 17 – Dec 7 | **Mon Dec 7** (was Nov 30) | Tue Dec 8 |
+| 16–20 (Thu) | Nov 19 – Dec 9 | **Wed Dec 9** (was Dec 2) | Thu Dec 10 |
+
 **Tuesday, November 10 — Section 01**
 - 7:00–7:30 PM: Group 01 — BGAF
 - 7:30–8:00 PM: Group 02 — Linux Larpers
@@ -185,7 +195,9 @@ Two things before the calendar:
 
 ---
 
-**Thanksgiving week (Nov 23–27) — no meetings.**
+**Thanksgiving week (Nov 23–27) — no meetings.** Sprint 4 keeps running
+through it: every group's Sprint 4 ends one week later than first scheduled
+(table above).
 
 **Sunday, November 29 — Preview Project Proposal Paper due**
 

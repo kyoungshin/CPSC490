@@ -86,15 +86,17 @@ add_milestone() {  # title, last day of the sprint (YYYY-MM-DD), description
 # Sprints are per group and staggered: 14 days each, starting at the group's
 # sprint meeting and ending the day before the next one (docs/sprint-schedule.md
 # in the course repo). Homework due dates are the class schedule - not these.
+# Sprint 4 is one week longer (Thanksgiving week): it ends the day before the
+# group's presentation.
 GROUP="${1:-}"
 if [ -z "$GROUP" ]; then
   GROUP=$(sed -nE 's/.*[-_][Gg]([0-9]{1,2})([-_].*)?$/\1/p' <<<"${REPO#*/}")
 fi
 GROUP=$((10#${GROUP:-0}))
-if   [ "$GROUP" -ge 1 ]  && [ "$GROUP" -le 5 ];  then S=("Sep 29|2026-10-12|Oct 12" "Oct 13|2026-10-26|Oct 26" "Oct 27|2026-11-09|Nov 9"  "Nov 10|2026-11-23|Nov 23")
-elif [ "$GROUP" -ge 6 ]  && [ "$GROUP" -le 10 ]; then S=("Oct 6|2026-10-19|Oct 19"  "Oct 20|2026-11-02|Nov 2"  "Nov 3|2026-11-16|Nov 16"  "Nov 17|2026-11-30|Nov 30")
-elif [ "$GROUP" -ge 11 ] && [ "$GROUP" -le 15 ]; then S=("Oct 1|2026-10-14|Oct 14"  "Oct 15|2026-10-28|Oct 28" "Oct 29|2026-11-11|Nov 11" "Nov 12|2026-11-25|Nov 25")
-elif [ "$GROUP" -ge 16 ] && [ "$GROUP" -le 20 ]; then S=("Oct 8|2026-10-21|Oct 21"  "Oct 22|2026-11-04|Nov 4"  "Nov 5|2026-11-18|Nov 18"  "Nov 19|2026-12-02|Dec 2")
+if   [ "$GROUP" -ge 1 ]  && [ "$GROUP" -le 5 ];  then S=("Sep 29|2026-10-12|Oct 12" "Oct 13|2026-10-26|Oct 26" "Oct 27|2026-11-09|Nov 9"  "Nov 10|2026-11-30|Nov 30")
+elif [ "$GROUP" -ge 6 ]  && [ "$GROUP" -le 10 ]; then S=("Oct 6|2026-10-19|Oct 19"  "Oct 20|2026-11-02|Nov 2"  "Nov 3|2026-11-16|Nov 16"  "Nov 17|2026-12-07|Dec 7")
+elif [ "$GROUP" -ge 11 ] && [ "$GROUP" -le 15 ]; then S=("Oct 1|2026-10-14|Oct 14"  "Oct 15|2026-10-28|Oct 28" "Oct 29|2026-11-11|Nov 11" "Nov 12|2026-12-02|Dec 2")
+elif [ "$GROUP" -ge 16 ] && [ "$GROUP" -le 20 ]; then S=("Oct 8|2026-10-21|Oct 21"  "Oct 22|2026-11-04|Nov 4"  "Nov 5|2026-11-18|Nov 18"  "Nov 19|2026-12-09|Dec 9")
 else S=(); fi
 if [ ${#S[@]} -eq 0 ]; then
   warn "could not tell your group number from '$REPO' - milestones skipped. Re-run as: bash scripts/bootstrap.sh <group number>"

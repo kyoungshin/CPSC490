@@ -66,10 +66,12 @@ As before, it only counts once it's **merged into `develop` or `main`**. Work le
 
 | Groups | Sprint 3 | Sprint 3 review (start of Sprint 4) | Sprint 4 |
 |---|---|---|---|
-| G01–G05 | Oct 27 – Nov 9 | **Tue Nov 10** | Nov 10 – 23 |
-| G11–G15 | Oct 29 – Nov 11 | **Thu Nov 12** | Nov 12 – 25 |
-| G06–G10 | Nov 3 – 16 | **Tue Nov 17** | Nov 17 – 30 |
-| G16–G20 | Nov 5 – 18 | **Thu Nov 19** | Nov 19 – Dec 2 |
+| G01–G05 | Oct 27 – Nov 9 | **Tue Nov 10** | Nov 10 – 30 |
+| G11–G15 | Oct 29 – Nov 11 | **Thu Nov 12** | Nov 12 – Dec 2 |
+| G06–G10 | Nov 3 – 16 | **Tue Nov 17** | Nov 17 – Dec 7 |
+| G16–G20 | Nov 5 – 18 | **Thu Nov 19** | Nov 19 – Dec 9 |
+
+**Updated Nov 19: Sprint 4 is one week longer for every group, because of Thanksgiving week.** It now ends the day before your group's presentation: Mon Nov 30 (G01–G05), Wed Dec 2 (G11–G15), Mon Dec 7 (G06–G10) and Wed Dec 9 (G16–G20). The full calendar is on the [sprint schedule](https://github.com/kyoungshin/CPSC490/blob/main/docs/sprint-schedule.md).
 
 ## Class at a glance
 
@@ -77,21 +79,21 @@ As before, it only counts once it's **merged into `develop` or `main`**. Work le
 
 | Group | Now | 1. PRs ↔ issues ↔ proposal | 2. Proposal §0–§4 | 3. Prototype works | 4. Word export | Demo-ready | Pages so far (target 50+) |
 |---|---|---|---|---|---|---|---|
-| [G01](#g01) BGAF | Sprint 4 (Nov 10 – 23) | ⚠️ | ✅ | ✅ | ✅ | ⚠️ | ≈ 97 |
-| [G02](#g02) Linux Larpers | Sprint 4 (Nov 10 – 23) | ⚠️ | ⚠️ | ✅ | ⚠️ | ⚠️ | ≈ 15 |
-| [G03](#g03) California | Sprint 4 (Nov 10 – 23) | ⚠️ | ⚠️ | ✅ | ⚠️ | ⚠️ | ≈ 9 |
-| [G04](#g04) Epic Engineers | Sprint 4 (Nov 10 – 23) | ✅ | ⚠️ | ✅ | ✅ | ⚠️ | ≈ 33 |
-| [G05](#g05) Fighting Mongooses | Sprint 4 (Nov 10 – 23) | ⚠️ | ⚠️ | ✅ | ⚠️ | ⚠️ | ≈ 5 |
-| [G06](#g06) GapWise | Sprint 4 (Nov 17 – 30) | ⚠️ | ⚠️ | ✅ | ⚠️ | ⚠️ | ≈ 6 |
-| [G07](#g07) Mighty Morphins | Sprint 4 (Nov 17 – 30) | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ≈ 9 |
-| [G08](#g08) Crime Busters | Sprint 4 (Nov 17 – 30) | ✅ | ✅ | ✅ | ⚠️ | ✅ | ≈ 9 |
-| [G09](#g09) Sigma Squad | Sprint 4 (Nov 17 – 30) | ⚠️ | ⚠️ | ✅ | ⚠️ | ⚠️ | ≈ 11 |
-| [G10](#g10) Team Jiddak | Sprint 4 (Nov 17 – 30) | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ≈ 10 |
-| [G11](#g11) 5 Guys | Sprint 4 (Nov 12 – 25) | ⚠️ | ⚠️ | ✅ | ⚠️ | ⚠️ | ≈ 9 |
-| [G12](#g12) ACJMM | Sprint 4 (Nov 12 – 25) | ⚠️ | ⚠️ | ✅ | ⚠️ | ⚠️ | ≈ 9 |
-| [G13](#g13) BYKX | Sprint 4 (Nov 12 – 25) | ⚠️ | ⚠️ | ⚠️ | ✅ | ⚠️ | ≈ 8 |
-| [G14](#g14) G14 | Sprint 4 (Nov 12 – 25) | ⚠️ | ✅ | ✅ | ✅ | ✅ | ≈ 11 |
-| [G15](#g15) HIBBI-01 | Sprint 4 (Nov 12 – 25) | ⚠️ | ⚠️ | ✅ | ⚠️ | ⚠️ | ≈ 6 |
+| [G01](#g01) BGAF | Sprint 4 (Nov 10 – 30) | ⚠️ | ✅ | ✅ | ✅ | ⚠️ | ≈ 97 |
+| [G02](#g02) Linux Larpers | Sprint 4 (Nov 10 – 30) | ⚠️ | ⚠️ | ✅ | ⚠️ | ⚠️ | ≈ 15 |
+| [G03](#g03) California | Sprint 4 (Nov 10 – 30) | ⚠️ | ⚠️ | ✅ | ⚠️ | ⚠️ | ≈ 9 |
+| [G04](#g04) Epic Engineers | Sprint 4 (Nov 10 – 30) | ✅ | ⚠️ | ✅ | ✅ | ⚠️ | ≈ 33 |
+| [G05](#g05) Fighting Mongooses | Sprint 4 (Nov 10 – 30) | ⚠️ | ⚠️ | ✅ | ⚠️ | ⚠️ | ≈ 5 |
+| [G06](#g06) GapWise | Sprint 4 (Nov 17 – Dec 7) | ⚠️ | ⚠️ | ✅ | ⚠️ | ⚠️ | ≈ 6 |
+| [G07](#g07) Mighty Morphins | Sprint 4 (Nov 17 – Dec 7) | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ≈ 9 |
+| [G08](#g08) Crime Busters | Sprint 4 (Nov 17 – Dec 7) | ✅ | ✅ | ✅ | ⚠️ | ✅ | ≈ 9 |
+| [G09](#g09) Sigma Squad | Sprint 4 (Nov 17 – Dec 7) | ⚠️ | ⚠️ | ✅ | ⚠️ | ⚠️ | ≈ 11 |
+| [G10](#g10) Team Jiddak | Sprint 4 (Nov 17 – Dec 7) | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ≈ 10 |
+| [G11](#g11) 5 Guys | Sprint 4 (Nov 12 – Dec 2) | ⚠️ | ⚠️ | ✅ | ⚠️ | ⚠️ | ≈ 9 |
+| [G12](#g12) ACJMM | Sprint 4 (Nov 12 – Dec 2) | ⚠️ | ⚠️ | ✅ | ⚠️ | ⚠️ | ≈ 9 |
+| [G13](#g13) BYKX | Sprint 4 (Nov 12 – Dec 2) | ⚠️ | ⚠️ | ⚠️ | ✅ | ⚠️ | ≈ 8 |
+| [G14](#g14) G14 | Sprint 4 (Nov 12 – Dec 2) | ⚠️ | ✅ | ✅ | ✅ | ✅ | ≈ 11 |
+| [G15](#g15) HIBBI-01 | Sprint 4 (Nov 12 – Dec 2) | ⚠️ | ⚠️ | ✅ | ⚠️ | ⚠️ | ≈ 6 |
 | [G16](#g16) G16 | Sprint 3 review Thu Nov 19 | ⚠️ | ✅ | ✅ | ✅ | ✅ | ≈ 25 |
 | [G17](#g17) G17 | Sprint 3 review Thu Nov 19 | ⚠️ | ⚠️ | ⚠️ | ✅ | ⚠️ | ≈ 15 |
 | [G18](#g18) G18 | Sprint 3 review Thu Nov 19 | ⚠️ | ⚠️ | ⚠️ | ✅ | ⚠️ | ≈ 8 |
@@ -124,7 +126,7 @@ Each card covers the three rules, using the best of `main` and `develop` (the br
 
 ### G01 · BGAF: Hyperliquid order book reconstruction and backtesting (SNX-4)
 
-*Pipeline that rebuilds Hyperliquid order books from SNX-4 data, validates them, and backtests strategies behind a gate.* · Sprint 3 review held Tue Nov 10 · **Sprint 4: Nov 10 – 23** · [repository](https://github.com/LeDuy23/CPSC490-G01-BGAF)
+*Pipeline that rebuilds Hyperliquid order books from SNX-4 data, validates them, and backtests strategies behind a gate.* · Sprint 3 review held Tue Nov 10 · **Sprint 4: Nov 10 – 30** · [repository](https://github.com/LeDuy23/CPSC490-G01-BGAF)
 
 **Sprint 4 bar:** finalize `proposal.md` as the whole paper, §0–§8, more than 50 pages without the Appendix (now ≈ 97), and complete the prototype so it is fully functional, with a test per acceptance criterion. The checks below still apply; finish every open item first.
 
@@ -157,7 +159,7 @@ Each card covers the three rules, using the best of `main` and `develop` (the br
 
 ### G02 · Linux Larpers: Distributed signal capture for multi-node analysis
 
-*ESP32 nodes capture Wi-Fi and Bluetooth metadata, stored and shown on a dashboard to identify recording devices.* · Sprint 3 review held Tue Nov 10 · **Sprint 4: Nov 10 – 23** · [repository](https://github.com/eliThomass/CPSC490-G02-Linux-Larpers)
+*ESP32 nodes capture Wi-Fi and Bluetooth metadata, stored and shown on a dashboard to identify recording devices.* · Sprint 3 review held Tue Nov 10 · **Sprint 4: Nov 10 – 30** · [repository](https://github.com/eliThomass/CPSC490-G02-Linux-Larpers)
 
 **Sprint 4 bar:** finalize `proposal.md` as the whole paper, §0–§8, more than 50 pages without the Appendix (now ≈ 15), and complete the prototype so it is fully functional, with a test per acceptance criterion. The checks below still apply; finish every open item first.
 
@@ -190,7 +192,7 @@ Each card covers the three rules, using the best of `main` and `develop` (the br
 
 ### G03 · California: Three AIs and Literate Programming
 
-*Transcribe a handwritten equation, generate code and a training dataset, and train a model in a notebook.* · Sprint 3 review held Tue Nov 10 · **Sprint 4: Nov 10 – 23** · [repository](https://github.com/eccortes4/CPSC490-G03-California)
+*Transcribe a handwritten equation, generate code and a training dataset, and train a model in a notebook.* · Sprint 3 review held Tue Nov 10 · **Sprint 4: Nov 10 – 30** · [repository](https://github.com/eccortes4/CPSC490-G03-California)
 
 **Sprint 4 bar:** finalize `proposal.md` as the whole paper, §0–§8, more than 50 pages without the Appendix (now ≈ 9), and complete the prototype so it is fully functional, with a test per acceptance criterion. The checks below still apply; finish every open item first.
 
@@ -223,7 +225,7 @@ Each card covers the three rules, using the best of `main` and `develop` (the br
 
 ### G04 · Epic Engineers: Polymarket PNL and trader profitability analytics
 
-*Compute profit and loss per Polymarket wallet from SonarX Polygon data, rank traders, and show them on a dashboard.* · Sprint 3 review held Tue Nov 10 · **Sprint 4: Nov 10 – 23** · [repository](https://github.com/Bryancostco/CPSC490-G04-EpicEngineers)
+*Compute profit and loss per Polymarket wallet from SonarX Polygon data, rank traders, and show them on a dashboard.* · Sprint 3 review held Tue Nov 10 · **Sprint 4: Nov 10 – 30** · [repository](https://github.com/Bryancostco/CPSC490-G04-EpicEngineers)
 
 **Sprint 4 bar:** finalize `proposal.md` as the whole paper, §0–§8, more than 50 pages without the Appendix (now ≈ 33), and complete the prototype so it is fully functional, with a test per acceptance criterion. The checks below still apply; finish every open item first.
 
@@ -256,7 +258,7 @@ Each card covers the three rules, using the best of `main` and `develop` (the br
 
 ### G05 · Fighting Mongooses: WILS, whale identification and location system
 
-*Detect whale calls with an AI model and locate them from hydrophone recordings.* · Sprint 3 review held Tue Nov 10 · **Sprint 4: Nov 10 – 23** · [repository](https://github.com/M-Kwatcher/CPSC490-G05-Fighting-Mongooses)
+*Detect whale calls with an AI model and locate them from hydrophone recordings.* · Sprint 3 review held Tue Nov 10 · **Sprint 4: Nov 10 – 30** · [repository](https://github.com/M-Kwatcher/CPSC490-G05-Fighting-Mongooses)
 
 **Sprint 4 bar:** finalize `proposal.md` as the whole paper, §0–§8, more than 50 pages without the Appendix (now ≈ 5), and complete the prototype so it is fully functional, with a test per acceptance criterion. The checks below still apply; finish every open item first.
 
@@ -289,7 +291,7 @@ Each card covers the three rules, using the best of `main` and `develop` (the br
 
 ### G06 · GapWise: LLM study assistant with adaptive weak-spot tracking
 
-*Turns a student's notes into practice questions and tracks per-concept mastery and forgetting to target weak spots.* · Sprint 3 review held Tue Nov 17 · **Sprint 4: Nov 17 – 30** · [repository](https://github.com/Joshbolus/CPSC490-G06-GapWise)
+*Turns a student's notes into practice questions and tracks per-concept mastery and forgetting to target weak spots.* · Sprint 3 review held Tue Nov 17 · **Sprint 4: Nov 17 – Dec 7** · [repository](https://github.com/Joshbolus/CPSC490-G06-GapWise)
 
 **Sprint 4 bar:** finalize `proposal.md` as the whole paper, §0–§8, more than 50 pages without the Appendix (now ≈ 6), and complete the prototype so it is fully functional, with a test per acceptance criterion. The checks below still apply; finish every open item first.
 
@@ -322,7 +324,7 @@ Each card covers the three rules, using the best of `main` and `develop` (the br
 
 ### G07 · Mighty Morphins: Online Material Database (EL-1)
 
-*Extracts material data from vendor certificates and test reports, stores it after human review, and supports analysis.* · Sprint 3 review held Tue Nov 17 · **Sprint 4: Nov 17 – 30** · [repository](https://github.com/CPSC490-Team-Proj/CPSC490-G07-MightyMorphin)
+*Extracts material data from vendor certificates and test reports, stores it after human review, and supports analysis.* · Sprint 3 review held Tue Nov 17 · **Sprint 4: Nov 17 – Dec 7** · [repository](https://github.com/CPSC490-Team-Proj/CPSC490-G07-MightyMorphin)
 
 **Sprint 4 bar:** finalize `proposal.md` as the whole paper, §0–§8, more than 50 pages without the Appendix (now ≈ 9), and complete the prototype so it is fully functional, with a test per acceptance criterion. The checks below still apply; finish every open item first.
 
@@ -355,7 +357,7 @@ Each card covers the three rules, using the best of `main` and `develop` (the br
 
 ### G08 · Crime Busters: interactive crime map and database
 
-*Normalizes public Costa Mesa crime-call data into SQLite and shows it on a filterable Leaflet map.* · Sprint 3 review held Tue Nov 17 · **Sprint 4: Nov 17 – 30** · [repository](https://github.com/miketruong91/CPSC490-G08-Crime-Busters)
+*Normalizes public Costa Mesa crime-call data into SQLite and shows it on a filterable Leaflet map.* · Sprint 3 review held Tue Nov 17 · **Sprint 4: Nov 17 – Dec 7** · [repository](https://github.com/miketruong91/CPSC490-G08-Crime-Busters)
 
 **Sprint 4 bar:** finalize `proposal.md` as the whole paper, §0–§8, more than 50 pages without the Appendix (now ≈ 9), and complete the prototype so it is fully functional, with a test per acceptance criterion. The checks below still apply; finish every open item first.
 
@@ -388,7 +390,7 @@ Each card covers the three rules, using the best of `main` and `develop` (the br
 
 ### G09 · Sigma Squad: Vehicle Maintenance Logger
 
-*A web app that records vehicle service history and recommends next service by mileage rules.* · Sprint 3 review held Tue Nov 17 · **Sprint 4: Nov 17 – 30** · [repository](https://github.com/TylerWard741/CPSC490-G09-SigmaSquad)
+*A web app that records vehicle service history and recommends next service by mileage rules.* · Sprint 3 review held Tue Nov 17 · **Sprint 4: Nov 17 – Dec 7** · [repository](https://github.com/TylerWard741/CPSC490-G09-SigmaSquad)
 
 **Sprint 4 bar:** finalize `proposal.md` as the whole paper, §0–§8, more than 50 pages without the Appendix (now ≈ 11), and complete the prototype so it is fully functional, with a test per acceptance criterion. The checks below still apply; finish every open item first.
 
@@ -421,7 +423,7 @@ Each card covers the three rules, using the best of `main` and `develop` (the br
 
 ### G10 · Team Jiddak: StableScope, stablecoin wash-trading detection (sponsor SNX-3)
 
-*Graph and anomaly-detection pipeline that flags wash trading in stablecoin transfers, with an investigation dashboard.* · Sprint 3 review held Tue Nov 17 · **Sprint 4: Nov 17 – 30** · [repository](https://github.com/Alexander-Sanchez2/CPSC490-G10-Team_Jiddak)
+*Graph and anomaly-detection pipeline that flags wash trading in stablecoin transfers, with an investigation dashboard.* · Sprint 3 review held Tue Nov 17 · **Sprint 4: Nov 17 – Dec 7** · [repository](https://github.com/Alexander-Sanchez2/CPSC490-G10-Team_Jiddak)
 
 **Sprint 4 bar:** finalize `proposal.md` as the whole paper, §0–§8, more than 50 pages without the Appendix (now ≈ 10), and complete the prototype so it is fully functional, with a test per acceptance criterion. The checks below still apply; finish every open item first.
 
@@ -454,7 +456,7 @@ Each card covers the three rules, using the best of `main` and `develop` (the br
 
 ### G11 · 5 Guys: Marathon Tracker
 
-*Phone app records a marathon runner's GPS to Firebase; spectators follow on a web page; pace and finish-time prediction.* · Sprint 3 review held Thu Nov 12 · **Sprint 4: Nov 12 – 25** · [repository](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys)
+*Phone app records a marathon runner's GPS to Firebase; spectators follow on a web page; pace and finish-time prediction.* · Sprint 3 review held Thu Nov 12 · **Sprint 4: Nov 12 – Dec 2** · [repository](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys)
 
 **Sprint 4 bar:** finalize `proposal.md` as the whole paper, §0–§8, more than 50 pages without the Appendix (now ≈ 9), and complete the prototype so it is fully functional, with a test per acceptance criterion. The checks below still apply; finish every open item first.
 
@@ -487,7 +489,7 @@ Each card covers the three rules, using the best of `main` and `develop` (the br
 
 ### G12 · ACJMM: Explainable 6G Waveform Classification
 
-*Python app that finds signal peaks in 6G captures, classifies waveform and modulation, and explains the decision.* · Sprint 3 review held Thu Nov 12 · **Sprint 4: Nov 12 – 25** · [repository](https://github.com/CharlesSinde/CPSC490-G12-ACJMM)
+*Python app that finds signal peaks in 6G captures, classifies waveform and modulation, and explains the decision.* · Sprint 3 review held Thu Nov 12 · **Sprint 4: Nov 12 – Dec 2** · [repository](https://github.com/CharlesSinde/CPSC490-G12-ACJMM)
 
 **Sprint 4 bar:** finalize `proposal.md` as the whole paper, §0–§8, more than 50 pages without the Appendix (now ≈ 9), and complete the prototype so it is fully functional, with a test per acceptance criterion. The checks below still apply; finish every open item first.
 
@@ -521,7 +523,7 @@ Each card covers the three rules, using the best of `main` and `develop` (the br
 
 ### G13 · BYKX: A.M.I.Y.A. Assignment Motivation Assistant
 
-*Windows desktop app (Python core, JavaScript UI) for assignments, suggested deadlines, progress and reminders.* · Sprint 3 review held Thu Nov 12 · **Sprint 4: Nov 12 – 25** · [repository](https://github.com/ktnwin/CPSC490-G13-BYKX)
+*Windows desktop app (Python core, JavaScript UI) for assignments, suggested deadlines, progress and reminders.* · Sprint 3 review held Thu Nov 12 · **Sprint 4: Nov 12 – Dec 2** · [repository](https://github.com/ktnwin/CPSC490-G13-BYKX)
 
 **Sprint 4 bar:** finalize `proposal.md` as the whole paper, §0–§8, more than 50 pages without the Appendix (now ≈ 8), and complete the prototype so it is fully functional, with a test per acceptance criterion. The checks below still apply; finish every open item first.
 
@@ -555,7 +557,7 @@ Each card covers the three rules, using the best of `main` and `develop` (the br
 
 ### G14 · G14: Cyber Sandbox (Cyber Squad)
 
-*Offline PySide6 desktop sandbox where beginners investigate and contain simulated malware, with AI-generated scenarios.* · Sprint 3 review held Thu Nov 12 · **Sprint 4: Nov 12 – 25** · [repository](https://github.com/jvillacorte/CPSC490-G14-Cyber-Squad)
+*Offline PySide6 desktop sandbox where beginners investigate and contain simulated malware, with AI-generated scenarios.* · Sprint 3 review held Thu Nov 12 · **Sprint 4: Nov 12 – Dec 2** · [repository](https://github.com/jvillacorte/CPSC490-G14-Cyber-Squad)
 
 **Sprint 4 bar:** finalize `proposal.md` as the whole paper, §0–§8, more than 50 pages without the Appendix (now ≈ 11), and complete the prototype so it is fully functional, with a test per acceptance criterion. The checks below still apply; finish every open item first.
 
@@ -588,7 +590,7 @@ Each card covers the three rules, using the best of `main` and `develop` (the br
 
 ### G15 · HIBBI-01: ECS game engine and game demo
 
-*C++ OpenGL 3.3 entity-component-system engine plus a game demo to measure performance on old hardware.* · Sprint 3 review held Thu Nov 12 · **Sprint 4: Nov 12 – 25** · [repository](https://github.com/Isaiah714/CPSC490-G15-HIBBI-01)
+*C++ OpenGL 3.3 entity-component-system engine plus a game demo to measure performance on old hardware.* · Sprint 3 review held Thu Nov 12 · **Sprint 4: Nov 12 – Dec 2** · [repository](https://github.com/Isaiah714/CPSC490-G15-HIBBI-01)
 
 **Sprint 4 bar:** finalize `proposal.md` as the whole paper, §0–§8, more than 50 pages without the Appendix (now ≈ 6), and complete the prototype so it is fully functional, with a test per acceptance criterion. The checks below still apply; finish every open item first.
 
