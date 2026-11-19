@@ -28,7 +28,7 @@ Two things before the calendar:
 | Sun Oct 4 | Homework #4 — Brief Project Proposal |
 | Sun Oct 11 | Homework #5 — Topic and Survey |
 | Sun Nov 29 | Preview Project Proposal Paper |
-| Sun Dec 13 | Presentation Rating & Survey |
+| Sun Dec 13 | Presentation Rating |
 | Sun Dec 20 | Final Project Proposal Paper |
 
 ---
@@ -227,7 +227,7 @@ Presentation-week Zoom links (sprint meetings stay in person):
 - 8:30–9:00 PM: Group 19 — Titan Security
 - 9:00–9:30 PM: Group 20 — Solos
 
-**Sunday, December 13 — Presentation Rating & Survey due**
+**Sunday, December 13 — Presentation Rating due**
 
 **Final week — no exams.**
 

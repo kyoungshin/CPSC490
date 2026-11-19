@@ -30,6 +30,7 @@ the material and that authorship stays clear. Once granted, please cite:
 
 | Piece | What it does |
 |---|---|
+| [`course/`](course/README.md) | **the instructor package**: sprint cadence and agendas, the five sprint rubrics, every assignment, the presentation and final paper, the handouts, and the grading tools (excluded from the student copy) |
 | [`QUICKSTART.md`](QUICKSTART.md) | the student entry point: whole setup in ~1 hour of numbered steps |
 | [`README.md`](README.md) | the full reference guide (repo layout, proposal rules, board conventions, sprint cadence, grading metrics) |
 | [`scripts/bootstrap.sh`](scripts/bootstrap.sh) | one command creates the 15 labels, 4 sprint milestones, `develop`, branch protection, and a project board with its Status columns |
