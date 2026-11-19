@@ -1,6 +1,6 @@
 # Group repository status: Sprint 3 readiness (proposal §0–§4 and a working prototype)
 
-## Word export check (Nov 18): fix these in `proposal.md`
+## Word export check (Nov 19): fix these in `proposal.md`
 
 I converted every group's `proposal/proposal.md` (both `main` and `develop`) with pandoc and the course converter, using the command in [README §3](https://github.com/kyoungshin/CPSC490#3-the-proposal-proposalproposalmd). All 20 convert without errors. The table below lists what still comes out wrong in Word, on the branch with your fuller proposal.
 
@@ -19,7 +19,7 @@ I converted every group's `proposal/proposal.md` (both `main` and `develop`) wit
 | G07 | `main` | The header block's date is still in 〈…〉, so the cover page leaves it blank. 〈…〉 in §5–§7. One picture is 20 in tall (fixed by the new converter). |
 | G08 | `develop` | Clean. |
 | G09 | `develop` | No `proposal/to-word.lua` or `reference.docx`: add both. 〈…〉 in §5 and §6. |
-| G10 | `develop` | The header block wraps your real values in 〈…〉 (title, group, team, sponsor, authors, date). The converter treats them as unfilled, so **the cover page comes out blank**: remove the brackets and keep the values. One reference is written `[[task:#79]] (https://…)` with a space before `(`, so it is not a link and the full URL stays in the text: delete the space. One picture is taller than the page (fixed by the new converter). |
+| G10 | `develop` | The header block wraps your real values in 〈…〉 (title, group, team, sponsor, authors, date). The converter treats them as unfilled, so **the cover page comes out blank**: remove the brackets and keep the values. One picture is taller than the page (fixed by the new converter). |
 | G11 | `main` | No `proposal/to-word.lua` or `reference.docx`: add both. 〈…〉 in §1 and §4–§8. |
 | G12 | `develop` | 〈…〉 in §4, including a reference written `task:#〈n〉`: put the real issue number in. |
 | G13 | `develop` | Clean. |
@@ -34,9 +34,9 @@ I converted every group's `proposal/proposal.md` (both `main` and `develop`) wit
 > [!IMPORTANT]
 > **New (Nov 8): this page now checks Sprint 3 readiness.** At your Sprint 3 review, which is the meeting that starts Sprint 4, I expect two things: **your proposal complete from the beginning through §4**, and **a working prototype you can demo**. This page checks your repository against the three rules of thumb from my Oct 31 email. It is a readiness check, not your sprint grade; the five rubric lenses are graded separately. Find your group's card below: it says what's missing and what to do, in order.
 >
-> **Sprint 4 (G01–G05 and G11–G15, now in Sprint 4):** Sprint 4 asks for the same three rules, taken to the finish. **Finalize `proposal.md` as the whole paper, §0–§8, more than 50 pages** without the Appendix, and **complete the prototype so it is fully functional**. You run Sprint 4 on the board as usual, and I grade it on the same five rubric lenses. Your card shows the Sprint 4 bar and your page count so far. G06–G10 and G16–G20: your card still shows the Sprint 3 review bar.
+> **Sprint 4 (G01–G05 and G11–G15 and G06–G10, now in Sprint 4):** Sprint 4 asks for the same three rules, taken to the finish. **Finalize `proposal.md` as the whole paper, §0–§8, more than 50 pages** without the Appendix, and **complete the prototype so it is fully functional**. You run Sprint 4 on the board as usual, and I grade it on the same five rubric lenses. Your card shows the Sprint 4 bar and your page count so far. G16–G20: your card still shows the Sprint 3 review bar.
 
-**CPSC 490 · Fall 2026 · swept 2026-11-17 20:36 UTC.** Earlier editions are kept in this file's git history.
+**CPSC 490 · Fall 2026 · swept 2026-11-19 20:47 UTC.** Earlier editions are kept in this file's git history.
 
 **Jump to your group:**
 
@@ -77,42 +77,42 @@ As before, it only counts once it's **merged into `develop` or `main`**. Work le
 
 | Group | Now | 1. PRs ↔ issues ↔ proposal | 2. Proposal §0–§4 | 3. Prototype works | 4. Word export | Demo-ready | Pages so far (target 50+) |
 |---|---|---|---|---|---|---|---|
-| [G01](#g01) BGAF | Sprint 4 (Nov 10 – 23) | ⚠️ | ✅ | ✅ | ✅ | ⚠️ | ≈ 87 |
+| [G01](#g01) BGAF | Sprint 4 (Nov 10 – 23) | ⚠️ | ✅ | ✅ | ✅ | ⚠️ | ≈ 97 |
 | [G02](#g02) Linux Larpers | Sprint 4 (Nov 10 – 23) | ⚠️ | ⚠️ | ✅ | ⚠️ | ⚠️ | ≈ 15 |
 | [G03](#g03) California | Sprint 4 (Nov 10 – 23) | ⚠️ | ⚠️ | ✅ | ⚠️ | ⚠️ | ≈ 9 |
 | [G04](#g04) Epic Engineers | Sprint 4 (Nov 10 – 23) | ✅ | ⚠️ | ✅ | ✅ | ⚠️ | ≈ 33 |
 | [G05](#g05) Fighting Mongooses | Sprint 4 (Nov 10 – 23) | ⚠️ | ⚠️ | ✅ | ⚠️ | ⚠️ | ≈ 5 |
-| [G06](#g06) GapWise | Sprint 3 review Tue Nov 17 | ⚠️ | ⚠️ | ✅ | ⚠️ | ⚠️ | ≈ 6 |
-| [G07](#g07) Mighty Morphins | Sprint 3 review Tue Nov 17 | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ≈ 9 |
-| [G08](#g08) Crime Busters | Sprint 3 review Tue Nov 17 | ✅ | ✅ | ✅ | ⚠️ | ✅ | ≈ 9 |
-| [G09](#g09) Sigma Squad | Sprint 3 review Tue Nov 17 | ⚠️ | ⚠️ | ✅ | ⚠️ | ⚠️ | ≈ 11 |
-| [G10](#g10) Team Jiddak | Sprint 3 review Tue Nov 17 | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ≈ 10 |
+| [G06](#g06) GapWise | Sprint 4 (Nov 17 – 30) | ⚠️ | ⚠️ | ✅ | ⚠️ | ⚠️ | ≈ 6 |
+| [G07](#g07) Mighty Morphins | Sprint 4 (Nov 17 – 30) | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ≈ 9 |
+| [G08](#g08) Crime Busters | Sprint 4 (Nov 17 – 30) | ✅ | ✅ | ✅ | ⚠️ | ✅ | ≈ 9 |
+| [G09](#g09) Sigma Squad | Sprint 4 (Nov 17 – 30) | ⚠️ | ⚠️ | ✅ | ⚠️ | ⚠️ | ≈ 11 |
+| [G10](#g10) Team Jiddak | Sprint 4 (Nov 17 – 30) | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ≈ 10 |
 | [G11](#g11) 5 Guys | Sprint 4 (Nov 12 – 25) | ⚠️ | ⚠️ | ✅ | ⚠️ | ⚠️ | ≈ 9 |
 | [G12](#g12) ACJMM | Sprint 4 (Nov 12 – 25) | ⚠️ | ⚠️ | ✅ | ⚠️ | ⚠️ | ≈ 9 |
 | [G13](#g13) BYKX | Sprint 4 (Nov 12 – 25) | ⚠️ | ⚠️ | ⚠️ | ✅ | ⚠️ | ≈ 8 |
 | [G14](#g14) G14 | Sprint 4 (Nov 12 – 25) | ⚠️ | ✅ | ✅ | ✅ | ✅ | ≈ 11 |
 | [G15](#g15) HIBBI-01 | Sprint 4 (Nov 12 – 25) | ⚠️ | ⚠️ | ✅ | ⚠️ | ⚠️ | ≈ 6 |
-| [G16](#g16) G16 | Sprint 3 review Thu Nov 19 | ⚠️ | ⚠️ | ✅ | ✅ | ⚠️ | ≈ 21 |
-| [G17](#g17) G17 | Sprint 3 review Thu Nov 19 | ⚠️ | ⚠️ | ❌ | ✅ | ❌ | ≈ 8 |
+| [G16](#g16) G16 | Sprint 3 review Thu Nov 19 | ⚠️ | ✅ | ✅ | ✅ | ✅ | ≈ 25 |
+| [G17](#g17) G17 | Sprint 3 review Thu Nov 19 | ⚠️ | ⚠️ | ⚠️ | ✅ | ⚠️ | ≈ 15 |
 | [G18](#g18) G18 | Sprint 3 review Thu Nov 19 | ⚠️ | ⚠️ | ⚠️ | ✅ | ⚠️ | ≈ 8 |
-| [G19](#g19) G19 | Sprint 3 review Thu Nov 19 | ⚠️ | ❌ | ⚠️ | ⚠️ | ❌ | ≈ 5 |
-| [G20](#g20) G20 | Sprint 3 review Thu Nov 19 | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ≈ 8 |
+| [G19](#g19) G19 | Sprint 3 review Thu Nov 19 | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ≈ 8 |
+| [G20](#g20) G20 | Sprint 3 review Thu Nov 19 | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ≈ 12 |
 
 - **Rule 1 met:** 2 of 20 (G04, G08).
-- **Proposal §0–§4 complete:** 3 of 20 (G01, G08, G14).
+- **Proposal §0–§4 complete:** 4 of 20 (G01, G08, G14, G16).
 - **Prototype working, with a real slice and tests:** 13 of 20 (G01, G02, G03, G04, G05, G06, G08, G09, G11, G12, G14, G15, G16).
-- **Ready to demo both today:** 2 of 20 (G08, G14).
+- **Ready to demo both today:** 3 of 20 (G08, G14, G16).
 
 **What changed since the last edition:**
 
-- **G01–G05 and G11–G15 are now in Sprint 4.** Sprint 4 asks for the same three rules, taken to the finish: the whole paper in `proposal.md` (§0–§8, more than 50 pages without the Appendix) and a fully functional prototype, graded on the five rubric lenses as usual. Your card now shows the Sprint 4 bar and your page count.
-- **G01's proposal now passes rule 2.** `main` gained the §4 summaries for the validation gate, the front end and the data model, and the gap finder (#334) merged. PRs #337, #338 and #343 are still open.
-- **G07 moved up on rule 3 and on demo readiness.** A static search page merged, and all 16 stories now have child issues, with all 97 issues linked from the proposal. The only test is still the course's `test_login.py`, so write tests for your own code.
-- **Big Sprint 3 merges:** G09 merged every Sprint 3 PR (#82–#109) into `develop`: service records, entry and import forms, the dashboard and recommendations. G06 doubled its stories with child issues (4 to 8) and added specs and a design doc on `develop`. G10's `develop` CI is green again and its proposal grew by about 70%. G16 explained its design diagrams in §4. G17's proposal grew from about 19k to 30k characters. G18 wrote §3 and the §4 environment and added three goal specs. G20 broke down all 8 stories into child issues.
-- **G08 and G14 stay demo-ready.** G08 merged the crime-type filter (#90) and marker highlighting (#87); release PR #86 into `main` is still open. G14's proposal and prototype are unchanged.
-- **No change since Nov 14:** G02, G03, G04, G05, G11 and G15. G12 and G13 changed only on the board or by merging `develop` into `main`.
-- **Check before your review:** G17's CI is red on `main`. G13's test file is not named so pytest finds it (`test_*.py`). G18, G19 and G20 have green CI that never builds or tests their own code. Work in an open PR does not count until it merges.
-- **Review dates:** G06–G10 Tue Nov 17 (tonight), G16–G20 Thu Nov 19.
+- **G06–G10 are now in Sprint 4**, with G01–G05 and G11–G15. Sprint 4 asks for the same three rules, taken to the finish: the whole paper in `proposal.md` (§0–§8, more than 50 pages without the Appendix) and a fully functional prototype, graded on the five rubric lenses as usual. **G16–G20 have their Sprint 3 review tonight (Thu Nov 19)** and start Sprint 4 after it.
+- **G16's proposal now passes rule 2, and G16 is demo-ready.** PRs #115 and #118 merged the Goal 2 and Goal 3 specs and the key design decisions into §4, and `develop` was released to `main`. Stories #19 and #21 still have no child issues.
+- **G17 moved up on rule 3 and on demo readiness.** The login and preferences screens, the swipe screen and the SQLite layer merged, CI on `main` is green again, and the proposal grew from about 30k to 51k characters. There are still no tests for the team's own code.
+- **G19's proposal moved from skeleton to partial.** `develop` gained the §4 environment, five embedded diagrams and the remaining-work prose. The epic summaries and design narrative are still in open PR #104, so they do not count yet.
+- **G20 merged `develop` into `main` (#94)** with six diagrams, spec summaries, implementation prose, a maze, an objective tracker and a chasing enemy. Template text is still in §1.2, §3 and §4, and CI does not build the Unreal project, so write a manual test per acceptance criterion.
+- **G01** merged the goal narratives (#345), the validation gate and its tests; the *Repository harness* job now fails on `main`. **G08** stays ✅ on all three rules and merged its release (#86). **G10's** `main` now holds the prototype (#80), but the *Repository harness* job is still red there. **G18** added starting classes (#81) and room scenes (#83) on `develop`; its proposal is unchanged.
+- **Word export:** I converted every proposal again today. G10 fixed its broken reference. G03, G06, G09, G11 and G20 still have no `proposal/to-word.lua` or `reference.docx`.
+- **No change since Nov 17:** G04, G05, G06, G13 and G14. G02, G03, G11, G12 and G15 changed only on the board or by small merges.
 
 <a name="groups" id="groups"></a>
 
@@ -126,30 +126,30 @@ Each card covers the three rules, using the best of `main` and `develop` (the br
 
 *Pipeline that rebuilds Hyperliquid order books from SNX-4 data, validates them, and backtests strategies behind a gate.* · Sprint 3 review held Tue Nov 10 · **Sprint 4: Nov 10 – 23** · [repository](https://github.com/LeDuy23/CPSC490-G01-BGAF)
 
-**Sprint 4 bar:** finalize `proposal.md` as the whole paper, §0–§8, more than 50 pages without the Appendix (now ≈ 87), and complete the prototype so it is fully functional, with a test per acceptance criterion. The checks below still apply; finish every open item first.
+**Sprint 4 bar:** finalize `proposal.md` as the whole paper, §0–§8, more than 50 pages without the Appendix (now ≈ 97), and complete the prototype so it is fully functional, with a test per acceptance criterion. The checks below still apply; finish every open item first.
 
-**Start here:** Merge PRs #337, #338 and #343 and refresh `prototype/README.md` so the demo shows cleaning and loading, not only a snapshot load.
+**Start here:** Open the failed Repository harness run on main, fix the failing gate, then merge #349, #362 and #363 so cleaning is demoable end to end.
 
 | Rule | Status | What I found |
 |---|---|---|
-| 1. PRs ↔ issues ↔ proposal | ⚠️ gaps | 14 of 15 stories have child issues (#58 is dropped and has none); 7 stories are still open. Eleven tasks carry `sp:` under a story (#195, #187, #184, #183, #181, #180, #175, #174, #173, #172, #134): double counting.; Eighteen child issues have no assignee, 14 still open (features #144, #145, #148, #157-#159, #163-#167, #169; tasks #94, #147).; Dropped story #58 has no Sprint milestone or points; #346, #347, #348 (filed today) are not yet linked in §4.; `[task:#151]` is cited four times but #151 is a sub-task; 79 typed refs sit in §5, §6 or §8 instead of §2/§4.; Three direct commits on main; old PRs #126, #123, #62, #40 lack `Closes #N` (every PR after #126 has one).. |
-| 2. Proposal §0–§4 (`main`, ≈ 87 pages) | ✅ done | ✅ §0 Abstract · ✅ §1 Intro · ✅ §1.1 Related work · ⚠️ §1.2 Problem · ⚠️ §2 Goals · ✅ §3 Approaches · ✅ §4 Environment · ✅ §4 Specs · ✅ §4 Design · ✅ §4 Diagrams · ✅ §4 Implementation · ✅ §4 Planned activities. Link tables in place of prose: The 15-row document table in §4 is a map only; it sits beside real prose for each document, so no prose is replaced.. |
-| 3. Prototype works | ✅ done | DuckDB schema and snapshot loader (`storage.py`) plus `find_gap_ranges` in `clean.py`; replay, validate, gate, backtest, report are stubs; front end is the Vite starter. CI: main run 11/16 16:07 PST green; Prototype job ran Install and test (Python) with pytest. Node steps skipped, so `prototype/frontend` is never built in CI. Tests: `test_storage.py` (schema, load, exact decimals, repeat load), `test_clean.py` (gap ranges), `test_package.py` (imports). |
-| 4. Word export (`main`) | ✅ done | 713 issue citation(s) become small in-text tags; 218 issue(s) fill 5 table(s) in Appendix A; replace your `proposal/to-word.lua` with the Nov 8 course version to get the issue tables. |
-| Demo-ready | ⚠️ partial | Proposal §0-§4 on main is complete; the prototype demo is a sample load into DuckDB that needs a CSV kept out of git, with replay and validation not built. |
+| 1. PRs ↔ issues ↔ proposal | ⚠️ gaps | 14 of 15 stories have child issues (#58 is dropped and has none); 11 stories are still open. Eleven tasks carry `sp:` under a story (#195, #187, #184, #183, #181, #180, #175, #174, #173, #172, #134): double counting; unchanged since the last edition.; Fourteen open child issues have no assignee (features #144, #145, #148, #157-#159, #163-#167, #169; tasks #94, #280).; Stories #23-#28 and about 30 back-end children lost their Sprint milestone on Nov 18 when the work moved to CPSC 491; #58 has none either.; 88 typed refs sit in §5, §6 or §8 instead of §2/§4; `[task:#151]` is cited four times but #151 is a sub-task; #369 is not linked yet (PR #370 open).; Three direct commits on main; PRs #8, #5, #4, #1 and other old PRs lack `Closes #N` (every recent PR has one).. |
+| 2. Proposal §0–§4 (`main`, ≈ 97 pages) | ✅ done | ✅ §0 Abstract · ✅ §1 Intro · ✅ §1.1 Related work · ⚠️ §1.2 Problem · ✅ §2 Goals · ✅ §3 Approaches · ✅ §4 Environment · ✅ §4 Specs · ✅ §4 Design · ✅ §4 Diagrams · ✅ §4 Implementation · ✅ §4 Planned activities. Link tables in place of prose: The document table in §4 and the objective status table in §2 are maps beside real prose; they do not replace it.. |
+| 3. Prototype works | ✅ done | DuckDB schema and loader (`storage.py`, now with order-level tables via #343), cleaning (duplicate removal, block-order sort, gap finder) and `gate.py` (#350). Replay, validate, backtest, report still stubs. CI: Main run 11/18 17:11 PST: Prototype job green (Install and test (Python), pytest); Repository harness failed at 'Run gates'. Node steps skipped, so `prototype/frontend` is never built. Tests: `test_storage.py`, `test_clean.py`, `test_gate.py` (new, with fixtures in `prototype/tests/fixtures/`), `test_package.py`. |
+| 4. Word export (`main`) | ✅ done | 805 issue citation(s) become small in-text tags; 225 issue(s) fill 5 table(s) in Appendix A; replace your `proposal/to-word.lua` with the Nov 8 course version to get the issue tables. |
+| Demo-ready | ⚠️ partial | Proposal §0-§4 can be shown; the prototype demo is sample load, cleaning and the gate, with no replay or validation yet, and a CSV kept out of git. |
 
-**Proposal, what to write:** §1.2 Problem Statements is 223 words plus a table; write each problem as a paragraph that names the goal it leads to.; §2 is a 19-line bullet list; merge PR #345, which adds the goal narratives.; §4 runs about 30,000 words with repeated material across specs, design and backtest sections; shorten as #346-#348 plan, keeping the six design parts.; §5 'What the prototype does today' says storage only; update it when #337, #338, #343 merge..
+**Proposal, what to write:** §1.2 Problem Statements is 223 words plus a table; write each problem as a paragraph that names the goal it leads to.; §4 is now about 35,000 words in total; the replay design (#355) added text while #357-#359 trimmed some; remove repeated passages across specs, design and backtest design.; §4 Planned activities and §6 still say moved back-end work happens in Sprint 4; merge PR #370 so the text matches the Nov 18 plan.; §5 'What the prototype does today' is 192 words and still says only storage runs; update it for cleaning and the gate..
 
-**Merge first** (it doesn't count until it's in `develop` or `main`): PR #337 (open, main): duplicate removal and UTC nanosecond timestamps in the cleaning step; PR #338 (open, main): event ordering by block height and position, with tests; PR #343 (open, main): load order-level tables into event and snapshot rows; PR #344 and #345 (open, main): validation-gate summary in §4; goal narratives in §2; branch develop: old proposal with 15 placeholders; retire it, main is the integration branch.
+**Merge first** (it doesn't count until it's in `develop` or `main`): PR #349, #362, #363 (open, main): twice-identical cleaning test, one clean week from S3, known-event check; PR #352, #368 (open, main): strategy metrics in `report.py`; refuse data after a decision time; PR #367 (open, main): front-end build, lint, typecheck and test; PR #370, #371 (open, main): proposal §4/§6 for the CPSC 491 move; replay design summary; PR #356 (open, main): timeline figure for §6.
 
 **To do in Sprint 4:**
 
-1. Merge PRs #337, #338 and #343, then update `prototype/README.md` layout and test list and the §5 'What the prototype does today' paragraph to match.
-2. Remove `sp:` from tasks #195, #187, #184, #183, #181, #180, #175, #174, #173, #172 and #134; points stay on the story only.
-3. Assign one person to each open child without an assignee (#144-#169 features, #94, #147) and give #58 a closing note or milestone.
-4. Link #346, #347, #348 in §4 and change the four `[task:#151]` refs to `[sub-task:#151]`; move work-item refs out of §5 and §6.
-5. Rewrite §1.2 Problem Statements as paragraphs, merge #345, and shorten §4 where specs and design repeat each other.
-6. Run `npm ci` and `npm run build` in `prototype/frontend` before your Sprint 4 review, since CI skips Node; stop committing directly to main.
+1. Find which gate failed in the Repository harness 'Run gates' step on main (run of Nov 18 17:11 PST) and fix it so main is green again in Sprint 4.
+2. Merge #349, #362, #363, #368, #352 with a test per acceptance criterion, then update `prototype/README.md` layout, test list and the §5 prototype paragraph.
+3. Remove `sp:` from tasks #195, #187, #184, #183, #181, #180, #175, #174, #173, #172 and #134; points stay on the story only.
+4. Assign one person to each open child without an assignee (#144, #145, #148, #157-#159, #163-#167, #169, #94, #280) and give each child kept in Sprint 4 a milestone.
+5. Merge #370, change the four `[task:#151]` refs to `[sub-task:#151]`, and move work-item refs out of §5, §6 and §8.
+6. Rewrite §1.2 as paragraphs and shorten repeated passages in §4; run `npm ci` and `npm run build` in `prototype/frontend` before your Sprint 4 review.
 
 [↑ Back to all groups](#groups)
 
@@ -165,15 +165,15 @@ Each card covers the three rules, using the best of `main` and `develop` (the br
 
 | Rule | Status | What I found |
 |---|---|---|
-| 1. PRs ↔ issues ↔ proposal | ⚠️ gaps | 5 of 15 stories have child issues (#16, #45, #46, #48, #57); 10 stories (#49, #51-#55, #58-#61) have none. Ten of 15 user stories have no child issues; break each into feature, task, sub-task on the board.; 21 tasks carry `sp:` under a story (double counting): #95, #92, #91, #86, #84, #81, #77, #69, #68, #41 ...; Thirteen child issues lack exactly one assignee (#68, #67, #41, #39, #38, #36, #25 ...); six meeting issues have no type label.; #132, #130, #99 and epic #20 are not linked from the proposal; some epic/story refs sit in §3.; Eight direct commits on develop and one on main; PRs #3, #4, #5, #14 lack `Closes #N`; PRs #127, #131, #133, #134 open.. |
-| 2. Proposal §0–§4 (`develop`, ≈ 15 pages) | ⚠️ partial | ✅ §0 Abstract · ✅ §1 Intro · ✅ §1.1 Related work · ⚠️ §1.2 Problem · ✅ §2 Goals · ✅ §3 Approaches · ✅ §4 Environment · ❌ §4 Specs · ⚠️ §4 Design · ✅ §4 Diagrams · ❌ §4 Implementation · ✅ §4 Planned activities. Link tables in place of prose: §2 uses bullets with refs; §4 'Specification and design documents' is a template comment plus a 4-row table with no spec or design prose.. |
-| 3. Prototype works | ✅ done | FastAPI `/health`, `/health/db`, POST/GET `/observations` on PostgreSQL via Compose; Angular starter page; ESP32 firmware is a skeleton with no capture yet. CI: Latest develop run green; Prototype job ran Python install and pytest on the backend. Angular and ESP32 projects are not built in CI; main run is also green but older. Tests: `test_main.py`, `test_observations.py`, `test_observation_model.py` (in-memory SQLite); Angular `app.spec.ts` not run in CI. |
-| 4. Word export (`develop`) | ⚠️ partial | 122 issue citation(s) become small in-text tags; 74 issue(s) fill 5 table(s) in Appendix A; replace your `proposal/to-word.lua` with the Nov 8 course version to get the issue tables; 〈placeholders〉 are still in the text and would print in Word. |
+| 1. PRs ↔ issues ↔ proposal | ⚠️ gaps | 5 of 15 stories have child issues (#16, #45, #46, #48, #57); 10 stories (#49, #51-#55, #58-#61) have none. Ten of 15 user stories have no child issues; break each into feature, task, sub-task on the board.; 21 tasks carry `sp:` under a story (double counting): #95, #92, #91, #86, #84, #81, #77, #69, #68, #41 ...; Thirteen child issues lack exactly one assignee (#68, #67, #41, #39, #38, #36, #25 ...); six meeting issues have no type label.; #130, #99 and epic #20 are not linked from the proposal; some epic/story refs sit in §3.; Eight direct commits on develop and one on main; PRs #3, #4, #5, #14 lack `Closes #N`; PRs #133 and #127 are open.. |
+| 2. Proposal §0–§4 (`develop`, ≈ 15 pages) | ⚠️ partial | ✅ §0 Abstract · ✅ §1 Intro · ✅ §1.1 Related work · ⚠️ §1.2 Problem · ✅ §2 Goals · ✅ §3 Approaches · ✅ §4 Environment · ❌ §4 Specs · ⚠️ §4 Design · ✅ §4 Diagrams · ❌ §4 Implementation · ✅ §4 Planned activities. Link tables in place of prose: §2 uses bullets with refs; §4 'Specification and design documents' is a template comment plus a 5-row table with no spec or design prose.. |
+| 3. Prototype works | ✅ done | FastAPI `/health`, `/health/db`, POST/GET `/observations` on PostgreSQL via Compose; Angular starter page; ESP32 firmware is a skeleton with no capture yet. CI: Develop run 11/17 18:41 PST green; Prototype job ran Python install and pytest on the backend. Angular and ESP32 projects are not built in CI; main run is green but older. Tests: `test_main.py`, `test_observations.py`, `test_observation_model.py` (in-memory SQLite); Angular `app.spec.ts` not run in CI. |
+| 4. Word export (`develop`) | ⚠️ partial | 125 issue citation(s) become small in-text tags; 75 issue(s) fill 5 table(s) in Appendix A; replace your `proposal/to-word.lua` with the Nov 8 course version to get the issue tables; 〈placeholders〉 are still in the text and would print in Word. |
 | Demo-ready | ⚠️ partial | Backend ingest and query can be demoed; no live ESP32 capture or dashboard data, and §4 specs, design and implementation are not written. |
 
-**Proposal, what to write:** §4 Specifications: no spec per epic exists; `docs/specs/` holds only the scaffold example. Write scope, FRs, NFRs, acceptance criteria and open questions for Goals 1-3.; §4 Design: `docs/design/architecture.md`, `data-flow.md`, `system-context.md` exist but §4 carries only figures; summarize components, data model, decisions, rejected alternatives and undesigned parts.; §4 Implementation details is absent; describe the backend API, PostgreSQL tables, ESP32 firmware and dashboard as built, with task refs.; §1.1 is one table plus a short paragraph and §1.2 is about 215 words; main still holds the unfilled template for §3 and §4..
+**Proposal, what to write:** §4 Specifications: no spec per epic exists; `docs/specs/` holds only the scaffold example. Write scope, FRs, NFRs, acceptance criteria and open questions for Goals 1-3.; §4 Design: `docs/design/architecture.md`, `data-flow.md`, `system-context.md` exist but §4 carries only figures and a table row; summarize components, data model, decisions, rejected alternatives, undesigned parts.; §4 Implementation details is absent; describe the backend API, PostgreSQL tables, ESP32 firmware and dashboard as built, with task refs.; §1.1 is one table plus a short paragraph and §1.2 is about 215 words; main still holds the unfilled template for §3 and §4..
 
-**Merge first** (it doesn't count until it's in `develop` or `main`): Branch develop — §3, §4 environment and planned activities, observation API; merge into main; PR #133 (open, main) — develop-to-main merge; get it reviewed and merged; PRs #127, #131, #134 (open, develop) — review and merge or close; Branches feature/114-restart-persistence, feature/130-sprint-3-review, feature/132-section4-links — unmerged commits.
+**Merge first** (it doesn't count until it's in `develop` or `main`): Branch develop — §3, §4 environment and planned activities, observation API; merge into main; PR #133 (open, main) — develop-to-main merge; get it reviewed and merged; PR #127 (open, develop) — review and merge or close; Branch feature/114-restart-persistence — 3 commits not in develop.
 
 **To do in Sprint 4:**
 
@@ -181,8 +181,8 @@ Each card covers the three rules, using the best of `main` and `develop` (the br
 2. Add a §4 design narrative from `docs/design/*.md`: data model, decisions with rejected alternatives, what is not designed yet.
 3. Add a §4 Implementation subsection describing the backend API, tables, firmware and dashboard, ending in task refs.
 4. Create child issues for stories #49, #51-#55, #58-#61 and remove `sp:` from the 21 tasks (#95, #92, #91 ...).
-5. Get one ESP32 observation into the dashboard via the API and add a CI build for `prototype/dashboard`.
-6. Link #132, #130, #99 and #20 from the proposal and merge develop into main.
+5. Get one ESP32 observation into the dashboard via the API, with a test per acceptance criterion and a CI build for `prototype/dashboard`.
+6. Link #130, #99 and #20 from the proposal and merge develop into main (#133).
 
 [↑ Back to all groups](#groups)
 
@@ -198,9 +198,9 @@ Each card covers the three rules, using the best of `main` and `develop` (the br
 
 | Rule | Status | What I found |
 |---|---|---|
-| 1. PRs ↔ issues ↔ proposal | ⚠️ gaps | 3 of 13 stories have child issues (#50, #46, #34); 10 stories, 8 still open, have none. Ten of 13 user stories have no child issues; break each into feature, task, sub-task on the board.; 27 issues are not in the proposal (#85, #84, #78, #72, #71, #70, #69 ...); 19 issues carry no type label (meetings, writing tasks).; 22 non-story issues have no parent; several have no Sprint milestone (#85, #75, #68, #55, #53, #45 ...).; PRs #81 and #77 (Sprint 3) have no `Closes #N`; PR #83 is open; one direct commit on main and on develop.; Six refs are bare or point at the wrong issue number; only 12 of 18 refs are typed.. |
+| 1. PRs ↔ issues ↔ proposal | ⚠️ gaps | 4 of 13 stories have child issues; 9 stories have none. Nine of 13 user stories have no child issues; break each into feature, task, sub-task on the board.; 28 issues are not in the proposal (#86, #85, #84, #78, #72, #71, #70 ...); 19 issues carry no type label (meetings, writing tasks).; 22 non-story issues have no parent; #86 has no assignee and #45 no Sprint milestone; #85, #75, #68, #55, #53 are also unplaced.; PRs #81 and #77 (Sprint 3) have no `Closes #N`; PR #83 is open; one direct commit on main and on develop.; Six refs are bare or point at the wrong issue number; only 12 of 18 refs are typed.. |
 | 2. Proposal §0–§4 (`develop`, ≈ 9 pages) | ⚠️ partial | ✅ §0 Abstract · ⚠️ §1 Intro · ✅ §1.1 Related work · ⚠️ §1.2 Problem · ✅ §2 Goals · ✅ §3 Approaches · ❌ §4 Environment · ⚠️ §4 Specs · ⚠️ §4 Design · ✅ §4 Diagrams · ❌ §4 Implementation · ❌ §4 Planned activities. Link tables in place of prose: §2 is a bullet list with refs; §4 'Specification and design documents' and 'Planned activities' are small tables, not prose; §4 opens with the unfilled template prompt.. |
-| 3. Prototype works | ✅ done | Transcriber router and recognizer, verifier, dataset generation, storage and display, PyTorch training, equation plotting, and a pipeline notebook. CI: Latest develop run green; Prototype job ran Python install and pytest on team code. Main CI is green but older, before most of the prototype landed. Tests: `tests/` has transcriber, recognize, verifier, pipeline, train and plot_equation tests; none named for dataset generate, store or display. |
+| 3. Prototype works | ✅ done | Transcriber router and recognizer, verifier, dataset generation, storage and display, PyTorch training, equation plotting, and a pipeline notebook. CI: Latest develop run (11/9 21:27 PST) green; Prototype job ran Python install and pytest on team code. Main CI is green but older, before most of the prototype landed. Tests: `tests/` has transcriber, recognize, verifier, pipeline, train and plot_equation tests; none named for dataset generate, store or display. |
 | 4. Word export (`develop`) | ⚠️ partial | 18 issue citation(s) become small in-text tags; 18 issue(s) fill 2 table(s) in Appendix A; `proposal/to-word.lua` or `proposal/reference.docx` is missing from your repository: copy both from the course repo; 〈placeholders〉 are still in the text and would print in Word. |
 | Demo-ready | ⚠️ partial | The prototype pipeline is demoable from develop, but §4 is mostly missing and the README run steps do not work. |
 
@@ -214,8 +214,8 @@ Each card covers the three rules, using the best of `main` and `develop` (the br
 2. Replace the §4 template prompt with Environment prose: each tool, platform and hosting choice with its reason.
 3. Summarize `docs/specs/transcription.md`, `data-generation.md`, `workbook-generation.md` in §4 with FRs, NFRs and acceptance criteria.
 4. Expand the §4 design section from `docs/design/architecture.md`: data model, decisions and rejected alternatives, undesigned parts.
-5. Create child issues for the ten stories without breakdown, with one assignee and a Sprint milestone each; link them all in §2/§4.
-6. Add `Closes #N` to PRs and merge develop into main.
+5. Create child issues for the nine stories without breakdown, with one assignee and a Sprint milestone each; link them all in §2/§4, including #86.
+6. Add a test per acceptance criterion (dataset generate, store, display), add `Closes #N` to PRs, and merge develop into main.
 
 [↑ Back to all groups](#groups)
 
@@ -289,7 +289,9 @@ Each card covers the three rules, using the best of `main` and `develop` (the br
 
 ### G06 · GapWise: LLM study assistant with adaptive weak-spot tracking
 
-*Turns a student's notes into practice questions and tracks per-concept mastery and forgetting to target weak spots.* · Sprint 3: Nov 3 – 16 · **Sprint 3 review Tue Nov 17** · [repository](https://github.com/Joshbolus/CPSC490-G06-GapWise)
+*Turns a student's notes into practice questions and tracks per-concept mastery and forgetting to target weak spots.* · Sprint 3 review held Tue Nov 17 · **Sprint 4: Nov 17 – 30** · [repository](https://github.com/Joshbolus/CPSC490-G06-GapWise)
+
+**Sprint 4 bar:** finalize `proposal.md` as the whole paper, §0–§8, more than 50 pages without the Appendix (now ≈ 6), and complete the prototype so it is fully functional, with a test per acceptance criterion. The checks below still apply; finish every open item first.
 
 **Start here:** Merge develop into main, then rewrite §4 Components, Data Model and Key Decisions as paragraphs with typed refs and rejected alternatives.
 
@@ -305,9 +307,9 @@ Each card covers the three rules, using the best of `main` and `develop` (the br
 
 **Merge first** (it doesn't count until it's in `develop` or `main`): branch develop: holds the specs, design doc, §4 sections and newest features; main stopped at merge #63 on 11/15; feature branches (feature/25-flashcard-system, feature/21-mastery-tracking and others): merge into develop or delete; branch 71-link-specs: 3 commits not in develop; merge or close.
 
-**To do before your Sprint 3 review:**
+**To do in Sprint 4:**
 
-1. Merge develop into main (reviewed PR with `Closes #N`) so the proposal, specs and demo are on one branch before the review.
+1. Merge develop into main (reviewed PR with `Closes #N`) so the proposal, specs and demo are on one branch before your Sprint 4 review.
 2. Rewrite §4 Components, Data Model, Data Flow and Key Decisions as paragraphs, each ending with typed issue refs; add rejected alternatives for every decision.
 3. Summarize `docs/specs/specs-epic-1.md` to `-3.md` inside §4: scope, functional and non-functional requirements, acceptance criteria, open questions.
 4. Create child issues under stories #14, #18, #19, #21, #28, #29, #31; give #74-#77 an assignee and Sprint 4 milestone; link them in §4.
@@ -320,30 +322,32 @@ Each card covers the three rules, using the best of `main` and `develop` (the br
 
 ### G07 · Mighty Morphins: Online Material Database (EL-1)
 
-*Extracts material data from vendor certificates and test reports, stores it after human review, and supports analysis.* · Sprint 3: Nov 3 – 16 · **Sprint 3 review Tue Nov 17** · [repository](https://github.com/CPSC490-Team-Proj/CPSC490-G07-MightyMorphin)
+*Extracts material data from vendor certificates and test reports, stores it after human review, and supports analysis.* · Sprint 3 review held Tue Nov 17 · **Sprint 4: Nov 17 – 30** · [repository](https://github.com/CPSC490-Team-Proj/CPSC490-G07-MightyMorphin)
+
+**Sprint 4 bar:** finalize `proposal.md` as the whole paper, §0–§8, more than 50 pages without the Appendix (now ≈ 9), and complete the prototype so it is fully functional, with a test per acceptance criterion. The checks below still apply; finish every open item first.
 
 **Start here:** Rewrite `prototype/README.md` for the real prototype and add one tested slice, then carry the three specs and the design documents into §4 as prose.
 
 | Rule | Status | What I found |
 |---|---|---|
-| 1. PRs ↔ issues ↔ proposal | ⚠️ gaps | 16 of 16 stories have child issues; all stories have an assignee and a Sprint milestone. Thirty issues are cited as bare refs in the proposal, not typed refs (#28-#59, #63, #67, #77 among them).; Nineteen story refs sit in §4, where only work items belong; epics #1, #4, #45 and story #49 are cited untyped outside §2.; Wrong ref types: `[task:#78]` and `[task:#94]` are features, `[task:#103]` is a bug, `[bug:#117]` is a task.; Task #38 carries `sp: 3` under story #48 (double counting); #28 has no Sprint milestone.; Three direct commits on main, two on develop; PRs #145, #144, #143, #140, #102, #99 are open.. |
+| 1. PRs ↔ issues ↔ proposal | ⚠️ gaps | 16 of 16 stories have child issues; all stories have an assignee and a Sprint milestone. Seventeen new features #151-#167 (children of stories #12-#19) have no assignee and are not linked from the proposal.; Thirty-one issues are bare refs in the proposal, not typed refs (#28-#59 among them); §2 now writes `story#48` and `story#49` without a colon.; Nineteen story refs sit in §4; epics #1, #4, #45 are cited outside §2; wrong ref types: `[task:#78]`, `[task:#94]`, `[task:#103]`, `[bug:#117]`, `[task:#134]`-`[task:#136]`.; Task #38 carries `sp: 3` under story #48 (double counting); #28 has no Sprint milestone; #147-#149 have no assignee.; Three direct commits on main; PRs #168, #145, #143, #140, #102, #99 are open.. |
 | 2. Proposal §0–§4 (`main`, ≈ 9 pages) | ⚠️ partial | ✅ §0 Abstract · ⚠️ §1 Intro · ✅ §1.1 Related work · ✅ §1.2 Problem · ✅ §2 Goals · ✅ §3 Approaches · ⚠️ §4 Environment · ⚠️ §4 Specs · ⚠️ §4 Design · ⚠️ §4 Diagrams · ❌ §4 Implementation · ⚠️ §4 Planned activities. Link tables in place of prose: §4 Planned activities is a 76-row table (48 issue links) with no prose; the 12-row document table stands in for specification and design writing.. |
-| 3. Prototype works | ⚠️ partial | Static HTML mock-ups, `prototype/index.html` and `ui-tabs/search-view.html` (PR #101); no back end, extraction or database code. CI: main run 11/16 22:31 PST green; Prototype job ran Install and test (Python), but the only test is the course `tests/test_login.py`. Tests: none for team code; only the course `tests/test_login.py`. |
-| 4. Word export (`main`) | ⚠️ partial | 128 issue citation(s) become small in-text tags; 95 issue(s) fill 6 table(s) in Appendix A; replace your `proposal/to-word.lua` with the Nov 8 course version to get the issue tables; 〈placeholders〉 are still in the text and would print in Word. |
+| 3. Prototype works | ⚠️ partial | Static HTML mock-ups, `prototype/index.html` and `ui-tabs/search-view.html` (PR #101); no back end, extraction or database code. CI: Main run 11/17 14:29 PST green; Prototype job ran Install and test (Python), but the only test is the course `tests/test_login.py`. Tests: none for team code; only the course `tests/test_login.py`. |
+| 4. Word export (`main`) | ⚠️ partial | 129 issue citation(s) become small in-text tags; 96 issue(s) fill 6 table(s) in Appendix A; replace your `proposal/to-word.lua` with the Nov 8 course version to get the issue tables; 〈placeholders〉 are still in the text and would print in Word. |
 | Demo-ready | ⚠️ partial | A static search page can be shown, but §4 is mostly links and tables, the README is the course template, and no team code is tested or runs. |
 
-**Proposal, what to write:** §4 specs: `docs/specs/data-extraction-spec.md`, `data-storage-spec.md`, `data-analysis-spec.md` are only linked; summarize each in §4 (scope, requirements, acceptance criteria, open questions).; §4 design: five figures, but only Figure 3 has explaining prose; add components, data model, data flow and key decisions with rejected alternatives, using `technology-stack-decision.md`.; §4 Environment is a table with short purposes; add a paragraph per choice (Snowflake, AWS, FastAPI, OCR tool) giving the reason and rejected option.; No implementation section: describe the static search view and what remains to be built; replace the 76-row table with prose..
+**Proposal, what to write:** §4 specs: the three goal specs in `docs/specs/` (renamed `goal-1-...`, `goal-2-...`, `goal-3-...`, each 5,600-6,400 characters) are only linked; summarize each in §4 (PR #145 is open).; §4 design: five figures, but only Figure 3 has explaining prose; add components, data model, data flow and key decisions with rejected alternatives, using `technology-stack-decision.md`.; §4 Environment is a table with short purposes; add a paragraph per choice (Snowflake, AWS, FastAPI, OCR tool) giving the reason and rejected option (PR #143 is open).; No implementation section: describe the static search view and what remains to be built; replace the 76-row table with prose..
 
-**Merge first** (it doesn't count until it's in `develop` or `main`): PR #145 (open, main): goal specification summaries added to the proposal; PR #144 (open, main): §2 update with new goal specs under `docs/specs/`; PR #143 and #140 (open, main): data-flow update and environment table; PR #99 and #102 (open, main): search-view and page-5 sequence diagrams; branch develop: far behind main and holds an old skeleton; retire it.
+**Merge first** (it doesn't count until it's in `develop` or `main`): PR #145 (open, main): goal specification summaries added to the proposal; PR #168 (open, main): Review 3 write-up, closes #150; PR #143 and #140 (open, main): data-flow update and environment table; PR #99 and #102 (open, main): page-5 and search-view sequence diagrams; Eight unmerged branches, among them `proposal-environment-reasoning` and `update-data-flow`.
 
-**To do before your Sprint 3 review:**
+**To do in Sprint 4:**
 
-1. Merge PR #145 and #144, then confirm §4 carries each goal specification as prose, not only a link to `docs/specs/`.
-2. Write §4 design as paragraphs: system context, components, data model, data flow, key decisions with rejected alternatives, and what is not designed yet.
-3. Replace the Planned activities table with paragraphs and convert the 30 bare issue refs to typed refs of the correct kind.
-4. Rewrite `prototype/README.md` for the real prototype and add team tests; replace the course `login.py` and `test_login.py`.
-5. Pick one slice (for example document upload, extraction and review) and implement it with a test per acceptance criterion before Sprint 4 ends.
-6. Move story refs out of §4, type the epic refs #1, #4, #45 and story ref #49 in §2, and remove `sp:` from #38.
+1. Merge PR #145 and #143, then confirm §4 carries each goal specification and the environment reasoning as prose, not only a link to `docs/specs/`.
+2. Assign one person to each of features #151-#167 and tasks #147-#149, and link them in §4 with the correct typed refs.
+3. Write §4 design as paragraphs: system context, components, data model, data flow, key decisions with rejected alternatives, and what is not designed yet.
+4. Replace the Planned activities table with paragraphs, convert the 31 bare issue refs to typed refs, and fix `story#48`, `story#49` in §2.
+5. Rewrite `prototype/README.md`, replace the course `login.py` and `test_login.py`, and implement one slice (upload, extraction, review) with a test per acceptance criterion.
+6. Move story refs out of §4, type the epic refs #1, #4, #45, and remove `sp:` from #38.
 
 [↑ Back to all groups](#groups)
 
@@ -351,30 +355,32 @@ Each card covers the three rules, using the best of `main` and `develop` (the br
 
 ### G08 · Crime Busters: interactive crime map and database
 
-*Normalizes public Costa Mesa crime-call data into SQLite and shows it on a filterable Leaflet map.* · Sprint 3: Nov 3 – 16 · **Sprint 3 review Tue Nov 17** · [repository](https://github.com/miketruong91/CPSC490-G08-Crime-Busters)
+*Normalizes public Costa Mesa crime-call data into SQLite and shows it on a filterable Leaflet map.* · Sprint 3 review held Tue Nov 17 · **Sprint 4: Nov 17 – 30** · [repository](https://github.com/miketruong91/CPSC490-G08-Crime-Busters)
 
-**Start here:** Merge release PR #86 into main so the default branch carries the Sprint 3 prototype and proposal text.
+**Sprint 4 bar:** finalize `proposal.md` as the whole paper, §0–§8, more than 50 pages without the Appendix (now ≈ 9), and complete the prototype so it is fully functional, with a test per acceptance criterion. The checks below still apply; finish every open item first.
+
+**Start here:** Finish #27 with a test per acceptance criterion, so the Sprint 4 prototype is complete rather than a map slice.
 
 | Rule | Status | What I found |
 |---|---|---|
-| 1. PRs ↔ issues ↔ proposal | ✅ done | 8 of 8 stories have child tasks. Closed legacy issues #45-#47 (untyped objectives), #6 and #7 are not in the proposal and have no Sprint milestone.; Release PR #86 (develop to main) is still open, so main lacks the Sprint 3 work; PR #88 lists `Closes #86` twice.; Sprint 1 PRs #37, #39, #40 lack `Closes #N`; every later PR has one. No direct commits, no `sp:` under a story.. |
-| 2. Proposal §0–§4 (`develop`, ≈ 9 pages) | ✅ done | ✅ §0 Abstract · ⚠️ §1 Intro · ⚠️ §1.1 Related work · ⚠️ §1.2 Problem · ✅ §2 Goals · ✅ §3 Approaches · ✅ §4 Environment · ✅ §4 Specs · ✅ §4 Design · ✅ §4 Diagrams · ✅ §4 Implementation · ✅ §4 Planned activities. Link tables in place of prose: none; §4 on develop is prose, each part ending with typed refs (the old link table was replaced).. |
-| 3. Prototype works | ✅ done | Normalizes a Costa Mesa snapshot, loads and verifies SQLite, serves `/api/incidents`; Leaflet shows 19 calls at 13 locations, crime-type filter, selected marker highlight. CI: develop run 11/16 22:31 PST green; Prototype job ran Install and test (Python) and collected the team test files. main run 11/03 green but lacks the app. Tests: `test_normalize.py`, `test_load_db.py`, `test_area_filter.py`, `test_crime_frequency.py`; none for `app.py` or the page. |
-| 4. Word export (`develop`) | ⚠️ partial | 46 issue citation(s) become small in-text tags; 46 issue(s) fill 3 table(s) in Appendix A; replace your `proposal/to-word.lua` with the Nov 8 course version to get the issue tables; 〈placeholders〉 are still in the text and would print in Word. |
-| Demo-ready | ✅ ready | On develop, §0-§4 are real prose and the Flask and Leaflet map runs from a fresh clone; demo from develop until #86 merges to main. |
+| 1. PRs ↔ issues ↔ proposal | ✅ done | 8 of 8 stories have child tasks (new #93 under #13). Closed legacy issues #45-#47 (untyped objectives), #6 and #7 are not in the proposal and have no Sprint milestone.; Sprint 1 PRs #37, #39, #40 lack `Closes #N`; every later PR, including #94, has one.; #27 (marker display and selection) is still open under the Sprint 3 milestone, which is past due.; No direct commits, no `sp:` under a story, every linked child has an assignee and milestone.. |
+| 2. Proposal §0–§4 (`develop`, ≈ 9 pages) | ✅ done | ✅ §0 Abstract · ⚠️ §1 Intro · ⚠️ §1.1 Related work · ⚠️ §1.2 Problem · ✅ §2 Goals · ✅ §3 Approaches · ✅ §4 Environment · ✅ §4 Specs · ✅ §4 Design · ✅ §4 Diagrams · ✅ §4 Implementation · ✅ §4 Planned activities. Link tables in place of prose: none; §4 is prose with typed refs at the end of each part.. |
+| 3. Prototype works | ✅ done | Normalizes a Costa Mesa snapshot into SQLite, serves `/api/incidents`; Leaflet map shows incidents with a crime-type filter, marker updates and highlight. CI: develop run 11/18 22:07 PST green and main run 11/17 19:49 PST green; the Prototype job ran Install and test (Python) on the team test files. Tests: `test_normalize.py`, `test_load_db.py`, `test_area_filter.py`, `test_crime_frequency.py`, and new `test_app.py` for the map and incidents routes. |
+| 4. Word export (`develop`) | ⚠️ partial | 47 issue citation(s) become small in-text tags; 47 issue(s) fill 3 table(s) in Appendix A; replace your `proposal/to-word.lua` with the Nov 8 course version to get the issue tables; 〈placeholders〉 are still in the text and would print in Word. |
+| Demo-ready | ✅ ready | Release #86 is on main and develop adds route tests; §0-§4 are prose and the Flask and Leaflet map runs from a fresh clone. |
 
-**Proposal, what to write:** §4 Figure 3 (the ER diagram) is only a link; embed the image with a caption and walk through the entities.; §4 Goal 1-3 requirements are compact: add a separate non-functional requirements paragraph and an open-questions list per goal, as in `docs/specs/example-spec.md`.; §1.1 (369 words) needs prose arguing what this project does differently from the existing crime maps in the table; §1 and §1.2 are also short..
+**Proposal, what to write:** §4 Figure 3 (the ER diagram) is still only a link; embed the image with a caption and walk through the entities.; §4 Goal 1-3 requirements are compact: add a non-functional requirements paragraph and an open-questions list per goal, as in `docs/specs/example-spec.md`.; §1.1 (369 words) needs prose arguing what this project does differently from the existing crime maps; §1 and §1.2 are also short.; The paper is about 6,500 words; the final paper needs more than 50 pages without the Appendix, so §5-§8 and every §0-§4 section must grow in Sprint 4..
 
-**Merge first** (it doesn't count until it's in `develop` or `main`): PR #86 (open, develop to main): Sprint 3 release with the map demo and §4 text; PR #91 (open, develop): map markers update with the crime-type filter; branch 83-update-prototype-readme: 4 commits not in develop; merge or delete; branch feature/map-filter-results: 3 commits not in develop, same work as PR #91.
+**Merge first** (it doesn't count until it's in `develop` or `main`): develop is one PR ahead of main: PR #94 route tests and the §4 test paragraph are not on main; branch 83-update-prototype-readme: 4 commits not in develop; merge or delete.
 
-**To do before your Sprint 3 review:**
+**To do in Sprint 4:**
 
-1. Merge PR #86 into main after CI passes, so the review demo and §0-§4 are on the default branch.
-2. Merge PR #91 and add a test for `/api/incidents` and for the filter's marker update in `prototype/`.
+1. Release `develop` to main again so PR #94 (`prototype/test_app.py`) and the §4 test paragraph reach the default branch.
+2. Finish #27 and write a test for each acceptance criterion of the marker selection and filter stories before your Sprint 4 review.
 3. Embed Figure 3 (ER diagram) in §4 with a caption and one paragraph on the tables.
-4. Add non-functional requirements and open questions to each Goal 1-3 specification summary in §4.
-5. Expand §1.1 with prose on what Crime Busters does differently from the existing maps, and lengthen §1 and §1.2.
-6. Close legacy issues #45-#47, #6, #7 or give them a type label and Sprint milestone.
+4. Add non-functional requirements and open questions to each Goal 1-3 specification in §4.
+5. Expand §1, §1.1 (what Crime Busters does differently from existing maps) and §1.2, then write §5-§8 toward the 50-page paper.
+6. Close legacy issues #45-#47, #6, #7 or give them a type label and Sprint milestone; delete branch 83-update-prototype-readme.
 
 [↑ Back to all groups](#groups)
 
@@ -382,30 +388,32 @@ Each card covers the three rules, using the best of `main` and `develop` (the br
 
 ### G09 · Sigma Squad: Vehicle Maintenance Logger
 
-*A web app that records vehicle service history and recommends next service by mileage rules.* · Sprint 3: Nov 3 – 16 · **Sprint 3 review Tue Nov 17** · [repository](https://github.com/TylerWard741/CPSC490-G09-SigmaSquad)
+*A web app that records vehicle service history and recommends next service by mileage rules.* · Sprint 3 review held Tue Nov 17 · **Sprint 4: Nov 17 – 30** · [repository](https://github.com/TylerWard741/CPSC490-G09-SigmaSquad)
 
-**Start here:** Open the develop-to-main release PR today so the review demo and the default branch show the working prototype.
+**Sprint 4 bar:** finalize `proposal.md` as the whole paper, §0–§8, more than 50 pages without the Appendix (now ≈ 11), and complete the prototype so it is fully functional, with a test per acceptance criterion. The checks below still apply; finish every open item first.
+
+**Start here:** Merge release PR #110 so main shows the working prototype, then write the §4 implementation section.
 
 | Rule | Status | What I found |
 |---|---|---|
-| 1. PRs ↔ issues ↔ proposal | ⚠️ gaps | 7 of 10 stories have child issues (#29-#32, #34-#36); #33, #37, #38 have none. #80 carries sp: 1 under story #32, and #57 carries sp: 1 under pointed task #55.; #101 and #91 are open with no assignee, no Sprint milestone, and no link in proposal.md.; #106 and #98 are not linked in §4 of proposal.md on develop.; Stories #33, #37, #38 have no child issues; #59 hangs off epic #28, not a story.; PR #20 (old draft) has no Closes line; all Sprint 3 PRs #82-#109 close an issue.. |
-| 2. Proposal §0–§4 (`develop`, ≈ 11 pages) | ⚠️ partial | ✅ §0 Abstract · ✅ §1 Intro · ✅ §1.1 Related work · ⚠️ §1.2 Problem · ✅ §2 Goals · ⚠️ §3 Approaches · ✅ §4 Environment · ⚠️ §4 Specs · ⚠️ §4 Design · ✅ §4 Diagrams · ❌ §4 Implementation · ⚠️ §4 Planned activities. Link tables in place of prose: §4 Specification and design documents is a table that indexes eight docs without summarizing them; Planned activities is a 42-row issue-link table with one intro paragraph.. |
-| 3. Prototype works | ✅ done | Vehicle selection, service-record API and CRUD, manual entry and CSV import forms, dashboard with edit/delete, mileage entry, and status-label recommendation engine for three service types. CI: develop 11-17 green (4a0f895): Prototype job ran Install and test for both Node and Python, so API and UI tests executed. main 10-22 green but scaffold only. Tests: Seven pytest files (`test_vehicle_api.py`, `test_service_records_api.py`, label, engine, interval tests) and seven `tests/ui/*.test.js` page tests. |
-| 4. Word export (`develop`) | ⚠️ partial | 54 issue citation(s) become small in-text tags; 54 issue(s) fill 3 table(s) in Appendix A; `proposal/to-word.lua` or `proposal/reference.docx` is missing from your repository: copy both from the course repo. |
-| Demo-ready | ⚠️ partial | The full Sprint 3 prototype runs from develop with green CI, but §4 specs and design are index-only, there is no implementation section, and main is scaffold. |
+| 1. PRs ↔ issues ↔ proposal | ⚠️ gaps | 8 of 10 stories have child issues; #37 and #38 have none (#33 gained #91). #80 carries sp: 1 under story #32; #57, #101, #111 and #112 carry sp: under pointed tasks.; #106 is open with no Sprint milestone and is not linked in proposal §4; #112 (PR #114 open) is not linked yet.; Stories #37 and #38 have no child issues; #59 hangs off epic #28, not a story.; PR #20 (old draft) has no Closes line; all Sprint 3 and Sprint 4 PRs close an issue.. |
+| 2. Proposal §0–§4 (`develop`, ≈ 11 pages) | ⚠️ partial | ✅ §0 Abstract · ✅ §1 Intro · ✅ §1.1 Related work · ⚠️ §1.2 Problem · ✅ §2 Goals · ⚠️ §3 Approaches · ✅ §4 Environment · ⚠️ §4 Specs · ⚠️ §4 Design · ✅ §4 Diagrams · ❌ §4 Implementation · ⚠️ §4 Planned activities. Link tables in place of prose: §4 Specification and design documents is a table that indexes eight docs without summarizing them; Planned activities is a 46-row issue-link table with one intro paragraph.. |
+| 3. Prototype works | ✅ done | Vehicle selection, service-record API and CRUD, manual entry and CSV import forms, dashboard with edit/delete, mileage entry, and status-label recommendations for three service types. CI: develop 11/19 00:48 PST green: the Prototype job ran Install and test for Node and Python, so API and UI tests executed. main 10/22 green but scaffold only. Tests: Seven pytest files (vehicle and service-record APIs, label, engine, interval) and seven `tests/ui/*.test.js` page tests. |
+| 4. Word export (`develop`) | ⚠️ partial | 58 issue citation(s) become small in-text tags; 58 issue(s) fill 3 table(s) in Appendix A; `proposal/to-word.lua` or `proposal/reference.docx` is missing from your repository: copy both from the course repo. |
+| Demo-ready | ⚠️ partial | The Sprint 3 prototype runs from develop with green CI, but §4 specs and design are index-only, no implementation section, and main is still scaffold until #110 merges. |
 
-**Proposal, what to write:** §3 is about 190 words; add alternatives beyond rules versus AI (for example Flask versus other stacks, SQLite versus a hosted database) with reasons.; Five specs in `docs/specs/` are only indexed; summarize scope, requirements, acceptance criteria and open questions per epic in §4 prose.; Design lacks decisions with rejected alternatives and a not-yet-designed list; `docs/design/architecture.md` and `maintenance-dashboard.md` are not carried by proposal.md.; No §4 implementation prose: describe the service-record API, entry and import forms, dashboard, label rule and their tests, ending in task refs.; §1.2 is about 100 words plus a table; write each problem as a full paragraph ending in refs..
+**Proposal, what to write:** §3 is about 190 words; add alternatives beyond rules versus AI (Flask versus other stacks, SQLite versus hosted database) with reasons.; Five specs in `docs/specs/` are only indexed; summarize scope, requirements, acceptance criteria and open questions per epic in §4 prose.; Design lacks decisions with rejected alternatives and a not-yet-designed list; `docs/design/architecture.md` and `maintenance-dashboard.md` are not carried by proposal.md.; No §4 implementation prose: describe the service-record API, entry and import forms, dashboard, label rule and their tests, ending in task refs.; The paper is about 6,500 words and §5-§8 are not written; the final paper needs more than 50 pages without the Appendix..
 
-**Merge first** (it doesn't count until it's in `develop` or `main`): develop vs main: develop holds the prototype, specs, design docs and diagrams; main is still the scaffold; branch feature/98-sprint-3-review: 8 commits not in develop (Sprint 3 review); branch feature/106-list-epic-27-spec: 2 commits not in develop; PR #107 closed unmerged.
+**Merge first** (it doesn't count until it's in `develop` or `main`): PR #110 (open, develop to main): release of Sprint 2 and 3 work; main is still scaffold; PR #114 (open, develop): update course files; branch feature/98-sprint-3-review: 8 commits not in develop; branch feature/106-list-epic-27-spec: 2 commits not in develop; PR #107 closed unmerged.
 
-**To do before your Sprint 3 review:**
+**To do in Sprint 4:**
 
-1. Open and merge the develop-to-main release PR, with CI green on main, so the default branch shows the prototype and proposal.
-2. Add §4 implementation prose for the vehicle, service-record, dashboard and recommendation code and its tests, ending in typed refs.
+1. Merge release PR #110 with CI green on main so the default branch shows the prototype and proposal.
+2. Write the §4 implementation prose for the vehicle, service-record, dashboard and recommendation code and its tests, ending in typed refs.
 3. Summarize the five specs and `docs/design/architecture.md` in §4: requirements, acceptance criteria, decisions with rejected alternatives, open questions.
-4. Remove sp: from #80 and #57; assign #91 and #101 with a Sprint milestone; link #91, #98, #101, #106 in §4.
-5. Add child issues for stories #33, #37, #38, and re-parent #59 under a story.
-6. Expand §3 alternatives and write §1.2 problems as paragraphs; replace the work-item table with prose.
+4. Remove sp: from #80, #57, #101, #111, #112; give #106 a Sprint milestone and link #106 and #112 in §4.
+5. Add child issues for stories #37 and #38 and re-parent #59 under a story; complete #91.
+6. Expand §3 alternatives, write §1.2 as paragraphs, replace the work-item table with prose, then write §5-§8 toward 50 pages.
 
 [↑ Back to all groups](#groups)
 
@@ -413,30 +421,32 @@ Each card covers the three rules, using the best of `main` and `develop` (the br
 
 ### G10 · Team Jiddak: StableScope, stablecoin wash-trading detection (sponsor SNX-3)
 
-*Graph and anomaly-detection pipeline that flags wash trading in stablecoin transfers, with an investigation dashboard.* · Sprint 3: Nov 3 – 16 · **Sprint 3 review Tue Nov 17** · [repository](https://github.com/Alexander-Sanchez2/CPSC490-G10-Team_Jiddak)
+*Graph and anomaly-detection pipeline that flags wash trading in stablecoin transfers, with an investigation dashboard.* · Sprint 3 review held Tue Nov 17 · **Sprint 4: Nov 17 – 30** · [repository](https://github.com/Alexander-Sanchez2/CPSC490-G10-Team_Jiddak)
 
-**Start here:** Fix the failing Run gates job on main and merge PR #80, then rewrite `prototype/README.md` so the demo runs from a fresh clone.
+**Sprint 4 bar:** finalize `proposal.md` as the whole paper, §0–§8, more than 50 pages without the Appendix (now ≈ 10), and complete the prototype so it is fully functional, with a test per acceptance criterion. The checks below still apply; finish every open item first.
+
+**Start here:** Fix the failing Run gates job on main, then rewrite `prototype/README.md` so the demo runs from a fresh clone.
 
 | Rule | Status | What I found |
 |---|---|---|
-| 1. PRs ↔ issues ↔ proposal | ⚠️ gaps | 0 of 14 stories have child issues; #46 and #69 hang off epic #15, not a story. None of stories #25-#33, #38, #39, #53-#55 has child feature, task or sub-task issues.; #56 carries sp: under pointed task #13; #69 is labelled epic with sp: 5 and cited as a task.; #73 and #74 have no Sprint milestone; #3 is untyped; #6 has five assignees.; #79, #74, #73 are bare refs in §4, not typed refs.; 14 direct commits on main and develop, including repo restructuring; all 32 PRs close an issue.. |
+| 1. PRs ↔ issues ↔ proposal | ⚠️ gaps | 1 of 14 stories has child issues (#31 gained #82); #46 and #69 hang off epic #15, not a story. Stories #25-#30, #32, #33, #38, #39, #53-#55 have no child feature, task or sub-task issues.; #82 carries sp: 1 under story #31; #56 carries sp: under pointed task #13; #69 is labelled epic with sp: 5.; #33 and #38 are open with no assignee; #73 and #74 have no Sprint milestone; #3 is untyped.; #82, #74, #73 are bare refs in §4; #83 is not linked; `[epic:#15]` is cited in §4 instead of §2.; 14 direct commits on main, including repo restructuring; all 34 PRs close an issue.. |
 | 2. Proposal §0–§4 (`develop`, ≈ 10 pages) | ⚠️ partial | ✅ §0 Abstract · ⚠️ §1 Intro · ⚠️ §1.1 Related work · ✅ §1.2 Problem · ✅ §2 Goals · ✅ §3 Approaches · ⚠️ §4 Environment · ⚠️ §4 Specs · ⚠️ §4 Design · ⚠️ §4 Diagrams · ❌ §4 Implementation · ⚠️ §4 Planned activities. Link tables in place of prose: §4 Planned Activities (5 bullets) and Tracked Task Issues (28 bullets) are lists; Specification and Design Documents is a link list followed by pasted doc text.. |
-| 3. Prototype works | ⚠️ partial | Goal 1 network model: transfer CSV to wallet graph, derived views, time-respecting cycles, metrics and reconciliation checks via `demo.py` on a synthetic sample. CI: develop 11-17 green (525ffda): Install and test (Python) ran. main 11-15 red on Repository harness (Run gates); whether pytest collects the nested tests is unconfirmed. Tests: 31 tests in `tests/test_requirements.py` and `tests/test_acceptance.py` under the nested prototype folder; plus course `test_login.py`. |
-| 4. Word export (`develop`) | ⚠️ partial | 44 issue citation(s) become small in-text tags; 44 issue(s) fill 4 table(s) in Appendix A; 1 issue URL(s) stay in the text because they aren't written as links (use `[task:#N](https://github.com/OWNER/REPO/issues/N)`); replace your `proposal/to-word.lua` with the Nov 8 course version to get the issue tables; 〈placeholders〉 are still in the text and would print in Word. |
-| Demo-ready | ⚠️ partial | A tested Goal 1 demo runs on develop from the CLI, but there is no UI, run steps are wrong, specs and design are thin, and main has no prototype. |
+| 3. Prototype works | ⚠️ partial | Goal 1 network model: transfer CSV to wallet graph, derived views, time-respecting cycles, metrics and reconciliation checks via `demo.py` on a synthetic sample. CI: develop 11/18 20:57 PST green (Prototype job ran Install and test (Python)); main 11/17 14:24 PST red on Repository harness (Run gates), Prototype job green. Tests: 31 tests in `tests/test_requirements.py` and `tests/test_acceptance.py` in the nested prototype folder; plus course `test_login.py`. |
+| 4. Word export (`develop`) | ⚠️ partial | 46 issue citation(s) become small in-text tags; 45 issue(s) fill 4 table(s) in Appendix A; replace your `proposal/to-word.lua` with the Nov 8 course version to get the issue tables; 〈placeholders〉 are still in the text and would print in Word. |
+| Demo-ready | ⚠️ partial | A tested Goal 1 demo runs on develop from the CLI and PR #80 put it on main, but there is no UI, run steps are wrong, and specs and design are thin. |
 
-**Proposal, what to write:** §1.1 now has a table and prose but compares only two vendors with one citation; add academic and open-source detectors and cite §8.; §1 Introduction is about 155 words; explain the domain, why wash trading matters and the sponsor context.; Epic #23 and #24 specs are summarized as scope paragraphs only; add requirements, acceptance criteria and open questions per epic.; Five diagrams have one-line captions; add prose per figure, decisions with rejected alternatives, and what is not designed yet.; No §4 implementation prose for `prototype/goal1-network-model-prototype/`; pasted `# Goal 1` headings sit inside §4 and need a place in the outline..
+**Proposal, what to write:** §1.1 compares only two vendors with one citation; add academic and open-source detectors and cite them in §8.; §1 Introduction is about 155 words; explain the domain, why wash trading matters and the sponsor context.; Goal 1 specification is now a prose paragraph on the graph model; add requirements, acceptance criteria and open questions, and finish Epic #24.; Five diagrams have one-line captions; add prose per figure, decisions with rejected alternatives, and what is not designed yet.; No §4 implementation prose for `prototype/goal1-network-model-prototype/`; pasted `# Goal 1` headings sit outside the outline. The paper is about 5,600 words; the final needs more than 50 pages..
 
-**Merge first** (it doesn't count until it's in `develop` or `main`): PR #80 (open, develop to main): releases the prototype, specs and diagrams to main; main CI is red; branch feat/69-goal1-network-model-prototype: 2 commits not in develop.
+**Merge first** (it doesn't count until it's in `develop` or `main`): develop is ahead of main: Goal 1 spec prose and reference [18] in proposal.md are not on main; branch feat/69-goal1-network-model-prototype: 2 commits not in develop.
 
-**To do before your Sprint 3 review:**
+**To do in Sprint 4:**
 
-1. Fix the Run gates failure on main, then merge PR #80 so the default branch shows the prototype.
+1. Fix the Run gates failure on main so the default branch is green, then release develop to main.
 2. Rewrite `prototype/README.md` and the nested README so run and test commands work from `prototype/goal1-network-model-prototype/`.
-3. Create child issues under each story (start with #31, #32, #25-#27), each with one assignee and a Sprint milestone; drop sp: from #56 and #69.
-4. Write a §4 Implementation section for `stablescope/` modules and the 31 tests, ending in typed refs.
-5. Summarize Epics #23 and #24 specs fully and explain each diagram in prose with decisions and rejected alternatives.
-6. Expand §1 Introduction and §1.1 with more sources cited in §8; stop direct commits to main and develop.
+3. Create child issues under each remaining story (start with #32, #25-#27), each with one assignee and a Sprint milestone; drop sp: from #82, #56, #69.
+4. Write a §4 Implementation section for the `stablescope/` modules and the 31 tests, ending in typed refs; build the Goal 2 and Goal 3 slices with a test per acceptance criterion.
+5. Summarize the Epic #23 and #24 specs fully and explain each diagram in prose with decisions and rejected alternatives.
+6. Expand §1 and §1.1 with sources cited in §8, write §5-§8, and stop direct commits to main.
 
 [↑ Back to all groups](#groups)
 
@@ -448,28 +458,28 @@ Each card covers the three rules, using the best of `main` and `develop` (the br
 
 **Sprint 4 bar:** finalize `proposal.md` as the whole paper, §0–§8, more than 50 pages without the Appendix (now ≈ 9), and complete the prototype so it is fully functional, with a test per acceptance criterion. The checks below still apply; finish every open item first.
 
-**Start here:** Build the spectator view (#69) so the Sprint 4 review demo shows a phone's GPS position reaching a web page through Firestore.
+**Start here:** Build the spectator view (#69) so your Sprint 4 demo shows a phone's GPS position reaching a web page through Firestore.
 
 | Rule | Status | What I found |
 |---|---|---|
-| 1. PRs ↔ issues ↔ proposal | ⚠️ gaps | 6 of 6 stories have child issues (#28-#33); 45 of 48 issues linked from the proposal. #62 (task under story #28) carries `sp: 3`; points belong on the story only, so story #28 is double counted.; PR #39 closes #21, which `proposal/proposal.md` does not link.; Open stories #28, #29, #30, #31, #33 and all Sprint 4 features have no merged PR yet; the Sprint 3 milestone is past due (11/11).; #1, #2, #6 are untyped and not in the proposal; #1 and #6 have no assignee (old Sprint 1 leftovers).; Tasks #58, #60, #65, #72 hang off no story; fine as process tasks, but #62 and #64 are the only prototype tasks under #28.. |
+| 1. PRs ↔ issues ↔ proposal | ⚠️ gaps | 6 of 6 stories have child issues (#28-#33); 45 of 49 issues linked from the proposal. `sp:` removed from #62; #1, #2, #6 are now typed and assigned, but still not linked from the proposal.; PR #39 closes #21, which `proposal/proposal.md` does not link; new task #88 (to fix this) has no parent and is not linked either.; Open stories #28, #29, #30, #31, #33 and all Sprint 4 features have no merged PR yet.; One direct commit (`.github` scaffold) on main and develop; every PR closes an issue.. |
 | 2. Proposal §0–§4 (`main`, ≈ 9 pages) | ⚠️ partial | ⚠️ §0 Abstract · ⚠️ §1 Intro · ⚠️ §1.1 Related work · ✅ §1.2 Problem · ⚠️ §2 Goals · ⚠️ §3 Approaches · ❌ §4 Environment · ⚠️ §4 Specs · ⚠️ §4 Design · ✅ §4 Diagrams · ⚠️ §4 Implementation · ✅ §4 Planned activities. Link tables in place of prose: §4 "Specification and design documents" is a 4-row link table; the specs and design docs stay in `docs/` and the proposal carries only one Goal 3 paragraph.. |
-| 3. Prototype works | ✅ done | Expo app with Firebase client, runner GPS tracking module (`runner-app/tracking.js`), Firestore smoke test, and pace calculation (`prediction/pace.py`). Spectator view is only a README placeholder. CI: main CI green 11/12 (720486b); Prototype job ran Node install and test (jest) and Python install and test; "Nothing to build" was skipped. develop is stale, still the login scaffold. Tests: 3 test files: `__tests__/App.test.js`, `__tests__/tracking.test.js` (jest) and `prediction/test_pace.py` (pace maths); all run in CI. |
+| 3. Prototype works | ✅ done | Expo app with Firebase client, runner GPS tracking module (`runner-app/tracking.js`), Firestore smoke test, and pace calculation (`prediction/pace.py`). Spectator view is only a README placeholder. CI: main CI green 11/12 (720486b); Prototype job ran Node install and test (jest) and Python install and test. develop green but still the login scaffold. Tests: 3 test files: `__tests__/App.test.js`, `__tests__/tracking.test.js` (jest) and `prediction/test_pace.py`; all run in CI. |
 | 4. Word export (`main`) | ⚠️ partial | 50 issue citation(s) become small in-text tags; 45 issue(s) fill 4 table(s) in Appendix A; `proposal/to-word.lua` or `proposal/reference.docx` is missing from your repository: copy both from the course repo; 〈placeholders〉 are still in the text and would print in Word. |
 | Demo-ready | ⚠️ partial | A phone-GPS-to-Firestore demo and pace test can run, but §4 is incomplete and the spectator view (#69) that ties it together is not built. |
 
-**Proposal, what to write:** §0 Abstract describes an ML performance-analysis app; the goals are live tracking, posts and a spectator page. Rewrite it to match §2.; §1 and §1.1 still hold template quote blocks and a stray 〈Your survey〉 placeholder; §1.1 ends mid-sentence ("our") and has a duplicated table cell.; §4 has no Environment and resources section: tech-stack reasons (Expo, Firebase, Mapbox, Python) appear only as one paragraph under Planned activities (#48, #72).; §4 specs: only Goal 3 is summarized; add scope, requirements, acceptance criteria and open questions for Goals 1 and 2 (#70, #73) from `docs/specs/`.; §4 design: carry the components, data model, key decisions with rejected alternatives and 'not designed yet' from `docs/design/architecture.md` and `data-model.md` into the proposal.; §4 implementation reads as a setup tutorial and says "we plan to use" for GPS and spectator code that already exists; describe what `tracking.js` and `pace.py` do..
+**Proposal, what to write:** §0 Abstract describes an ML performance-analysis app; the goals are live tracking, posts and a spectator page. Rewrite it to match §2.; §1 and §1.1 still hold template quote blocks and a stray 〈Your survey〉 placeholder; §1.1 ends mid-sentence and has a duplicated table cell.; §4 has no Environment and resources section: tech-stack reasons (Expo, Firebase, Mapbox, Python) appear only under Planned activities (#48, #72).; §4 specs: only Goal 3 is summarized; add scope, requirements, acceptance criteria and open questions for Goals 1 and 2 (#70, #73) from `docs/specs/`.; §4 design and implementation: carry components, data model and decisions with rejected alternatives into the proposal; describe what `tracking.js` and `pace.py` do. The paper is about 5,600 words; the final needs more than 50 pages..
 
-**Merge first** (it doesn't count until it's in `develop` or `main`): branch develop - stale, holds only the login scaffold; later PRs targeting it never reached main's prototype.
+**Merge first** (it doesn't count until it's in `develop` or `main`): branch develop - stale, holds only the login scaffold; later PRs never reached main's prototype.
 
 **To do in Sprint 4:**
 
-1. Build the spectator view (#69) in `prototype/spectator-view/` so the demo shows a runner position on a page end to end.
+1. Build the spectator view (#69) in `prototype/spectator-view/` so a runner position reaches a web page end to end, with a test per acceptance criterion.
 2. Add an Environment and resources subsection to §4 with one reason per tool (Expo, Firebase Firestore, Mapbox, Python); cite #48 and #72.
-3. Summarize the Goal 1 and Goal 2 specs in §4 and complete the Goal 3 summary; finish #70, then link each spec's acceptance criteria to a test.
+3. Summarize the Goal 1 and Goal 2 specs in §4 and complete Goal 3; finish #70 and link each acceptance criterion to a test.
 4. Move the data model, architecture and key decisions (with rejected alternatives) from `docs/design/` into §4 prose, each paragraph ending with issue refs.
-5. Rewrite §0 Abstract so it matches Goals 1-3; fix §1.1 ending, remove 〈…〉 placeholders and template quote blocks in §0-§4.
-6. Remove `sp: 3` from #62, close or type #1, #2, #6, and refresh `prototype/README.md` run steps.
+5. Rewrite §0 to match Goals 1-3; fix §1.1, remove 〈…〉 placeholders and quote blocks, then write §5-§8 toward 50 pages.
+6. Finish #88 (link #21, #1, #2, #6) and refresh `prototype/README.md` run steps.
 
 [↑ Back to all groups](#groups)
 
@@ -481,28 +491,29 @@ Each card covers the three rules, using the best of `main` and `develop` (the br
 
 **Sprint 4 bar:** finalize `proposal.md` as the whole paper, §0–§8, more than 50 pages without the Appendix (now ≈ 9), and complete the prototype so it is fully functional, with a test per acceptance criterion. The checks below still apply; finish every open item first.
 
-**Start here:** Merge develop into main today so your Sprint 4 review shows the real prototype and proposal from the default branch.
+**Start here:** Merge PR #167 and promote develop to main so your Sprint 4 work builds on one proposal and one prototype on the default branch.
 
 | Rule | Status | What I found |
 |---|---|---|
-| 1. PRs ↔ issues ↔ proposal | ⚠️ gaps | 10 of 17 stories have child issues; #67, #69, #70, #71, #84, #95, #163 have none. Stories #67, #69, #70, #71, #84, #95, #163 have no child feature, task or sub-task.; 22 issues are not in proposal.md on develop, including tasks #154-#162, #147, #150, #152 and stories #95, #163.; #70 and #71 have no assignee or Sprint milestone; #103 is untyped with no assignee.; §4 still cites stories (#68, #84, #111, #126) that belong only in §2; 14 misplaced refs, one to deleted #63.; One direct commit on develop; PRs #1, #2 (old) have no issue; PRs #151, #153 still open.. |
+| 1. PRs ↔ issues ↔ proposal | ⚠️ gaps | 11 of 17 stories have child issues; #67, #69, #70, #71, #84, #95 have none (#163 now has #164, #165). Stories #67, #69, #70, #71, #84, #95 have no child feature, task or sub-task.; 24 issues are not in proposal.md on develop, including tasks #147-#152, #154-#162, #164, #165 and stories #95, #163.; #70 and #71 have no assignee or Sprint milestone; #103 is untyped with no assignee.; §4 still cites stories (#68, #84, #111, #126) that belong only in §2; 14 misplaced refs, one to deleted #63.; One direct commit on develop and main; PRs #1, #2 (old) have no issue; PR #167 is open.. |
 | 2. Proposal §0–§4 (`develop`, ≈ 9 pages) | ⚠️ partial | ✅ §0 Abstract · ✅ §1 Intro · ⚠️ §1.1 Related work · ⚠️ §1.2 Problem · ✅ §2 Goals · ✅ §3 Approaches · ⚠️ §4 Environment · ⚠️ §4 Specs · ✅ §4 Design · ✅ §4 Diagrams · ❌ §4 Implementation · ⚠️ §4 Planned activities. |
-| 3. Prototype works | ✅ done | CLI and GUI run peak picking (baseline v1.4, CV model), channelizer, calibration with Unknown abstention, Captum attribution and a transformer AMC module. CI: develop 11-13 green (2719a5c); Prototype job ran Install and test (Python) on team code. main is 10-16 scaffold. Tests: 14 test files in `prototype/tests/`: peak pickers, channelizer, calibration, attribution, CLI, pipeline gate, OFDM, training, transformer. |
+| 3. Prototype works | ✅ done | CLI and GUI run peak picking (baseline v1.4, CV model), channelizer, calibration with Unknown abstention, Captum attribution and a transformer AMC module. CI: develop 11-19 green (3b7ee1b), re-run on the same code; Prototype job ran Install and test (Python) on team code. main is the 10-16 scaffold. Tests: 14 test files in `prototype/tests/`: peak pickers, channelizer, calibration, attribution, CLI, pipeline gate, OFDM, training, transformer. |
 | 4. Word export (`develop`) | ⚠️ partial | 70 issue citation(s) become small in-text tags; 54 issue(s) fill 3 table(s) in Appendix A; replace your `proposal/to-word.lua` with the Nov 8 course version to get the issue tables; 〈placeholders〉 are still in the text and would print in Word. |
 | Demo-ready | ⚠️ partial | The peak-picker and classifier demo runs from develop, but §4 lacks Environment detail and Implementation, and main still shows the scaffold. |
 
 **Proposal, what to write:** §4 Environment and resources is 28 words with template placeholders; give each tool (MATLAB, Python, Captum, dataset) and the reason it was chosen.; Only two specs (application architecture, waveform family) for five epics; Goals 1, 4 and 5 need scope, requirements, acceptance criteria and open questions.; No §4 implementation section for `waveform_identification/`, `xai/`, `GUI/` and `modulation_classification/`; add paragraphs ending in task refs.; §1.1 has four prose subsections but no pros-and-cons table or prose on what this project does differently.; §1.2 states P1-P3 in about 50 words; explain why each matters and tie it to a goal. No planned-activities prose exists..
 
-**Merge first** (it doesn't count until it's in `develop` or `main`): branch develop: holds the real prototype and §4 work; main is the login scaffold, promote it; PRs #151, #153 (open): Sprint 2 review notes and Word export converter; branches Application-Structure, docs/team-documentation, docs/150-sprint-2-review, docs/152-word-export: commits not in develop.
+**Merge first** (it doesn't count until it's in `develop` or `main`): PR #167 (open): merges diagrams and design docs into `proposal/proposal.md` (closes #163); branch develop: holds the real prototype and §4 work; main is the login scaffold, promote it; branches Application-Structure, docs/team-documentation: commits not in develop.
 
 **To do in Sprint 4:**
 
-1. Open and merge a develop-to-main PR so `prototype/` and `proposal/proposal.md` on main are current; keep main CI green.
-2. Link #147-#162 and #95 in §4 as typed refs, and move story refs out of §4 into §2.
-3. Create child issues for stories #67, #69, #70, #71, #84, #95, #163; assign one person and a Sprint milestone to each.
-4. Replace the §4 Environment placeholder with each tool and why it was chosen, ending paragraphs with task refs.
-5. Write a §4 Implementation section for the four prototype packages and planned-activities prose for the remaining work.
-6. Add short specs for Goals 1, 4 and 5, and a §1.1 pros-and-cons table with prose on what differs.
+1. Merge PR #167 and finish #164 and #165 so the specs and design in `docs/` are carried inside `proposal/proposal.md`.
+2. Open and merge a develop-to-main PR so `prototype/` and `proposal/proposal.md` on main are current; keep main CI green.
+3. Link #147-#165 in §4 as typed refs, and move story refs out of §4 into §2.
+4. Create child issues for stories #67, #69, #70, #71, #84, #95; assign one person and a Sprint milestone to each.
+5. Replace the §4 Environment placeholder with each tool and why it was chosen; write an Implementation section for the four prototype packages and planned-activities prose.
+6. Add specs for Goals 1, 4 and 5 and a §1.1 pros-and-cons table, then draft §5 to §8 in Sprint 4.
+7. Wire the CLI to the analysis pipeline (#161) and add one test per acceptance criterion in `prototype/tests/` for the full prototype.
 
 [↑ Back to all groups](#groups)
 
@@ -514,7 +525,7 @@ Each card covers the three rules, using the best of `main` and `develop` (the br
 
 **Sprint 4 bar:** finalize `proposal.md` as the whole paper, §0–§8, more than 50 pages without the Appendix (now ≈ 8), and complete the prototype so it is fully functional, with a test per acceptance criterion. The checks below still apply; finish every open item first.
 
-**Start here:** Merge the open feature PRs, then rewrite `prototype/README.md` and rename the test file so CI exercises the app.
+**Start here:** Merge the open feature PRs, then rewrite `prototype/README.md` and rename the test file so CI exercises the app in Sprint 4.
 
 | Rule | Status | What I found |
 |---|---|---|
@@ -532,10 +543,11 @@ Each card covers the three rules, using the best of `main` and `develop` (the br
 
 1. Merge PRs #144, #145, #147, #148, #153 with `Closes #N` and close the issues the prototype already implements.
 2. Rewrite `prototype/README.md` with install, run and test commands for the core and the UI.
-3. Rename `TestAssignments.py` to `test_assignments.py` and add tests for deadline suggestion and CRUD, one per acceptance criterion in `docs/specs/specs-G1.md`.
+3. Rename `TestAssignments.py` to `test_assignments.py` and add one test per acceptance criterion in `docs/specs/specs-G1.md` through `specs-G3.md`.
 4. Merge the architecture diagram branch and add system context, data model and data flow diagrams with prose to §4.
 5. Add Sprint milestones to #93, #94, #124, keep one assignee per issue, and fix malformed refs in the Planned Activities table.
 6. Write §4 Environment with a reason per tool, an Implementation section, and carry specs and the ER design into §4 prose.
+7. Start §5 to §8 in Sprint 4 so the whole paper reaches the 50-page target.
 
 [↑ Back to all groups](#groups)
 
@@ -592,6 +604,8 @@ Each card covers the three rules, using the best of `main` and `develop` (the br
 
 **Proposal, what to write:** §4 specs: summarize `docs/specs/game-engine.md` and `game-demo.md` in prose (scope, FR/NFR, acceptance criteria, open questions); today only the file names appear.; §4 design: write components, data model (entities, components, systems), data flow and key decisions with rejected alternatives from `docs/design/architecture.md`.; §4 diagrams: Figures 1 and 2 have captions but no paragraph explaining them; add one per figure.; §4 environment is one line per tool; explain why SDL3, Assimp, ImGui and C++26 suit old hardware, and name the test machines.; §4 has no implementation section: describe `prototype/include/engine/` and `demo/` and what runs, citing #63, #66, #67, #82..
 
+**Merge first** (it doesn't count until it's in `develop` or `main`): branch 33-objective-24-implement-visual-editor-to-import-models-create-objects-and-design-the-game-world: 2 commits not in develop.
+
 **To do in Sprint 4:**
 
 1. Write §4 Specifications as prose from `docs/specs/game-engine.md` and `game-demo.md`: scope, FR, NFR, acceptance criteria, open questions per epic.
@@ -599,7 +613,8 @@ Each card covers the three rules, using the best of `main` and `develop` (the br
 3. Add a §4 Implementation section on what the CMake prototype builds and tests today, citing #63, #66, #67, #82.
 4. Replace the 38-row planned-activities table with paragraphs and typed refs; add #76, #78, #82 and epic #6.
 5. Create child issues under stories #26-#29; remove `sp:` from #46 and fix its parent.
-6. Explain Figures 1 and 2 in prose, and fix the 〈…〉 title in `prototype/README.md`.
+6. Merge the #33 visual-editor branch by PR with `Closes #N`, and add a test per acceptance criterion for the engine and demo.
+7. Explain Figures 1 and 2 in prose, fix the 〈…〉 title in `prototype/README.md`, and start §5 to §8 in Sprint 4.
 
 [↑ Back to all groups](#groups)
 
@@ -609,28 +624,28 @@ Each card covers the three rules, using the best of `main` and `develop` (the br
 
 *Monitors cross-chain bridge vaults, learns normal outflow, and alerts on drains with measured false alarms.* · Sprint 3: Nov 5 – 18 · **Sprint 3 review Thu Nov 19** · [repository](https://github.com/garybs16/CPSC490-G16-Neuroprosthetic)
 
-**Start here:** Merge PR #115, then write the decisions-and-rejected-alternatives and not-yet-designed paragraphs after D6 in §4 from `docs/design/architecture.md`.
+**Start here:** Create child tasks under stories #19 and #21 with one assignee and a Sprint 4 milestone each, then tie each to a test.
 
 | Rule | Status | What I found |
 |---|---|---|
-| 1. PRs ↔ issues ↔ proposal | ⚠️ gaps | 5 of 9 stories have child issues (#14, #15, #17, #18, #20); #5, #16, #19, #21 have none. Stories #19 and #21 (Sprint 4) and closed stories #5 and #16 have no child issues.; #113 and #114 (Goal 2 and 3 spec summaries) are not linked from the proposal; PR #115 that cites them is open.; PRs #75 and #35 have no `Closes #N`.; Three direct `docs:` commits on main and develop (team details), outside any PR.. |
-| 2. Proposal §0–§4 (`develop`, ≈ 21 pages) | ⚠️ partial | ✅ §0 Abstract · ✅ §1 Intro · ✅ §1.1 Related work · ✅ §1.2 Problem · ✅ §2 Goals · ✅ §3 Approaches · ✅ §4 Environment · ⚠️ §4 Specs · ⚠️ §4 Design · ✅ §4 Diagrams · ✅ §4 Implementation · ✅ §4 Planned activities. Link tables in place of prose: Table 9 lists the three specs and design doc as file paths with issue refs; apart from Goal 1, no spec has a prose summary behind it.. |
-| 3. Prototype works | ✅ done | Detector, SQLite store, live Ethereum poller, replay of five past hacks, false-alarm evaluation on real normal days, Slack notifier, FastAPI API, web dashboard, demo mode. CI: develop b3da6c6 (11/17) green; Prototype job ran 'Install and test (Python)', so team tests executed. main last ran 11/3, also green. Tests: Four files in `prototype/tests/`: detector, live loop, baseline check, data pipeline; proposal reports sixty tests. |
-| 4. Word export (`develop`) | ✅ done | 69 issue citation(s) become small in-text tags; 47 issue(s) fill 4 table(s) in Appendix A; replace your `proposal/to-word.lua` with the Nov 8 course version to get the issue tables. |
-| Demo-ready | ⚠️ partial | The prototype runs in live, demo and replay modes and could be shown; §4 still lacks Goal 2 and 3 spec summaries and decisions prose. |
+| 1. PRs ↔ issues ↔ proposal | ⚠️ gaps | 5 of 9 stories have child issues (#14, #15, #17, #18, #20); #5, #16, #19, #21 have none. Stories #19 and #21 (Sprint 4) and closed stories #5 and #16 have no child issues.; Tasks #28 and #107 have no parent story; #107 also has no assignee.; PRs #75 and #35 have no `Closes #N` (both closed, old).; Three direct `docs:` commits on main and develop (team details), outside any PR.. |
+| 2. Proposal §0–§4 (`main`, ≈ 25 pages) | ✅ done | ✅ §0 Abstract · ✅ §1 Intro · ✅ §1.1 Related work · ✅ §1.2 Problem · ✅ §2 Goals · ✅ §3 Approaches · ✅ §4 Environment · ✅ §4 Specs · ✅ §4 Design · ✅ §4 Diagrams · ✅ §4 Implementation · ✅ §4 Planned activities. Link tables in place of prose: Table 9 lists the specs and design doc as paths with issue refs, but prose summaries for Goals 1, 2 and 3 now sit behind it.. |
+| 3. Prototype works | ✅ done | Detector, SQLite store, live Ethereum poller, replay of five past hacks, false-alarm evaluation on real normal days, Slack notifier, FastAPI API, web dashboard, demo mode. CI: main 93cd0c2 and develop 3463b50 both green on 11-18; Prototype job ran Install and test (Python), so team tests executed. Tests: Four files in `prototype/tests/`: detector, live loop, baseline check, data pipeline; proposal reports sixty tests. |
+| 4. Word export (`main`) | ✅ done | 78 issue citation(s) become small in-text tags; 50 issue(s) fill 4 table(s) in Appendix A; replace your `proposal/to-word.lua` with the Nov 8 course version to get the issue tables. |
+| Demo-ready | ✅ ready | The prototype runs in live, demo and replay modes on green CI, and §0-§4 now carry specs, design decisions and implementation prose on both branches. |
 
-**Proposal, what to write:** §4 specs: only Goal 1 is summarized in prose; write Goals 2 and 3 (scope, requirements, acceptance criteria, open questions) and merge PR #115.; §4 design: context, architecture, data model and data flow are explained under D0-D6; key decisions with rejected alternatives and what is not designed yet are missing.; Figures 1 and 2 still sit at the end of §4 as the planned design; fold them into the D1-D2 prose or drop them.; main still holds the Nov 3 paper (47k characters vs 71k on develop); the graded branch must carry D0-D6 and the implementation details..
+**Proposal, what to write:** Goals 2 and 3 now have spec summaries in §4 (PR #115) and the Key design decisions and Not designed yet paragraphs exist (PR #118).; Figures 1 and 2 are labelled as the original plan beside D0 to D6; keep them marked planned versus built.; §4 Planned activities should be updated in Sprint 4 so the Sprint 4 tasks read as prose ending in refs..
 
-**Merge first** (it doesn't count until it's in `develop` or `main`): PR #115 - Goal 2 and Goal 3 spec summaries in §4 (develop); closes #113 and #114; PR #109 - counts 30 normal days per bridge for Objective 2.3 (develop); develop to main - D0-D6, implementation details and Sprint 3 tasks are not on main.
+**Merge first** (it doesn't count until it's in `develop` or `main`): branch 93-cpsc491-timeline: 13 commits not in develop.
 
 **To do before your Sprint 3 review:**
 
-1. Merge PR #115 so the Goal 2 and Goal 3 spec summaries are in §4 with their issue refs, and check each states acceptance criteria and open questions.
-2. Add to §4 after D6 a paragraph on the key design decisions with the rejected alternatives, and one on what is not designed yet.
-3. Create child tasks under stories #19 and #21 before Sprint 4 starts, each with one assignee and a Sprint milestone.
-4. Merge PR #109, then write the 30-day false-alarm numbers into §4 against Objective 2.3.
-5. Fold Figures 1 and 2 into the D1 and D2 explanations, labelled planned versus built.
-6. Release develop to main so the graded branch holds the current paper and prototype.
+1. Create child tasks under stories #19 and #21 at the start of Sprint 4, each with one assignee and a Sprint milestone.
+2. Give #107 an assignee and put #28 and #107 under a story, so every issue sits in the story chain.
+3. Add a test per acceptance criterion for Objectives 2.2, 2.3 and the dashboard in `prototype/tests/`, and finish the prototype for Sprint 4.
+4. Update §4 Planned activities with the Sprint 4 tasks and the 30-day false-alarm results for Objective 2.3.
+5. Draft §5 to §8 in full so the whole paper moves toward the >50-page target.
+6. Merge the `93-cpsc491-timeline` branch by PR with `Closes #N`, and stop direct commits to main.
 
 [↑ Back to all groups](#groups)
 
@@ -640,28 +655,26 @@ Each card covers the three rules, using the best of `main` and `develop` (the br
 
 *A game-like map of genres, artists and songs where swipes steer personalized music discovery.* · Sprint 3: Nov 5 – 18 · **Sprint 3 review Thu Nov 19** · [repository](https://github.com/vibhorbh/CPSC490-G17-SonicScape)
 
-**Start here:** Fix the failing 'Run gates' step on main, then merge PR #70 and build one running slice in `prototype/` with a test; that unlocks a demo.
+**Start here:** Write one pytest per acceptance criterion of `docs/specs/specs_goal3.md` against `db.py` (account, salted hash, swipes survive restart) and run them in CI.
 
 | Rule | Status | What I found |
 |---|---|---|
-| 1. PRs ↔ issues ↔ proposal | ⚠️ gaps | 3 of 6 stories have child issues (#25, #29, #30); #26, #27, #28 have none. `sp:` on child tasks #41, #42, #43, #49, #55, #57, #58, #59, #65, #68 and #51 under stories or pointed tasks.; #41, #49, #51, #55, #57, #58, #59, #62, #63, #64 are not linked from the proposal.; #49 and #55 have no assignee; #63 and #64 have no parent.; 17 merged PRs (e.g. #31-#39, #45, #67) have no `Closes #N`; main has 30 direct commits.; 7 of 16 proposal issue refs are bare links, not typed refs (e.g. #42, #43, #46, #47, #53).. |
-| 2. Proposal §0–§4 (`main`, ≈ 8 pages) | ⚠️ partial | ✅ §0 Abstract · ⚠️ §1 Intro · ⚠️ §1.1 Related work · ⚠️ §1.2 Problem · ⚠️ §2 Goals · ✅ §3 Approaches · ✅ §4 Environment · ❌ §4 Specs · ⚠️ §4 Design · ⚠️ §4 Diagrams · ❌ §4 Implementation · ⚠️ §4 Planned activities. Link tables in place of prose: §1.1 and §1.2 are tables, §2 is nine bullets, and the spec/design document table and 'Planned activities' (5 rows) stand in for prose; neither carries issue refs in sentences.. |
-| 3. Prototype works | ❌ skeleton | Module skeleton plus a starting UI (`frontend/ScreenViews.py`, PR #69) and `backend/lastfm.py`; `db.py` and `schema.sql` are in open PR #70; README still says skeleton. CI: main 59bd5d6 (11/16 PST) red: Repository harness failed at 'Run gates'; Prototype job green but no team tests exist. develop is a stale scaffold. Tests: none on main; no `prototype/tests/` folder although the README claims four tests |
-| 4. Word export (`main`) | ✅ done | 14 issue citation(s) become small in-text tags; 14 issue(s) fill 3 table(s) in Appendix A; replace your `proposal/to-word.lua` with the Nov 8 course version to get the issue tables. |
-| Demo-ready | ❌ not ready | A starting UI exists but no tested slice, main CI is red on the harness gate, and §4 has no spec or implementation prose. |
+| 1. PRs ↔ issues ↔ proposal | ⚠️ gaps | 4 of 6 stories have child issues (#25, #27, #29, #30); #26 and #28 have none (tasks #46, #47, #53 hang off epic #21). `sp:` on 11 child tasks under stories or pointed tasks (#41-#43, #49, #51, #55, #57-#59, #65, #68).; #41, #49, #51, #55, #57-#59, #62-#64 are not linked from the proposal; 9 of 18 linked refs are untyped.; #49 and #55 have no assignee; #63 and #64 have no parent; #64 has no type label.; 18 merged PRs lack `Closes #N`, including recent #75 and #67; main has 32 direct commits.; Stories #29 and #30 are still open although login PRs #69 and #70 merged; Sprint 2 holds 2 open issues.. |
+| 2. Proposal §0–§4 (`main`, ≈ 15 pages) | ⚠️ partial | ✅ §0 Abstract · ⚠️ §1 Intro · ⚠️ §1.1 Related work · ⚠️ §1.2 Problem · ⚠️ §2 Goals · ✅ §3 Approaches · ✅ §4 Environment · ✅ §4 Specs · ✅ §4 Design · ✅ §4 Diagrams · ❌ §4 Implementation · ⚠️ §4 Planned activities. Link tables in place of prose: §1.1 and §1.2 are tables, §2 is nine bullets, the spec and design index is a link table, and Planned activities is a 7-row table with no prose.. |
+| 3. Prototype works | ⚠️ partial | Arcade login and preferences screens (#62, PR #69), swipe on the main screen (#72), SQLite `db.py` and `schema.sql` (#64), Last.fm client; not shown wired end to end. CI: main c2f301d (11/18 PST) green: harness passed and 'Install and test (Python)' ran, but no team tests exist, so CI verifies no team code. The develop branch no longer exists. Tests: none; no `prototype/tests/` folder although the README claims four tests |
+| 4. Word export (`main`) | ✅ done | 16 issue citation(s) become small in-text tags; 16 issue(s) fill 3 table(s) in Appendix A; replace your `proposal/to-word.lua` with the Nov 8 course version to get the issue tables. |
+| Demo-ready | ⚠️ partial | Login, preferences and a swipe screen can be shown from main and §4 now has specs and design prose, but there is no tested end-to-end slice. |
 
-**Proposal, what to write:** §1.1 is a four-row table with no prose and no citations to §8; add paragraphs on what SonicScape does differently.; §1.2 is a table and §2 is bullets; write problem statements and explain each epic and story in paragraphs ending in refs.; §4 specs: summarize `docs/specs/specs_goal1.md`, `specs_goal2.md`, `specs_goal3.md` (scope, FR/NFR, acceptance criteria, open questions) in prose.; §4 swipe sequence, architecture and system context diagrams are raw Mermaid with no explaining prose; data flow, screen flow and database design are real prose.; §4 has no implementation details; planned activities list only five Sprint 2 rows; §5-§8 still hold template text..
-
-**Merge first** (it doesn't count until it's in `develop` or `main`): PR #70 - SQLite connections in `db.py` and `schema.sql` for Goal 3 login backend, open against main; develop branch - stale scaffold with a different title; align it with main or retire it.
+**Proposal, what to write:** §1.1 is a four-row table with no prose and no citations to §8; §8 still holds template references. Add paragraphs on what SonicScape does differently.; §1.2 is a table and §2 is bullets; write the problem statements and each epic and story as paragraphs ending in typed refs.; §4 has no implementation details; describe what `prototype/src/sonicscape` does (screens, swipe, `db.py`, `lastfm.py`) with task refs.; §4 figures 3 to 5 are raw Mermaid blocks, and figure numbers repeat (two Figure 1 labels, Figure 6 then 7); export images and renumber.; §4 Planned activities lists only 7 rows; describe Sprint 3 and 4 work in prose. §5-§8 are still template text..
 
 **To do before your Sprint 3 review:**
 
-1. Open the failing 'Run gates' step on main, fix what it names, and get CI green.
-2. Merge PR #70, then build the first end-to-end slice in `prototype/` (Last.fm into SQLite, galaxy view, one swipe) with tests in `prototype/tests/` per acceptance criterion.
-3. Replace the README run line (it reads 'cd cd') and the four-tests claim with commands and tests that work from a fresh clone.
-4. Summarize `specs_goal1.md`, `specs_goal2.md`, `specs_goal3.md` in §4, then add a caption and paragraph for the swipe, architecture and context diagrams.
-5. Rewrite §1.1, §1.2 and §2 as prose with citations matching §8; add an implementation-details subsection and Sprint 3-4 planned activities.
-6. Remove `sp:` from child tasks, assign #49 and #55, link #41, #49, #51, #55, #57-#59, #62-#64 in §4, and add children under #26-#28.
+1. Add `prototype/tests/` with a pytest per acceptance criterion in `docs/specs/specs_goal1.md`, `specs_goal2.md` and `specs_goal3.md` (login, salted hash, swipe saved, restart persistence) and run them in CI.
+2. Wire one end-to-end slice: Last.fm data into SQLite, galaxy view, a swipe that saves a like; rewrite the README run and test steps so they work from a fresh clone.
+3. Rewrite §1.1, §1.2 and §2 as prose with citations matching §8, and add an implementation-details subsection to §4.
+4. Fill §5 to §8 and grow `proposal.md` past 50 pages without the Appendix; export the Mermaid figures and renumber them.
+5. Add child issues under stories #26 and #28, remove `sp:` from child tasks, assign #49 and #55, link #41, #49, #51, #55, #57-#59, #62-#64 as typed refs.
+6. Close stories #29 and #30 once their tests pass, and open every change through a PR with `Closes #N` instead of direct commits to main.
 
 [↑ Back to all groups](#groups)
 
@@ -671,60 +684,59 @@ Each card covers the three rules, using the best of `main` and `develop` (the br
 
 *A Unity 2D action roguelite where builds develop through weapons, attributes and branching three-Act runs.* · Sprint 3: Nov 5 – 18 · **Sprint 3 review Thu Nov 19** · [repository](https://github.com/austin2578/CPSC490-G18-ProStrats)
 
-**Start here:** Write the §4 Implementation subsection from the existing combat and traversal code, then add one edit-mode test per acceptance criterion in the Goal 2 spec.
+**Start here:** Write the §4 Implementation subsection from the existing combat, class and traversal code, then add one edit-mode test per acceptance criterion in the Goal 2 spec.
 
 | Rule | Status | What I found |
 |---|---|---|
-| 1. PRs ↔ issues ↔ proposal | ⚠️ gaps | 3 of 10 stories have child issues (#32 via #72, #35 via #64, #41 via #48); #33, #34, #36-#40 have none. #65, #64, #56, #53 carry sp: under a story or epic; points belong on the story only.; #76, #74, #58 have no Sprint milestone; #26 and #13 are untyped with no milestone.; #76, #74, #72, #65, #64, #61, #58, #56, #53 are not linked from proposal.md.; Epics #29-#31 are cited in §1 and story #41 in §4; epics and stories belong in §2 only.; #60, #59, #58, #51, #49, #47 are tasks with no parent story or epic.; Sprint 3 closes 11/18 with 6 issues open and none closed.. |
+| 1. PRs ↔ issues ↔ proposal | ⚠️ gaps | 3 of 10 stories have child issues (#32 via #72, #35 via #64, #41 via #48); #33, #34, #36-#40 have none. #64 (under story #35), #65, #56 and #53 carry `sp:`; points belong on the story only.; #74 and #58 have no Sprint milestone; #26 and #13 are untyped with no milestone.; #79, #76, #74, #72, #65, #64, #61, #58, #56, #53 are not linked from proposal.md.; Epics #29-#31 are cited in §1 and story #41 in §4; epics and stories belong in §2 only.; #79, #76, #74, #60, #59, #58, #51, #49, #47 are tasks with no parent story or epic.; PR #80 to main has no `Closes #N`; Sprint 3 closed 11/18 with 6 issues open and 2 closed.. |
 | 2. Proposal §0–§4 (`develop`, ≈ 8 pages) | ⚠️ partial | ✅ §0 Abstract · ✅ §1 Intro · ✅ §1.1 Related work · ⚠️ §1.2 Problem · ✅ §2 Goals · ✅ §3 Approaches · ✅ §4 Environment · ⚠️ §4 Specs · ⚠️ §4 Design · ⚠️ §4 Diagrams · ❌ §4 Implementation · ⚠️ §4 Planned activities. Link tables in place of prose: §4 Specification and design documents is a 5-row link table; Planned activities is a 28-row issue table with only four short paragraphs.. |
-| 3. Prototype works | ⚠️ partial | Unity 6 project with a combat demo (resolver, abilities, target dummy, loadouts) and a movement/traversal room; two demos, no run loop yet. CI: develop b5888ff (11/16 PST) and main d6e8c9a green; the Prototype job ran only 'Install and test (Python)' on the scaffold, so no Unity code was compiled or tested. Tests: No automated tests; `Assets/Editor/ProgressionVerification.cs` and the `Test_Combat` scene serve as manual checks. |
+| 3. Prototype works | ⚠️ partial | Unity 6 project on develop: combat demo (resolver, abilities, target dummy), movement and traversal room, starting classes (#81), five room scenes with enemy placeholders (#83); no run loop merged. CI: develop 559632c (11/19 PST) and main d6e8c9a (11/4 PST) green; the Prototype job ran only 'Install and test (Python)' on the scaffold, so no Unity code was compiled or tested. Tests: No automated tests; `Assets/Editor/ClassVerification.cs`, `ProgressionVerification.cs` and the `Test_Combat` scene serve as manual checks. |
 | 4. Word export (`develop`) | ✅ done | 54 issue citation(s) become small in-text tags; 47 issue(s) fill 4 table(s) in Appendix A; replace your `proposal/to-word.lua` with the Nov 8 course version to get the issue tables. |
-| Demo-ready | ⚠️ partial | Combat and traversal demos can be shown from develop, but §4 lacks specification, design and implementation prose and CI does not run the game. |
+| Demo-ready | ⚠️ partial | Combat, traversal and class demos run from develop, but §4 lacks specification, design and implementation prose and CI does not run the game. |
 
-**Proposal, what to write:** §4 Specifications: the three goal specs in `docs/specs/` are not summarized per epic with requirements and acceptance criteria.; §4 Design: `docs/design/system-overview.md` is only linked; carry context, components, data model, data flow, decisions and open items into the proposal.; §4 Diagrams: the class diagram and run/room/reward flowchart in `docs/design/diagrams/` are not embedded; the two embedded figures get one short paragraph each.; §4 Implementation: add a section describing what `prototype/ProjectRogue` implements (combat resolver, abilities, movement, traversal room, boons) with task refs.; §2 and §3 disagree on starting classes versus weapon-and-element builds; align them. main still has the template §3 and §4..
+**Proposal, what to write:** §4 Specifications: the three goal specs in `docs/specs/` are not summarized per epic with requirements and acceptance criteria.; §4 Design: `docs/design/system-overview.md` is only linked; carry context, components, data model, data flow, decisions and open items into the proposal.; §4 Diagrams: the class diagram and run/room/reward flowchart in `docs/design/diagrams/` are not embedded; the two embedded figures get one short paragraph each.; §4 Implementation: add a section describing what `prototype/ProjectRogue` implements (combat resolver, abilities, movement, traversal room, boons, classes) with task refs.; §2 and §3 disagree on starting classes versus weapon-and-element builds; align them. main still has the template §3 and §4..
 
-**Merge first** (it doesn't count until it's in `develop` or `main`): develop to main: §3-§4 text, diagrams, specs and the prototype's movement work are not on main.
+**Merge first** (it doesn't count until it's in `develop` or `main`): PR #84 - run, node and reward progression for #40, open against develop; PR #80 - title, pause and retry UI for #79, open against main with no `Closes`; develop to main - §3-§4 text, diagrams, specs and prototype work are not on main.
 
 **To do before your Sprint 3 review:**
 
-1. Create child issues for stories #33, #34, #36-#40, each with one assignee and a Sprint milestone, and remove sp: from #65, #64, #56, #53.
-2. Link #76, #74, #72, #65, #64, #61, #58, #56, #53 from §4 as typed refs and move epic refs out of §1 and story #41 out of §4.
-3. Write a per-epic specification summary in §4 (scope, functional and non-functional requirements, acceptance criteria, open questions) from the `docs/specs/` files.
-4. Carry the system overview and combat class diagram into §4 with context, components, data model, data flow, rejected alternatives and open items.
-5. Add a §4 Implementation subsection naming what each folder under `prototype/ProjectRogue` does, with task refs.
-6. Add edit-mode tests for combat and progression and run them in CI or record manual results.
-7. Merge develop into main through a reviewed PR and keep main demo-ready.
+1. Write the §4 Implementation subsection naming what each folder under `prototype/ProjectRogue` does (combat, movement, classes, rooms, boons) with task refs.
+2. Write a per-epic specification summary in §4 (scope, functional and non-functional requirements, acceptance criteria, open questions) from the `docs/specs/` files.
+3. Carry the system overview and combat class diagram into §4 with context, components, data model, data flow, rejected alternatives and open items.
+4. Add edit-mode tests, one per acceptance criterion in the three specs, and run them in CI; merge PR #84 and finish the run loop.
+5. Create child issues for stories #33, #34, #36-#40 with one assignee and a Sprint milestone each, remove `sp:` from #64, #65, #56, #53, and link every issue in §4 as a typed ref.
+6. Fill §5 to §8 and grow `proposal.md` past 50 pages without the Appendix; merge develop into main through a reviewed PR.
 
 [↑ Back to all groups](#groups)
 
 <a name="g19" id="g19"></a>
 
-### G19 · G19: Titan Security, Radar over WiFi drone detection (RTX-AST)
+### G19 · G19: Titan Security, Radar over WiFi drone detection (RTX-2)
 
 *Detect small drones and estimate position and movement from Wi-Fi CSI, compared against conventional radar.* · Sprint 3: Nov 5 – 18 · **Sprint 3 review Thu Nov 19** · [repository](https://github.com/sopper75/CPSC490-G19-TitanSecurity)
 
-**Start here:** Merge PR #87 so §4 has a real environment section, then replace the course `test_login.py` with tests for `capture.py` and `quality_check.py`.
+**Start here:** Write pytest tests for `quality_check.py` and `event_analysis.py` against the sample recording, replace the course `test_login.py`, and run them in CI.
 
 | Rule | Status | What I found |
 |---|---|---|
-| 1. PRs ↔ issues ↔ proposal | ⚠️ gaps | 12 of 12 stories have child issues, but 8 of those children (#77-#84) have no assignee or Sprint milestone. #77-#84 are untyped, have no assignee and no Sprint milestone; none is linked from proposal.md.; #88, #71, #53, #47, #45, #39 carry sp: under a story; points belong on the story only.; #88, #86, #75, #71, #65, #53, #51, #39, #37, #38, #43 are not linked from §4.; §4 Planned activities lists only 8 Sprint 1 tasks; no Sprint 2 or Sprint 3 work item appears.; Open PRs #87 and #89 are unmerged; #85 was closed without merging.; Story #73 has no sp:; every story must carry its points once.. |
-| 2. Proposal §0–§4 (`develop`, ≈ 5 pages) | ❌ skeleton | ✅ §0 Abstract · ⚠️ §1 Intro · ✅ §1.1 Related work · ✅ §1.2 Problem · ✅ §2 Goals · ⚠️ §3 Approaches · ❌ §4 Environment · ⚠️ §4 Specs · ⚠️ §4 Design · ⚠️ §4 Diagrams · ❌ §4 Implementation · ⚠️ §4 Planned activities. Link tables in place of prose: §4 Specification and design documents is a link table plus template placeholder rows; Planned activities is an 8-row Sprint 1 issue table with one sentence of prose.. |
-| 3. Prototype works | ⚠️ partial | CSI capture and recording quality-check stubs (`capture.py`, `quality_check.py`) with a sample recording; README keeps scaffold text and a placeholder row. CI: main 7fca571 and develop 55e7853 green (11/5 PST); 'Install and test (Python)' ran, but the only test is the course `test_login.py`, so team code is untested. Tests: Only the course `prototype/tests/test_login.py`; nothing tests capture or quality check. |
-| 4. Word export (`develop`) | ⚠️ partial | 30 issue citation(s) become small in-text tags; 29 issue(s) fill 4 table(s) in Appendix A; replace your `proposal/to-word.lua` with the Nov 8 course version to get the issue tables; 〈placeholders〉 are still in the text and would print in Word. |
-| Demo-ready | ❌ not ready | §4 is largely template and the prototype is stubs with no team tests; a CSI capture could be shown but not a detection slice. |
+| 1. PRs ↔ issues ↔ proposal | ⚠️ gaps | 13 of 13 stories have child issues, but 8 children (#77-#84) have no type, assignee or Sprint milestone. #77-#84 are untyped, have no assignee or Sprint milestone, and none is linked from proposal.md.; #99 is labelled user-story and task, carries `sp:` under story #97, and is cited as a task.; 18 issues are not linked from §4, including #101, #98, #93, #75, #71, #53 and #43.; #86 and #91 are tasks with no parent; #93 has no Sprint milestone; story #73 has no `sp:`.; The §4 work-item table cites stories #6, #7, #13-#17; stories belong in §2 only.; Sprint 3 (due 11/18) has 8 open and 4 closed issues; PR #104 is open.. |
+| 2. Proposal §0–§4 (`develop`, ≈ 8 pages) | ⚠️ partial | ✅ §0 Abstract · ⚠️ §1 Intro · ✅ §1.1 Related work · ✅ §1.2 Problem · ✅ §2 Goals · ⚠️ §3 Approaches · ✅ §4 Environment · ⚠️ §4 Specs · ⚠️ §4 Design · ✅ §4 Diagrams · ❌ §4 Implementation · ✅ §4 Planned activities. Link tables in place of prose: §4.3 is a link table with a leftover template placeholder block and no per-epic spec summaries; §4.4 is a 15-row table, with the prose in §4.5.. |
+| 3. Prototype works | ⚠️ partial | CSI capture and quality-check scripts with a sample recording, plus preliminary feature extraction and event analysis (`features.py`, `event_analysis.py`, PR #102); scaffold `login.py` remains. CI: develop 484bafe (11/18 PST) green and 'Install and test (Python)' ran, but the only test is the course `test_login.py`, so no team code is tested; main 7fca571 (11/5 PST) is older. Tests: Only the course `prototype/tests/test_login.py`; nothing tests capture, quality check, features or event analysis. |
+| 4. Word export (`develop`) | ⚠️ partial | 46 issue citation(s) become small in-text tags; 37 issue(s) fill 4 table(s) in Appendix A; replace your `proposal/to-word.lua` with the Nov 8 course version to get the issue tables; 〈placeholders〉 are still in the text and would print in Word. |
+| Demo-ready | ⚠️ partial | §4 environment, diagrams and remaining-work prose are real and CSI capture plus offline event analysis can be shown, but there are no team tests or detection slice. |
 
-**Proposal, what to write:** §4 opens with a template placeholder; write each tool, device, host and data store with the reason for the choice (PR #87 holds a draft).; §4 Specifications: summarize the three specs in `docs/specs/` (CSI sensing, drone detection, evaluation) with requirements and acceptance criteria.; §4 Design: only the Level 0/1 data flow is in the proposal; add context, components, data model and decisions with rejected alternatives.; §4 Diagrams: `high-level-architecture.png`, `system-context.png` and `sequence-diagram.png` exist in `docs/design/diagrams/` but are not embedded.; §1 is 148 words and §3 is informal; expand both and add a Sprint 3 Implementation and planned-activities narrative..
+**Proposal, what to write:** §4.3: delete the two placeholder rows and summarize `wifi-csi-sensing.md`, `drone-detection.md` and `evaluation.md` per epic; PR #104 is open for this.; §4 design: add the data model (recording and dataset formats), key decisions with rejected alternatives, and what is not designed yet.; §4 has no implementation section; describe what `capture.py`, `quality_check.py`, `features.py` and `event_analysis.py` do, with #101.; The draft-status banner under the title and the 'TO CONFIRM' lines in §1.1 and §8 remain; resolve them and name the conventional radar systems.; §1 is three short paragraphs and §3 is brief; expand the motivation, scope and the reasoning for the two-computer pipeline..
 
-**Merge first** (it doesn't count until it's in `develop` or `main`): PR #87 - §4 CSI experiment environment (#86), open against develop; PR #89 - classifier training and evaluation plan (#88), open against develop; Branch feature/#51-section4-update - drone detection and evaluation spec additions to §4, not in develop.
+**Merge first** (it doesn't count until it's in `develop` or `main`): PR #104 - epic spec summaries and design narrative for #97, open against develop; develop to main - main last changed 11/5 PST and lacks all Sprint 3 work.
 
 **To do before your Sprint 3 review:**
 
-1. Merge PRs #87 and #89 after review, delete branch feature/#51-section4-update once its §4 text is in develop, and merge develop into main.
-2. Assign and milestone #77-#84, type them, and add them and #86, #88 to §4 as typed refs.
-3. Remove sp: from #88, #71, #53, #47, #45, #39; keep points on the stories only.
-4. Write the §4 environment, three per-epic specification summaries and a design narrative, embedding `high-level-architecture.png` and `system-context.png` with captions.
-5. Replace `login.py` and `tests/test_login.py` with capture and quality-check tests; fix the README run block and the Sprint 3 row.
-6. Add Sprint 3 and 4 work items to the §4 Planned activities with prose describing the remaining work.
+1. Merge PR #104, delete the placeholder rows in §4.3 and the draft banner, and merge develop into main.
+2. Add tests for `capture.py`, `quality_check.py`, `features.py` and `event_analysis.py` per acceptance criterion in `docs/specs/wifi-csi-sensing.md`; replace `login.py` and its test; fix the README.
+3. Add a §4 Implementation subsection and the design data model, decisions with rejected alternatives and open items, with task refs.
+4. Type, assign and milestone #77-#84, fix #99, parent #86 and #91, and link all 18 unlinked issues as typed refs in §4.
+5. Finish the Sprint 3 stories #13-#15 and #7 (labeled data, classifier, position estimates) with results written into the proposal.
+6. Fill §5 to §8 and grow `proposal.md` past 50 pages without the Appendix; select the conventional radar systems in §1.1.
 
 [↑ Back to all groups](#groups)
 
@@ -734,29 +746,26 @@ Each card covers the three rules, using the best of `main` and `develop` (the br
 
 *Unreal Engine 5 first-person horror maze game with adaptive monsters, encounter director and responsive atmosphere.* · Sprint 3: Nov 5 – 18 · **Sprint 3 review Thu Nov 19** · [repository](https://github.com/muntay89/CPSC490-G20-Solos)
 
-**Start here:** Merge the `.mmd` diagrams onto develop and embed them in §4 with captions and prose, closing #64 and #77.
+**Start here:** Rewrite the §4 work-item table and prose refs as typed refs, then update `prototype/README.md` to run the maze level with a manual test per acceptance criterion.
 
 | Rule | Status | What I found |
 |---|---|---|
-| 1. PRs ↔ issues ↔ proposal | ⚠️ gaps | 8 of 8 stories have child issues (#13, #14, #15, #18, #19, #20, #22, #23). Only 11 typed refs; 39 issues are cited as bare #N or untyped links, mostly in §4 Planned activities.; #41 carries sp: 3 under story #13; points belong on the story only.; #65-#68 and #76-#78 are standalone tasks with sp: and no parent story or epic.; Sprint 3 closes tomorrow with 34 open issues and 1 closed; PR #82 for #42 is still open.; Epics #12, #17, #21 sit in Sprint 4 while their stories sit in Sprint 3.. |
-| 2. Proposal §0–§4 (`develop`, ≈ 8 pages) | ⚠️ partial | ✅ §0 Abstract · ⚠️ §1 Intro · ⚠️ §1.1 Related work · ✅ §1.2 Problem · ✅ §2 Goals · ✅ §3 Approaches · ✅ §4 Environment · ⚠️ §4 Specs · ❌ §4 Design · ❌ §4 Diagrams · ⚠️ §4 Implementation · ✅ §4 Planned activities. Link tables in place of prose: §4 Specification and design documents is a link table still holding two template placeholder rows; the 41-row work-item table follows real workstream prose.. |
-| 3. Prototype works | ⚠️ partial | Unreal Engine 5 first-person starter project with sprint and crouch movement (#40); no maze, monster or director yet. CI: develop c2776b9 (11/16 PST) and main 4235cfb (11/5 PST) green, but the Prototype job ran only 'Nothing to build'; CI does not exercise the Unreal project. Tests: None automated; the README describes a manual smoke test and records it as passed. |
-| 4. Word export (`develop`) | ⚠️ partial | 50 issue citation(s) become small in-text tags; 50 issue(s) fill 3 table(s) in Appendix A; `proposal/to-word.lua` or `proposal/reference.docx` is missing from your repository: copy both from the course repo; 〈placeholders〉 are still in the text and would print in Word. |
-| Demo-ready | ⚠️ partial | The starter level with movement should run per the README, but there is no monster or maze yet, and §4 design and diagrams are missing. |
+| 1. PRs ↔ issues ↔ proposal | ⚠️ gaps | 8 of 8 stories have child issues (#13, #14, #15, #18, #19, #20, #22, #23). Only 11 refs are typed; 39 of 51 issue refs are bare `#N` or `Task `[#N]` links, mostly in §4.; Tasks #64-#68, #76-#78 and #91 are standalone with `sp:` and no parent story or epic.; Sprint 3 (due 11/18) has 19 open and 17 closed issues; stories #14, #15, #18-#20, #22, #23 are open.; Epics #12, #17, #21 sit in Sprint 4 while their stories sit in Sprint 3.; The §4 table lists #41 under Type 'Task' but cites it as 'Feature'; fix the Type column.. |
+| 2. Proposal §0–§4 (`develop`, ≈ 12 pages) | ⚠️ partial | ✅ §0 Abstract · ⚠️ §1 Intro · ⚠️ §1.1 Related work · ✅ §1.2 Problem · ✅ §2 Goals · ✅ §3 Approaches · ✅ §4 Environment · ⚠️ §4 Specs · ✅ §4 Design · ✅ §4 Diagrams · ✅ §4 Implementation · ✅ §4 Planned activities. Link tables in place of prose: The spec and design index and the 41-row work-item table are tables, but each follows real prose; no section relies on a link table alone.. |
+| 3. Prototype works | ⚠️ partial | Unreal Engine 5 project with sprint and crouch movement (#40), a prototype maze (#71), objective tracker (#42), an enemy that chases and attacks (#48) and hide evasion (#73). CI: develop c686eb8 and main 8f44220 (11/18 PST) green, but the Prototype job ran only 'Nothing to build', so CI did not exercise the Unreal project; judged by README and PR notes. Tests: None automated; manual tests are recorded in PR descriptions, and the README smoke test covers only the starter level. |
+| 4. Word export (`develop`) | ⚠️ partial | 61 issue citation(s) become small in-text tags; 51 issue(s) fill 3 table(s) in Appendix A; `proposal/to-word.lua` or `proposal/reference.docx` is missing from your repository: copy both from the course repo; 〈placeholders〉 are still in the text and would print in Word. |
+| Demo-ready | ⚠️ partial | The prototype shows movement, a maze, an objective tracker and a chasing enemy, but it has no tests, and template text is still in §1.2, §3 and §4. |
 
-**Proposal, what to write:** §1.1 compares three games in prose with short pros and cons, but has no comparison table; task #68 is open.; §4 Specifications: three spec files in `docs/specs/` are only listed; summarize scope, requirements and acceptance criteria per epic.; §4 Design and Diagrams: nothing is embedded; the `.mmd` diagrams are on main only, so bring them to develop with captions and prose.; §3 still ends with template text and §4 Environment still carries template diagram instructions; delete them.; §4 Implementation: describe what the starter project and movement work (#40) implement; add the architecture and monster-state design..
-
-**Merge first** (it doesn't count until it's in `develop` or `main`): PR #82 - objective tracking UI for #42, open against develop; Branch issue-42-objective-tracking - 1 commit not in develop; develop to main - main §3 is still the template and §4 trails develop; docs/design/*.mmd diagrams are on main only; bring to develop and into the proposal.
+**Proposal, what to write:** §1.1 compares three games in short pros and cons and calls Insomnia a haunted-house game while §0 and §2 describe a maze; align and cite [1]-[3] in §8.; §4 Specifications: each summary is one paragraph; add non-functional requirements and numbered functional requirements per epic.; Template text remains: the quote blocks and 'Keep the details out' note in §3, the quote block in §4, an empty table header, and 〈〉 cells in the §1.2 table.; §4 Design: add the data model or state explicitly that none exists, and describe the director and monster state data.; §4 Implementation is clear on status; add the Unreal Blueprint structure and the hide, line-of-sight and attack-timing work (#73)..
 
 **To do before your Sprint 3 review:**
 
-1. Rewrite the issue refs in §4 Planned activities as typed refs, such as feature:#40 and task:#41, and remove sp: from #41.
-2. Parent #65-#68 and #76-#78 under an epic or story and make sure each has one assignee and a Sprint milestone.
-3. Merge the `.mmd` diagrams onto develop, export images, embed them in §4 with captions and explaining prose (#64, #79).
-4. Summarize the three specs per epic in §4 and write the design documents: context, components, data flow, decisions, open items (#66).
-5. Add the §1.1 comparison table (#68) and delete the template text left in §3 and §4.
-6. Build the maze slice (#71) with a manual test per acceptance criterion, then merge develop into main (#77, #78).
-7. Merge PR #82 and close the Sprint 3 issues that are done before the review.
+1. Rewrite the §4 work-item table and every `#N` in §4 prose as typed refs such as `feature:#40` and `task:#41`.
+2. Parent #64-#68, #76-#78 and #91 under an epic or story, and move unfinished Sprint 3 issues to the Sprint 4 milestone.
+3. Update `prototype/README.md` for the maze level and controls, with a manual test per acceptance criterion and recorded results.
+4. Build the second monster type, the director (#50, #51) and adaptive audio (#75), each with a written test per acceptance criterion in the specs.
+5. Delete the leftover template text in §1.2, §3 and §4, align §1.1 with the maze concept, and add non-functional requirements to the specs.
+6. Fill §5 to §8 and grow `proposal.md` past 50 pages without the Appendix.
 
 [↑ Back to all groups](#groups)
 
