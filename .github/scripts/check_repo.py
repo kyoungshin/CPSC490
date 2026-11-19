@@ -102,9 +102,7 @@ def md_files() -> list[Path]:
     out: list[Path] = []
     for p in ROOT.rglob("*.md"):
         rel = p.relative_to(ROOT).as_posix()
-        # course/tools/claude-skills/ holds the instructor's evaluator prompts, which quote
-        # example links such as [epic:#12](…/issues/N) on purpose; they are not documents.
-        if rel.startswith((".git/", "node_modules/", "course/tools/claude-skills/")):
+        if rel.startswith((".git/", "node_modules/")):
             continue
         out.append(p)
     return sorted(out)
