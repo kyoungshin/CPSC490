@@ -8,6 +8,8 @@ You submit the Preview (Sun Nov 29) and the Final (Sun Dec 20) as Word files mad
 
 **〈placeholders〉:** the converter warns about any 〈…〉 left outside the guidance quotes, and Word prints it as typed. Sprint 4 finishes the whole paper, so none may remain: draft §5–§8 for the Preview and clear every one before the Final.
 
+**Fix the paper in `proposal.md`, not in Word.** Don't fix the Word file by hand: change `proposal.md` and convert again. Only image adjustment is allowed in Word.
+
 | Group | Branch | Converter in your repo | What comes out wrong in Word |
 |---|---|---|---|
 | G01 | `main` | Old copy: replace it | Clean. |
@@ -144,6 +146,8 @@ Each card covers the three rules and the Word export, using the best of `main` a
 *Pipeline that rebuilds Hyperliquid order books from SNX-4 data, validates them, and backtests strategies behind a gate.* · **Sprint 4: Nov 10 – 30** · presentation Tue Dec 1 · [repository](https://github.com/LeDuy23/CPSC490-G01-BGAF)
 
 **Sprint 4 bar:** the whole paper, §0–§8, more than 50 pages without the Appendix (now ≈ 106), and a fully functional prototype with a test per acceptance criterion.
+
+**From my Nov 27 email:** Every section is complete and drafted. Please trim the paper down by many pages, by consolidating and de-duplicating, to something like 50 pages.
 
 **Start here:** Add estimated hours per task and an assumptions paragraph to §6 for the Preview (Sun Nov 29); it is the one section still thin.
 
@@ -632,6 +636,8 @@ Each card covers the three rules and the Word export, using the best of `main` a
 
 **Sprint 4 bar:** the whole paper, §0–§8, more than 50 pages without the Appendix (now ≈ 11, about 39 to go), and a fully functional prototype with a test per acceptance criterion.
 
+**From my Nov 27 email:** §0–§4 are all complete. Please add more pages: more than 40 pages.
+
 **Start here:** Merge PRs #179-#181 and write §5 and §7 in `proposal/proposal.md` for the Sun Nov 29 Preview, since both are still template text.
 
 | Rule | Status | What I found |
@@ -707,6 +713,8 @@ Each card covers the three rules and the Word export, using the best of `main` a
 *Monitors cross-chain bridge vaults, learns normal outflow, and alerts on drains with measured false alarms.* · **Sprint 4: Nov 19 – Dec 9** · presentation Thu Dec 10 · [repository](https://github.com/garybs16/CPSC490-G16-Neuroprosthetic)
 
 **Sprint 4 bar:** the whole paper, §0–§8, more than 50 pages without the Appendix (now ≈ 27, about 23 to go), and a fully functional prototype with a test per acceptance criterion.
+
+**From my Nov 27 email:** Every section is complete and drafted. Please add more pages: more than 40 pages.
 
 **Start here:** Release develop to main so the Preview (Sun Nov 29) shows the new §5-§7, then run the false-alarm count on the SonarX Jul-Oct window (#123).
 
